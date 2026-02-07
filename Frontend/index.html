@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tony's Pizza - Inventory Manager</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Toast container -->
+  <div id="toast-container"></div>
+
+  <!-- App shell (hidden until logged in) -->
+  <div id="app-shell" class="app-shell hidden">
+    <!-- Sidebar -->
+    <nav id="sidebar" class="sidebar">
+      <div class="sidebar-brand">
+        <span class="brand-icon">&#127829;</span>
+        <span class="brand-text">Tony's Pizza</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#/dashboard" data-page="dashboard"><span class="nav-icon">&#9632;</span> Dashboard</a></li>
+        <li><a href="#/upload" data-page="upload"><span class="nav-icon">&#8679;</span> Upload Sales</a></li>
+        <li><a href="#/inventory" data-page="inventory"><span class="nav-icon">&#9998;</span> Inventory Ops</a></li>
+        <li><a href="#/forecast" data-page="forecast"><span class="nav-icon">&#9729;</span> Forecast</a></li>
+        <li><a href="#/analytics" data-page="analytics"><span class="nav-icon">&#9733;</span> Analytics</a></li>
+        <li><a href="#/admin" data-page="admin"><span class="nav-icon">&#9881;</span> Admin</a></li>
+      </ul>
+      <div class="sidebar-footer">
+        <button id="btn-logout" class="btn-logout">Sign Out</button>
+      </div>
+    </nav>
+
+    <!-- Main content -->
+    <main id="main-content" class="main-content">
+      <div id="page-container" class="page-container"></div>
+    </main>
+  </div>
+
+  <!-- Login page (shown when not authenticated) -->
+  <div id="login-page" class="login-page">
+    <div class="login-card" id="login-loading">
+      <h1>&#127829; Tony's Pizza</h1>
+      <p class="subtitle">Loading...</p>
+    </div>
+  </div>
+
+  <!-- Onboarding page -->
+  <div id="onboarding-page" class="onboarding-page hidden"></div>
+
+  <!-- CDN Scripts -->
+  <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+  <script src="https://unpkg.com/papaparse@5"></script>
+
+  <!-- All app code in a single file to avoid cross-script issues -->
+  <script src="js/app.js"></script>
+</body>
+</html>

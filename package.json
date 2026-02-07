@@ -4,6 +4,7 @@
   "description": "let it begin!",
   "main": "index.js",
   "scripts": {
+    "dev": "npx serve Frontend",
     "test": "jest --runInBand --verbose",
     "test:watch": "jest --runInBand --watch"
   },
