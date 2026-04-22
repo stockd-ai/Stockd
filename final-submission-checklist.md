@@ -4,6 +4,11 @@ Last updated: April 22, 2026
 
 Use this as the final go/no-go checklist before submitting the course project.
 
+## Submission Links
+
+- GitHub repository: `https://github.com/stockd-ai/Stockd`
+- Live website URL: `<paste the verified Stockd production URL after Vercel access is available>`
+
 ## Repo and Deployment
 
 - [x] Assignment enhancements implemented in the real Stockd repo
@@ -30,9 +35,19 @@ Use this as the final go/no-go checklist before submitting the course project.
 
 - [x] `logs/traffic_summary.json` refreshed
 - [x] `logs/security_analysis_sample.md` refreshed
-- [x] `logs/security_events_export.jsonl` refreshed
+- [x] `logs/security_events_export.jsonl` refreshed locally
+- [ ] decide whether to keep `logs/security_events_export.jsonl` local-only or commit a sanitized export
 - [ ] `screenshots/` updated with real final screenshots
 - [ ] live deployment URL confirmed and added wherever needed
+
+## Screenshots To Capture
+
+- [ ] public login page
+- [ ] lockout or remaining-attempt message after repeated failed login attempts
+- [ ] dashboard page
+- [ ] security monitor page
+- [ ] GitHub Actions success runs
+- [ ] one report artifact such as `logs/security_analysis_sample.md`
 
 ## GitHub / CI
 
@@ -48,3 +63,4 @@ Use this as the final go/no-go checklist before submitting the course project.
 - GitHub repository secrets for Vercel and Supabase
 - final screenshot capture from the public deployment
 - PDF export of the final report
+- confirmation of the real production website URL for submission

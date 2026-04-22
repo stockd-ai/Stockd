@@ -30,6 +30,7 @@ Useful course-project docs:
 - `assignment-requirements-mapping.md`
 - `final-submission-checklist.md`
 - `final-demo-script.md`
+- `final-report-notes.md`
 
 ### Live Rollout Status (April 22, 2026)
 
@@ -40,6 +41,8 @@ Useful course-project docs:
 - live monitoring artifacts were regenerated from the real Stockd Supabase project
 - remaining manual step: redeploy the updated frontend through the real Stockd Vercel project so the public site exposes the guarded login flow and security monitor page
 - GitHub Actions workflows are in repo, but repository secrets still need to be configured before deploy automation can run
+- GitHub repository URL: `https://github.com/stockd-ai/Stockd`
+- Live website URL: `<paste the verified Stockd production URL before submission>`
 
 ---
 

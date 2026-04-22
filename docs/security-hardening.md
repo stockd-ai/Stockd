@@ -114,6 +114,7 @@ As of April 22, 2026:
 
 - the hardening changes are implemented in the real Stockd repo
 - the related tests pass locally
+- the full Jest suite also passed against the real Supabase project during final rollout validation
 - the public Stockd frontend still needs to be redeployed through the actual Vercel project for these UI hardening changes to become public
 
 ## Validation Notes

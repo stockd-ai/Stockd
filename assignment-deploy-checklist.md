@@ -4,6 +4,10 @@ Last updated: April 22, 2026
 
 This runbook reflects the **actual rollout state** of the assignment enhancements inside the real `Stockd` environment.
 
+Known repository link:
+
+- `https://github.com/stockd-ai/Stockd`
+
 ## Completed Already
 
 The following steps were completed successfully from this machine:
@@ -28,7 +32,7 @@ node scripts/generate-security-artifacts.mjs logs/security_events_export.jsonl
 
 ## Remaining Manual Rollout Steps
 
-### 1. Push the repo changes to GitHub
+### 1. Push any additional repo changes to GitHub if needed
 
 From `/Users/admin/Documents/GitHub/Stockd`:
 
@@ -40,12 +44,19 @@ git push origin main
 
 Notes:
 
+- this step was already completed for the current assignment-integration changes
 - avoid staging unrelated pre-existing changes such as `.DS_Store` unless you explicitly want them included
 - if the real Stockd Vercel project is connected to GitHub, this push may trigger the normal frontend deployment pipeline
 
 ### 2. Deploy the frontend through the real Stockd Vercel project
 
 This step is still required because the local Vercel account on this machine does not currently expose the Stockd production project.
+
+Additional confirmed blockers from this machine:
+
+- no local `.vercel/project.json` metadata is present
+- GitHub deployment records for this repo were empty at audit time
+- creating or linking a new Vercel project from this machine would risk targeting the wrong environment
 
 If you have the correct Vercel project access:
 
@@ -89,6 +100,14 @@ Behaviors to verify:
 3. the lockout message appears after the threshold is reached
 4. the security monitor page loads a live summary
 5. no obvious console/runtime errors appear on the hardened pages
+
+Suggested screenshots for submission:
+
+- public login page
+- lockout or remaining-attempt message
+- dashboard page
+- security monitor page
+- GitHub Actions success run
 
 ### 5. Refresh artifacts one last time after real user traffic exists
 
@@ -140,5 +159,6 @@ The backend live rollout is already confirmed for:
 - guarded login lockout behavior
 - security event ingestion
 - security event analysis
+- GitHub CI success on the pushed `main` branch
 
 The only remaining live validation gap is the **public frontend deployment** through the real Stockd Vercel project.

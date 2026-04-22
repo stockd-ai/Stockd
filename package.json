@@ -18,16 +18,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/panjabandharyana/ugahacks11.git"
+    "url": "git+https://github.com/stockd-ai/Stockd.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/panjabandharyana/ugahacks11/issues"
+    "url": "https://github.com/stockd-ai/Stockd/issues"
   },
-  "homepage": "https://github.com/panjabandharyana/ugahacks11#readme",
+  "homepage": "https://github.com/stockd-ai/Stockd#readme",
   "dependencies": {
     "@elevenlabs/elevenlabs-js": "^2.34.0",
     "@supabase/supabase-js": "^2.95.3",

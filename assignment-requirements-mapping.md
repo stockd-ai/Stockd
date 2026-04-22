@@ -4,6 +4,10 @@ Last updated: April 22, 2026
 
 This file maps the **real Stockd implementation** to the course rubric and reflects the current rollout state.
 
+Repository link:
+
+- `https://github.com/stockd-ai/Stockd`
+
 ## Rubric Mapping Summary
 
 | Rubric item | Stockd implementation | Status |
@@ -89,4 +93,4 @@ Evidence:
 
 Use this wording if you want the report to reflect the exact rollout state:
 
-> We used the real Stockd application as the networking course project and extended it instead of building a separate demo. By April 22, 2026, the backend rollout was complete in the real Supabase project: the new guard and monitoring migrations were applied, the login protection and monitoring Edge Functions were deployed, and live security-analysis artifacts were regenerated. The remaining step was to publish the updated frontend through the actual Stockd Vercel project so the public site exposed the new login flow and monitoring page.
+> We used the real Stockd application as the networking course project and extended it instead of building a separate demo. By April 22, 2026, the backend rollout was complete in the real Supabase project: the new guard and monitoring migrations were applied, the login protection and monitoring Edge Functions were deployed, live security-analysis artifacts were regenerated, and the GitHub CI workflow was passing on the real repository. The remaining step was to publish the updated frontend through the actual Stockd Vercel project so the public site exposed the new login flow and monitoring page.

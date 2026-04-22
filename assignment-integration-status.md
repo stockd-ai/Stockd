@@ -46,7 +46,7 @@ Verified successfully with disposable test users:
 
 Regenerated from the real Supabase project:
 
-- `logs/security_events_export.jsonl`
+- `logs/security_events_export.jsonl` (local live export, intentionally left out of Git)
 - `logs/traffic_summary.json`
 - `logs/security_analysis_sample.md`
 
@@ -142,6 +142,7 @@ Current status:
 - workflows exist in repo and are pushed to `origin/main`
 - CI was observed successfully on GitHub after push
 - the deploy workflow now exits successfully in skip mode when secrets are missing
+- the GitHub Actions files were updated to current major action versions to avoid the Node 20 action-runtime warning
 - GitHub repository secrets are still not configured for a real Vercel deploy
 
 ## Remaining Blockers
@@ -152,7 +153,9 @@ Blocked:
 
 - `vercel whoami` succeeded for the local account
 - the accessible Vercel scope did **not** expose the real Stockd project
-- `vercel pull` from this repo could not link to the correct production project
+- no local `.vercel/project.json` metadata exists in this repo
+- GitHub deployment records for `stockd-ai/Stockd` returned no deployment entries from this machine
+- `vercel pull` from this repo cannot be performed safely without risking a wrong project link
 
 Impact:
 
@@ -184,10 +187,9 @@ Impact:
 
 ## Recommended Rollout Order From Here
 
-1. Commit and push the repo updates to the real GitHub repository.
-2. Deploy the updated frontend through the actual Stockd Vercel project.
-3. Confirm the public login page now uses the guarded login flow.
-4. Open the public security monitor page and verify it loads live analysis data.
-5. Add GitHub repository secrets for Supabase and Vercel.
-6. Re-run or observe GitHub Actions after secrets are configured.
-7. Capture final screenshots for the report and submission package.
+1. Deploy the updated frontend through the actual Stockd Vercel project.
+2. Confirm the public login page now uses the guarded login flow.
+3. Open the public security monitor page and verify it loads live analysis data.
+4. Add GitHub repository secrets for Supabase and Vercel.
+5. Re-run or observe GitHub Actions after secrets are configured.
+6. Capture final screenshots for the report and submission package.

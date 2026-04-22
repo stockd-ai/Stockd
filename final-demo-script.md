@@ -4,6 +4,11 @@ Last updated: April 22, 2026
 
 This is a concise presentation flow for the final course-project demo using the real Stockd application.
 
+Reference links:
+
+- GitHub repo: `https://github.com/stockd-ai/Stockd`
+- Live URL: `<paste the verified Stockd production URL once confirmed>`
+
 ## 1. Opening
 
 > Our project is the real Stockd application, which is a restaurant inventory and analytics platform built on a live Supabase backend and deployed with Vercel. For the networking assignment, we extended the existing app with security hardening, brute-force protection, monitoring, and deployment automation.
@@ -83,7 +88,7 @@ Say:
 
 Say:
 
-> The backend rollout is complete in the real Supabase project. The remaining manual step is redeploying the updated frontend through the actual Stockd Vercel project, because that Vercel project was not accessible from this machine during the rollout session.
+> The backend rollout is complete in the real Supabase project. The remaining manual step is redeploying the updated frontend through the actual Stockd Vercel project, because that Vercel project was not accessible from this machine during the rollout session. GitHub CI is green, the deploy workflow is valid, and the repo is fully prepared for that final publish step.
 
 ## 8. Closing
 
