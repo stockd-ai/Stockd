@@ -289,7 +289,7 @@
 
       <div class="demo-box">
         <div class="demo-title">Want to try the demo?</div>
-        <div class="demo-text">Email: <strong>demo@user.pizza</strong></div>
+        <div class="demo-text">Email: <strong>demo@pizza.com</strong></div>
         <div class="demo-text">Pass: <strong>admin</strong></div>
         <a class="auto-fill-link" onclick="autoFillDemo()">✨ Tap to auto-fill</a>
       </div>
@@ -608,7 +608,11 @@
       setLoading(true);
       try {
         const response = await invokeProtectedLogin(payload);
-        if (response && response.ok && response.code === 'signed_in') {
+        const signedIn =
+          Boolean(response && response.ok && response.code === 'signed_in') ||
+          Boolean(response && response.success === true && response.session);
+
+        if (signedIn) {
           clearChallenge();
           authUiState.lockUntilMs = 0;
           clearStoredLockout();
@@ -664,7 +668,7 @@
     }
 
     function autoFillDemo() {
-      document.getElementById('email').value = 'demo@user.pizza';
+      document.getElementById('email').value = 'demo@pizza.com';
       document.getElementById('password').value = 'admin';
       clearChallenge();
       showError('');
