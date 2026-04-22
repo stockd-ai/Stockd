@@ -25,11 +25,13 @@ Say:
 
 > Instead of building a fake demo app, we used a real deployed codebase and integrated the assignment requirements into that production-style stack.
 
+> During the final integration pass, we also transplanted the deployable htmltest app surface into this canonical Stockd repo so the code we submit, test, and deploy now lives in one place.
+
 ## 3. Mandatory Security Requirement: SQLi + XSS Hardening
 
 Show:
 
-- `Frontend/js/security-utils.js`
+- `Frontend/js/security.js`
 - `Frontend/js/csv-parser.js`
 - `docs/security-hardening.md`
 

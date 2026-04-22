@@ -6,6 +6,8 @@ This file tracks the course-project enhancements implemented directly in the rea
 
 The earlier side-copy prototype is no longer the project. It was used only as a pattern reference. The real rollout work in this repo targeted the linked Supabase project `ifycpxtpyysuthnknptl` and the existing Stockd deployment model.
 
+On April 22, 2026, the deployable app surface from `/Users/admin/Documents/GitHub/htmltest` was transplanted into this canonical Stockd repo while preserving Stockd-specific docs, workflows, and the already-live Supabase backend contract.
+
 ## Overall Status
 
 | Requirement area | Status | Current state |
@@ -55,7 +57,7 @@ Regenerated from the real Supabase project:
 Completed locally from authenticated Supabase CLI state:
 
 - `Frontend/js/env.js`
-- `Frontend/js/config.js`
+- `kiosk/env.js`
 
 This lets the local Stockd frontend point at the real Supabase project for testing.
 
@@ -65,7 +67,7 @@ This lets the local Stockd frontend point at the real Supabase project for testi
 
 Implemented files:
 
-- `Frontend/js/security-utils.js`
+- `Frontend/js/security.js`
 - `Frontend/js/csv-parser.js`
 - `Frontend/js/ai-copilot.js`
 - `Frontend/login.html`
@@ -90,6 +92,7 @@ Implemented files:
 
 - `supabase/migrations/20260422000100_auth_login_guards.sql`
 - `supabase/functions/auth-login/index.ts`
+- `supabase/functions/auth-login/store.ts`
 - `Frontend/js/supabase-client.js`
 - `Frontend/login.html`
 - `supabase/config.toml`
@@ -108,10 +111,14 @@ Implemented files:
 - `supabase/migrations/20260422000200_security_events.sql`
 - `supabase/functions/security-log-event/index.ts`
 - `supabase/functions/security-analyze/index.ts`
+- `supabase/functions/_shared/monitoring.ts`
+- `Frontend/js/monitoring-client.js`
 - `supabase/functions/_shared/cors.ts`
 - `supabase/functions/_shared/security-events.ts`
 - `supabase/functions/_shared/security-analyzer.mjs`
 - `Frontend/pages/security-monitor.html`
+- `monitoring/analyze.js`
+- `scripts/export-monitoring-analysis.js`
 - `scripts/export-security-events.mjs`
 - `scripts/generate-security-artifacts.mjs`
 - `logs/access.sample.jsonl`
@@ -160,6 +167,19 @@ Blocked:
 Impact:
 
 - I could not deploy the updated frontend to the real Stockd Vercel environment from this machine
+
+### 4. Copilot function deployment for the transplanted frontend
+
+Blocked:
+
+- the transplanted htmltest app surface includes `Frontend/js/ai-client.js`, `Frontend/js/ai-copilot.js`, and `supabase/functions/copilot/`
+- the local htmltest `.env` available on this machine did **not** include `OPENAI_API_KEY`
+- because of that, I did not deploy the new `copilot` Edge Function during the transplant pass
+
+Impact:
+
+- the transplanted frontend, auth, monitoring, and assignment features are deployment-ready
+- Copilot-specific live functionality still requires an `OPENAI_API_KEY` (and optionally `COPILOT_ACTION_SECRET`) before the `copilot` Edge Function can be deployed safely
 
 ### 2. GitHub Actions secrets
 

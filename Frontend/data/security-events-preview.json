@@ -1,0 +1,193 @@
+[
+  {
+    "event_at": "2026-04-22T06:57:05.463Z",
+    "event_type": "auth.login_succeeded",
+    "severity": "info",
+    "source": "auth-login",
+    "flow": null,
+    "route": "/login.html",
+    "request_id": null,
+    "metadata": {
+      "source": "auth-login"
+    }
+  },
+  {
+    "event_at": "2026-04-22T06:55:36.618Z",
+    "event_type": "custom.monitor_test",
+    "severity": "info",
+    "source": "local-debug",
+    "flow": null,
+    "route": "/Frontend/pages/security-monitor.html",
+    "request_id": null,
+    "metadata": {
+      "source": "local-debug"
+    }
+  },
+  {
+    "event_at": "2026-04-22T06:55:36.264Z",
+    "event_type": "auth.login_succeeded",
+    "severity": "info",
+    "source": "auth-login",
+    "flow": null,
+    "route": "/login.html",
+    "request_id": null,
+    "metadata": {
+      "source": "auth-login"
+    }
+  },
+  {
+    "event_at": "2026-04-22T06:55:01.640Z",
+    "event_type": "custom.monitor_test",
+    "severity": "info",
+    "source": "local-debug",
+    "flow": null,
+    "route": "/Frontend/pages/security-monitor.html",
+    "request_id": null,
+    "metadata": {
+      "source": "local-debug"
+    }
+  },
+  {
+    "event_at": "2026-04-22T06:55:01.336Z",
+    "event_type": "auth.login_succeeded",
+    "severity": "info",
+    "source": "auth-login",
+    "flow": null,
+    "route": "/login.html",
+    "request_id": null,
+    "metadata": {
+      "source": "auth-login"
+    }
+  },
+  {
+    "event_at": "2026-04-22T06:54:10.705Z",
+    "event_type": "auth.login_succeeded",
+    "severity": "info",
+    "source": "auth-login",
+    "flow": null,
+    "route": "/login.html",
+    "request_id": null,
+    "metadata": {
+      "source": "auth-login"
+    }
+  },
+  {
+    "event_at": "2026-04-22T06:53:55.560Z",
+    "event_type": "custom.monitor_test",
+    "severity": "info",
+    "source": "local-debug",
+    "flow": null,
+    "route": "/Frontend/pages/security-monitor.html",
+    "request_id": null,
+    "metadata": {
+      "source": "local-debug"
+    }
+  },
+  {
+    "event_at": "2026-04-22T06:53:55.138Z",
+    "event_type": "auth.login_succeeded",
+    "severity": "info",
+    "source": "auth-login",
+    "flow": null,
+    "route": "/login.html",
+    "request_id": null,
+    "metadata": {
+      "source": "auth-login"
+    }
+  },
+  {
+    "event_at": "2026-04-22T06:53:27.629Z",
+    "event_type": "auth.login_succeeded",
+    "severity": "info",
+    "source": "auth-login",
+    "flow": null,
+    "route": "/login.html",
+    "request_id": null,
+    "metadata": {
+      "source": "auth-login"
+    }
+  },
+  {
+    "event_at": "2026-04-22T06:51:41.384Z",
+    "event_type": "auth.login_succeeded",
+    "severity": "info",
+    "source": "auth-login",
+    "flow": null,
+    "route": "/login.html",
+    "request_id": null,
+    "metadata": {
+      "source": "auth-login"
+    }
+  },
+  {
+    "event_at": "2026-04-22T06:51:40.848Z",
+    "event_type": "auth.login_locked",
+    "severity": "critical",
+    "source": "auth-login",
+    "flow": null,
+    "route": "/login.html",
+    "request_id": null,
+    "metadata": {
+      "source": "auth-login",
+      "lockedUntil": "2026-04-22T06:56:40.568Z",
+      "failedAttempts": 5,
+      "retryAfterSeconds": 300
+    }
+  },
+  {
+    "event_at": "2026-04-22T06:51:40.381Z",
+    "event_type": "auth.login_failed",
+    "severity": "warning",
+    "source": "auth-login",
+    "flow": null,
+    "route": "/login.html",
+    "request_id": null,
+    "metadata": {
+      "source": "auth-login",
+      "failedAttempts": 4,
+      "remainingAttempts": 1
+    }
+  },
+  {
+    "event_at": "2026-04-22T06:51:39.844Z",
+    "event_type": "auth.login_failed",
+    "severity": "warning",
+    "source": "auth-login",
+    "flow": null,
+    "route": "/login.html",
+    "request_id": null,
+    "metadata": {
+      "source": "auth-login",
+      "failedAttempts": 3,
+      "remainingAttempts": 2
+    }
+  },
+  {
+    "event_at": "2026-04-22T06:51:39.361Z",
+    "event_type": "auth.login_failed",
+    "severity": "info",
+    "source": "auth-login",
+    "flow": null,
+    "route": "/login.html",
+    "request_id": null,
+    "metadata": {
+      "source": "auth-login",
+      "failedAttempts": 2,
+      "remainingAttempts": 3
+    }
+  },
+  {
+    "event_at": "2026-04-22T06:51:38.810Z",
+    "event_type": "auth.login_failed",
+    "severity": "info",
+    "source": "auth-login",
+    "flow": null,
+    "route": "/login.html",
+    "request_id": null,
+    "metadata": {
+      "source": "auth-login",
+      "failedAttempts": 1,
+      "remainingAttempts": 4
+    }
+  }
+]

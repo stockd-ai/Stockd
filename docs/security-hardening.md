@@ -19,16 +19,15 @@ Phase 1 focused on the mandatory injection/XSS requirement:
 
 File:
 
-- `/Users/admin/Documents/GitHub/Stockd/Frontend/js/security-utils.js`
+- `/Users/admin/Documents/GitHub/Stockd/Frontend/js/security.js`
 
 The helper now provides:
 
 - `escapeHtml()` for safe interpolation into HTML templates
-- `sanitizePlainText()` and `sanitizeUserNote()` for text input cleanup
-- `sanitizeCsvCell()` for imported CSV values
-- `sanitizeEmail()` for auth input normalization
-- `formatRichTextSafe()` for AI/chat responses
-- `setSelectOptions()` to avoid building dynamic `<option>` markup by string concatenation
+- `sanitizeTextInput()` for plain-text cleanup
+- `sanitizeEmailInput()` for auth input normalization
+- `inspectTextInput()` for suspicious-input detection and logging
+- `safeEnum()`, `parseFiniteNumber()`, and `safeAttribute()` for safer UI state and rendering
 
 ### 2. Hardened AI output rendering
 
@@ -123,7 +122,7 @@ Local validation completed:
 
 ```bash
 npx jest tests/security-utils.test.js --runInBand --verbose
-node --check Frontend/js/security-utils.js
+node --check Frontend/js/security.js
 node --check Frontend/js/csv-parser.js
 node --check Frontend/js/supabase-client.js
 node --check Frontend/js/ai-copilot.js

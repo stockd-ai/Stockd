@@ -23,6 +23,7 @@ Use this as the final go/no-go checklist before submitting the course project.
 
 ## Documentation
 
+- [x] `repo-transplant-summary.md` added
 - [x] `assignment-integration-status.md` updated
 - [x] `assignment-deploy-checklist.md` updated
 - [x] `assignment-requirements-mapping.md` updated

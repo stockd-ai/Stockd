@@ -52,6 +52,8 @@ export function analyzeSecurityEvents(rawEvents, options = {}) {
         ? Number(event.status_code ?? event.statusCode)
         : null,
       userAgent: safeString(event.user_agent || event.userAgent || ''),
+      source: safeString(event.source || event.details?.source || 'unknown'),
+      flow: safeString(event.flow || event.details?.flow || ''),
       details: event.details && typeof event.details === 'object' && !Array.isArray(event.details) ? event.details : {},
       createdAt: toIso(event.created_at || event.createdAt)
     }))
@@ -74,7 +76,7 @@ export function analyzeSecurityEvents(rawEvents, options = {}) {
       statusCounts[event.statusCode] = (statusCounts[event.statusCode] || 0) + 1;
     }
 
-    if (event.eventType === 'auth.login_failed') {
+    if (event.eventType === 'auth.login_failed' || event.eventType === 'login_failure') {
       const key = `${event.actorEmail || 'unknown'}::${event.ipAddress}`;
       if (!failedLogins[key]) {
         failedLogins[key] = {
@@ -114,7 +116,7 @@ export function analyzeSecurityEvents(rawEvents, options = {}) {
     });
 
   events
-    .filter(event => event.eventType === 'auth.login_locked')
+    .filter(event => event.eventType === 'auth.login_locked' || event.eventType === 'bruteforce_lockout_triggered')
     .forEach(event => {
       flaggedActivities.push({
         type: 'lockout_triggered',

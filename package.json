@@ -5,13 +5,23 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --runInBand --verbose",
-    "test:security": "jest tests/security-utils.test.js --runInBand --verbose",
+    "test:copilot": "jest tests/copilot --runInBand --verbose",
+    "test:security": "node scripts/run-security-tests.js",
+    "test:bruteforce": "node scripts/run-bruteforce-tests.js",
+    "test:monitoring": "node scripts/run-monitoring-tests.js",
+    "test:database": "node scripts/run-database-tests.js",
     "test:watch": "jest --runInBand --watch",
-    "check:client-js": "node --check Frontend/js/security-utils.js && node --check Frontend/js/csv-parser.js && node --check Frontend/js/supabase-client.js && node --check Frontend/js/ai-copilot.js",
-    "ci:quick": "npm run check:client-js && npm run test:security && npm run security:artifacts",
+    "build": "npm run config",
+    "check:client-js": "node --check Frontend/js/security.js && node --check Frontend/js/monitoring-client.js && node --check Frontend/js/csv-parser.js && node --check Frontend/js/supabase-client.js && node --check Frontend/js/ai-client.js && node --check Frontend/js/ai-copilot.js",
+    "ci:quick": "npm run check:client-js && npm run test:security && npm run test:bruteforce && npm run test:monitoring",
     "config": "node scripts/generate-config.js",
-    "security:artifacts": "node scripts/generate-security-artifacts.mjs",
+    "config:public": "node scripts/generate-config.js",
+    "security:artifacts": "node scripts/generate-security-artifacts.mjs logs/security_events_export.jsonl",
     "security:export": "node scripts/export-security-events.mjs",
+    "monitoring:analyze": "node scripts/export-monitoring-analysis.js",
+    "monitoring:sample": "node scripts/export-monitoring-analysis.js --fixture",
+    "monitoring:analyze:ai": "node scripts/export-monitoring-analysis.js --ai",
+    "seed:demo": "node scripts/setup-all.js",
     "start": "npx serve Frontend",
     "start:backend": "node Backend/server.js",
     "start:kiosk": "npx serve kiosk -l 3000"
@@ -39,6 +49,7 @@
   },
   "devDependencies": {
     "jest": "^30.2.0",
-    "supabase": "^2.76.3"
+    "supabase": "^2.76.3",
+    "typescript": "^5.9.3"
   }
 }

@@ -21,7 +21,7 @@ function getClientFingerprint() {
 
   try {
     fingerprint = localStorage.getItem(key);
-  } catch (err) {
+  } catch (_error) {
     fingerprint = null;
   }
 
@@ -31,8 +31,7 @@ function getClientFingerprint() {
       : `stockd-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
     try {
       localStorage.setItem(key, fingerprint);
-    } catch (err) {
-      // Ignore storage issues; a per-page fingerprint is still acceptable.
+    } catch (_error) {
     }
   }
 
@@ -42,7 +41,7 @@ function getClientFingerprint() {
 async function invokeEdgeFunction(functionName, body) {
   const headers = {
     'Content-Type': 'application/json',
-    apikey: SUPABASE_ANON
+    apikey: SUPABASE_ANON,
   };
 
   const { data: { session } } = await sb.auth.getSession();
@@ -53,29 +52,30 @@ async function invokeEdgeFunction(functionName, body) {
   const response = await fetch(`${SUPABASE_URL}/functions/v1/${functionName}`, {
     method: 'POST',
     headers,
-    body: JSON.stringify(body || {})
+    body: JSON.stringify(body || {}),
   });
 
   let data = null;
   try {
     data = await response.json();
-  } catch (err) {
+  } catch (_error) {
     data = null;
   }
 
   return {
     ok: response.ok,
     status: response.status,
-    data
+    data,
   };
 }
 
 async function guardedPasswordLogin(email, password) {
   return invokeEdgeFunction('auth-login', {
+    flow: 'web_login',
     email,
     password,
-    clientFingerprint: getClientFingerprint(),
-    userAgent: navigator.userAgent || ''
+    client_token: getClientFingerprint(),
+    userAgent: navigator.userAgent || '',
   });
 }
 

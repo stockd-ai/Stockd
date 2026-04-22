@@ -1,23 +1,51 @@
-# Security Analysis Summary
+# Stockd Monitoring Analysis
 
-Generated: 2026-04-22T07:28:25.886Z
-Events analyzed: 15
+Generated at: 2026-04-22T06:57:05.463Z
+Source: supabase_live
 
-## Heuristic Summary
+## Executive Summary
 
-Detected 2 suspicious patterns across 15 monitored events. Primary risk signal: repeated failed logins with escalating lockout behavior. Secondary signal: no probe-route burst crossed the alert threshold. Highest weighted source IP: 131.96.42.157 (15 events).
+Monitoring flagged 1 suspicious pattern in the analyzed window. The most significant issue was "repeated failed logins detected", which accounted for 4 related events.
 
-## Severity Counts
+## Traffic Overview
 
-- Info: 12
-- Warning: 2
-- Critical: 1
+- Total events analyzed: 15
+- Last hour: 15 events
+- Last 24 hours: 15 events
+- Last 7 days: 15 events
 
-## Flagged Activity
+## Security-Relevant Counters
 
-- [WARNING] codex-lockout-1776840696226@example.com had 4 failed login attempts from 131.96.42.157.
-- [CRITICAL] Temporary login lockout triggered for codex-lockout-1776840696226@example.com from 131.96.42.157.
+- Login failures: 4
+- Login successes: 7
+- Brute-force challenges: 0
+- Brute-force lockouts: 1
+- Suspicious input events: 0
+- CSV validation failures: 0
+- Copilot access rejections: 0
 
-## Top Source IPs
+## Top Security-Relevant Event Types
 
-- 131.96.42.157: 15 events, risk score 19
+- auth.login_succeeded: 7
+- auth.login_failed: 4
+- custom.monitor_test: 3
+- auth.login_locked: 1
+
+## Suspicious Findings
+
+- [MEDIUM] Repeated failed logins detected: 4 failed logins were recorded for the same hashed identifier/device scope.
+
+## Recent Event Preview
+
+| Time | Event | Severity | Source | Flow |
+| --- | --- | --- | --- | --- |
+| 2026-04-22T06:57:05.463Z | auth.login_succeeded | info | auth-login | — |
+| 2026-04-22T06:55:36.618Z | custom.monitor_test | info | local-debug | — |
+| 2026-04-22T06:55:36.264Z | auth.login_succeeded | info | auth-login | — |
+| 2026-04-22T06:55:01.640Z | custom.monitor_test | info | local-debug | — |
+| 2026-04-22T06:55:01.336Z | auth.login_succeeded | info | auth-login | — |
+| 2026-04-22T06:54:10.705Z | auth.login_succeeded | info | auth-login | — |
+| 2026-04-22T06:53:55.560Z | custom.monitor_test | info | local-debug | — |
+| 2026-04-22T06:53:55.138Z | auth.login_succeeded | info | auth-login | — |
+| 2026-04-22T06:53:27.629Z | auth.login_succeeded | info | auth-login | — |
+| 2026-04-22T06:51:41.384Z | auth.login_succeeded | info | auth-login | — |

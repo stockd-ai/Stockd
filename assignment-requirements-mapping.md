@@ -35,7 +35,7 @@ Repository link:
 
 Evidence:
 
-- `Frontend/js/security-utils.js`
+- `Frontend/js/security.js`
 - `Frontend/js/csv-parser.js`
 - `Frontend/js/ai-copilot.js`
 - `docs/security-hardening.md`
@@ -81,6 +81,7 @@ Evidence:
 - `supabase/migrations/20260422000200_security_events.sql`
 - `supabase/functions/security-log-event/index.ts`
 - `supabase/functions/security-analyze/index.ts`
+- `Frontend/js/monitoring-client.js`
 - `Frontend/pages/security-monitor.html`
 - `logs/traffic_summary.json`
 - `logs/security_analysis_sample.md`

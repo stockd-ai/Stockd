@@ -80,7 +80,6 @@ Add these in GitHub repository settings:
 - `VERCEL_TOKEN`
 - `VERCEL_ORG_ID`
 - `VERCEL_PROJECT_ID`
-- `GEMINI_API_KEY` if deploy-time config generation should include it
 
 ### 4. Validate the public frontend after deploy
 
@@ -142,13 +141,17 @@ Configured functions:
 Stockd uses generated runtime files:
 
 - `Frontend/js/env.js`
-- `Frontend/js/config.js`
+- `kiosk/env.js`
 
 If these are regenerated during deployment, make sure the deployment environment has:
 
 - `SUPABASE_URL`
 - `SUPABASE_ANON_KEY`
-- `GEMINI_API_KEY`
+
+Optional if you also want the transplanted Copilot feature live:
+
+- `OPENAI_API_KEY`
+- `COPILOT_ACTION_SECRET`
 
 ## Final Validation Reference
 

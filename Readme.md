@@ -3,7 +3,7 @@
 > AI-powered inventory management with dynamic pricing and demand forecasting for modern restaurants.
 
 [![Built at UGAHacks 11](https://img.shields.io/badge/Built%20at-UGAHacks%2011-green)](https://ugahacks.com/)
-[![Powered by Gemini](https://img.shields.io/badge/Powered%20by-Gemini-blue)](https://ai.google.dev/)
+[![Powered by OpenAI](https://img.shields.io/badge/Powered%20by-OpenAI-blue)](https://openai.com/)
 [![Powered by Supabase](https://img.shields.io/badge/Powered%20by-Supabase-brightgreen)](https://supabase.com/)
 
 **Stockd turns inventory data into restaurant profits.** We help restaurants improve margins by 2-5%, save 8+ hours per week, and increase revenue 10-15% during peak periods through intelligent inventory management and dynamic pricing.
@@ -16,6 +16,7 @@ This repository now also serves as the real codebase for the networking course p
 
 Assignment-focused additions in this repo:
 
+- deployable app/runtime/auth/UI/test surface transplanted from the `htmltest` repo into this canonical `Stockd` repo
 - XSS hardening and safer imported-text handling in the real frontend
 - server-enforced brute-force login protection through a Supabase Edge Function and lockout table
 - security event persistence plus a monitoring page at `Frontend/pages/security-monitor.html`
@@ -31,6 +32,7 @@ Useful course-project docs:
 - `final-submission-checklist.md`
 - `final-demo-script.md`
 - `final-report-notes.md`
+- `repo-transplant-summary.md`
 
 ### Live Rollout Status (April 22, 2026)
 
@@ -39,6 +41,7 @@ Useful course-project docs:
   - `security_events` migration applied
   - `auth-login`, `security-log-event`, and `security-analyze` deployed
 - live monitoring artifacts were regenerated from the real Stockd Supabase project
+- the htmltest deployable app surface was transplanted into this Stockd repo, while Stockd docs/workflows/live backend names were preserved
 - remaining manual step: redeploy the updated frontend through the real Stockd Vercel project so the public site exposes the guarded login flow and security monitor page
 - GitHub Actions workflows are in repo, but repository secrets still need to be configured before deploy automation can run
 - GitHub repository URL: `https://github.com/stockd-ai/Stockd`
@@ -82,7 +85,7 @@ Traditional inventory systems cost thousands per month or are too complex for da
 - Profit optimization metrics
 
 ### 🤖 AI-Powered Forecasting
-- Predicts next-day demand using Google Gemini
+- Predicts next-day demand using historical sales trends and AI-assisted analysis
 - Analyzes 90 days of historical sales data
 - Generates 7-day revenue forecasts
 - Adapts to seasonal variations and day-of-week patterns
@@ -107,7 +110,7 @@ Traditional inventory systems cost thousands per month or are too complex for da
 - Monitor inventory shrinkage
 
 ### ✨ AI Copilot
-- Natural language interface powered by Gemini
+- Natural language interface powered by a Supabase Edge Function with OpenAI-based responses
 - Ask questions like "What's my forecast for tomorrow?" or "Should I raise prices tonight?"
 - Get actionable business insights instantly
 
@@ -126,7 +129,7 @@ Traditional inventory systems cost thousands per month or are too complex for da
 - **Row Level Security (RLS)** - Multi-tenant data isolation
 
 ### AI/ML
-- **Google Gemini API** - Natural language processing and forecasting
+- **OpenAI Responses API** - Natural language Copilot and pricing insights
 - **Custom algorithms** - Time-series analysis with moving averages
 
 ### Data Processing
@@ -139,7 +142,7 @@ Traditional inventory systems cost thousands per month or are too complex for da
 
 ```
 ┌─────────────┐         ┌──────────────┐         ┌─────────────┐
-│  Frontend   │ ◄─────► │   Supabase   │ ◄─────► │   Gemini    │
+│  Frontend   │ ◄─────► │   Supabase   │ ◄─────► │   OpenAI    │
 │  (Vanilla   │         │  (PostgreSQL │         │     API     │
 │     JS)     │         │   + Realtime)│         │(Forecasting)│
 └─────────────┘         └──────────────┘         └─────────────┘
@@ -174,7 +177,7 @@ MAPE = (100% / n) × Σ|Actual - Forecast| / Actual
 
 ### Technical Skills
 - **PostgreSQL Mastery** - Window functions, CTEs, RLS policies, custom aggregates
-- **AI Integration** - JSON schema validation, prompt engineering for Gemini
+- **AI Integration** - JSON schema validation, prompt engineering, and secure tool-calling flows
 - **Real-Time Architecture** - WebSocket management, optimistic UI updates
 - **Data Visualization** - Chart selection, color theory, accessibility
 
@@ -191,7 +194,7 @@ MAPE = (100% / n) × Σ|Actual - Forecast| / Actual
 Built custom PostgreSQL functions with aggressive caching to aggregate transaction-based ledger on-demand.
 
 ### 2. Forecast Model Accuracy
-Improved from 35% MAPE to **13% MAPE** by integrating Gemini API for contextual analysis of menu item relationships.
+Improved from 35% MAPE to **13% MAPE** by combining historical demand analytics with AI-assisted restaurant context.
 
 ### 3. Toast API Emulation
 Created synthetic data generator simulating realistic order flow patterns for testing surge pricing without live POS access.
