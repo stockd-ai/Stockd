@@ -15,7 +15,7 @@ The earlier side-copy prototype is no longer the project. It was used only as a 
 | SQL injection / XSS hardening | `repo-complete` | Implemented in the real frontend code; public frontend deploy is still pending. |
 | Brute-force login protection | `backend-live / frontend-pending` | Migration and `auth-login` Edge Function are live; public frontend still needs redeploy so the live login page uses the guarded flow. |
 | Traffic monitoring / security analysis | `backend-live / frontend-pending` | Event table and Edge Functions are live; monitoring page needs frontend deploy. Live artifacts were regenerated from the real project. |
-| GitHub Actions automation | `repo-complete` | Workflows are present, but GitHub repository secrets are still missing. |
+| GitHub Actions automation | `repo-live / secrets-pending` | Workflows are present, pushed, and validated on GitHub; deploy secrets are still missing. |
 
 ## Completed From This Machine
 
@@ -138,10 +138,11 @@ Implemented files:
 
 Current status:
 
-- `repo-complete`
-- workflows exist in repo
-- GitHub repository secrets are not configured yet
-- no deploy automation can run successfully until the missing secrets are added
+- `repo-live / secrets-pending`
+- workflows exist in repo and are pushed to `origin/main`
+- CI was observed successfully on GitHub after push
+- the deploy workflow now exits successfully in skip mode when secrets are missing
+- GitHub repository secrets are still not configured for a real Vercel deploy
 
 ## Remaining Blockers
 
@@ -166,8 +167,8 @@ Blocked:
 
 Impact:
 
-- CI quick checks can run once pushed
-- deploy workflow will remain skipped or incomplete until the Vercel and Supabase secrets are configured
+- CI quick checks already run successfully on GitHub
+- deploy workflow will remain skip-only until the Vercel and Supabase secrets are configured
 
 ### 3. Browser automation limitations in this session
 

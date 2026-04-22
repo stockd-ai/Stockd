@@ -36,11 +36,11 @@ Use this as the final go/no-go checklist before submitting the course project.
 
 ## GitHub / CI
 
-- [ ] repo changes committed on `main`
-- [ ] changes pushed to `origin/main`
+- [x] repo changes committed on `main`
+- [x] changes pushed to `origin/main`
 - [ ] GitHub Actions secrets added
-- [ ] CI workflow observed on GitHub
-- [ ] deploy workflow ready or intentionally documented as manual
+- [x] CI workflow observed on GitHub
+- [x] deploy workflow ready or intentionally documented as manual
 
 ## What Still Requires Your Access
 
