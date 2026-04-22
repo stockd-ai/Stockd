@@ -4,39 +4,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stockd — Security Monitor</title>
+  <meta name="robots" content="noindex, nofollow">
+  <title>Stockd — Internal Security Snapshot</title>
   <link rel="stylesheet" href="../css/app-light.css">
 </head>
 
 <body>
 
-  <nav class="topnav">
-    <div class="topnav-brand">
-      <div class="topnav-icon">R</div>
+  <div style="border-bottom:1px solid var(--border); background:rgba(255,255,255,0.02);">
+    <div class="page-narrow" style="display:flex; align-items:center; justify-content:space-between; gap:16px; padding:18px 0;">
       <div>
-        <div class="topnav-title">Stockd</div>
-        <div class="topnav-sub">Security Monitor</div>
+        <div style="font-size:12px; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-muted); font-weight:700;">
+          Internal Report View
+        </div>
+        <div style="margin-top:4px; color:var(--text-primary); font-size:18px; font-weight:700;">
+          Security Snapshot
+        </div>
+      </div>
+      <div style="display:flex; gap:10px; align-items:center;">
+        <button class="btn btn-outline" onclick="go('dashboard')">Back to Dashboard</button>
+        <button class="btn btn-outline" onclick="signOut()">⏻</button>
       </div>
     </div>
-    <div class="topnav-links">
-      <button class="topnav-link" onclick="go('dashboard')">Dashboard</button>
-      <button class="topnav-link" onclick="go('upload')">Upload</button>
-      <button class="topnav-link" onclick="go('receive')">Receive</button>
-      <button class="topnav-link" onclick="go('count')">Count</button>
-      <button class="topnav-link active" onclick="go('security-monitor')">Security</button>
-    </div>
-    <div class="topnav-actions">
-      <button class="btn btn-outline" onclick="signOut()">⏻</button>
-    </div>
-  </nav>
+  </div>
 
   <div class="page-narrow">
     <div class="section-header" style="margin-top:12px;">
       <div>
-        <h1 style="margin:0; color:var(--text-primary);">Traffic & Security Analysis</h1>
+        <h1 style="margin:0; color:var(--text-primary);">Internal Security Snapshot</h1>
         <p style="margin:8px 0 0; color:var(--text-muted); max-width:720px;">
-          This page summarizes recent authentication failures, temporary lockouts, suspicious route probes,
-          and high-volume status code spikes using deterministic heuristic analysis.
+          This page is kept for internal validation, screenshots, and report/demo support.
+          It is no longer part of the normal Stockd product navigation.
         </p>
       </div>
       <div style="display:flex; gap:10px; align-items:center;">

@@ -32,7 +32,6 @@
     <div class="topnav-links">
       <button class="topnav-link active" onclick="go('dashboard')">Dashboard</button>
       <button class="topnav-link" onclick="go('sales-analysis')">Sales Analysis</button>
-      <button class="topnav-link" onclick="go('security-monitor')">Security</button>
       <button class="topnav-link" onclick="go('receive')">Receive</button>
       <button class="topnav-link" onclick="go('count')">Count</button>
     </div>
@@ -47,16 +46,6 @@
 
     <!-- Alert Banner (filled by JS) -->
     <div id="alert-banner"></div>
-
-    <div class="card animate-in" id="database-status-card" style="display:none; margin-bottom:24px;">
-      <div style="display:flex; align-items:flex-start; gap:12px;">
-        <div style="font-size:20px; line-height:1;">🗄️</div>
-        <div>
-          <div style="color:#FFF; font-size:15px; font-weight:700; margin-bottom:4px;">Live Database Status</div>
-          <div id="database-status-text" style="color:#AEAEB2; font-size:13px; line-height:1.5;"></div>
-        </div>
-      </div>
-    </div>
 
     <!-- KPI Cards -->
     <div class="grid-4" id="kpi-grid">
@@ -286,7 +275,6 @@
         renderKPIs(salesTrend, inventory, menuCount);
         renderRevenueChart(salesTrend);
         renderInventory(inventory);
-        renderDatabaseStatus(salesTrend, null, { pendingForecast: true });
         renderForecastTable([], { loading: true });
         renderForecastChart(salesTrend, []);
         renderCategoryChart(categories);
@@ -295,12 +283,10 @@
 
         try {
           const forecastData = await fetchForecast(today, salesRows);
-          renderDatabaseStatus(salesTrend, forecastData);
           renderForecastTable(forecastData?.menu_items || []);
           renderForecastChart(salesTrend, forecastData?.daily_revenue || []);
         } catch (forecastError) {
           console.warn('Forecast refresh failed', forecastError);
-          renderDatabaseStatus(salesTrend, null);
           renderForecastTable([], { message: 'Live forecast data is still refreshing.' });
           renderForecastChart(salesTrend, []);
         }
@@ -429,42 +415,6 @@
         .from('menu_items')
         .select('id', { count: 'exact', head: true });
       return count || 0;
-    }
-
-    function renderDatabaseStatus(salesTrend, forecastData, options = {}) {
-      const card = document.getElementById('database-status-card');
-      const textEl = document.getElementById('database-status-text');
-      if (!card || !textEl) return;
-      const pendingForecast = options.pendingForecast === true;
-
-      const latestSalesDate = forecastData?.latest_sales_date || salesTrend[salesTrend.length - 1]?.date || null;
-      const forecastStartDate = forecastData?.daily_revenue?.[0]?.date || null;
-      const forecastEndDate = forecastData?.daily_revenue?.[forecastData.daily_revenue.length - 1]?.date || null;
-
-      if (!latestSalesDate) {
-        textEl.textContent = 'No recent sales history is stored yet. Upload a sales CSV to populate Postgres tables and unlock live forecasts.';
-        card.style.display = 'block';
-        return;
-      }
-
-      const recentSalesDays = salesTrend.length;
-
-      if (pendingForecast) {
-        textEl.textContent =
-          `Live Supabase data: ${recentSalesDays} recent sales days loaded through ${formatBusinessDate(latestSalesDate)}. ` +
-          'Refreshing forecast tables now so the dashboard can paint immediately while prediction cards catch up.';
-        card.style.display = 'block';
-        return;
-      }
-
-      const forecastWindowText = forecastStartDate && forecastEndDate
-        ? `${formatBusinessDate(forecastStartDate)} to ${formatBusinessDate(forecastEndDate)}`
-        : 'No persisted forecast rows yet';
-
-      textEl.textContent =
-        `Live Supabase data: ${recentSalesDays} recent sales days loaded through ${formatBusinessDate(latestSalesDate)}. ` +
-        `Forecast tables were refreshed for ${forecastWindowText}. Inventory receives and counts persist to Postgres and appear after refresh.`;
-      card.style.display = 'block';
     }
 
     // ─── Renderers ───────────────────────────
