@@ -1,0 +1,277 @@
+{
+  "generatedAt": "2026-04-22T06:57:24.813Z",
+  "totalEvents": 15,
+  "severityCounts": {
+    "info": 12,
+    "warning": 2,
+    "critical": 1
+  },
+  "eventTypeCounts": {
+    "auth.login_failed": 4,
+    "auth.login_locked": 1,
+    "auth.login_succeeded": 7,
+    "custom.monitor_test": 3
+  },
+  "statusCounts": {
+    "200": 10,
+    "401": 4,
+    "429": 1
+  },
+  "topIpAddresses": [
+    {
+      "ipAddress": "131.96.42.157",
+      "score": 19,
+      "events": 15
+    }
+  ],
+  "flaggedActivities": [
+    {
+      "type": "repeated_failed_logins",
+      "severity": "warning",
+      "summary": "codex-lockout-1776840696226@example.com had 4 failed login attempts from 131.96.42.157.",
+      "evidence": {
+        "email": "codex-lockout-1776840696226@example.com",
+        "ipAddress": "131.96.42.157",
+        "attempts": 4,
+        "firstSeen": "2026-04-22T06:51:38.810Z",
+        "lastSeen": "2026-04-22T06:51:40.381Z"
+      }
+    },
+    {
+      "type": "lockout_triggered",
+      "severity": "critical",
+      "summary": "Temporary login lockout triggered for codex-lockout-1776840696226@example.com from 131.96.42.157.",
+      "evidence": {
+        "email": "codex-lockout-1776840696226@example.com",
+        "ipAddress": "131.96.42.157",
+        "lockedUntil": "2026-04-22T06:56:40.568Z",
+        "retryAfterSeconds": 300
+      }
+    }
+  ],
+  "recentEvents": [
+    {
+      "eventType": "auth.login_succeeded",
+      "severity": "info",
+      "actorEmail": "monitor-verify-1776841023824@example.com",
+      "actorUserId": "c531020d-208f-403f-93db-a1063e68775a",
+      "ipAddress": "131.96.42.157",
+      "route": "/login.html",
+      "statusCode": 200,
+      "userAgent": "local-debug-script",
+      "details": {
+        "source": "auth-login"
+      },
+      "createdAt": "2026-04-22T06:57:05.463Z"
+    },
+    {
+      "eventType": "custom.monitor_test",
+      "severity": "info",
+      "actorEmail": "monitor-verify-1776840934705@example.com",
+      "actorUserId": "3dc1b24b-1cc3-4a93-a607-f72eaa151075",
+      "ipAddress": "131.96.42.157",
+      "route": "/Frontend/pages/security-monitor.html",
+      "statusCode": 200,
+      "userAgent": "node",
+      "details": {
+        "source": "local-debug"
+      },
+      "createdAt": "2026-04-22T06:55:36.618Z"
+    },
+    {
+      "eventType": "auth.login_succeeded",
+      "severity": "info",
+      "actorEmail": "monitor-verify-1776840934705@example.com",
+      "actorUserId": "3dc1b24b-1cc3-4a93-a607-f72eaa151075",
+      "ipAddress": "131.96.42.157",
+      "route": "/login.html",
+      "statusCode": 200,
+      "userAgent": "local-debug-script",
+      "details": {
+        "source": "auth-login"
+      },
+      "createdAt": "2026-04-22T06:55:36.264Z"
+    },
+    {
+      "eventType": "custom.monitor_test",
+      "severity": "info",
+      "actorEmail": "monitor-verify-1776840899753@example.com",
+      "actorUserId": "56088d30-5392-4260-ac27-988468e03c72",
+      "ipAddress": "131.96.42.157",
+      "route": "/Frontend/pages/security-monitor.html",
+      "statusCode": 200,
+      "userAgent": "node",
+      "details": {
+        "source": "local-debug"
+      },
+      "createdAt": "2026-04-22T06:55:01.640Z"
+    },
+    {
+      "eventType": "auth.login_succeeded",
+      "severity": "info",
+      "actorEmail": "monitor-verify-1776840899753@example.com",
+      "actorUserId": "56088d30-5392-4260-ac27-988468e03c72",
+      "ipAddress": "131.96.42.157",
+      "route": "/login.html",
+      "statusCode": 200,
+      "userAgent": "local-debug-script",
+      "details": {
+        "source": "auth-login"
+      },
+      "createdAt": "2026-04-22T06:55:01.336Z"
+    },
+    {
+      "eventType": "auth.login_succeeded",
+      "severity": "info",
+      "actorEmail": "monitor-verify-1776840849401@example.com",
+      "actorUserId": "42fdaa5c-b9b7-4d8e-8bd8-0c0f46fb74d3",
+      "ipAddress": "131.96.42.157",
+      "route": "/login.html",
+      "statusCode": 200,
+      "userAgent": "local-debug-script",
+      "details": {
+        "source": "auth-login"
+      },
+      "createdAt": "2026-04-22T06:54:10.705Z"
+    },
+    {
+      "eventType": "custom.monitor_test",
+      "severity": "info",
+      "actorEmail": "monitor-verify-1776840833749@example.com",
+      "actorUserId": "ae0c71c9-5585-4d8c-b622-5323a038fb16",
+      "ipAddress": "131.96.42.157",
+      "route": "/Frontend/pages/security-monitor.html",
+      "statusCode": 200,
+      "userAgent": "node",
+      "details": {
+        "source": "local-debug"
+      },
+      "createdAt": "2026-04-22T06:53:55.560Z"
+    },
+    {
+      "eventType": "auth.login_succeeded",
+      "severity": "info",
+      "actorEmail": "monitor-verify-1776840833749@example.com",
+      "actorUserId": "ae0c71c9-5585-4d8c-b622-5323a038fb16",
+      "ipAddress": "131.96.42.157",
+      "route": "/login.html",
+      "statusCode": 200,
+      "userAgent": "local-debug-script",
+      "details": {
+        "source": "auth-login"
+      },
+      "createdAt": "2026-04-22T06:53:55.138Z"
+    },
+    {
+      "eventType": "auth.login_succeeded",
+      "severity": "info",
+      "actorEmail": "monitor-verify-1776840806048@example.com",
+      "actorUserId": "5e38cbd0-040c-4f4f-8f35-4c14fb7db9ab",
+      "ipAddress": "131.96.42.157",
+      "route": "/login.html",
+      "statusCode": 200,
+      "userAgent": "local-debug-script",
+      "details": {
+        "source": "auth-login"
+      },
+      "createdAt": "2026-04-22T06:53:27.629Z"
+    },
+    {
+      "eventType": "auth.login_succeeded",
+      "severity": "info",
+      "actorEmail": "codex-login-1776840696226@example.com",
+      "actorUserId": "6672261e-8c70-4bc3-b381-7bef529fcfce",
+      "ipAddress": "131.96.42.157",
+      "route": "/login.html",
+      "statusCode": 200,
+      "userAgent": "node",
+      "details": {
+        "source": "auth-login"
+      },
+      "createdAt": "2026-04-22T06:51:41.384Z"
+    },
+    {
+      "eventType": "auth.login_locked",
+      "severity": "critical",
+      "actorEmail": "codex-lockout-1776840696226@example.com",
+      "actorUserId": "",
+      "ipAddress": "131.96.42.157",
+      "route": "/login.html",
+      "statusCode": 429,
+      "userAgent": "node",
+      "details": {
+        "source": "auth-login",
+        "lockedUntil": "2026-04-22T06:56:40.568Z",
+        "failedAttempts": 5,
+        "retryAfterSeconds": 300
+      },
+      "createdAt": "2026-04-22T06:51:40.848Z"
+    },
+    {
+      "eventType": "auth.login_failed",
+      "severity": "warning",
+      "actorEmail": "codex-lockout-1776840696226@example.com",
+      "actorUserId": "",
+      "ipAddress": "131.96.42.157",
+      "route": "/login.html",
+      "statusCode": 401,
+      "userAgent": "node",
+      "details": {
+        "source": "auth-login",
+        "failedAttempts": 4,
+        "remainingAttempts": 1
+      },
+      "createdAt": "2026-04-22T06:51:40.381Z"
+    },
+    {
+      "eventType": "auth.login_failed",
+      "severity": "warning",
+      "actorEmail": "codex-lockout-1776840696226@example.com",
+      "actorUserId": "",
+      "ipAddress": "131.96.42.157",
+      "route": "/login.html",
+      "statusCode": 401,
+      "userAgent": "node",
+      "details": {
+        "source": "auth-login",
+        "failedAttempts": 3,
+        "remainingAttempts": 2
+      },
+      "createdAt": "2026-04-22T06:51:39.844Z"
+    },
+    {
+      "eventType": "auth.login_failed",
+      "severity": "info",
+      "actorEmail": "codex-lockout-1776840696226@example.com",
+      "actorUserId": "",
+      "ipAddress": "131.96.42.157",
+      "route": "/login.html",
+      "statusCode": 401,
+      "userAgent": "node",
+      "details": {
+        "source": "auth-login",
+        "failedAttempts": 2,
+        "remainingAttempts": 3
+      },
+      "createdAt": "2026-04-22T06:51:39.361Z"
+    },
+    {
+      "eventType": "auth.login_failed",
+      "severity": "info",
+      "actorEmail": "codex-lockout-1776840696226@example.com",
+      "actorUserId": "",
+      "ipAddress": "131.96.42.157",
+      "route": "/login.html",
+      "statusCode": 401,
+      "userAgent": "node",
+      "details": {
+        "source": "auth-login",
+        "failedAttempts": 1,
+        "remainingAttempts": 4
+      },
+      "createdAt": "2026-04-22T06:51:38.810Z"
+    }
+  ],
+  "aiStyleSummary": "Detected 2 suspicious patterns across 15 monitored events. Primary risk signal: repeated failed logins with escalating lockout behavior. Secondary signal: no probe-route burst crossed the alert threshold. Highest weighted source IP: 131.96.42.157 (15 events).",
+  "analysisWindowHours": 24
+}

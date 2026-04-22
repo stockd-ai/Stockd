@@ -23,6 +23,7 @@
       <button class="topnav-link active" onclick="go('upload')">Upload</button>
       <button class="topnav-link" onclick="go('receive')">Receive</button>
       <button class="topnav-link" onclick="go('count')">Count</button>
+      <button class="topnav-link" onclick="go('security-monitor')">Security</button>
     </div>
     <div class="topnav-actions">
       <button class="btn btn-outline" onclick="signOut()">⏻</button>
@@ -86,9 +87,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="../js/env.js"></script>
+  <script src="../js/security-utils.js"></script>
   <script src="../js/supabase-client.js"></script>
   <script src="../js/csv-parser.js"></script>
   <script>
+    const stockdSecurity = window.StockdSecurity || {};
+    const escapeHtml = stockdSecurity.escapeHtml || (value => String(value ?? ''));
+
     function go(page) { window.location.href = page + '.html'; }
 
     let parsedData = null;
@@ -119,10 +124,10 @@
         document.getElementById('parse-preview').style.display = 'block';
         document.getElementById('parse-preview').innerHTML = `
           <div class="parse-stats">
-            <div class="stat-row"><span class="label">Rows</span><span class="value">${s.aggregatedRows}</span></div>
-            <div class="stat-row"><span class="label">Date(s)</span><span class="value">${s.startDate}${s.startDate !== s.endDate ? ' → ' + s.endDate : ''}</span></div>
-            <div class="stat-row"><span class="label">Items</span><span class="value">${s.uniqueItems} menu items</span></div>
-            <div class="stat-row"><span class="label">Sales</span><span class="value">$${s.totalSales.toLocaleString(undefined, { minimumFractionDigits: 2 })}</span></div>
+            <div class="stat-row"><span class="label">Rows</span><span class="value">${escapeHtml(s.aggregatedRows)}</span></div>
+            <div class="stat-row"><span class="label">Date(s)</span><span class="value">${escapeHtml(s.startDate)}${s.startDate !== s.endDate ? ' → ' + escapeHtml(s.endDate) : ''}</span></div>
+            <div class="stat-row"><span class="label">Items</span><span class="value">${escapeHtml(s.uniqueItems)} menu items</span></div>
+            <div class="stat-row"><span class="label">Sales</span><span class="value">$${escapeHtml(s.totalSales.toLocaleString(undefined, { minimumFractionDigits: 2 }))}</span></div>
           </div>
         `;
 
@@ -179,12 +184,18 @@
 
       const sorted = Object.values(byDate).sort((a, b) => b.date.localeCompare(a.date)).slice(0, 10);
 
-      document.getElementById('recent-tbody').innerHTML = sorted.map(d => `
+      const tbody = document.getElementById('recent-tbody');
+      if (!sorted.length) {
+        tbody.innerHTML = '<tr><td colspan="4" class="mono" style="text-align:center;color:var(--text-muted);padding:20px;">No uploaded sales days yet.</td></tr>';
+        return;
+      }
+
+      tbody.innerHTML = sorted.map(d => `
         <tr>
-          <td class="mono" style="color:var(--text-primary)">${d.date}</td>
-          <td class="mono">${Math.round(d.qty)}</td>
-          <td class="mono" style="color:var(--accent)">$${Math.round(d.sales).toLocaleString()}</td>
-          <td class="mono">${d.items.size}</td>
+          <td class="mono" style="color:var(--text-primary)">${escapeHtml(d.date)}</td>
+          <td class="mono">${escapeHtml(Math.round(d.qty))}</td>
+          <td class="mono" style="color:var(--accent)">$${escapeHtml(Math.round(d.sales).toLocaleString())}</td>
+          <td class="mono">${escapeHtml(d.items.size)}</td>
         </tr>
       `).join('');
     }

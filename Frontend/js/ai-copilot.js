@@ -6,6 +6,18 @@
 (function () {
   'use strict';
 
+  const stockdSecurity = window.StockdSecurity || {};
+  const formatRichTextSafe = stockdSecurity.formatRichTextSafe || function fallbackFormatter(text) {
+    const safeText = String(text || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;')
+      .replace(/\n/g, '<br>');
+    return `<p>${safeText}</p>`;
+  };
+
   // ─── State ───────────────────────────────────────────────────
   let isOpen = false;
   let isLoading = false;
@@ -174,8 +186,7 @@
         </div>
       `;
     } else {
-      // Parse markdown-like formatting
-      const formattedText = formatMessage(text);
+      const formattedText = formatRichTextSafe(text);
       msg.innerHTML = `<div class="ai-message-content">${formattedText}</div>`;
     }
 
@@ -188,21 +199,6 @@
   function removeMessage(id) {
     const msg = document.getElementById(id);
     if (msg) msg.remove();
-  }
-
-  function formatMessage(text) {
-    if (!text) return '';
-
-    // Convert markdown-like formatting
-    return text
-      // Bold
-      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-      // Bullet points
-      .replace(/^[•\-\*]\s+(.*)$/gm, '<li>$1</li>')
-      // Wrap consecutive li in ul
-      .replace(/(<li>.*<\/li>\n?)+/g, '<ul>$&</ul>')
-      // Line breaks
-      .replace(/\n/g, '<br>');
   }
 
   // ─── Global Functions ────────────────────────────────────────

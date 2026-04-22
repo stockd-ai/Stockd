@@ -5,8 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --runInBand --verbose",
+    "test:security": "jest tests/security-utils.test.js --runInBand --verbose",
     "test:watch": "jest --runInBand --watch",
+    "check:client-js": "node --check Frontend/js/security-utils.js && node --check Frontend/js/csv-parser.js && node --check Frontend/js/supabase-client.js && node --check Frontend/js/ai-copilot.js",
+    "ci:quick": "npm run check:client-js && npm run test:security && npm run security:artifacts",
     "config": "node scripts/generate-config.js",
+    "security:artifacts": "node scripts/generate-security-artifacts.mjs",
+    "security:export": "node scripts/export-security-events.mjs",
     "start": "npx serve Frontend",
     "start:backend": "node Backend/server.js",
     "start:kiosk": "npx serve kiosk -l 3000"

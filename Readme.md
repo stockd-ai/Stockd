@@ -10,6 +10,39 @@
 
 ---
 
+## Course Project Enhancements
+
+This repository now also serves as the real codebase for the networking course project, **"Secure, Optimize, and Monitor Your Website."**
+
+Assignment-focused additions in this repo:
+
+- XSS hardening and safer imported-text handling in the real frontend
+- server-enforced brute-force login protection through a Supabase Edge Function and lockout table
+- security event persistence plus a monitoring page at `Frontend/pages/security-monitor.html`
+- deterministic security-analysis artifacts in `logs/`
+- GitHub Actions CI and deploy workflows in `.github/workflows/`
+
+Useful course-project docs:
+
+- `docs/security-hardening.md`
+- `assignment-integration-status.md`
+- `assignment-deploy-checklist.md`
+- `assignment-requirements-mapping.md`
+- `final-submission-checklist.md`
+- `final-demo-script.md`
+
+### Live Rollout Status (April 22, 2026)
+
+- Supabase rollout completed for the assignment enhancements:
+  - `auth_login_guards` migration applied
+  - `security_events` migration applied
+  - `auth-login`, `security-log-event`, and `security-analyze` deployed
+- live monitoring artifacts were regenerated from the real Stockd Supabase project
+- remaining manual step: redeploy the updated frontend through the real Stockd Vercel project so the public site exposes the guarded login flow and security monitor page
+- GitHub Actions workflows are in repo, but repository secrets still need to be configured before deploy automation can run
+
+---
+
 ## 🚀 The Problem
 
 Every year, restaurants in the United States waste **22-33 billion pounds of food** and lose **$162 billion annually** to food waste. The average restaurant throws away **4-10% of purchases** before it reaches a customer's plate.

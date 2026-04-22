@@ -137,6 +137,7 @@
       <button class="topnav-link" onclick="go('sales-analysis')">Sales Analysis</button>
       <button class="topnav-link active" onclick="go('receive')">Receive</button>
       <button class="topnav-link" onclick="go('count')">Count</button>
+      <button class="topnav-link" onclick="go('security-monitor')">Security</button>
     </div>
     <div class="topnav-actions">
       <button class="btn btn-primary" onclick="toggleAIPanel()">✨ Copilot</button>
@@ -276,6 +277,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="../js/env.js"></script>
+  <script src="../js/security-utils.js"></script>
   <script src="../js/config.js"></script>
   <script src="../js/supabase-client.js"></script>
   <script src="../js/gemini-client.js"></script>
@@ -286,27 +288,41 @@
   <script type="module">
     import { getInvoiceMatches } from '../js/invoice-matcher.js';
 
+    const stockdSecurity = window.StockdSecurity || {};
+    const escapeHtml = stockdSecurity.escapeHtml || (value => String(value ?? ''));
+    const sanitizeUserNote = stockdSecurity.sanitizeUserNote || (value => String(value || '').trim());
+
+    function setInvoiceStatus(message, type) {
+      const statusEl = document.getElementById('invoice-status');
+      const colors = {
+        error: 'var(--red)',
+        info: 'var(--blue)',
+        success: 'var(--green)'
+      };
+      statusEl.textContent = message || '';
+      statusEl.style.color = colors[type] || 'var(--text-muted)';
+    }
+
     window.analyzeInvoice = async function () {
       const fileInput = document.getElementById('invoice-upload');
       const file = fileInput.files[0];
-      const statusEl = document.getElementById('invoice-status');
 
       if (!file) {
-        statusEl.innerHTML = '<span style="color:var(--red)">Please select a PDF file first</span>';
+        setInvoiceStatus('Please select a PDF file first', 'error');
         return;
       }
 
       try {
-        statusEl.innerHTML = '<span style="color:var(--blue)">Analyzing PDF... this may take a moment</span>';
+        setInvoiceStatus('Analyzing PDF... this may take a moment', 'info');
         document.getElementById('analyze-btn').disabled = true;
 
         const { matches, unmatched } = await getInvoiceMatches(file, sb);
 
         renderMatches(matches, unmatched);
-        statusEl.innerHTML = '';
+        setInvoiceStatus('', 'info');
       } catch (err) {
         console.error(err);
-        statusEl.innerHTML = `<span style="color:var(--red)">Error: ${err.message}</span>`;
+        setInvoiceStatus(`Error: ${err.message}`, 'error');
       } finally {
         document.getElementById('analyze-btn').disabled = false;
       }
@@ -333,11 +349,11 @@
       tbody.innerHTML = matches.map((m, idx) => `
         <tr>
           <td><input type="checkbox" class="match-checkbox" data-idx="${idx}" checked></td>
-          <td style="font-weight:500;">${m.ingredientName}</td>
-          <td class="mono" style="color:var(--green)">+${m.qtyShipped}</td>
-          <td class="mono" style="font-size:12px;">${m.ingredientUnit}</td>
+          <td style="font-weight:500;">${escapeHtml(m.ingredientName)}</td>
+          <td class="mono" style="color:var(--green)">+${escapeHtml(m.qtyShipped)}</td>
+          <td class="mono" style="font-size:12px;">${escapeHtml(m.ingredientUnit)}</td>
           <td style="font-size:11px; color:var(--text-muted)">
-            Ordered: ${m.qtyOrdered}<br>Product #: ${m.productNumber}
+            Ordered: ${escapeHtml(m.qtyOrdered)}<br>Product #: ${escapeHtml(m.productNumber)}
           </td>
         </tr>
       `).join('');
@@ -369,7 +385,7 @@
           const { error } = await sb.rpc('receive_inventory', {
             p_ingredient_id: item.ingredientId,
             p_qty: item.qtyShipped,
-            p_note: `Invoice Upload: ${item.productNumber}`
+            p_note: sanitizeUserNote(`Invoice Upload: ${item.productNumber}`)
           });
 
           if (error) throw error;
@@ -394,6 +410,11 @@
   </script>
 
   <script>
+    const stockdSecurity = window.StockdSecurity || {};
+    const escapeHtml = stockdSecurity.escapeHtml || (value => String(value ?? ''));
+    const sanitizeUserNote = stockdSecurity.sanitizeUserNote || (value => String(value || '').trim());
+    const setSelectOptions = stockdSecurity.setSelectOptions;
+
     function go(page) { window.location.href = page + '.html'; }
 
     let ingredients = [];
@@ -411,8 +432,16 @@
       ingredients = data || [];
 
       const sel = document.getElementById('ingredient-select');
-      sel.innerHTML = '<option value="">— Select ingredient —</option>' +
-        ingredients.map(i => `<option value="${i.id}">${i.name} (${i.unit})</option>`).join('');
+      if (setSelectOptions) {
+        setSelectOptions(sel, ingredients, {
+          placeholder: '— Select ingredient —',
+          getValue: item => item.id,
+          getLabel: item => `${item.name} (${item.unit})`
+        });
+      } else {
+        sel.innerHTML = '<option value="">— Select ingredient —</option>' +
+          ingredients.map(i => `<option value="${i.id}">${i.name} (${i.unit})</option>`).join('');
+      }
 
       sel.addEventListener('change', async () => {
         const id = sel.value;
@@ -428,7 +457,8 @@
     async function submitReceive() {
       const id = document.getElementById('ingredient-select').value;
       const qty = parseFloat(document.getElementById('qty-input').value);
-      const note = document.getElementById('note-input').value || null;
+      const noteValue = sanitizeUserNote(document.getElementById('note-input').value || '');
+      const note = noteValue || null;
 
       if (!id) { setStatus('Select an ingredient', 'error'); return; }
       if (!qty || qty <= 0) { setStatus('Enter a valid quantity', 'error'); return; }
@@ -540,15 +570,19 @@
 
         return `
         <tr>
-          <td class="date-cell">${dateStr}</td>
-          <td class="ingredient-cell">${name}</td>
-          <td class="qty-cell">+${t.qty_delta} ${unit}</td>
-          <td class="note-cell">${note}</td>
+          <td class="date-cell">${escapeHtml(dateStr)}</td>
+          <td class="ingredient-cell">${escapeHtml(name)}</td>
+          <td class="qty-cell">+${escapeHtml(t.qty_delta)} ${escapeHtml(unit)}</td>
+          <td class="note-cell">${escapeHtml(note)}</td>
           <td class="action-cell">
-            <button class="action-btn" onclick="showReceiptOptions('${t.id}')">⋮</button>
+            <button class="action-btn" data-receipt-id="${escapeHtml(t.id)}">⋮</button>
           </td>
         </tr>`;
       }).join('');
+
+      tbody.querySelectorAll('.action-btn[data-receipt-id]').forEach(button => {
+        button.addEventListener('click', () => showReceiptOptions(button.dataset.receiptId));
+      });
     }
 
     function showReceiptOptions(receiptId) {

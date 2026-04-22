@@ -3,6 +3,48 @@
 // Load AFTER PapaParse CDN script
 // ═══════════════════════════════════════════════
 
+const stockdSecurity = (() => {
+  if (typeof window !== 'undefined' && window.StockdSecurity) {
+    return window.StockdSecurity;
+  }
+  if (typeof require === 'function') {
+    try {
+      return require('./security-utils.js');
+    } catch (err) {
+      // Ignore in browser builds.
+    }
+  }
+  return {};
+})();
+
+const sanitizeCsvCell = stockdSecurity.sanitizeCsvCell || (value => String(value || '').trim());
+
+function parseDecimal(value) {
+  const parsed = parseFloat(value);
+  return Number.isFinite(parsed) ? parsed : 0;
+}
+
+function normalizeToastRecord(record) {
+  const rawDate = sanitizeCsvCell(record['Order Date'], 40).split(' ')[0];
+  let businessDate = null;
+
+  if (rawDate) {
+    const [mm, dd, yyyy] = rawDate.split('/');
+    if (mm && dd && yyyy) {
+      businessDate = `${yyyy}-${mm.padStart(2, '0')}-${dd.padStart(2, '0')}`;
+    }
+  }
+
+  return {
+    business_date: businessDate,
+    menu_item_name: sanitizeCsvCell(record['Menu Item'], 120),
+    category: sanitizeCsvCell(record['Sales Category'], 80),
+    qty: parseDecimal(record['Qty']),
+    net_sales: parseDecimal(record['Net Price']),
+    is_void: sanitizeCsvCell(record['Void?'], 16).toLowerCase() === 'true'
+  };
+}
+
 /**
  * Parse a Toast ItemSelectionDetails CSV and return
  * rows aggregated by (business_date, menu_item) ready
@@ -18,38 +60,28 @@ function parseToastCSV(file) {
       skipEmptyLines: true,
       complete(results) {
         const raw = results.data;
+        const normalized = raw.map(normalizeToastRecord);
+        const nonVoid = normalized.filter(r => !r.is_void);
 
         // Filter voids
-        const valid = raw.filter(r => {
-          const v = (r['Void?'] || '').toString().trim().toLowerCase();
-          return v === 'false' || v === '';
-        });
+        const valid = nonVoid.filter(r => r.business_date && r.menu_item_name);
 
         // Group by (date, menu_item)
         const grouped = {};
         valid.forEach(r => {
-          const rawDate = (r['Order Date'] || '').trim().split(' ')[0];
-          if (!rawDate) return;
-          const [mm, dd, yyyy] = rawDate.split('/');
-          if (!mm || !dd || !yyyy) return;
-          const bizDate = `${yyyy}-${mm.padStart(2,'0')}-${dd.padStart(2,'0')}`;
-
-          const item = (r['Menu Item'] || '').trim();
-          if (!item) return;
-
-          const key = `${bizDate}|${item}`;
+          const key = `${r.business_date}|${r.menu_item_name}`;
           if (!grouped[key]) {
             grouped[key] = {
-              business_date: bizDate,
-              menu_item_name: item,
-              category: (r['Sales Category'] || '').trim(),
+              business_date: r.business_date,
+              menu_item_name: r.menu_item_name,
+              category: r.category,
               qty: 0,
               net_sales: 0,
               source: 'toast'
             };
           }
-          grouped[key].qty += parseFloat(r['Qty'] || '0') || 0;
-          grouped[key].net_sales += parseFloat(r['Net Price'] || '0') || 0;
+          grouped[key].qty += r.qty;
+          grouped[key].net_sales += r.net_sales;
         });
 
         const rows = Object.values(grouped).map(r => ({
@@ -65,7 +97,7 @@ function parseToastCSV(file) {
           rows,
           stats: {
             rawRows: raw.length,
-            voidsFiltered: raw.length - valid.length,
+            voidsFiltered: raw.length - nonVoid.length,
             aggregatedRows: rows.length,
             uniqueItems: items.length,
             uniqueCategories: [...new Set(rows.map(r => r.category))].length,
@@ -111,4 +143,13 @@ async function ingestBatched(rows, onProgress) {
   }
 
   return { totalProcessed, totalItemsCreated };
+}
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = {
+    chunk,
+    ingestBatched,
+    normalizeToastRecord,
+    parseToastCSV
+  };
 }

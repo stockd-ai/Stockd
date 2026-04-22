@@ -83,9 +83,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="../js/env.js"></script>
+  <script src="../js/security-utils.js"></script>
   <script src="../js/supabase-client.js"></script>
   <script src="../js/csv-parser.js"></script>
   <script>
+    const stockdSecurity = window.StockdSecurity || {};
+    const escapeHtml = stockdSecurity.escapeHtml || (value => String(value ?? ''));
+
     // ─── State ───────────────────────────────
     let parsedData = null;
 
@@ -136,14 +140,14 @@
       el.style.display = 'block';
       el.innerHTML = `
         <div class="parse-stats">
-          <div class="stat-row"><span class="label">Raw CSV rows</span><span class="value">${s.rawRows.toLocaleString()}</span></div>
-          <div class="stat-row"><span class="label">Voids filtered</span><span class="value">${s.voidsFiltered}</span></div>
-          <div class="stat-row"><span class="label">Aggregated rows</span><span class="value">${s.aggregatedRows.toLocaleString()}</span></div>
-          <div class="stat-row"><span class="label">Unique menu items</span><span class="value">${s.uniqueItems}</span></div>
-          <div class="stat-row"><span class="label">Categories</span><span class="value">${s.uniqueCategories}</span></div>
-          <div class="stat-row"><span class="label">Date range</span><span class="value">${s.startDate} → ${s.endDate} (${s.totalDays} days)</span></div>
-          <div class="stat-row"><span class="label">Total units sold</span><span class="value">${Math.round(s.totalQty).toLocaleString()}</span></div>
-          <div class="stat-row"><span class="label">Total net sales</span><span class="value">$${s.totalSales.toLocaleString(undefined, { minimumFractionDigits: 2 })}</span></div>
+          <div class="stat-row"><span class="label">Raw CSV rows</span><span class="value">${escapeHtml(s.rawRows.toLocaleString())}</span></div>
+          <div class="stat-row"><span class="label">Voids filtered</span><span class="value">${escapeHtml(s.voidsFiltered)}</span></div>
+          <div class="stat-row"><span class="label">Aggregated rows</span><span class="value">${escapeHtml(s.aggregatedRows.toLocaleString())}</span></div>
+          <div class="stat-row"><span class="label">Unique menu items</span><span class="value">${escapeHtml(s.uniqueItems)}</span></div>
+          <div class="stat-row"><span class="label">Categories</span><span class="value">${escapeHtml(s.uniqueCategories)}</span></div>
+          <div class="stat-row"><span class="label">Date range</span><span class="value">${escapeHtml(s.startDate)} → ${escapeHtml(s.endDate)} (${escapeHtml(s.totalDays)} days)</span></div>
+          <div class="stat-row"><span class="label">Total units sold</span><span class="value">${escapeHtml(Math.round(s.totalQty).toLocaleString())}</span></div>
+          <div class="stat-row"><span class="label">Total net sales</span><span class="value">$${escapeHtml(s.totalSales.toLocaleString(undefined, { minimumFractionDigits: 2 }))}</span></div>
         </div>
       `;
 

@@ -34,6 +34,7 @@
       <button class="topnav-link" onclick="go('sales-analysis')">Sales Analysis</button>
       <button class="topnav-link" onclick="go('receive')">Receive</button>
       <button class="topnav-link" onclick="go('count')">Count</button>
+      <button class="topnav-link" onclick="go('security-monitor')">Security</button>
     </div>
     <div class="topnav-actions">
       <button class="btn btn-primary" onclick="toggleAIPanel()">✨ Copilot</button>
@@ -231,12 +232,16 @@
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="../js/env.js"></script>
+  <script src="../js/security-utils.js"></script>
   <script src="../js/supabase-client.js"></script>
   <script src="../js/gemini-client.js"></script>
   <script src="../js/config.js"></script>
   <script src="../js/ai-copilot.js"></script>
   <script src="../js/animated-counter.js"></script>
   <script>
+    const stockdSecurity = window.StockdSecurity || {};
+    const escapeHtml = stockdSecurity.escapeHtml || (value => String(value ?? ''));
+
     // ─── Navigation ──────────────────────────
     function go(page) { window.location.href = page + '.html'; }
 
@@ -479,12 +484,13 @@
 
       // Alert banner
       if (alerts > 0) {
+        const firstCriticalName = inventory.filter(i => i.status === 'critical')[0]?.name || 'Items';
         document.getElementById('alert-banner').innerHTML = `
           <div class="alert-banner critical">
             <div class="alert-icon" style="animation:pulse 1.5s infinite;">⚠️</div>
             <div class="alert-body">
               <div class="alert-title">${critical} Critical · ${reorder} Reorder Soon</div>
-              <div class="alert-text">${inventory.filter(i => i.status === 'critical')[0]?.name || 'Items'} need immediate attention</div>
+              <div class="alert-text">${escapeHtml(firstCriticalName)} need immediate attention</div>
             </div>
             <button class="btn btn-danger" onclick="document.getElementById('inventory-table').scrollIntoView({behavior:'smooth'})">View</button>
           </div>
@@ -526,26 +532,26 @@
         const suggested = Math.max(0, par - i.qty_on_hand);
 
         const suggElem = suggested > 0
-          ? `<span style="color:#30D158">+${num(suggested)} ${i.unit}</span>`
+          ? `<span style="color:#30D158">+${escapeHtml(num(suggested))} ${escapeHtml(i.unit || '')}</span>`
           : `<span style="color:#30D158;opacity:0.5;">OK</span>`;
 
         return `
           <tr>
             <td>
-              <div style="color:#FFFFFF;font-weight:500;">${i.name}</div>
-              <div style="color:#8E8E93;font-size:12px;">${i.unit || ''}</div>
+              <div style="color:#FFFFFF;font-weight:500;">${escapeHtml(i.name)}</div>
+              <div style="color:#8E8E93;font-size:12px;">${escapeHtml(i.unit || '')}</div>
             </td>
-            <td class="mono" style="color:${qtyColor}">${num(i.qty_on_hand)}</td>
-            <td class="mono" style="color:#8E8E93">${num(par)}</td>
+            <td class="mono" style="color:${qtyColor}">${escapeHtml(num(i.qty_on_hand))}</td>
+            <td class="mono" style="color:#8E8E93">${escapeHtml(num(par))}</td>
             <td>
-              <span class="mono" style="color:${dosColor};font-size:13px;">${dos}</span>
+              <span class="mono" style="color:${dosColor};font-size:13px;">${escapeHtml(dos)}</span>
               <div class="mini-bar-dark">
                 <div class="mini-bar-fill" style="width:${Math.min(100, (i.days_of_supply || 0) / 14 * 100)}%;background:${dosColor};height:100%;"></div>
               </div>
             </td>
-            <td class="mono" style="color:#8E8E93">${num(sevenDayNeed)}</td>
+            <td class="mono" style="color:#8E8E93">${escapeHtml(num(sevenDayNeed))}</td>
             <td class="mono">${suggElem}</td>
-            <td><span class="badge ${badgeClass}">${status.replace('_', ' ')}</span></td>
+            <td><span class="badge ${badgeClass}">${escapeHtml(status.replace('_', ' '))}</span></td>
           </tr>
         `;
       }).join('');
@@ -576,13 +582,13 @@
       tbody.innerHTML = items.slice(0, 100).map(item => `
             <tr>
                 <td>
-                    <div style="color:#FFFFFF;font-weight:500;">${item.name}</div>
+                    <div style="color:#FFFFFF;font-weight:500;">${escapeHtml(item.name)}</div>
                 </td>
-                <td><span class="badge" style="background:#2C2C2E;color:#AEAEB2;border:none;">${item.category}</span></td>
-                <td style="color:#8E8E93;">$${item.price}</td>
-                <td style="color:#FFFFFF;">${Math.round(item.avg_daily_sales || 0)}</td>
-                <td style="color:#30D158;font-weight:600;">${Math.round(item.forecast_tomorrow || 0)}</td>
-                <td style="color:#8E8E93;">$${Math.round((item.forecast_tomorrow || 0) * item.price)}</td>
+                <td><span class="badge" style="background:#2C2C2E;color:#AEAEB2;border:none;">${escapeHtml(item.category || 'Other')}</span></td>
+                <td style="color:#8E8E93;">$${escapeHtml(item.price)}</td>
+                <td style="color:#FFFFFF;">${escapeHtml(Math.round(item.avg_daily_sales || 0))}</td>
+                <td style="color:#30D158;font-weight:600;">${escapeHtml(Math.round(item.forecast_tomorrow || 0))}</td>
+                <td style="color:#8E8E93;">$${escapeHtml(Math.round((item.forecast_tomorrow || 0) * item.price))}</td>
             </tr>
         `).join('');
     }
@@ -782,10 +788,10 @@
                   <div style="color:#FF453A; font-size:20px; line-height:1.4;">•</div>
                   <div>
                       <div style="color:#FFF; font-size:16px; font-weight:500; line-height:1.4;">
-                          ${item.name} is critically low.
+                          ${escapeHtml(item.name)} is critically low.
                       </div>
                       <div style="color:#AEAEB2; font-size:15px; margin-top:2px;">
-                          Order <span style="color:#FFF; font-weight:600;">${Math.ceil(need)} ${item.unit}</span> to restore safe levels.
+                          Order <span style="color:#FFF; font-weight:600;">${escapeHtml(Math.ceil(need))} ${escapeHtml(item.unit || '')}</span> to restore safe levels.
                       </div>
                   </div>
               </li>`;
@@ -800,10 +806,10 @@
                   <div style="color:#FF9F0A; font-size:20px; line-height:1.4;">•</div>
                   <div>
                       <div style="color:#FFF; font-size:16px; font-weight:500; line-height:1.4;">
-                          Restock ${item.name}.
+                          Restock ${escapeHtml(item.name)}.
                       </div>
                       <div style="color:#AEAEB2; font-size:15px; margin-top:2px;">
-                          Purchase <span style="color:#FFF; font-weight:600;">${Math.ceil(need)} ${item.unit}</span> soon to avoid running out.
+                          Purchase <span style="color:#FFF; font-weight:600;">${escapeHtml(Math.ceil(need))} ${escapeHtml(item.unit || '')}</span> soon to avoid running out.
                       </div>
                   </div>
               </li>`;
@@ -920,8 +926,8 @@
           <div class="alert-item ${isCrit ? 'alert-critical' : 'alert-warning'}">
             <span class="alert-icon">${isCrit ? '🔴' : '🟡'}</span>
             <div>
-              <strong>${item.name}</strong>
-              <p>${num(item.qty_on_hand)} ${item.unit} on hand · ~${item.days_of_supply ?? '?'} days supply</p>
+              <strong>${escapeHtml(item.name)}</strong>
+              <p>${escapeHtml(num(item.qty_on_hand))} ${escapeHtml(item.unit || '')} on hand · ~${escapeHtml(item.days_of_supply ?? '?')} days supply</p>
             </div>
           </div>
         `;

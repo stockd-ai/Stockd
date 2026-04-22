@@ -219,8 +219,14 @@
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="js/env.js"></script>
+  <script src="js/security-utils.js"></script>
   <script src="js/supabase-client.js"></script>
   <script>
+    const stockdSecurity = window.StockdSecurity || {};
+    const sanitizeEmail = stockdSecurity.sanitizeEmail || (value => String(value || '').trim().toLowerCase());
+    let loginLockTimer = null;
+    let activeLoginLock = null;
+
     // If already logged in, go to app
     (async () => {
       const { data: { session } } = await sb.auth.getSession();
@@ -233,26 +239,41 @@
     });
 
     async function doLogin() {
-      const email = document.getElementById('email').value.trim();
+      const email = sanitizeEmail(document.getElementById('email').value);
       const pass = document.getElementById('password').value;
       if (!email || !pass) { showError('Enter email and password'); return; }
+      if (isLoginLocked()) return;
+      document.getElementById('email').value = email;
 
       setLoading(true);
-      const { error } = await sb.auth.signInWithPassword({ email, password: pass });
+      const result = await guardedPasswordLogin(email, pass);
 
-      if (error) {
-        showError(error.message);
+      if (!result.ok) {
         setLoading(false);
-      } else {
-        window.location.href = 'index.html';
+        handleLoginFailure(result.data);
+        return;
       }
+
+      if (result.data?.session?.access_token && result.data?.session?.refresh_token) {
+        clearLoginLock();
+        await sb.auth.setSession({
+          access_token: result.data.session.access_token,
+          refresh_token: result.data.session.refresh_token
+        });
+        window.location.href = 'index.html';
+        return;
+      }
+
+      showError('Login failed. Please try again.');
+      setLoading(false);
     }
 
     async function doSignUp() {
-      const email = document.getElementById('email').value.trim();
+      const email = sanitizeEmail(document.getElementById('email').value);
       const pass = document.getElementById('password').value;
       if (!email || !pass) { showError('Enter email and password'); return; }
-      if (pass.length < 6) { showError('Password must be at least 6 characters'); return; }
+      if (pass.length < 8) { showError('Password must be at least 8 characters'); return; }
+      document.getElementById('email').value = email;
 
       setLoading(true);
       const { error } = await sb.auth.signUp({ email, password: pass });
@@ -262,17 +283,114 @@
         setLoading(false);
       } else {
         showError('');
-        document.querySelector('.login-box').innerHTML = `
-          <div style="text-align:center;padding:32px 16px;">
-            <div style="font-size:48px;margin-bottom:16px;">✉️</div>
-            <h3 style="color:var(--text-main);font-size:20px;font-weight:600;margin-bottom:8px;">Check your email</h3>
-            <p style="color:var(--text-sub);font-size:14px;line-height:1.6;">
-              We sent a confirmation link to <strong style="color:var(--text-main)">${email}</strong>.<br>
-              Click it to activate your account, then sign in.
-            </p>
-          </div>
-        `;
+        renderEmailConfirmation(email);
       }
+    }
+
+    function renderEmailConfirmation(email) {
+      const box = document.querySelector('.login-box');
+      box.textContent = '';
+
+      const wrapper = document.createElement('div');
+      wrapper.style.textAlign = 'center';
+      wrapper.style.padding = '32px 16px';
+
+      const icon = document.createElement('div');
+      icon.style.fontSize = '48px';
+      icon.style.marginBottom = '16px';
+      icon.textContent = '✉️';
+
+      const heading = document.createElement('h3');
+      heading.style.color = 'var(--text-main)';
+      heading.style.fontSize = '20px';
+      heading.style.fontWeight = '600';
+      heading.style.marginBottom = '8px';
+      heading.textContent = 'Check your email';
+
+      const paragraph = document.createElement('p');
+      paragraph.style.color = 'var(--text-sub)';
+      paragraph.style.fontSize = '14px';
+      paragraph.style.lineHeight = '1.6';
+      paragraph.append('We sent a confirmation link to ');
+
+      const strong = document.createElement('strong');
+      strong.style.color = 'var(--text-main)';
+      strong.textContent = email;
+      paragraph.appendChild(strong);
+      paragraph.append('. Click it to activate your account, then sign in.');
+
+      wrapper.append(icon, heading, paragraph);
+      box.appendChild(wrapper);
+    }
+
+    function handleLoginFailure(payload) {
+      if (payload?.code === 'locked' && payload?.lockedUntil) {
+        applyLoginLock(payload);
+        return;
+      }
+
+      if (payload?.code === 'invalid_credentials') {
+        const remaining = Number(payload?.remainingAttempts);
+        const suffix = Number.isFinite(remaining)
+          ? ` ${remaining} attempt${remaining === 1 ? '' : 's'} remaining before temporary lockout.`
+          : '';
+        showError((payload?.message || 'Invalid email or password.') + suffix);
+        return;
+      }
+
+      showError(payload?.message || 'Login failed. Please try again.');
+    }
+
+    function isLoginLocked() {
+      return Boolean(activeLoginLock && activeLoginLock.lockedUntilMs > Date.now());
+    }
+
+    function applyLoginLock(payload) {
+      const lockedUntilMs = new Date(payload.lockedUntil).getTime();
+      activeLoginLock = { lockedUntilMs, message: payload.message || 'Too many failed attempts.' };
+
+      if (loginLockTimer) {
+        clearInterval(loginLockTimer);
+      }
+
+      const tick = () => {
+        const remainingSeconds = Math.max(0, Math.ceil((lockedUntilMs - Date.now()) / 1000));
+
+        if (remainingSeconds <= 0) {
+          clearLoginLock();
+          showError('');
+          setLoading(false);
+          return;
+        }
+
+        const btn = document.getElementById('login-btn');
+        btn.disabled = true;
+        btn.textContent = `Locked (${formatCountdown(remainingSeconds)})`;
+        showError(`${activeLoginLock.message} ${formatCountdown(remainingSeconds)} remaining.`);
+      };
+
+      tick();
+      loginLockTimer = setInterval(tick, 1000);
+    }
+
+    function clearLoginLock() {
+      activeLoginLock = null;
+      if (loginLockTimer) {
+        clearInterval(loginLockTimer);
+        loginLockTimer = null;
+      }
+      const btn = document.getElementById('login-btn');
+      if (btn) {
+        btn.disabled = false;
+        btn.textContent = 'Continue';
+      }
+    }
+
+    function formatCountdown(totalSeconds) {
+      const minutes = Math.floor(totalSeconds / 60);
+      const seconds = totalSeconds % 60;
+      if (!minutes) return `${seconds}s`;
+      return `${minutes}m ${String(seconds).padStart(2, '0')}s`;
     }
 
     function showError(msg) {
@@ -284,8 +402,8 @@
     function setLoading(loading) {
       const btn = document.getElementById('login-btn');
       if (btn) {
-        btn.disabled = loading;
-        btn.textContent = loading ? 'Signing in...' : 'Continue';
+        btn.disabled = loading || isLoginLocked();
+        btn.textContent = loading ? 'Signing in...' : (isLoginLocked() ? btn.textContent : 'Continue');
       }
     }
   </script>

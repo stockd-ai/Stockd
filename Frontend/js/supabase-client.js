@@ -15,6 +15,70 @@ if (!SUPABASE_ANON) {
 
 const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
 
+function getClientFingerprint() {
+  const key = 'stockd-client-fingerprint';
+  let fingerprint = null;
+
+  try {
+    fingerprint = localStorage.getItem(key);
+  } catch (err) {
+    fingerprint = null;
+  }
+
+  if (!fingerprint) {
+    fingerprint = typeof crypto !== 'undefined' && crypto.randomUUID
+      ? crypto.randomUUID()
+      : `stockd-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
+    try {
+      localStorage.setItem(key, fingerprint);
+    } catch (err) {
+      // Ignore storage issues; a per-page fingerprint is still acceptable.
+    }
+  }
+
+  return fingerprint;
+}
+
+async function invokeEdgeFunction(functionName, body) {
+  const headers = {
+    'Content-Type': 'application/json',
+    apikey: SUPABASE_ANON
+  };
+
+  const { data: { session } } = await sb.auth.getSession();
+  if (session?.access_token) {
+    headers.Authorization = `Bearer ${session.access_token}`;
+  }
+
+  const response = await fetch(`${SUPABASE_URL}/functions/v1/${functionName}`, {
+    method: 'POST',
+    headers,
+    body: JSON.stringify(body || {})
+  });
+
+  let data = null;
+  try {
+    data = await response.json();
+  } catch (err) {
+    data = null;
+  }
+
+  return {
+    ok: response.ok,
+    status: response.status,
+    data
+  };
+}
+
+async function guardedPasswordLogin(email, password) {
+  return invokeEdgeFunction('auth-login', {
+    email,
+    password,
+    clientFingerprint: getClientFingerprint(),
+    userAgent: navigator.userAgent || ''
+  });
+}
+
 // ─── Auth Helpers ────────────────────────────
 
 /** Get current session or redirect to login */

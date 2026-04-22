@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stockd — Security Monitor</title>
+  <link rel="stylesheet" href="../css/app-light.css">
+</head>
+
+<body>
+
+  <nav class="topnav">
+    <div class="topnav-brand">
+      <div class="topnav-icon">R</div>
+      <div>
+        <div class="topnav-title">Stockd</div>
+        <div class="topnav-sub">Security Monitor</div>
+      </div>
+    </div>
+    <div class="topnav-links">
+      <button class="topnav-link" onclick="go('dashboard')">Dashboard</button>
+      <button class="topnav-link" onclick="go('upload')">Upload</button>
+      <button class="topnav-link" onclick="go('receive')">Receive</button>
+      <button class="topnav-link" onclick="go('count')">Count</button>
+      <button class="topnav-link active" onclick="go('security-monitor')">Security</button>
+    </div>
+    <div class="topnav-actions">
+      <button class="btn btn-outline" onclick="signOut()">⏻</button>
+    </div>
+  </nav>
+
+  <div class="page-narrow">
+    <div class="section-header" style="margin-top:12px;">
+      <div>
+        <h1 style="margin:0; color:var(--text-primary);">Traffic & Security Analysis</h1>
+        <p style="margin:8px 0 0; color:var(--text-muted); max-width:720px;">
+          This page summarizes recent authentication failures, temporary lockouts, suspicious route probes,
+          and high-volume status code spikes using deterministic heuristic analysis.
+        </p>
+      </div>
+      <div style="display:flex; gap:10px; align-items:center;">
+        <select id="window-select" class="input-field" style="height:42px; width:160px;">
+          <option value="24">Last 24 hours</option>
+          <option value="72">Last 72 hours</option>
+          <option value="168">Last 7 days</option>
+        </select>
+        <button class="btn btn-primary" onclick="loadSecuritySummary()">Refresh</button>
+      </div>
+    </div>
+
+    <div class="grid-3" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:16px; margin-bottom:20px;">
+      <div class="card">
+        <div class="metric-label">Events Analyzed</div>
+        <div class="metric-value" id="metric-total">0</div>
+        <div class="metric-sub" id="metric-window">Current window</div>
+      </div>
+      <div class="card">
+        <div class="metric-label">Flagged Patterns</div>
+        <div class="metric-value" id="metric-flagged">0</div>
+        <div class="metric-sub" id="metric-severity">0 critical / 0 warning</div>
+      </div>
+      <div class="card">
+        <div class="metric-label">Top Source IP</div>
+        <div class="metric-value" id="metric-ip" style="font-size:28px;">—</div>
+        <div class="metric-sub" id="metric-ip-sub">No events yet</div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:20px;">
+      <div class="section-header" style="margin-bottom:12px;">
+        <h2 style="margin:0;">AI-Inspired Summary</h2>
+      </div>
+      <p id="summary-text" style="margin:0; color:var(--text-secondary); line-height:1.7;">
+        Loading analysis...
+      </p>
+    </div>
+
+    <div class="grid-2" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:16px;">
+      <div class="card">
+        <div class="section-header" style="margin-bottom:12px;">
+          <h2 style="margin:0;">Flagged Activity</h2>
+        </div>
+        <div id="flagged-list" style="display:flex; flex-direction:column; gap:12px;"></div>
+      </div>
+
+      <div class="card">
+        <div class="section-header" style="margin-bottom:12px;">
+          <h2 style="margin:0;">Top Source IPs</h2>
+        </div>
+        <div id="ip-list" style="display:flex; flex-direction:column; gap:10px;"></div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:20px;">
+      <div class="section-header" style="margin-bottom:12px;">
+        <h2 style="margin:0;">Recent Security Events</h2>
+      </div>
+      <div style="overflow-x:auto;">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Event</th>
+              <th>Severity</th>
+              <th>IP</th>
+              <th>Route</th>
+            </tr>
+          </thead>
+          <tbody id="recent-events-body"></tbody>
+        </table>
+      </div>
+      <div id="status-msg" class="status-msg" style="margin-top:14px;"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../js/env.js"></script>
+  <script src="../js/security-utils.js"></script>
+  <script src="../js/supabase-client.js"></script>
+  <script>
+    const stockdSecurity = window.StockdSecurity || {};
+    const escapeHtml = stockdSecurity.escapeHtml || (value => String(value ?? ''));
+
+    function go(page) { window.location.href = page + '.html'; }
+
+    (async () => {
+      const session = await requireAuth('../login.html');
+      if (!session) return;
+
+      await invokeEdgeFunction('security-log-event', {
+        eventType: 'security.monitor_viewed',
+        severity: 'info',
+        route: '/pages/security-monitor.html',
+        details: { source: 'security-monitor-page' }
+      }).catch(() => null);
+
+      loadSecuritySummary();
+    })();
+
+    async function loadSecuritySummary() {
+      setStatus('Loading security analysis...', 'info');
+
+      const hours = Number(document.getElementById('window-select').value || '24');
+      const result = await invokeEdgeFunction('security-analyze', { hours });
+
+      if (!result.ok || !result.data?.summary) {
+        setStatus(result.data?.message || 'Unable to load security analysis.', 'error');
+        return;
+      }
+
+      const summary = result.data.summary;
+      renderMetrics(summary, hours);
+      renderSummary(summary);
+      renderFlagged(summary.flaggedActivities || []);
+      renderTopIps(summary.topIpAddresses || []);
+      renderRecentEvents(summary.recentEvents || []);
+      setStatus(`Updated at ${new Date(summary.generatedAt).toLocaleString()}`, 'success');
+    }
+
+    function renderMetrics(summary, hours) {
+      document.getElementById('metric-total').textContent = summary.totalEvents || 0;
+      document.getElementById('metric-window').textContent = `Last ${hours} hour${hours === 1 ? '' : 's'}`;
+
+      const critical = (summary.flaggedActivities || []).filter(item => item.severity === 'critical').length;
+      const warning = (summary.flaggedActivities || []).filter(item => item.severity === 'warning').length;
+      document.getElementById('metric-flagged').textContent = (summary.flaggedActivities || []).length;
+      document.getElementById('metric-severity').textContent = `${critical} critical / ${warning} warning`;
+
+      const topIp = (summary.topIpAddresses || [])[0];
+      document.getElementById('metric-ip').textContent = topIp ? topIp.ipAddress : '—';
+      document.getElementById('metric-ip-sub').textContent = topIp
+        ? `${topIp.events} events · risk score ${topIp.score}`
+        : 'No notable source IPs';
+    }
+
+    function renderSummary(summary) {
+      document.getElementById('summary-text').textContent = summary.aiStyleSummary || 'No summary available.';
+    }
+
+    function renderFlagged(items) {
+      const el = document.getElementById('flagged-list');
+      if (!items.length) {
+        el.innerHTML = '<div class="empty-state" style="padding:24px; text-align:center; color:var(--text-muted);">No suspicious activity crossed the alert threshold in this window.</div>';
+        return;
+      }
+
+      el.innerHTML = items.map(item => `
+        <div style="border:1px solid rgba(255,255,255,0.08); border-radius:14px; padding:14px 16px; background:${item.severity === 'critical' ? 'rgba(255,69,58,0.08)' : 'rgba(255,159,10,0.08)'};">
+          <div style="display:flex; justify-content:space-between; gap:12px; align-items:flex-start;">
+            <div style="font-weight:600; color:var(--text-primary);">${escapeHtml(item.summary)}</div>
+            <span class="badge ${item.severity === 'critical' ? 'badge-critical-dark' : 'badge-warning-dark'}">${escapeHtml(item.severity)}</span>
+          </div>
+          <div style="margin-top:8px; color:var(--text-muted); font-size:12px; line-height:1.5;">
+            ${escapeHtml(JSON.stringify(item.evidence))}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderTopIps(items) {
+      const el = document.getElementById('ip-list');
+      if (!items.length) {
+        el.innerHTML = '<div class="empty-state" style="padding:24px; text-align:center; color:var(--text-muted);">No IP-level activity to report.</div>';
+        return;
+      }
+
+      el.innerHTML = items.map(item => `
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:12px 0; border-bottom:1px solid rgba(255,255,255,0.06);">
+          <div>
+            <div style="color:var(--text-primary); font-weight:600;">${escapeHtml(item.ipAddress)}</div>
+            <div style="color:var(--text-muted); font-size:12px;">${escapeHtml(item.events)} events</div>
+          </div>
+          <div style="text-align:right;">
+            <div style="color:var(--accent); font-weight:700;">${escapeHtml(item.score)}</div>
+            <div style="color:var(--text-muted); font-size:12px;">risk score</div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderRecentEvents(events) {
+      const tbody = document.getElementById('recent-events-body');
+      if (!events.length) {
+        tbody.innerHTML = '<tr><td colspan="5" style="text-align:center; padding:24px; color:var(--text-muted);">No recent security events.</td></tr>';
+        return;
+      }
+
+      tbody.innerHTML = events.map(event => `
+        <tr>
+          <td class="mono">${escapeHtml(new Date(event.createdAt).toLocaleString())}</td>
+          <td>${escapeHtml(event.eventType)}</td>
+          <td><span class="badge ${event.severity === 'critical' ? 'badge-critical-dark' : event.severity === 'warning' ? 'badge-warning-dark' : 'badge-ok-dark'}">${escapeHtml(event.severity)}</span></td>
+          <td class="mono">${escapeHtml(event.ipAddress || '—')}</td>
+          <td>${escapeHtml(event.route || '—')}</td>
+        </tr>
+      `).join('');
+    }
+
+    function setStatus(message, type) {
+      const el = document.getElementById('status-msg');
+      el.className = `status-msg ${type}`;
+      el.textContent = message;
+    }
+  </script>
+</body>
+
+</html>

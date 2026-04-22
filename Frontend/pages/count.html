@@ -376,6 +376,7 @@
       <button class="topnav-link" onclick="go('sales-analysis')">Sales Analysis</button>
       <button class="topnav-link" onclick="go('receive')">Receive</button>
       <button class="topnav-link active" onclick="go('count')">Count</button>
+      <button class="topnav-link" onclick="go('security-monitor')">Security</button>
     </div>
     <div class="topnav-actions">
       <button class="btn btn-primary" onclick="toggleAIPanel()">✨ Copilot</button>
@@ -567,12 +568,18 @@
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="../js/env.js"></script>
+  <script src="../js/security-utils.js"></script>
   <script src="../js/config.js"></script>
   <script src="../js/supabase-client.js"></script>
   <script src="../js/gemini-client.js"></script>
   <script src="../js/ai-copilot.js"></script>
   <script src="../js/animated-counter.js"></script>
   <script>
+    const stockdSecurity = window.StockdSecurity || {};
+    const escapeHtml = stockdSecurity.escapeHtml || (value => String(value ?? ''));
+    const sanitizePlainText = stockdSecurity.sanitizePlainText || (value => String(value ?? '').trim());
+    const setSelectOptions = stockdSecurity.setSelectOptions;
+
     function go(page) { window.location.href = page + '.html'; }
 
     let ingredients = [];
@@ -594,8 +601,16 @@
       ingredients = data || [];
 
       const sel = document.getElementById('ingredient-select');
-      sel.innerHTML = '<option value="">— Select ingredient —</option>' +
-        ingredients.map(i => `<option value="${i.id}">${i.name} (${i.unit})</option>`).join('');
+      if (setSelectOptions) {
+        setSelectOptions(sel, ingredients, {
+          placeholder: '— Select ingredient —',
+          getValue: item => item.id,
+          getLabel: item => `${item.name} (${item.unit})`
+        });
+      } else {
+        sel.innerHTML = '<option value="">— Select ingredient —</option>' +
+          ingredients.map(i => `<option value="${i.id}">${i.name} (${i.unit})</option>`).join('');
+      }
 
       sel.addEventListener('change', async () => {
         const id = sel.value;
@@ -921,29 +936,29 @@
         return `
           <tr>
             <td style="font-family:var(--font-mono); font-size:13px; color:var(--text-secondary);">
-              ${new Date(t.created_at).toLocaleDateString()}
+              ${escapeHtml(new Date(t.created_at).toLocaleDateString())}
             </td>
             <td style="font-weight:500; color:var(--text-primary);">
-              ${t.ingredients?.name || '—'}
+              ${escapeHtml(t.ingredients?.name || '—')}
             </td>
             <td style="font-family:var(--font-mono); color:var(--text-secondary);">
-              ${systemQty} ${t.ingredients?.unit || ''}
+              ${escapeHtml(systemQty)} ${escapeHtml(t.ingredients?.unit || '')}
             </td>
             <td style="font-family:var(--font-mono); color:var(--text-primary);">
-              ${countedQty} ${t.ingredients?.unit || ''}
+              ${escapeHtml(countedQty)} ${escapeHtml(t.ingredients?.unit || '')}
             </td>
             <td>
               <div class="delta-cell ${deltaClass}">
-                ${sign}${delta.toLocaleString()} ${t.ingredients?.unit || ''} ${deltaIcon}
+                ${escapeHtml(sign + delta.toLocaleString())} ${escapeHtml(t.ingredients?.unit || '')} ${deltaIcon}
               </div>
             </td>
             <td>
               <span class="variance-badge ${varianceClass}">
-                ${variance === 0 ? '0%' : (delta >= 0 ? '+' : '-') + variance.toFixed(2) + '%'}
+                ${escapeHtml(variance === 0 ? '0%' : (delta >= 0 ? '+' : '-') + variance.toFixed(2) + '%')}
               </span>
             </td>
             <td style="color:var(--text-muted); font-size:12px;">
-              ${t.note?.replace(/Physical count: [\d.]+→[\d.]+/, '').trim() || '—'}
+              ${escapeHtml(sanitizePlainText(t.note?.replace(/Physical count: [\d.]+→[\d.]+/, '').trim() || '—', { maxLength: 160 }))}
             </td>
           </tr>
         `;
@@ -1019,35 +1034,32 @@
       if (counts.length > 0) {
         const lastCount = counts[0];
         const timeAgo = getTimeAgo(new Date(lastCount.created_at));
-        document.getElementById('last-count-stat').innerHTML =
-          `<strong>Last Count:</strong> ${timeAgo} (${lastCount.ingredients?.name || 'Unknown'})`;
+        setQuickStat('last-count-stat', 'Last Count:', `${timeAgo} (${lastCount.ingredients?.name || 'Unknown'})`);
 
         // Find most accurate items (0 delta)
         const perfectCounts = counts.filter(c => c.qty_delta === 0);
         const perfectItems = [...new Set(perfectCounts.map(c => c.ingredients?.name).filter(Boolean))];
-        document.getElementById('most-accurate-stat').innerHTML =
+        setQuickStat(
+          'most-accurate-stat',
+          'Most Accurate:',
           perfectItems.length > 0
-            ? `<strong>Most Accurate:</strong> ${perfectItems.slice(0, 3).join(', ')}`
-            : `<strong>Most Accurate:</strong> No perfect counts this week`;
+            ? perfectItems.slice(0, 3).join(', ')
+            : 'No perfect counts this week'
+        );
 
         // Find items needing review (largest discrepancy)
         const sortedByDelta = [...counts].sort((a, b) => Math.abs(b.qty_delta) - Math.abs(a.qty_delta));
         if (sortedByDelta.length > 0 && sortedByDelta[0].qty_delta !== 0) {
           const worst = sortedByDelta[0];
           const sign = worst.qty_delta >= 0 ? '+' : '';
-          document.getElementById('needs-review-stat').innerHTML =
-            `<strong>Needs Review:</strong> ${worst.ingredients?.name} (${sign}${worst.qty_delta} discrepancy)`;
+          setQuickStat('needs-review-stat', 'Needs Review:', `${worst.ingredients?.name} (${sign}${worst.qty_delta} discrepancy)`);
         } else {
-          document.getElementById('needs-review-stat').innerHTML =
-            `<strong>Needs Review:</strong> All counts within acceptable range`;
+          setQuickStat('needs-review-stat', 'Needs Review:', 'All counts within acceptable range');
         }
       } else {
-        document.getElementById('last-count-stat').innerHTML =
-          `<strong>Last Count:</strong> No counts recorded this week`;
-        document.getElementById('most-accurate-stat').innerHTML =
-          `<strong>Most Accurate:</strong> Perform counts to see accuracy data`;
-        document.getElementById('needs-review-stat').innerHTML =
-          `<strong>Needs Review:</strong> No data available`;
+        setQuickStat('last-count-stat', 'Last Count:', 'No counts recorded this week');
+        setQuickStat('most-accurate-stat', 'Most Accurate:', 'Perform counts to see accuracy data');
+        setQuickStat('needs-review-stat', 'Needs Review:', 'No data available');
       }
 
       // Generate insights
@@ -1086,7 +1098,7 @@
         if (shortages.length >= 2 && shortages.length === deltas.length) {
           insights.push({
             icon: '📉',
-            text: `<strong>${name}</strong> has shown consistent shortages (${shortages.length} counts). Possible causes: spillage, portion control issues, or incorrect recipes.`
+            html: `<strong>${escapeHtml(name)}</strong> has shown consistent shortages (${escapeHtml(shortages.length)} counts). Possible causes: spillage, portion control issues, or incorrect recipes.`
           });
         }
       });
@@ -1097,7 +1109,7 @@
         if (overages.length >= 2) {
           insights.push({
             icon: '📈',
-            text: `<strong>${name}</strong> has shown overages. Consider adjusting par levels or reviewing receiving procedures.`
+            html: `<strong>${escapeHtml(name)}</strong> has shown overages. Consider adjusting par levels or reviewing receiving procedures.`
           });
         }
       });
@@ -1116,12 +1128,12 @@
       if (accuracyRate >= 90) {
         insights.push({
           icon: '🏆',
-          text: `<strong>Great job!</strong> Your inventory accuracy (${accuracyRate}%) is above industry average (89%). Keep up the good work!`
+          html: `<strong>Great job!</strong> Your inventory accuracy (${escapeHtml(accuracyRate)}%) is above industry average (89%). Keep up the good work!`
         });
       } else if (accuracyRate < 80) {
         insights.push({
           icon: '⚠️',
-          text: `<strong>Improvement needed:</strong> Your accuracy rate (${accuracyRate}%) is below recommended levels. Consider more frequent counts and reviewing handling procedures.`
+          html: `<strong>Improvement needed:</strong> Your accuracy rate (${escapeHtml(accuracyRate)}%) is below recommended levels. Consider more frequent counts and reviewing handling procedures.`
         });
       }
 
@@ -1129,16 +1141,25 @@
       if (insights.length === 0) {
         insights.push({
           icon: '✅',
-          text: `<strong>Looking good!</strong> No significant discrepancy patterns detected. Continue regular physical counts to maintain accuracy.`
+          html: `<strong>Looking good!</strong> No significant discrepancy patterns detected. Continue regular physical counts to maintain accuracy.`
         });
       }
 
       container.innerHTML = insights.map(i => `
         <div class="insight-item">
           <span class="insight-icon">${i.icon}</span>
-          <div class="insight-text">${i.text}</div>
+          <div class="insight-text">${i.html}</div>
         </div>
       `).join('');
+    }
+
+    function setQuickStat(id, label, value) {
+      const el = document.getElementById(id);
+      el.textContent = '';
+
+      const strong = document.createElement('strong');
+      strong.textContent = label;
+      el.append(strong, ' ' + sanitizePlainText(value, { maxLength: 160 }));
     }
 
     function getTimeAgo(date) {
