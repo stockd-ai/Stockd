@@ -128,7 +128,7 @@
       const session = await requireAuth('../login.html');
       if (!session) return;
 
-      await invokeEdgeFunction('security-log-event', {
+      void invokeEdgeFunction('security-log-event', {
         eventType: 'security.monitor_viewed',
         severity: 'info',
         route: '/pages/security-monitor.html',

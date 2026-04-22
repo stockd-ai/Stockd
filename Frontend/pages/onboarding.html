@@ -102,6 +102,23 @@
       return monitoring.trackEvent(eventType, options);
     }
 
+    function queueMonitoring(eventType, options) {
+      if (!monitoring) {
+        return { ok: false, skipped: true };
+      }
+
+      if (typeof monitoring.queueEvent === 'function') {
+        return monitoring.queueEvent(eventType, options);
+      }
+
+      if (typeof monitoring.trackEvent === 'function') {
+        void monitoring.trackEvent(eventType, options).catch(() => null);
+        return { ok: true, queued: true };
+      }
+
+      return { ok: false, skipped: true };
+    }
+
     // ─── Init ────────────────────────────────
     (async () => {
       const session = await requireAuth('../login.html');
@@ -134,7 +151,7 @@
 
     async function handleFile(file) {
       setStatus('📄 Parsing CSV...', 'info');
-      await trackMonitoring('csv_upload_attempted', {
+      queueMonitoring('csv_upload_attempted', {
         flow: 'onboarding_sales_history',
         metadata: {
           page: 'onboarding',
@@ -147,7 +164,7 @@
         parsedData = await parseToastCSV(file);
         const s = parsedData.stats;
         if (s.rejectedRows > 0 || s.parseErrors > 0 || s.suspiciousRows > 0 || s.sanitizedFieldCount > 0) {
-          await trackMonitoring('csv_validation_failure', {
+          queueMonitoring('csv_validation_failure', {
             flow: 'onboarding_sales_history',
             metadata: {
               page: 'onboarding',
@@ -163,7 +180,7 @@
           });
         }
         if (s.suspiciousRows > 0 || s.sanitizedFieldCount > 0) {
-          await trackMonitoring('suspicious_input_detected', {
+          queueMonitoring('suspicious_input_detected', {
             flow: 'onboarding_sales_history',
             metadata: {
               page: 'onboarding',
@@ -177,7 +194,7 @@
         document.getElementById('step1-num').classList.add('done');
         document.getElementById('step1-num').textContent = '✓';
       } catch (err) {
-        await trackMonitoring('csv_validation_failure', {
+        queueMonitoring('csv_validation_failure', {
           flow: 'onboarding_sales_history',
           metadata: {
             page: 'onboarding',
@@ -243,7 +260,7 @@
 
         const msg = `🎉 Setup complete! ${closeData.dates_processed} dates processed, ` +
           `${closeData.total_consume_txns} consumption transactions. Redirecting...`;
-        await trackMonitoring('csv_upload_completed', {
+        queueMonitoring('csv_upload_completed', {
           flow: 'onboarding_sales_history',
           metadata: {
             page: 'onboarding',

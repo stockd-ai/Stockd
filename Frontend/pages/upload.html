@@ -23,6 +23,7 @@
       <button class="topnav-link active" onclick="go('upload')">Upload</button>
       <button class="topnav-link" onclick="go('receive')">Receive</button>
       <button class="topnav-link" onclick="go('count')">Count</button>
+      <button class="topnav-link" onclick="go('security-monitor')">Security</button>
     </div>
     <div class="topnav-actions">
       <button class="btn btn-outline" onclick="signOut()">⏻</button>
@@ -108,6 +109,23 @@
       return monitoring.trackEvent(eventType, options);
     }
 
+    function queueMonitoring(eventType, options) {
+      if (!monitoring) {
+        return { ok: false, skipped: true };
+      }
+
+      if (typeof monitoring.queueEvent === 'function') {
+        return monitoring.queueEvent(eventType, options);
+      }
+
+      if (typeof monitoring.trackEvent === 'function') {
+        void monitoring.trackEvent(eventType, options).catch(() => null);
+        return { ok: true, queued: true };
+      }
+
+      return { ok: false, skipped: true };
+    }
+
     (async () => {
       const session = await requireAuth('../login.html');
       if (!session) return;
@@ -127,7 +145,7 @@
 
     async function handleFile(file) {
       setStatus('Parsing...', 'info');
-      await trackMonitoring('csv_upload_attempted', {
+      queueMonitoring('csv_upload_attempted', {
         flow: 'daily_sales_upload',
         metadata: {
           page: 'upload',
@@ -141,7 +159,7 @@
         const s = parsedData.stats;
 
         if (s.rejectedRows > 0 || s.parseErrors > 0 || s.suspiciousRows > 0 || s.sanitizedFieldCount > 0) {
-          await trackMonitoring('csv_validation_failure', {
+          queueMonitoring('csv_validation_failure', {
             flow: 'daily_sales_upload',
             metadata: {
               page: 'upload',
@@ -158,7 +176,7 @@
         }
 
         if (s.suspiciousRows > 0 || s.sanitizedFieldCount > 0) {
-          await trackMonitoring('suspicious_input_detected', {
+          queueMonitoring('suspicious_input_detected', {
             flow: 'daily_sales_upload',
             metadata: {
               page: 'upload',
@@ -182,7 +200,7 @@
         document.getElementById('upload-btn').disabled = false;
         setStatus('✅ Ready to upload', 'success');
       } catch (err) {
-        await trackMonitoring('csv_validation_failure', {
+        queueMonitoring('csv_validation_failure', {
           flow: 'daily_sales_upload',
           metadata: {
             page: 'upload',
@@ -216,7 +234,7 @@
         }
 
         setStatus(`🎉 Done! ${result.totalProcessed} rows for ${dates.join(', ')}. Inventory updated.`, 'success');
-        await trackMonitoring('csv_upload_completed', {
+        queueMonitoring('csv_upload_completed', {
           flow: 'daily_sales_upload',
           metadata: {
             page: 'upload',

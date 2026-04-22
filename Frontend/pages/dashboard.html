@@ -251,9 +251,17 @@
   <script>
     const { escapeHtml, sanitizeTextInput } = window.StockdSecurity;
     const { addDays, buildCategoryStats, buildDashboardForecastData, buildSalesTrend, buildTopSellerStats } = window.StockdDatabase;
+    let dashboardRevealed = false;
 
     // ─── Navigation ──────────────────────────
     function go(page) { window.location.href = page + '.html'; }
+
+    function revealDashboard() {
+      if (dashboardRevealed) return;
+      dashboardRevealed = true;
+      document.getElementById('loading').style.display = 'none';
+      document.getElementById('main-content').style.opacity = '1';
+    }
 
     // ─── Init ────────────────────────────────
     (async () => {
@@ -264,34 +272,44 @@
 
     // ─── Main Load ───────────────────────────
     async function loadDashboard() {
+      const today = new Date().toISOString().split('T')[0];
+
       try {
-        const today = new Date().toISOString().split('T')[0];
-        const [inventory, salesRows, menuCount, forecastData] = await Promise.all([
+        const [inventory, salesRows, menuCount] = await Promise.all([
           fetchInventory(),
           fetchSalesDataset(90),
           fetchMenuItemCount(),
-          fetchForecast(today)
         ]);
 
         const salesTrend = buildSalesTrend(salesRows);
-        const topSellers = buildTopSellerStats(salesRows, { limit: 100, excludeTests: true });
         const categories = buildCategoryStats(salesRows, { excludeTests: true });
-
-        renderDatabaseStatus(salesTrend, forecastData);
         renderKPIs(salesTrend, inventory, menuCount);
         renderRevenueChart(salesTrend);
         renderInventory(inventory);
-        renderForecastTable(forecastData?.menu_items || []);
-        renderForecastChart(salesTrend, forecastData?.daily_revenue || []);
+        renderDatabaseStatus(salesTrend, null, { pendingForecast: true });
+        renderForecastTable([], { loading: true });
+        renderForecastChart(salesTrend, []);
         renderCategoryChart(categories);
         renderSuggestedOrders(inventory);
+        revealDashboard();
+
+        try {
+          const forecastData = await fetchForecast(today, salesRows);
+          renderDatabaseStatus(salesTrend, forecastData);
+          renderForecastTable(forecastData?.menu_items || []);
+          renderForecastChart(salesTrend, forecastData?.daily_revenue || []);
+        } catch (forecastError) {
+          console.warn('Forecast refresh failed', forecastError);
+          renderDatabaseStatus(salesTrend, null);
+          renderForecastTable([], { message: 'Live forecast data is still refreshing.' });
+          renderForecastChart(salesTrend, []);
+        }
 
       } catch (err) {
         console.error('Dashboard error:', err);
         showToast('Failed to load data: ' + err.message, 'error');
       } finally {
-        document.getElementById('loading').style.display = 'none';
-        document.getElementById('main-content').style.opacity = '1';
+        revealDashboard();
       }
     }
 
@@ -358,7 +376,7 @@
       );
     }
 
-    async function fetchForecast(referenceDate) {
+    async function fetchForecast(referenceDate, salesRows = null) {
       const safeReferenceDate = sanitizeTextInput(referenceDate, { maxLength: 10 }) || new Date().toISOString().split('T')[0];
       const forecastWindowStart = addDays(safeReferenceDate, 1);
       const forecastWindowEnd = addDays(safeReferenceDate, 7);
@@ -374,18 +392,22 @@
           console.warn('Forecast refresh failed', generateError);
         }
 
-        const [forecastRows, forecastSalesRows] = await Promise.all([
-          fetchAllPaginated(
-            'forecast_items',
-            'forecast_date, menu_item_id, qty, menu_items(name, category)',
-            (query) => query.gte('forecast_date', forecastWindowStart).lte('forecast_date', forecastWindowEnd),
-          ),
-          fetchAllPaginated(
+        const forecastRows = await fetchAllPaginated(
+          'forecast_items',
+          'forecast_date, menu_item_id, qty, menu_items(name, category)',
+          (query) => query.gte('forecast_date', forecastWindowStart).lte('forecast_date', forecastWindowEnd),
+        );
+
+        const forecastSalesRows = Array.isArray(salesRows)
+          ? salesRows.filter((row) => {
+            const dateKey = sanitizeTextInput(row && row.business_date, { maxLength: 10 });
+            return Boolean(dateKey) && dateKey >= salesWindowStart && dateKey < safeReferenceDate;
+          })
+          : await fetchAllPaginated(
             'sales_line_items',
             'business_date, menu_item_id, qty, net_sales, menu_items(name, category)',
             (query) => query.gte('business_date', salesWindowStart).lt('business_date', safeReferenceDate),
-          ),
-        ]);
+          );
 
         return buildDashboardForecastData({
           referenceDate: safeReferenceDate,
@@ -409,10 +431,11 @@
       return count || 0;
     }
 
-    function renderDatabaseStatus(salesTrend, forecastData) {
+    function renderDatabaseStatus(salesTrend, forecastData, options = {}) {
       const card = document.getElementById('database-status-card');
       const textEl = document.getElementById('database-status-text');
       if (!card || !textEl) return;
+      const pendingForecast = options.pendingForecast === true;
 
       const latestSalesDate = forecastData?.latest_sales_date || salesTrend[salesTrend.length - 1]?.date || null;
       const forecastStartDate = forecastData?.daily_revenue?.[0]?.date || null;
@@ -425,6 +448,15 @@
       }
 
       const recentSalesDays = salesTrend.length;
+
+      if (pendingForecast) {
+        textEl.textContent =
+          `Live Supabase data: ${recentSalesDays} recent sales days loaded through ${formatBusinessDate(latestSalesDate)}. ` +
+          'Refreshing forecast tables now so the dashboard can paint immediately while prediction cards catch up.';
+        card.style.display = 'block';
+        return;
+      }
+
       const forecastWindowText = forecastStartDate && forecastEndDate
         ? `${formatBusinessDate(forecastStartDate)} to ${formatBusinessDate(forecastEndDate)}`
         : 'No persisted forecast rows yet';
@@ -570,10 +602,18 @@
       }
     }
 
-    function renderForecastTable(items) {
+    function renderForecastTable(items, options = {}) {
       const tbody = document.getElementById('forecast-tbody');
+      const loading = options.loading === true;
+      const emptyMessage = sanitizeTextInput(options.message || 'No forecast data available', { maxLength: 160 });
+
+      if (loading) {
+        tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;padding:20px;color:#8E8E93;">Refreshing live forecast…</td></tr>';
+        return;
+      }
+
       if (!items || items.length === 0) {
-        tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;padding:20px;color:#8E8E93;">No forecast data available</td></tr>';
+        tbody.innerHTML = `<tr><td colspan="6" style="text-align:center;padding:20px;color:#8E8E93;">${escapeHtml(emptyMessage)}</td></tr>`;
         return;
       }
 

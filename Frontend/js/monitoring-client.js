@@ -126,11 +126,31 @@
       return data || { ok: true };
     } catch (error) {
       console.warn("[monitoring-client] event rejected", {
-        eventType: requestBody.event_type,
+        eventType: requestBody.eventType,
         message: error && error.message ? error.message : "unknown",
       });
       return { ok: false, skipped: false };
     }
+  }
+
+  function queueTask(task) {
+    const runTask = () => {
+      Promise.resolve()
+        .then(task)
+        .catch(() => null);
+    };
+
+    if (typeof window !== "undefined" && typeof window.requestIdleCallback === "function") {
+      window.requestIdleCallback(runTask, { timeout: 900 });
+      return { ok: true, queued: true };
+    }
+
+    setTimeout(runTask, 0);
+    return { ok: true, queued: true };
+  }
+
+  function queueEvent(eventType, options = {}) {
+    return queueTask(() => trackEvent(eventType, options));
   }
 
   async function trackSuspiciousInput(fieldName, rawValue, options = {}) {
@@ -163,9 +183,15 @@
     });
   }
 
+  function queueSuspiciousInput(fieldName, rawValue, options = {}) {
+    return queueTask(() => trackSuspiciousInput(fieldName, rawValue, options));
+  }
+
   globalScope.stockdMonitoring = {
     buildRequestId,
     getClientToken,
+    queueEvent,
+    queueSuspiciousInput,
     trackEvent,
     trackSuspiciousInput,
   };

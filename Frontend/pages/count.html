@@ -376,6 +376,7 @@
       <button class="topnav-link" onclick="go('sales-analysis')">Sales Analysis</button>
       <button class="topnav-link" onclick="go('receive')">Receive</button>
       <button class="topnav-link active" onclick="go('count')">Count</button>
+      <button class="topnav-link" onclick="go('security-monitor')">Security</button>
     </div>
     <div class="topnav-actions">
       <button class="btn btn-primary" onclick="toggleAIPanel()">✨ Copilot</button>
@@ -590,6 +591,23 @@
       return monitoring.trackEvent(eventType, options);
     }
 
+    function queueMonitoring(eventType, options) {
+      if (!monitoring) {
+        return { ok: false, skipped: true };
+      }
+
+      if (typeof monitoring.queueEvent === 'function') {
+        return monitoring.queueEvent(eventType, options);
+      }
+
+      if (typeof monitoring.trackEvent === 'function') {
+        void monitoring.trackEvent(eventType, options).catch(() => null);
+        return { ok: true, queued: true };
+      }
+
+      return { ok: false, skipped: true };
+    }
+
     let ingredients = [];
     let allCountData = [];
     let currentFilter = 'all';
@@ -701,7 +719,7 @@
       const ingredient = ingredients.find((entry) => entry.id === id);
 
       if (!ingredient) {
-        await trackMonitoring('inventory_count_rejected', {
+        queueMonitoring('inventory_count_rejected', {
           flow: 'physical_count',
           metadata: {
             page: 'count',
@@ -713,7 +731,7 @@
       }
 
       if (qty === null) {
-        await trackMonitoring('inventory_count_rejected', {
+        queueMonitoring('inventory_count_rejected', {
           flow: 'physical_count',
           metadata: {
             page: 'count',
@@ -732,7 +750,7 @@
       });
 
       if (error || data?.status === 'error') {
-        await trackMonitoring('inventory_count_rejected', {
+        queueMonitoring('inventory_count_rejected', {
           flow: 'physical_count',
           metadata: {
             page: 'count',
@@ -748,7 +766,7 @@
       const delta = data.delta;
       const sign = delta >= 0 ? '+' : '';
 
-      await trackMonitoring('inventory_count_submission', {
+      queueMonitoring('inventory_count_submission', {
         flow: 'physical_count',
         metadata: {
           page: 'count',

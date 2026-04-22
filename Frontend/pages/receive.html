@@ -137,6 +137,7 @@
       <button class="topnav-link" onclick="go('sales-analysis')">Sales Analysis</button>
       <button class="topnav-link active" onclick="go('receive')">Receive</button>
       <button class="topnav-link" onclick="go('count')">Count</button>
+      <button class="topnav-link" onclick="go('security-monitor')">Security</button>
     </div>
     <div class="topnav-actions">
       <button class="btn btn-primary" onclick="toggleAIPanel()">✨ Copilot</button>
@@ -300,6 +301,23 @@
       return monitoring.trackEvent(eventType, options);
     }
 
+    function queueMonitoring(eventType, options) {
+      if (!monitoring) {
+        return { ok: false, skipped: true };
+      }
+
+      if (typeof monitoring.queueEvent === 'function') {
+        return monitoring.queueEvent(eventType, options);
+      }
+
+      if (typeof monitoring.trackEvent === 'function') {
+        void monitoring.trackEvent(eventType, options).catch(() => null);
+        return { ok: true, queued: true };
+      }
+
+      return { ok: false, skipped: true };
+    }
+
     function setInvoiceStatus(message, type = 'info') {
       const statusEl = document.getElementById('invoice-status');
       const colors = {
@@ -410,7 +428,7 @@
       }
 
       alert(`Processed invoice.\nSuccess: ${successCount}\nFailed: ${failCount}`);
-      await trackMonitoring(failCount > 0 ? 'inventory_receive_rejected' : 'inventory_receive_action', {
+      queueMonitoring(failCount > 0 ? 'inventory_receive_rejected' : 'inventory_receive_action', {
         flow: 'invoice_receive',
         metadata: {
           page: 'receive',
@@ -446,12 +464,46 @@
       return monitoring.trackEvent(eventType, options);
     }
 
+    function queueMonitoring(eventType, options) {
+      if (!monitoring) {
+        return { ok: false, skipped: true };
+      }
+
+      if (typeof monitoring.queueEvent === 'function') {
+        return monitoring.queueEvent(eventType, options);
+      }
+
+      if (typeof monitoring.trackEvent === 'function') {
+        void monitoring.trackEvent(eventType, options).catch(() => null);
+        return { ok: true, queued: true };
+      }
+
+      return { ok: false, skipped: true };
+    }
+
     async function trackSuspiciousInput(fieldName, rawValue, options) {
       if (!monitoring || typeof monitoring.trackSuspiciousInput !== 'function') {
         return { ok: false, skipped: true };
       }
 
       return monitoring.trackSuspiciousInput(fieldName, rawValue, options);
+    }
+
+    function queueSuspiciousInput(fieldName, rawValue, options) {
+      if (!monitoring) {
+        return { ok: false, skipped: true };
+      }
+
+      if (typeof monitoring.queueSuspiciousInput === 'function') {
+        return monitoring.queueSuspiciousInput(fieldName, rawValue, options);
+      }
+
+      if (typeof monitoring.trackSuspiciousInput === 'function') {
+        void monitoring.trackSuspiciousInput(fieldName, rawValue, options).catch(() => null);
+        return { ok: true, queued: true };
+      }
+
+      return { ok: false, skipped: true };
     }
 
     let ingredients = [];
@@ -508,13 +560,13 @@
       const note = sanitizeTextInput(rawNote, { maxLength: 240 }) || null;
       const ingredient = ingredients.find((entry) => entry.id === id);
 
-      await trackSuspiciousInput('receive_note', rawNote, {
+      queueSuspiciousInput('receive_note', rawNote, {
         flow: 'manual_receive',
         page: 'receive'
       });
 
       if (!ingredient) {
-        await trackMonitoring('inventory_receive_rejected', {
+        queueMonitoring('inventory_receive_rejected', {
           flow: 'manual_receive',
           metadata: {
             page: 'receive',
@@ -526,7 +578,7 @@
       }
 
       if (qty === null) {
-        await trackMonitoring('inventory_receive_rejected', {
+        queueMonitoring('inventory_receive_rejected', {
           flow: 'manual_receive',
           metadata: {
             page: 'receive',
@@ -545,7 +597,7 @@
       });
 
       if (error || data?.status === 'error') {
-        await trackMonitoring('inventory_receive_rejected', {
+        queueMonitoring('inventory_receive_rejected', {
           flow: 'manual_receive',
           metadata: {
             page: 'receive',
@@ -558,7 +610,7 @@
         return;
       }
 
-      await trackMonitoring('inventory_receive_action', {
+      queueMonitoring('inventory_receive_action', {
         flow: 'manual_receive',
         metadata: {
           page: 'receive',
