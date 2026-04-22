@@ -12,7 +12,7 @@
     "test:database": "node scripts/run-database-tests.js",
     "test:watch": "jest --runInBand --watch",
     "build": "npm run config",
-    "check:client-js": "node --check Frontend/js/security.js && node --check Frontend/js/monitoring-client.js && node --check Frontend/js/csv-parser.js && node --check Frontend/js/supabase-client.js && node --check Frontend/js/ai-client.js && node --check Frontend/js/ai-copilot.js",
+    "check:client-js": "node --check Frontend/js/security.js && node --check Frontend/js/monitoring-client.js && node --check Frontend/js/csv-parser.js && node --check Frontend/js/database-helpers.js && node --check Frontend/js/supabase-client.js && node --check Frontend/js/ai-client.js && node --check Frontend/js/ai-copilot.js",
     "ci:quick": "npm run check:client-js && npm run test:security && npm run test:bruteforce && npm run test:monitoring",
     "config": "node scripts/generate-config.js",
     "config:public": "node scripts/generate-config.js",

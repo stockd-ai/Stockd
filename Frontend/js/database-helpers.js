@@ -45,6 +45,94 @@
     return date.toISOString().slice(0, 10);
   }
 
+  function getDatePartsInTimeZone(value, timeZone = "UTC") {
+    const date = value instanceof Date ? value : new Date(toSafeString(value).trim());
+    if (!(date instanceof Date) || Number.isNaN(date.getTime())) {
+      return null;
+    }
+
+    const parts = new Intl.DateTimeFormat("en-US", {
+      timeZone,
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      weekday: "short",
+      hour: "2-digit",
+      hourCycle: "h23",
+    }).formatToParts(date);
+
+    const map = {};
+    parts.forEach((part) => {
+      if (part.type !== "literal") {
+        map[part.type] = part.value;
+      }
+    });
+
+    const weekdayIndex = {
+      Sun: 0,
+      Mon: 1,
+      Tue: 2,
+      Wed: 3,
+      Thu: 4,
+      Fri: 5,
+      Sat: 6,
+    }[map.weekday] ?? null;
+
+    if (!map.year || !map.month || !map.day) {
+      return null;
+    }
+
+    return {
+      dateKey: `${map.year}-${map.month}-${map.day}`,
+      hour: toNumber(map.hour),
+      weekdayIndex,
+    };
+  }
+
+  function getBusinessDateKey(value = new Date(), timeZone = "America/New_York") {
+    const parts = getDatePartsInTimeZone(value, timeZone);
+    return parts ? parts.dateKey : null;
+  }
+
+  function buildAnalysisWindow(options = {}) {
+    const currentDateKey = toDateKey(options.currentDateKey);
+    const latestAvailableDateKey = toDateKey(options.latestAvailableDateKey);
+    const safeWindowDays = Math.max(1, Math.floor(toNumber(options.windowDays, 1)));
+    const useCurrentWindow = options.useCurrentWindow !== false;
+
+    if (useCurrentWindow && currentDateKey) {
+      return {
+        startDate: addDays(currentDateKey, -(safeWindowDays - 1)),
+        endDate: currentDateKey,
+        anchor: "current",
+        usedFallback: false,
+        windowDays: safeWindowDays,
+      };
+    }
+
+    if (latestAvailableDateKey) {
+      return {
+        startDate: addDays(latestAvailableDateKey, -(safeWindowDays - 1)),
+        endDate: latestAvailableDateKey,
+        anchor: "latest_available",
+        usedFallback: currentDateKey !== latestAvailableDateKey,
+        windowDays: safeWindowDays,
+      };
+    }
+
+    if (currentDateKey) {
+      return {
+        startDate: addDays(currentDateKey, -(safeWindowDays - 1)),
+        endDate: currentDateKey,
+        anchor: "current",
+        usedFallback: false,
+        windowDays: safeWindowDays,
+      };
+    }
+
+    return null;
+  }
+
   function shouldExcludeMenuEntry(name, category) {
     const safeName = toSafeString(name).trim().toLowerCase();
     const safeCategory = toSafeString(category).trim().toLowerCase();
@@ -392,12 +480,15 @@
 
   const api = {
     addDays,
+    buildAnalysisWindow,
     buildCategoryStats,
     buildDashboardForecastData,
     buildRecentSalesDays,
     buildSalesTrend,
     buildTopSellerStats,
+    getBusinessDateKey,
     getCountVariancePercent,
+    getDatePartsInTimeZone,
     parseInventoryCountNote,
     summarizeCountMetrics,
     toDateKey,

@@ -38,6 +38,9 @@
     <p style="color:var(--text-muted);font-size:19px;margin-bottom:28px;line-height:1.5;">
       Performance insights and smart pricing recommendations powered by your sales data.
     </p>
+    <div id="analysis-window-note"
+      style="display:none; margin:-6px 0 24px 0; padding:12px 16px; border:1px solid #D7E3F5; background:#F6FAFF; color:#335C85; border-radius:12px; font-size:13px; line-height:1.45;">
+    </div>
 
     <!-- Top Row: 2 Cards Side by Side -->
     <div class="grid-2">
@@ -45,6 +48,7 @@
       <div class="card">
         <h2 style="color:#FFF; font-size:20px; font-weight:700; margin:0 0 20px 0; letter-spacing:-0.3px;">Traffic Surge
           Patterns</h2>
+        <div id="traffic-window-note" style="display:none; color:#8E8E93; font-size:12px; margin:-10px 0 16px 0;"></div>
 
         <!-- Day Tabs -->
         <div id="day-tabs" style="display:flex; gap:8px; margin:20px 0;">
@@ -66,6 +70,7 @@
       <div class="card">
         <h2 style="color:#FFF; font-size:20px; font-weight:700; margin:0 0 20px 0; letter-spacing:-0.3px;">Popular Items
         </h2>
+        <div id="top-sellers-window-note" style="display:none; color:#8E8E93; font-size:12px; margin:-10px 0 16px 0;"></div>
         <div id="top-sellers" style="display:flex; flex-direction:column; gap:12px;">
           <!-- Top sellers will be rendered here -->
         </div>
@@ -78,6 +83,7 @@
       <div class="card" style="display:flex; flex-direction:column;">
         <h2 style="color:#FFF; font-size:20px; font-weight:700; margin:0 0 20px 0; letter-spacing:-0.3px;">Dynamic
           Pricing Recommendations</h2>
+        <div id="pricing-window-note" style="display:none; color:#8E8E93; font-size:12px; margin:-10px 0 16px 0;"></div>
         <div id="pricing-recommendations" style="flex:1; display:flex; flex-direction:column; overflow:hidden;">
           <!-- Recommendations will be rendered here -->
         </div>
@@ -87,6 +93,7 @@
       <div class="card">
         <h2 style="color:#FFF; font-size:20px; font-weight:700; margin:0 0 20px 0; letter-spacing:-0.3px;">Recent Daily
           Sales</h2>
+        <div id="sales-window-note" style="display:none; color:#8E8E93; font-size:12px; margin:-10px 0 16px 0;"></div>
         <div id="sales-history" style="display:flex; flex-direction:column; gap:12px;">
           <!-- Sales history will be rendered here -->
         </div>
@@ -125,18 +132,30 @@
   <script src="../js/ai-copilot.js"></script>
   <script src="../js/animated-counter.js"></script>
   <script>
-    const { parseFiniteNumber, safeEnum, sanitizeTextInput } = window.StockdSecurity;
-    const { buildTopSellerStats } = window.StockdDatabase;
+    const { parseFiniteNumber, sanitizeTextInput } = window.StockdSecurity;
+    const {
+      addDays,
+      buildAnalysisWindow,
+      buildTopSellerStats,
+      getBusinessDateKey,
+      getDatePartsInTimeZone,
+    } = window.StockdDatabase;
 
     function go(page) { window.location.href = page + '.html'; }
 
-    let salesData = [];
     let orderData = [];
-    let selectedDay = new Date().getDay();
+    const BUSINESS_TIMEZONE = 'America/New_York';
+    let selectedDay = getDatePartsInTimeZone(new Date(), BUSINESS_TIMEZONE)?.weekdayIndex ?? new Date().getDay();
+    const analysisContext = {
+      trafficWindow: null,
+      recentSalesWindow: null,
+      pricingWindow: null,
+      topSellersWindow: null,
+      latestFallbackDate: null,
+      pageFallback: false,
+    };
 
     const dayNames = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
-    const fullDayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-
     (async () => {
       const session = await requireAuth('../login.html');
       if (!session) return;
@@ -149,17 +168,232 @@
     })();
 
     async function loadData() {
-      // Load Traffic Data independently to show it fast
-      loadOrderData().then(() => renderPopularTimes());
+      try {
+        const [trafficWindow, recentSalesWindow, pricingWindow, topSellersWindow] = await Promise.all([
+          resolveSectionWindow({
+            table: 'daily_orders',
+            windowDays: 28,
+            applyFilters: (query) => query.eq('voided', false).not('opened_at', 'is', null),
+          }),
+          resolveSectionWindow({
+            table: 'daily_orders',
+            windowDays: 7,
+            applyFilters: (query) => query.eq('voided', false),
+          }),
+          resolveSectionWindow({
+            table: 'sales_line_items',
+            windowDays: 7,
+          }),
+          resolveSectionWindow({
+            table: 'sales_line_items',
+            windowDays: 90,
+          }),
+        ]);
 
-      // Load other components in parallel
-      fetchPricingRecommendations();
-      loadTopSellers();
-      fetchRecentDailySales();
+        analysisContext.trafficWindow = trafficWindow;
+        analysisContext.recentSalesWindow = recentSalesWindow;
+        analysisContext.pricingWindow = pricingWindow;
+        analysisContext.topSellersWindow = topSellersWindow;
+
+        const fallbackDates = [trafficWindow, recentSalesWindow, pricingWindow, topSellersWindow]
+          .filter((windowInfo) => windowInfo && windowInfo.usedFallback && windowInfo.endDate)
+          .map((windowInfo) => windowInfo.endDate)
+          .sort();
+
+        analysisContext.pageFallback = fallbackDates.length > 0;
+        analysisContext.latestFallbackDate = fallbackDates.length > 0
+          ? fallbackDates[fallbackDates.length - 1]
+          : null;
+
+        renderPageWindowNote();
+        renderSectionWindowNote('traffic-window-note', trafficWindow, 28);
+        renderSectionWindowNote('sales-window-note', recentSalesWindow, 7);
+        renderSectionWindowNote('pricing-window-note', pricingWindow, 7);
+        renderSectionWindowNote('top-sellers-window-note', topSellersWindow, 90);
+
+        if (trafficWindow && trafficWindow.endDate) {
+          const parts = getDatePartsInTimeZone(`${trafficWindow.endDate}T12:00:00Z`, BUSINESS_TIMEZONE);
+          if (parts && Number.isInteger(parts.weekdayIndex)) {
+            selectedDay = parts.weekdayIndex;
+          }
+        }
+
+        renderDayTabs();
+
+        loadOrderData(trafficWindow).then(() => renderPopularTimes());
+        fetchPricingRecommendations(pricingWindow);
+        loadTopSellers(topSellersWindow);
+        fetchRecentDailySales(recentSalesWindow);
+      } catch (error) {
+        console.error('Error loading sales analysis windows:', error);
+        renderPageWindowNote();
+        loadOrderData().then(() => renderPopularTimes());
+        fetchPricingRecommendations();
+        loadTopSellers();
+        fetchRecentDailySales();
+      }
     }
 
-    async function fetchPricingRecommendations() {
+    function formatBusinessDateLabel(dateKey) {
+      if (!dateKey) {
+        return 'unknown date';
+      }
+
+      return new Intl.DateTimeFormat('en-US', {
+        timeZone: BUSINESS_TIMEZONE,
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric',
+      }).format(new Date(`${dateKey}T12:00:00Z`));
+    }
+
+    function setNoteHtml(elementId, message) {
+      const element = document.getElementById(elementId);
+      if (!element) return;
+
+      if (!message) {
+        element.style.display = 'none';
+        element.innerHTML = '';
+        return;
+      }
+
+      element.style.display = 'block';
+      element.innerHTML = message;
+    }
+
+    function renderPageWindowNote() {
+      if (!analysisContext.pageFallback || !analysisContext.latestFallbackDate) {
+        setNoteHtml('analysis-window-note', '');
+        return;
+      }
+
+      setNoteHtml(
+        'analysis-window-note',
+        `Showing the latest available sales window ending <strong>${escapeHtml(formatBusinessDateLabel(analysisContext.latestFallbackDate))}</strong> because newer sales have not been recorded yet.`
+      );
+    }
+
+    function renderSectionWindowNote(elementId, windowInfo, windowDays) {
+      if (!windowInfo || !windowInfo.usedFallback || !windowInfo.endDate) {
+        setNoteHtml(elementId, '');
+        return;
+      }
+
+      setNoteHtml(
+        elementId,
+        `Showing the latest available ${escapeHtml(String(windowDays))}-day window ending ${escapeHtml(formatBusinessDateLabel(windowInfo.endDate))}.`
+      );
+    }
+
+    async function countRowsInWindow(table, startDate, endDate, applyFilters) {
+      let query = sb
+        .from(table)
+        .select('business_date', { head: true, count: 'exact' })
+        .gte('business_date', startDate)
+        .lte('business_date', endDate);
+
+      if (typeof applyFilters === 'function') {
+        query = applyFilters(query);
+      }
+
+      const { count, error } = await query;
+      if (error) throw error;
+      return count || 0;
+    }
+
+    async function fetchLatestBusinessDate(table, applyFilters) {
+      const currentDateKey = getBusinessDateKey(new Date(), BUSINESS_TIMEZONE);
+      let query = sb
+        .from(table)
+        .select('business_date')
+        .lte('business_date', currentDateKey)
+        .order('business_date', { ascending: false })
+        .limit(1);
+
+      if (typeof applyFilters === 'function') {
+        query = applyFilters(query);
+      }
+
+      const { data, error } = await query;
+      if (error) throw error;
+      return data && data[0] ? data[0].business_date : null;
+    }
+
+    async function resolveSectionWindow({ table, windowDays, applyFilters }) {
+      const currentDateKey = getBusinessDateKey(new Date(), BUSINESS_TIMEZONE);
+      const currentWindow = buildAnalysisWindow({
+        currentDateKey,
+        windowDays,
+        useCurrentWindow: true,
+      });
+
+      if (!currentWindow) {
+        return null;
+      }
+
+      const currentCount = await countRowsInWindow(
+        table,
+        currentWindow.startDate,
+        currentWindow.endDate,
+        applyFilters
+      );
+
+      if (currentCount > 0) {
+        return {
+          ...currentWindow,
+          rowCount: currentCount,
+        };
+      }
+
+      const latestAvailableDateKey = await fetchLatestBusinessDate(table, applyFilters);
+      if (!latestAvailableDateKey) {
+        return {
+          ...currentWindow,
+          rowCount: 0,
+          latestAvailableDateKey: null,
+        };
+      }
+
+      const fallbackWindow = buildAnalysisWindow({
+        currentDateKey,
+        latestAvailableDateKey,
+        windowDays,
+        useCurrentWindow: false,
+      });
+
+      const fallbackCount = await countRowsInWindow(
+        table,
+        fallbackWindow.startDate,
+        fallbackWindow.endDate,
+        applyFilters
+      );
+
+      return {
+        ...fallbackWindow,
+        rowCount: fallbackCount,
+        latestAvailableDateKey,
+      };
+    }
+
+    function buildAnalysisLabel(windowInfo, label) {
+      if (!windowInfo || !windowInfo.endDate) {
+        return label;
+      }
+
+      if (windowInfo.usedFallback) {
+        return `${label} ending ${formatBusinessDateLabel(windowInfo.endDate)}`;
+      }
+
+      return `${label} through ${formatBusinessDateLabel(windowInfo.endDate)}`;
+    }
+
+    async function fetchPricingRecommendations(windowInfo = null) {
       const container = document.getElementById('pricing-recommendations');
+      const activeWindow = windowInfo || buildAnalysisWindow({
+        currentDateKey: getBusinessDateKey(new Date(), BUSINESS_TIMEZONE),
+        windowDays: 7,
+        useCurrentWindow: true,
+      });
 
       // Show loading state
       container.innerHTML = `
@@ -171,12 +405,8 @@
       `;
 
       try {
-        const today = new Date();
-        const sevenDaysAgo = new Date(today);
-        sevenDaysAgo.setDate(today.getDate() - 7);
-
-        const startDate = sevenDaysAgo.toISOString().split('T')[0];
-        const endDate = today.toISOString().split('T')[0];
+        const startDate = activeWindow ? activeWindow.startDate : getBusinessDateKey(new Date(), BUSINESS_TIMEZONE);
+        const endDate = activeWindow ? activeWindow.endDate : getBusinessDateKey(new Date(), BUSINESS_TIMEZONE);
 
         // Query sales data grouped by menu item for past 7 days
         const { data: salesByItem, error } = await sb
@@ -232,7 +462,10 @@
         }
 
         // Render
-        renderPricingRecommendations(recommendations.slice(0, 5), recommendationState);
+        renderPricingRecommendations(recommendations.slice(0, 5), {
+          ...recommendationState,
+          analysisLabel: buildAnalysisLabel(activeWindow, 'Based on 7-day sales analysis'),
+        });
 
       } catch (error) {
         console.error('Error fetching pricing recommendations:', error);
@@ -392,13 +625,16 @@
 
     function renderPricingRecommendations(recommendations, options = {}) {
       const container = document.getElementById('pricing-recommendations');
+      const analysisLabel = typeof options.analysisLabel === 'string' && options.analysisLabel.trim()
+        ? options.analysisLabel.trim()
+        : 'Based on 7-day sales analysis';
 
       if (recommendations.length === 0) {
         container.innerHTML = `
           <div style="padding:30px; text-align:center; color:#8E8E93;">
             <div style="font-size:32px; margin-bottom:12px;">📊</div>
             <p>Not enough sales data for pricing analysis</p>
-            <p style="font-size:12px; margin-top:8px;">Recommendations will appear after 7 days</p>
+            <p style="font-size:12px; margin-top:8px;">${escapeHtml(analysisLabel)}</p>
           </div>
         `;
         return;
@@ -488,7 +724,7 @@
       container.innerHTML = `
         ${fallbackBanner}
         ${cautionBanner}
-        <div style="font-size:12px; color:#9CA3AF; margin-bottom:12px; text-transform:uppercase; letter-spacing:0.5px;">Based on 7-day sales analysis</div>
+        <div style="font-size:12px; color:#9CA3AF; margin-bottom:12px; text-transform:uppercase; letter-spacing:0.5px;">${escapeHtml(analysisLabel)}</div>
         <div style="flex:1; overflow-y: auto; padding-right: 4px; min-height:0;">
             ${listHtml}
         </div>
@@ -653,17 +889,20 @@
       }).filter(Boolean);
     }
 
-    async function loadTopSellers() {
-      const today = new Date().toISOString().split('T')[0];
-      const startDate = new Date();
-      startDate.setDate(startDate.getDate() - 90);
-      const startDateKey = startDate.toISOString().split('T')[0];
+    async function loadTopSellers(windowInfo = null) {
+      const activeWindow = windowInfo || buildAnalysisWindow({
+        currentDateKey: getBusinessDateKey(new Date(), BUSINESS_TIMEZONE),
+        windowDays: 90,
+        useCurrentWindow: true,
+      });
+      const startDateKey = activeWindow ? activeWindow.startDate : getBusinessDateKey(new Date(), BUSINESS_TIMEZONE);
+      const endDateKey = activeWindow ? activeWindow.endDate : getBusinessDateKey(new Date(), BUSINESS_TIMEZONE);
 
       const { data, error } = await sb
         .from('sales_line_items')
         .select('business_date, menu_item_id, menu_items(name, category), qty, net_sales')
         .gte('business_date', startDateKey)
-        .lte('business_date', today);
+        .lte('business_date', endDateKey);
 
       if (error) {
         document.getElementById('top-sellers').innerHTML = `
@@ -706,8 +945,13 @@
       }).join('');
     }
 
-    async function fetchRecentDailySales() {
+    async function fetchRecentDailySales(windowInfo = null) {
       const container = document.getElementById('sales-history');
+      const activeWindow = windowInfo || buildAnalysisWindow({
+        currentDateKey: getBusinessDateKey(new Date(), BUSINESS_TIMEZONE),
+        windowDays: 7,
+        useCurrentWindow: true,
+      });
 
       // Show loading state
       container.innerHTML = `
@@ -719,33 +963,23 @@
       `;
 
       try {
-        const today = new Date();
         const days = [];
         const dateMap = {};
+        const endDate = activeWindow ? activeWindow.endDate : getBusinessDateKey(new Date(), BUSINESS_TIMEZONE);
+        const startDate = activeWindow ? activeWindow.startDate : addDays(endDate, -6);
 
-        // Generate last 7 days (Today -> 7 days ago) using LOCAL time
-        // to match business dates correctly
+        // Generate the active 7-day analysis window.
         for (let i = 0; i < 7; i++) {
-          const d = new Date(today);
-          d.setDate(d.getDate() - i); // Corrected to use 'd' instead of 'today' for consistent date calculation
-          // Use 'en-CA' for YYYY-MM-DD format in local timezone
-          const dateStr = d.toLocaleDateString('en-CA');
+          const dateStr = addDays(endDate, -i);
           days.push(dateStr);
           dateMap[dateStr] = {
             date: dateStr,
-            dateObj: d,
+            dateObj: new Date(`${dateStr}T12:00:00Z`),
             revenue: 0,
             orders: 0,
             items: 0
           };
         }
-
-        const startDate = days[6]; // Oldest date
-        const endDate = days[0];   // Newest date (Today)
-
-        // DIRECT QUERY STRATEGY
-        // The get_revenue_trend RPC uses MAX(business_date), which is picking up bad test data from year 9999.
-        // To ensure we show THIS week's data, we query directly with strict date filters.
         const { data: orders, error } = await sb
           .from('daily_orders')
           .select('business_date, subtotal, num_guests')
@@ -775,11 +1009,9 @@
 
         // Calculate Max Revenue for Progress Bars
         const maxRevenue = Math.max(...salesData.map(d => d.revenue), 1);
-        const totalRev = salesData.reduce((sum, d) => sum + d.revenue, 0);
-
         // Render
         const listHtml = salesData.map((dayData, idx) => {
-          const isToday = idx === 0;
+          const isWindowEnd = idx === 0;
 
           const dayOfWeek = dayData.dateObj.toLocaleDateString('en-US', { weekday: 'short' });
           const monthDay = dayData.dateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
@@ -798,12 +1030,12 @@
           }).format(dayData.revenue);
 
           return `
-            <div style="padding:12px 16px; background:${isToday ? '#2C2C2E' : 'transparent'}; border-radius:10px; border:${isToday ? '1px solid #3A3A3C' : '1px solid transparent'};">
+            <div style="padding:12px 16px; background:${isWindowEnd ? '#2C2C2E' : 'transparent'}; border-radius:10px; border:${isWindowEnd ? '1px solid #3A3A3C' : '1px solid transparent'};">
               <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
                 <div style="display:flex; align-items:center; gap:8px;">
                   <div style="color:#FFF; font-size:15px; font-weight:600;">${dayOfWeek}</div>
                   <div style="color:#8E8E93; font-size:13px;">${monthDay}</div>
-                  ${isToday ? '<div style="background:#30D158; color:#000; font-size:10px; font-weight:700; padding:2px 6px; border-radius:4px; text-transform:uppercase;">TODAY</div>' : ''}
+                  ${isWindowEnd ? `<div style="background:#30D158; color:#000; font-size:10px; font-weight:700; padding:2px 6px; border-radius:4px; text-transform:uppercase;">${activeWindow && activeWindow.usedFallback ? 'LATEST' : 'TODAY'}</div>` : ''}
                 </div>
                 <div style="color:#FFF; font-size:16px; font-weight:700;">${revenueFormatted}</div>
               </div>
@@ -834,17 +1066,20 @@
       }
     }
 
-    async function loadOrderData() {
-      const today = new Date().toISOString().split('T')[0];
-      const startDate = new Date();
-      startDate.setDate(startDate.getDate() - 28);
-      const startDateKey = startDate.toISOString().split('T')[0];
+    async function loadOrderData(windowInfo = null) {
+      const activeWindow = windowInfo || buildAnalysisWindow({
+        currentDateKey: getBusinessDateKey(new Date(), BUSINESS_TIMEZONE),
+        windowDays: 28,
+        useCurrentWindow: true,
+      });
+      const startDateKey = activeWindow ? activeWindow.startDate : getBusinessDateKey(new Date(), BUSINESS_TIMEZONE);
+      const endDateKey = activeWindow ? activeWindow.endDate : getBusinessDateKey(new Date(), BUSINESS_TIMEZONE);
 
       const { data, error } = await sb
         .from('daily_orders')
         .select('opened_at, business_date')
         .gte('business_date', startDateKey)
-        .lte('business_date', today)
+        .lte('business_date', endDateKey)
         .eq('voided', false)
         .not('opened_at', 'is', null);
 
@@ -859,7 +1094,6 @@
 
     function renderDayTabs() {
       const container = document.getElementById('day-tabs');
-      const today = new Date().getDay();
 
       container.innerHTML = dayNames.map((d, i) => {
         // Reorder to start with Today, then previous days?
@@ -881,7 +1115,9 @@
 
     function selectDay(dayIndex) {
       const normalizedDay = parseFiniteNumber(dayIndex, { integer: true, min: 0, max: 6 });
-      selectedDay = normalizedDay === null ? new Date().getDay() : normalizedDay;
+      selectedDay = normalizedDay === null
+        ? (getDatePartsInTimeZone(new Date(), BUSINESS_TIMEZONE)?.weekdayIndex ?? new Date().getDay())
+        : normalizedDay;
       renderDayTabs();
       renderPopularTimes();
     }
@@ -900,8 +1136,8 @@
       }
 
       const relevantOrders = orderData.filter(o => {
-        const d = new Date(o.opened_at);
-        return d.getDay() === selectedDay;
+        const parts = getDatePartsInTimeZone(o.opened_at, BUSINESS_TIMEZONE);
+        return parts && parts.weekdayIndex === selectedDay;
       });
 
       if (relevantOrders.length === 0) {
@@ -919,8 +1155,10 @@
       // Group by hour
       const hourlyCounts = new Array(24).fill(0);
       relevantOrders.forEach(o => {
-        const h = new Date(o.opened_at).getHours();
-        hourlyCounts[h]++;
+        const parts = getDatePartsInTimeZone(o.opened_at, BUSINESS_TIMEZONE);
+        if (parts && Number.isInteger(parts.hour)) {
+          hourlyCounts[parts.hour]++;
+        }
       });
 
       // Find global max to scale bars (across all days or just this day?)
@@ -929,8 +1167,10 @@
       const maxCount = Math.max(...hourlyCounts, 1);
 
       // Description logic
-      const currentHour = new Date().getHours();
-      const isToday = selectedDay === new Date().getDay();
+      const currentParts = getDatePartsInTimeZone(new Date(), BUSINESS_TIMEZONE);
+      const currentHour = currentParts ? currentParts.hour : new Date().getHours();
+      const currentWeekday = currentParts ? currentParts.weekdayIndex : new Date().getDay();
+      const isToday = !analysisContext.trafficWindow?.usedFallback && selectedDay === currentWeekday;
       const currentLoad = hourlyCounts[currentHour] || 0;
 
       let labelText = '';
