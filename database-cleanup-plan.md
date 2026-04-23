@@ -77,7 +77,7 @@ The original `register_order` RPC also trusted the incoming `business_date` inst
 - Ambiguous kiosk rows are skipped, never force-repaired.
 - `created_at` values are not shifted.
 - `RECEIVE` and `COUNT` transactions are not shifted.
-- Stage 2 is optional and must be treated as a separate decision, not as part of the real bug fix.
+- Stage 2 was executed as a separate approved continuity step after the real bug fix and Stage 1 correction; it should not be described as the root-cause fix itself.
 
 ## Future-Write Fix
 
@@ -199,6 +199,11 @@ Stage 2 remained intentionally separate from the real bug fix and the real histo
 - `current_max_business_date = 2026-04-22`
 - `current_kiosk_max_business_date = 2026-04-22`
 - `mismatches = []`
+- totals preserved:
+  - `daily_orders_subtotal = 974842.61`
+  - `sales_line_items_net_sales = 899428.83`
+  - `sales_line_items_qty = 55607`
+  - `inventory_txns_consume_qty_delta = -3283597.5`
 
 ### Commands Used
 
@@ -231,7 +236,7 @@ Additional reconciliation work was required during Stage 2:
 ### Analysis Script
 
 - file: `scripts/database-cleanup-analyze.mjs`
-- purpose: read-only audit of date ranges, kiosk anomalies, impacted rows, and the optional Stage 2 shift delta
+- purpose: read-only audit of date ranges, kiosk anomalies, impacted rows, and the computed forward-shift delta
 
 ### Verification Script
 
@@ -256,3 +261,11 @@ Rows are marked ambiguous and skipped if any of the following are true:
 - reconstructed subtotal does not match the stored order subtotal within tolerance
 
 For the current Stage 1 run, no rows met those conditions.
+
+## Remaining Imperfection
+
+The Stage 2 continuity shift moved the dataset forward, but it did not invent missing historical days. One interior historical gap still exists in the shifted order timeline, so the data is now current to `2026-04-22` without pretending that every missing historical day originally existed.
+
+## Live Analytics Impact
+
+Because the underlying order-history dataset now reaches `2026-04-22`, the Sales Analysis page can use truly current recent windows instead of relying on a latest-available fallback. The current 7-day sales window, 28-day traffic window, and pricing window all populate from real post-shift data.

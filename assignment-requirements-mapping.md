@@ -16,7 +16,7 @@ Repository link:
 | Mandatory Security 2: SQL injection / XSS protection | Supabase/RPC access avoids raw SQL concatenation; frontend now includes shared sanitization and hardened rendering paths. | `live-deployed` |
 | Mandatory Security 3: brute-force login protection | `auth-login` Edge Function + `auth_login_guards` table + lockout messaging. | `live-deployed` |
 | Mandatory Security 4: secure sessions / auth handling | Supabase Auth manages sessions over HTTPS; the guarded login endpoint is now deployed. | `live-deployed` |
-| Additional Enhancement 1: database integration | Existing Supabase/PostgreSQL backend with migrations, RPCs, analytics, real app data, a live `business_date` normalization fix, and a completed Stage 1 historical kiosk correction. | `live-deployed` |
+| Additional Enhancement 1: database integration | Existing Supabase/PostgreSQL backend with migrations, RPCs, analytics, real app data, a live `business_date` normalization fix, a completed Stage 1 historical kiosk correction, and an intentionally applied Stage 2 continuity shift. | `live-deployed` |
 | Additional Enhancement 2: performance optimization | Static frontend, lightweight client architecture, and CDN-backed hosting model. | `live-deployed` |
 | Additional Enhancement 3: scalability / deployment | Real Vercel deployment model plus GitHub Actions CI/deploy workflows in repo. | `live-deployed, deploy secrets optional` |
 | Additional Enhancement 4: traffic monitoring & security analysis | `security_events` table, event-ingest function, analysis function, internal/report monitoring page, and generated artifacts. | `backend-live, report-ready` |
@@ -57,7 +57,7 @@ Evidence:
 
 ### Additional Enhancement 1: Database Integration
 
-> Stockd already used a real Supabase/PostgreSQL backend with migrations, RPC functions, and production-style data flows for onboarding, inventory, forecasting, and analytics. During the assignment work, we also fixed a real date-handling bug in the kiosk order flow by moving `business_date` resolution to the server in `America/New_York`, safely corrected the already affected historical kiosk data in the live database, and then intentionally shifted the broader order-history timeline forward as a controlled data-curation step after verification. That makes database integration one of the strongest rubric categories in the project because it includes both normal application persistence and a real production-style data repair.
+> Stockd already used a real Supabase/PostgreSQL backend with migrations, RPC functions, and production-style data flows for onboarding, inventory, forecasting, and analytics. During the assignment work, we also fixed a real date-handling bug in the kiosk order flow by moving `business_date` resolution to the server in `America/New_York`, safely corrected the already affected historical kiosk data in the live database, and then intentionally shifted the broader order-history timeline forward as a controlled data-curation step after verification. That makes database integration one of the strongest rubric categories in the project because it includes normal application persistence, a real production-style data repair, and a verified continuity shift that now keeps the live analytics pages current.
 
 Evidence:
 
@@ -104,3 +104,7 @@ Evidence:
 Use this wording if you want the report to reflect the exact rollout state:
 
 > We used the real Stockd application as the networking course project and extended it instead of building a separate demo. By April 23, 2026, the backend rollout was complete in the real Supabase project: the security and monitoring migrations were applied, the login protection and monitoring Edge Functions were deployed, the kiosk `business_date` bug was fixed server-side in `America/New_York`, 35 historical kiosk orders and 300 related consume transactions were corrected with post-verification passing, the broader order-history timeline was intentionally shifted forward by 35 days after fresh analysis and post-verification, live security-analysis artifacts were regenerated, and the public frontend was deployed on the real Stockd Vercel site.
+
+One honest caveat to mention in the report:
+
+> One interior historical gap still remains in the shifted order-history timeline because the continuity shift moved real data forward without inventing missing historical days.

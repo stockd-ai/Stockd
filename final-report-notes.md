@@ -19,7 +19,9 @@ Stockd is a real restaurant inventory and analytics application built on a Supab
 - the affected sales aggregates were rebuilt and post-verification passed
 - no ambiguous rows and no manual-review queue were left behind
 - after the root-cause repair and Stage 1 correction, a controlled Stage 2 forward timeline shift of `+35` days was intentionally applied to close the stale data gap
+- the latest business date is now `2026-04-22`
 - DST-sensitive shifted order timestamps were reconciled so `America/New_York` business-time behavior stayed correct
+- Sales Analysis now shows truly current recent windows because the dataset itself is current again
 
 ### 1. Real backend rollout completed
 
@@ -70,6 +72,11 @@ Stockd is a real restaurant inventory and analytics application built on a Supab
 
 - existing Supabase/PostgreSQL application with real production-style data flow, plus a live business-date bug fix, verified historical kiosk correction, and a verified full forward timeline shift to the latest completed business day
 
+### Analytics Caveat
+
+- one interior historical gap still remains in the shifted timeline
+- that is acceptable and honest because the continuity shift moved real data forward without inventing missing historical days
+
 ### Additional Enhancement: Traffic Monitoring and Security Analysis
 
 - `security_events` storage
@@ -97,7 +104,7 @@ Use these screenshots in the final report:
    Show Stockd as a real, existing application rather than a course-only demo.
 
 4. Database cleanup proof artifact
-   Show `logs/database-cleanup/stage1-kiosk-repair/post-verification-stage1-kiosk.json` or the matching Markdown summary.
+   Show `logs/database-cleanup/stage2-forward-shift/post-verification-stage2-shift.json` or the matching Markdown summary.
 
 5. Security monitor / report artifact
    Show the backend/reporting security-analysis output rather than presenting it as a core user-facing feature.

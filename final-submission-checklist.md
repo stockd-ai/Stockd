@@ -51,6 +51,9 @@ Use this as the final go/no-go checklist before submitting the course project.
 - [x] `24,370` `inventory_txns` `CONSUME` rows shifted forward
 - [x] Stage 2 post-verification passed with no mismatches
 - [x] DST-sensitive shifted order timestamps reconciled
+- [x] Latest business date is now `2026-04-22`
+- [x] Sales Analysis now has truly current recent windows
+- [x] Interior historical gap documented honestly as still present
 
 ## Submission Artifacts
 
@@ -88,3 +91,4 @@ Use this as the final go/no-go checklist before submitting the course project.
 
 - Stage 2 was applied deliberately after the real bug fix and the real Stage 1 historical correction
 - the forward shift was a controlled continuity step, not a replacement for the underlying date bug fix
+- one interior historical gap still remains because the shift moved real data but did not invent missing days

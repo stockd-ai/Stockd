@@ -42,6 +42,16 @@ Stage 2 was later approved and applied intentionally.
 
 After Stage 2, the latest business date became `2026-04-22`, which closed the stale order-history gap up to the latest completed business day in `America/New_York`.
 
+## What still is not perfect
+
+- one interior historical gap still exists in the shifted dataset
+- that is expected because Stage 2 moved the real data forward but did not invent missing historical days
+
+## Effect on analytics pages
+
+- Sales Analysis now has truly current recent windows because the data itself now reaches `2026-04-22`
+- the recent sales, traffic surge, and dynamic pricing sections can now populate from the current window instead of relying only on fallback logic
+
 ## Report-ready summary
 
 > We identified a real date-handling bug in the kiosk order flow: the kiosk was sending a UTC-derived `business_date`, which caused some late-night orders to be recorded as tomorrow's order. We fixed that by making the server authoritative for `business_date` in `America/New_York`, then safely corrected the already affected kiosk data in Stage 1. In the live database, 35 kiosk orders and 300 related consume transactions were corrected, the affected sales aggregates were rebuilt successfully, and post-verification passed with no manual-review rows. After that root-cause repair was complete, we intentionally applied Stage 2 as a controlled data-curation step, shifting the order-history timeline forward by 35 days so the dataset reached the latest completed business day without changing audit-style `created_at` fields, and then corrected DST-sensitive shifted order timestamps so local business-time behavior remained consistent.

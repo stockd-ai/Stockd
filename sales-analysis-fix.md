@@ -7,7 +7,7 @@ Last updated: April 22, 2026
 ### Recent Daily Sales
 
 - The page was querying only the last 7 calendar days relative to the current date.
-- After the business-date cleanup, the real historical dataset still ends on `2026-03-18` because the optional global forward shift was intentionally not applied.
+- After the full database cleanup was completed, the real dataset now reaches `2026-04-22` because the Stage 2 continuity shift was intentionally applied after the root-cause fix and Stage 1 historical correction.
 - That meant the current-date-relative 7-day query returned no rows, so the section rendered an empty or unhelpful state even though valid historical sales still existed.
 
 ### Traffic Surge Patterns
