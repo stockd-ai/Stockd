@@ -15,6 +15,8 @@ const {
 const {
   buildAnalysisWindow,
   buildDashboardForecastData,
+  buildPricingRecommendations,
+  buildPricingSignalSummary,
   buildRecentSalesDays,
   getBusinessDateKey,
   getCountVariancePercent,
@@ -217,6 +219,59 @@ function buildOrderPayload(orderId, menuItemName, overrides = {}) {
       usedFallback: false,
       windowDays: 28,
     });
+  })) passed += 1; else failed += 1;
+
+  if (await run("pricing helpers return a clean insufficient-data state when the analysis window has no price diversity", async () => {
+    const itemPerformance = [
+      { id: "a", name: "The Barbecue Chicken Pizza (L)", category: "Chicken", totalQuantity: 117, totalRevenue: 1519.83, currentPrice: 12.99, orderCount: 2, dayCount: 2 },
+      { id: "b", name: "The Greek Pizza (L)", category: "Classic", totalQuantity: 41, totalRevenue: 532.59, currentPrice: 12.99, orderCount: 1, dayCount: 1 },
+      { id: "c", name: "The Spinach Pesto Pizza (L)", category: "Veggie", totalQuantity: 18, totalRevenue: 233.82, currentPrice: 12.99, orderCount: 1, dayCount: 1 },
+      { id: "d", name: "The Sicilian Pizza (M)", category: "Supreme", totalQuantity: 12, totalRevenue: 155.88, currentPrice: 12.99, orderCount: 1, dayCount: 1 },
+    ];
+
+    const summary = buildPricingSignalSummary(itemPerformance, {
+      minItems: 4,
+      minActiveDays: 1,
+      minTotalUnits: 20,
+    });
+
+    assert.equal(summary.readiness.code, "no_price_diversity");
+    assert.equal(summary.uniquePriceCount, 1);
+    assert.deepEqual(
+      buildPricingRecommendations(itemPerformance, {
+        minItems: 4,
+        minActiveDays: 1,
+        minTotalUnits: 20,
+      }),
+      [],
+    );
+  })) passed += 1; else failed += 1;
+
+  if (await run("pricing helpers produce a recommendation only when category peers show real price and demand divergence", async () => {
+    const itemPerformance = [
+      { id: "a", name: "Item A", category: "Chicken", totalQuantity: 90, totalRevenue: 854.1, currentPrice: 9.49, orderCount: 6, dayCount: 4 },
+      { id: "b", name: "Item B", category: "Chicken", totalQuantity: 28, totalRevenue: 363.72, currentPrice: 12.99, orderCount: 4, dayCount: 4 },
+      { id: "c", name: "Item C", category: "Chicken", totalQuantity: 24, totalRevenue: 311.76, currentPrice: 12.99, orderCount: 4, dayCount: 4 },
+      { id: "d", name: "Item D", category: "Chicken", totalQuantity: 21, totalRevenue: 272.79, currentPrice: 12.99, orderCount: 4, dayCount: 4 },
+    ];
+
+    const summary = buildPricingSignalSummary(itemPerformance, {
+      minItems: 4,
+      minActiveDays: 3,
+      minTotalUnits: 20,
+    });
+
+    assert.equal(summary.readiness.code, "ready");
+    const recommendations = buildPricingRecommendations(itemPerformance, {
+      minItems: 4,
+      minActiveDays: 3,
+      minTotalUnits: 20,
+    });
+
+    assert.equal(recommendations.length > 0, true);
+    assert.equal(recommendations[0].itemName, "Item A");
+    assert.equal(recommendations[0].action, "increase");
+    assert.equal(recommendations[0].suggestedPrice > recommendations[0].currentPrice, true);
   })) passed += 1; else failed += 1;
 
   if (await run("count_inventory note parsing and summary metrics match the real RPC note format", async () => {

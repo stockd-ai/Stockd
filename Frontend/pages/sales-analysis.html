@@ -136,6 +136,8 @@
     const {
       addDays,
       buildAnalysisWindow,
+      buildPricingRecommendations: derivePricingRecommendations,
+      buildPricingSignalSummary,
       buildTopSellerStats,
       getBusinessDateKey,
       getDatePartsInTimeZone,
@@ -428,44 +430,52 @@
 
         // Group and analyze by menu item
         const itemPerformance = aggregateItemPerformance(salesByItem || []);
+        const analysisLabel = buildAnalysisLabel(activeWindow, 'Based on 7-day sales analysis');
+        const pricingSignalSummary = buildPricingSignalSummary(itemPerformance, {
+          minItems: 4,
+          minActiveDays: 3,
+          minTotalUnits: 20,
+        });
 
-        // Generate recommendations
+        if (pricingSignalSummary.readiness.state !== 'ready') {
+          renderPricingRecommendations([], {
+            analysisLabel,
+            emptyState: pricingSignalSummary.readiness,
+          });
+          return;
+        }
+
         let recommendations = null;
-        let recommendationState = { fallback: false, reason: '', source: 'ai' };
 
-        // Try AI generation first
+        // Use Stockd Copilot when the data window supports real recommendation work.
         try {
-          renderSkeletonLoading(); // Show skeleton state while AI thinks
+          renderSkeletonLoading();
           const aiResult = await generateCopilotPricingInsights(itemPerformance, { startDate, endDate });
           recommendations = aiResult.recommendations;
-
-          if (!recommendations || recommendations.length === 0) {
-            recommendationState = {
-              fallback: true,
-              source: 'fallback',
-              reason: aiResult.reason || 'Stockd Copilot did not return usable pricing recommendations.'
-            };
-          }
         } catch (err) {
-          console.warn('Pricing insights request failed, falling back to rules:', err);
-          recommendationState = {
-            fallback: true,
-            source: 'fallback',
-            reason: err && err.message ? err.message : 'Stockd Copilot is unavailable right now.'
-          };
+          console.warn('Pricing insights request failed, falling back to deterministic rules:', err);
         }
 
-        // Fallback to rule-based if AI fails or returns empty
         if (!recommendations || recommendations.length === 0) {
-          console.log('Using rule-based pricing recommendations');
-          recommendations = generatePricingRecommendations(itemPerformance);
+          recommendations = derivePricingRecommendations(itemPerformance, {
+            minItems: 4,
+            minActiveDays: 3,
+            minTotalUnits: 20,
+          });
         }
 
-        // Render
-        renderPricingRecommendations(recommendations.slice(0, 5), {
-          ...recommendationState,
-          analysisLabel: buildAnalysisLabel(activeWindow, 'Based on 7-day sales analysis'),
-        });
+        if (!recommendations || recommendations.length === 0) {
+          renderPricingRecommendations([], {
+            analysisLabel,
+            emptyState: {
+              title: 'No reliable price move yet',
+              message: 'Recent item performance looks stable, so Stockd is holding pricing until stronger demand or pricing signals appear.',
+            },
+          });
+          return;
+        }
+
+        renderPricingRecommendations(recommendations.slice(0, 5), { analysisLabel });
 
       } catch (error) {
         console.error('Error fetching pricing recommendations:', error);
@@ -496,7 +506,8 @@
             category: item.category || 'Other',
             totalQuantity: 0,
             totalRevenue: 0,
-            orderCount: 0 // Sales line items doesn't give us order count directly, using txn count as proxy
+            orderCount: 0, // Sales line items doesn't give us order count directly, using txn count as proxy
+            activeDates: new Set(),
           });
         }
 
@@ -504,6 +515,9 @@
         itemData.totalQuantity += sale.qty || 0;
         itemData.totalRevenue += parseFloat(sale.net_sales) || 0;
         itemData.orderCount += 1;
+        if (sale.business_date) {
+          itemData.activeDates.add(String(sale.business_date));
+        }
       });
 
       return Array.from(itemMap.values()).map(item => {
@@ -511,112 +525,10 @@
         item.currentPrice = item.totalQuantity > 0
           ? item.totalRevenue / item.totalQuantity
           : 0;
+        item.dayCount = item.activeDates.size;
+        delete item.activeDates;
         return item;
       });
-    }
-
-    function generatePricingRecommendations(itemPerformance) {
-      if (itemPerformance.length === 0) return [];
-
-      const recommendations = [];
-
-      // Calculate overall averages for comparison
-      const avgQuantity = itemPerformance.reduce((sum, item) => sum + item.totalQuantity, 0) / itemPerformance.length;
-      const avgRevenue = itemPerformance.reduce((sum, item) => sum + item.totalRevenue, 0) / itemPerformance.length;
-      const avgPrice = itemPerformance.reduce((sum, item) => sum + item.currentPrice, 0) / itemPerformance.length;
-
-      itemPerformance.forEach(item => {
-        const rec = {
-          itemId: item.id,
-          itemName: item.name,
-          category: item.category,
-          currentPrice: item.currentPrice,
-          suggestedPrice: item.currentPrice,
-          priceChange: 0,
-          percentChange: 0,
-          action: 'hold', // 'increase', 'decrease', 'hold'
-          actionIcon: '=',
-          reason: '',
-          confidence: 'medium', // 'high', 'medium', 'low'
-          risk: 'medium', // 'low', 'medium', 'high'
-          metrics: {
-            unitsSold: item.totalQuantity,
-            revenue: item.totalRevenue,
-            orders: item.orderCount
-          }
-        };
-
-        // High demand + Strong revenue = Consider increase
-        if (item.totalQuantity > avgQuantity * 1.3 && item.totalRevenue > avgRevenue * 1.2) {
-          rec.action = 'increase';
-          rec.actionIcon = '↗️';
-          rec.priceChange = Math.round(item.currentPrice * 0.05 * 100) / 100; // 5% increase
-          rec.percentChange = 5;
-          rec.suggestedPrice = item.currentPrice + rec.priceChange;
-          rec.reason = 'High demand, low price sensitivity';
-          rec.confidence = 'high';
-          rec.risk = 'low';
-        }
-
-        // High demand + Below average price = Underpriced
-        else if (item.totalQuantity > avgQuantity * 1.5 && item.currentPrice < avgPrice * 0.8) {
-          rec.action = 'increase';
-          rec.actionIcon = '↗️';
-          rec.priceChange = Math.round(item.currentPrice * 0.10 * 100) / 100; // 10% increase
-          rec.percentChange = 10;
-          rec.suggestedPrice = item.currentPrice + rec.priceChange;
-          rec.reason = 'Popular item priced below market';
-          rec.confidence = 'high';
-          rec.risk = 'low';
-        }
-
-        // Low demand + High price = Overpriced
-        else if (item.totalQuantity < avgQuantity * 0.5 && item.currentPrice > avgPrice * 1.2) {
-          rec.action = 'decrease';
-          rec.actionIcon = '↘️';
-          rec.priceChange = -Math.round(item.currentPrice * 0.10 * 100) / 100; // 10% decrease
-          rec.percentChange = -10;
-          rec.suggestedPrice = item.currentPrice + rec.priceChange;
-          rec.reason = 'Low conversion - test lower price point';
-          rec.confidence = 'medium';
-          rec.risk = 'medium';
-        }
-
-        // Very low demand = Investigate
-        else if (item.totalQuantity < 10 && item.orderCount < 5) {
-          rec.action = 'decrease';
-          rec.actionIcon = '↘️';
-          rec.priceChange = -Math.round(item.currentPrice * 0.15 * 100) / 100; // 15% decrease
-          rec.percentChange = -15;
-          rec.suggestedPrice = item.currentPrice + rec.priceChange;
-          rec.reason = 'Very low sales - significant adjustment needed';
-          rec.confidence = 'low';
-          rec.risk = 'high';
-        }
-
-        // Stable performance = Hold
-        else {
-          rec.action = 'hold';
-          rec.actionIcon = '=';
-          rec.reason = 'Stable performance - maintain pricing';
-          rec.confidence = 'high';
-          rec.risk = 'low';
-        }
-
-        recommendations.push(rec);
-      });
-
-      // Sort by impact (prioritize high-revenue items with opportunities)
-      recommendations.sort((a, b) => {
-        // Prioritize increase opportunities on high-revenue items
-        if (a.action === 'increase' && b.action !== 'increase') return -1;
-        if (b.action === 'increase' && a.action !== 'increase') return 1;
-
-        // Then sort by revenue descending
-        return b.metrics.revenue - a.metrics.revenue;
-      });
-
-      return recommendations;
     }
 
     function escapeHtml(value) {
@@ -628,37 +540,41 @@
       const analysisLabel = typeof options.analysisLabel === 'string' && options.analysisLabel.trim()
         ? options.analysisLabel.trim()
         : 'Based on 7-day sales analysis';
+      const emptyState = options.emptyState && typeof options.emptyState === 'object'
+        ? options.emptyState
+        : null;
 
       if (recommendations.length === 0) {
         container.innerHTML = `
-          <div style="padding:30px; text-align:center; color:#8E8E93;">
-            <div style="font-size:32px; margin-bottom:12px;">📊</div>
-            <p>Not enough sales data for pricing analysis</p>
-            <p style="font-size:12px; margin-top:8px;">${escapeHtml(analysisLabel)}</p>
+          <div style="padding:28px 24px; text-align:left; color:#E5E7EB; background:#2C2C2E; border:1px solid #3A3A3C; border-radius:16px;">
+            <div style="display:flex; gap:12px; align-items:flex-start;">
+              <div style="font-size:22px; line-height:1;">📉</div>
+              <div>
+                <div style="font-size:16px; font-weight:700; color:#FFF; margin-bottom:6px;">
+                  ${escapeHtml(emptyState && emptyState.title ? emptyState.title : 'No reliable pricing recommendation yet')}
+                </div>
+                <div style="font-size:13px; line-height:1.5; color:#D1D5DB;">
+                  ${escapeHtml(emptyState && emptyState.message
+                    ? emptyState.message
+                    : 'Not enough recent pricing evidence is available to recommend a confident price move right now.')}
+                </div>
+                <div style="font-size:11px; color:#9CA3AF; margin-top:12px; text-transform:uppercase; letter-spacing:0.5px;">
+                  ${escapeHtml(analysisLabel)}
+                </div>
+              </div>
+            </div>
           </div>
         `;
         return;
       }
 
-      const fallbackBanner = options.fallback ? `
-        <div style="background:#1F2937; border:1px solid #374151; border-radius:12px; padding:14px 16px; margin-bottom:16px; display:flex; gap:12px;">
-          <div style="font-size:18px;">ℹ️</div>
-          <div>
-            <div style="font-weight:700; font-size:13px; color:#E5E7EB; margin-bottom:4px;">USING LOCAL FALLBACK</div>
-            <div style="font-size:12px; color:#D1D5DB; line-height:1.4;">
-              ${escapeHtml(options.reason || 'Stockd Copilot was unavailable, so these recommendations were generated with local pricing rules.')}
-            </div>
-          </div>
-        </div>
-      ` : '';
-
       const cautionBanner = `
         <div style="background:#FEF3C7; border:1px solid #F59E0B; border-radius:12px; padding:16px; margin-bottom:20px; display:flex; gap:12px;">
           <div style="font-size:20px;">⚠️</div>
           <div>
-            <div style="font-weight:700; font-size:13px; color:#92400E; margin-bottom:4px;">PRICING CAUTION</div>
+            <div style="font-weight:700; font-size:13px; color:#92400E; margin-bottom:4px;">PRICE CHANGE GUIDANCE</div>
             <div style="font-size:12px; color:#78350F; line-height:1.4;">
-              Sudden changes can impact customer loyalty. We recommend gradual adjustments.
+              Use these as controlled tests. Apply small changes first and monitor conversion before widening the move.
             </div>
           </div>
         </div>
@@ -722,13 +638,11 @@
       }).join('');
 
       container.innerHTML = `
-        ${fallbackBanner}
         ${cautionBanner}
         <div style="font-size:12px; color:#9CA3AF; margin-bottom:12px; text-transform:uppercase; letter-spacing:0.5px;">${escapeHtml(analysisLabel)}</div>
         <div style="flex:1; overflow-y: auto; padding-right: 4px; min-height:0;">
             ${listHtml}
         </div>
-        ${recommendations.length > 5 ? '<button style="width:100%; padding:10px; background:transparent; border:1px solid #3A3A3C; color:#8E8E93; border-radius:8px; margin-top:8px; font-size:13px; cursor:pointer;">View All Recommendations</button>' : ''}
       `;
     }
 
@@ -877,7 +791,9 @@
           percentChange: reportedPercent,
           action,
           actionIcon: action === 'increase' ? '↗️' : action === 'decrease' ? '↘️' : action === 'investigate' ? '🔎' : '=',
-          reason: 'AI: ' + (typeof rec.reason === 'string' ? rec.reason : 'Review pricing opportunity'),
+          reason: typeof rec.reason === 'string' && rec.reason.trim()
+            ? rec.reason.trim()
+            : 'Review pricing opportunity',
           confidence: ['low', 'medium', 'high'].includes(rec.confidence) ? rec.confidence : 'medium',
           risk: ['low', 'medium', 'high'].includes(rec.risk) ? rec.risk : (Math.abs(reportedPercent) > 15 ? 'high' : 'medium'),
           metrics: {

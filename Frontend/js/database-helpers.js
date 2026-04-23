@@ -285,6 +285,262 @@
     return limit === null ? results : results.slice(0, limit);
   }
 
+  function buildPricingSignalSummary(itemPerformance, options = {}) {
+    const settings = options || {};
+    const minItems = Math.max(1, Math.floor(toNumber(settings.minItems, 4)));
+    const minActiveDays = Math.max(1, Math.floor(toNumber(settings.minActiveDays, 3)));
+    const minTotalUnits = Math.max(1, Math.floor(toNumber(settings.minTotalUnits, 20)));
+
+    const safeItems = (Array.isArray(itemPerformance) ? itemPerformance : [])
+      .map((item) => ({
+        id: toSafeString(item && item.id).trim(),
+        name: toSafeString(item && item.name).trim() || "Unknown item",
+        category: toSafeString(item && item.category).trim() || "Other",
+        totalQuantity: toNumber(item && item.totalQuantity),
+        totalRevenue: toNumber(item && item.totalRevenue),
+        currentPrice: Number(toNumber(item && item.currentPrice).toFixed(2)),
+        orderCount: Math.max(0, Math.floor(toNumber(item && item.orderCount))),
+        dayCount: Math.max(0, Math.floor(toNumber(item && item.dayCount))),
+      }))
+      .filter((item) =>
+        item.id &&
+        item.totalQuantity > 0 &&
+        item.currentPrice > 0 &&
+        !shouldExcludeMenuEntry(item.name, item.category)
+      );
+
+    const uniquePricePoints = Array.from(new Set(
+      safeItems.map((item) => Number(item.currentPrice.toFixed(2))),
+    )).sort((left, right) => left - right);
+
+    const categoryMap = new Map();
+    let maxActiveDays = 0;
+    let totalUnits = 0;
+    let totalRevenue = 0;
+
+    safeItems.forEach((item) => {
+      totalUnits += item.totalQuantity;
+      totalRevenue += item.totalRevenue;
+      maxActiveDays = Math.max(maxActiveDays, item.dayCount);
+
+      if (!categoryMap.has(item.category)) {
+        categoryMap.set(item.category, []);
+      }
+
+      categoryMap.get(item.category).push(item);
+    });
+
+    const categoryStats = Array.from(categoryMap.entries()).map(([category, items]) => {
+      const prices = items.map((item) => item.currentPrice);
+      const quantities = items.map((item) => item.totalQuantity);
+      return {
+        category,
+        itemCount: items.length,
+        avgPrice: Number((prices.reduce((sum, value) => sum + value, 0) / items.length).toFixed(2)),
+        minPrice: Math.min(...prices),
+        maxPrice: Math.max(...prices),
+        avgQuantity: Number((quantities.reduce((sum, value) => sum + value, 0) / items.length).toFixed(2)),
+      };
+    });
+
+    let readiness = {
+      state: "ready",
+      title: "Recommendations available",
+      message: "",
+      code: "ready",
+    };
+
+    if (safeItems.length === 0) {
+      readiness = {
+        state: "insufficient_data",
+        title: "No recent item sales found",
+        message: "Not enough recent item sales are available in this window to evaluate pricing.",
+        code: "no_sales_rows",
+      };
+    } else if (safeItems.length < minItems) {
+      readiness = {
+        state: "insufficient_data",
+        title: "Not enough item coverage yet",
+        message: `Only ${safeItems.length} selling item${safeItems.length === 1 ? "" : "s"} appeared in this window. Stockd needs a broader mix before pricing recommendations are reliable.`,
+        code: "too_few_items",
+      };
+    } else if (maxActiveDays < minActiveDays) {
+      readiness = {
+        state: "insufficient_data",
+        title: "Need a few more active sales days",
+        message: `This window only has ${maxActiveDays} active sales day${maxActiveDays === 1 ? "" : "s"} for pricing analysis. Stockd waits for a little more day-to-day coverage before recommending changes.`,
+        code: "too_few_days",
+      };
+    } else if (totalUnits < minTotalUnits) {
+      readiness = {
+        state: "insufficient_data",
+        title: "Not enough sales volume yet",
+        message: `This window only contains ${Math.round(totalUnits)} sold units. Stockd needs a bit more recent volume before suggesting price moves confidently.`,
+        code: "too_few_units",
+      };
+    } else if (uniquePricePoints.length < 2) {
+      const singlePrice = uniquePricePoints[0];
+      const priceLabel = Number.isFinite(singlePrice) ? `$${singlePrice.toFixed(2)}` : "the same price";
+      readiness = {
+        state: "insufficient_data",
+        title: "Price movement is not justified yet",
+        message: `We have recent sales data, but every selling item in this window is currently at ${priceLabel}. Stockd needs real price variation before it can recommend dynamic pricing changes confidently.`,
+        code: "no_price_diversity",
+      };
+    }
+
+    return {
+      items: safeItems,
+      itemCount: safeItems.length,
+      totalUnits: Number(totalUnits.toFixed(2)),
+      totalRevenue: Number(totalRevenue.toFixed(2)),
+      maxActiveDays,
+      uniquePricePoints,
+      uniquePriceCount: uniquePricePoints.length,
+      categoryStats,
+      readiness,
+    };
+  }
+
+  function buildPricingRecommendations(itemPerformance, options = {}) {
+    const summary = buildPricingSignalSummary(itemPerformance, options);
+    if (summary.readiness.state !== "ready") {
+      return [];
+    }
+
+    const items = summary.items;
+    const overallAvgQuantity = items.reduce((sum, item) => sum + item.totalQuantity, 0) / items.length;
+    const categoryMap = new Map();
+
+    items.forEach((item) => {
+      if (!categoryMap.has(item.category)) {
+        categoryMap.set(item.category, []);
+      }
+      categoryMap.get(item.category).push(item);
+    });
+
+    const recommendations = [];
+
+    items.forEach((item) => {
+      const peers = categoryMap.get(item.category) || [];
+      if (peers.length < 2) {
+        return;
+      }
+
+      const categoryAvgPrice = peers.reduce((sum, peer) => sum + peer.currentPrice, 0) / peers.length;
+      const categoryAvgQuantity = peers.reduce((sum, peer) => sum + peer.totalQuantity, 0) / peers.length;
+      const categoryMinPrice = Math.min(...peers.map((peer) => peer.currentPrice));
+      const categoryMaxPrice = Math.max(...peers.map((peer) => peer.currentPrice));
+
+      const quantityRatio = categoryAvgQuantity > 0 ? item.totalQuantity / categoryAvgQuantity : 1;
+      const priceDelta = Number((item.currentPrice - categoryAvgPrice).toFixed(2));
+      const hasMeaningfulPriceGap = Math.abs(priceDelta) >= 0.5;
+
+      let recommendation = null;
+
+      if (
+        hasMeaningfulPriceGap &&
+        quantityRatio >= 1.35 &&
+        item.currentPrice <= categoryAvgPrice - 0.5
+      ) {
+        const targetPrice = Math.min(categoryAvgPrice, item.currentPrice + Math.max(0.25, Math.abs(priceDelta) * 0.5));
+        recommendation = {
+          itemId: item.id,
+          itemName: item.name,
+          category: item.category,
+          currentPrice: item.currentPrice,
+          suggestedPrice: Number(targetPrice.toFixed(2)),
+          priceChange: Number((targetPrice - item.currentPrice).toFixed(2)),
+          percentChange: Math.round(((targetPrice - item.currentPrice) / item.currentPrice) * 100),
+          action: "increase",
+          actionIcon: "↗",
+          reason: `Strong recent demand against lower-priced peers in ${item.category}.`,
+          confidence: quantityRatio >= 1.6 ? "high" : "medium",
+          risk: "low",
+          metrics: {
+            unitsSold: item.totalQuantity,
+            revenue: item.totalRevenue,
+            orders: item.orderCount,
+          },
+        };
+      } else if (
+        hasMeaningfulPriceGap &&
+        quantityRatio <= 0.7 &&
+        item.currentPrice >= categoryAvgPrice + 0.5
+      ) {
+        const targetPrice = Math.max(categoryAvgPrice, item.currentPrice - Math.max(0.25, Math.abs(priceDelta) * 0.5));
+        recommendation = {
+          itemId: item.id,
+          itemName: item.name,
+          category: item.category,
+          currentPrice: item.currentPrice,
+          suggestedPrice: Number(targetPrice.toFixed(2)),
+          priceChange: Number((targetPrice - item.currentPrice).toFixed(2)),
+          percentChange: Math.round(((targetPrice - item.currentPrice) / item.currentPrice) * 100),
+          action: "decrease",
+          actionIcon: "↘",
+          reason: `Trailing similar ${item.category.toLowerCase()} items at a higher price point.`,
+          confidence: quantityRatio <= 0.5 ? "high" : "medium",
+          risk: "medium",
+          metrics: {
+            unitsSold: item.totalQuantity,
+            revenue: item.totalRevenue,
+            orders: item.orderCount,
+          },
+        };
+      } else if (
+        categoryMaxPrice > categoryMinPrice &&
+        item.totalQuantity >= overallAvgQuantity * 1.5 &&
+        item.currentPrice === categoryMaxPrice
+      ) {
+        recommendation = {
+          itemId: item.id,
+          itemName: item.name,
+          category: item.category,
+          currentPrice: item.currentPrice,
+          suggestedPrice: item.currentPrice,
+          priceChange: 0,
+          percentChange: 0,
+          action: "hold",
+          actionIcon: "=",
+          reason: `Recent demand is strong even at the top of the ${item.category.toLowerCase()} price range.`,
+          confidence: "medium",
+          risk: "low",
+          metrics: {
+            unitsSold: item.totalQuantity,
+            revenue: item.totalRevenue,
+            orders: item.orderCount,
+          },
+        };
+      }
+
+      if (recommendation) {
+        if (recommendation.action !== "hold" && recommendation.currentPrice > 0) {
+          const maxAllowedChange = Number((recommendation.currentPrice * 0.12).toFixed(2));
+          if (Math.abs(recommendation.priceChange) > maxAllowedChange) {
+            const adjustedPriceChange = recommendation.priceChange > 0 ? maxAllowedChange : -maxAllowedChange;
+            recommendation.priceChange = adjustedPriceChange;
+            recommendation.suggestedPrice = Number((recommendation.currentPrice + adjustedPriceChange).toFixed(2));
+            recommendation.percentChange = Math.round((adjustedPriceChange / recommendation.currentPrice) * 100);
+          }
+        }
+
+        recommendations.push(recommendation);
+      }
+    });
+
+    return recommendations
+      .sort((left, right) => {
+        if (left.action !== right.action) {
+          if (left.action === "increase") return -1;
+          if (right.action === "increase") return 1;
+        }
+
+        return toNumber(right.metrics && right.metrics.revenue) - toNumber(left.metrics && left.metrics.revenue);
+      })
+      .slice(0, 5);
+  }
+
   function buildDashboardForecastData(input = {}) {
     const forecastRows = Array.isArray(input.forecastRows) ? input.forecastRows : [];
     const salesRows = Array.isArray(input.salesRows) ? input.salesRows : [];
@@ -483,6 +739,8 @@
     buildAnalysisWindow,
     buildCategoryStats,
     buildDashboardForecastData,
+    buildPricingRecommendations,
+    buildPricingSignalSummary,
     buildRecentSalesDays,
     buildSalesTrend,
     buildTopSellerStats,
