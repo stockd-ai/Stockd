@@ -414,6 +414,7 @@
         const { data: salesByItem, error } = await sb
           .from('sales_line_items')
           .select(`
+            business_date,
             menu_item_id,
             menu_items!inner (
               id,
