@@ -1,0 +1,1816 @@
+{
+  "current_state": {
+    "app_config": {
+      "history_end_date": "2026-03-18",
+      "history_start_date": "2025-01-26",
+      "onboarding_present": true
+    },
+    "daily_orders": {
+      "count": 21920,
+      "distinct_dates": 372,
+      "largest_interior_gap": {
+        "diff_days": 10,
+        "from": "2026-03-05",
+        "missing_days": 9,
+        "to": "2026-03-15"
+      },
+      "max_date": "2026-03-18",
+      "min_date": "2025-03-02",
+      "non_voided_subtotal_total": 974842.61
+    },
+    "inventory_txns_consume": {
+      "count": 24370,
+      "distinct_dates": 401,
+      "largest_interior_gap": {
+        "diff_days": 10,
+        "from": "2026-03-05",
+        "missing_days": 9,
+        "to": "2026-03-15"
+      },
+      "max_date": "2026-03-18",
+      "min_date": "2025-01-26",
+      "total_qty_delta": -3283597.5
+    },
+    "sales_line_items": {
+      "count": 25420,
+      "distinct_dates": 401,
+      "largest_interior_gap": {
+        "diff_days": 10,
+        "from": "2026-03-05",
+        "missing_days": 9,
+        "to": "2026-03-15"
+      },
+      "max_date": "2026-03-18",
+      "min_date": "2025-01-26",
+      "total_net_sales": 899428.83,
+      "total_qty": 55607
+    }
+  },
+  "generated_at": "2026-04-23T04:10:34.432Z",
+  "kiosk_orders": {
+    "all_rows": [
+      {
+        "ambiguous_reasons": [],
+        "closed_at": "2026-02-08T17:19:14.093+00:00",
+        "corrected_business_date": "2026-02-08",
+        "created_at": "2026-02-08T17:19:14.317017+00:00",
+        "delta_days": 0,
+        "eligible_for_repair": false,
+        "opened_at": "2026-02-08T17:19:14.093+00:00",
+        "order_id": "KIOSK-1770571154093",
+        "reconstructed_items": [
+          {
+            "inventory_txn_ids": [
+              "068a24ea-a6a1-46d9-9b80-771733025470",
+              "493bf2de-cbb8-44e9-8520-dc3fe9138f3c",
+              "74bc92c6-b49f-43cf-af00-ab47edbfc2a5",
+              "783ea687-5706-4f37-afd6-84a01f3cc800",
+              "bb25f20d-c5f0-489a-b99c-f42b289cb44d",
+              "c533250d-a6c3-49cd-8b9c-ea2896344b36",
+              "d4de983b-6711-4e40-a3f7-66c35697474b",
+              "d98c82ac-9ced-4a3b-a669-bdff6827862d"
+            ],
+            "line_sales": 38.97,
+            "menu_item_id": "a22bcd57-81c7-44ae-b3b2-8289c92235d5",
+            "menu_item_name": "The Southwest Chicken Pizza (L)",
+            "qty": 3,
+            "unit_price": 12.99
+          }
+        ],
+        "reconstructed_subtotal": 38.97,
+        "related_inventory_txn_count": 8,
+        "related_inventory_txn_ids": [
+          "068a24ea-a6a1-46d9-9b80-771733025470",
+          "493bf2de-cbb8-44e9-8520-dc3fe9138f3c",
+          "74bc92c6-b49f-43cf-af00-ab47edbfc2a5",
+          "783ea687-5706-4f37-afd6-84a01f3cc800",
+          "bb25f20d-c5f0-489a-b99c-f42b289cb44d",
+          "c533250d-a6c3-49cd-8b9c-ea2896344b36",
+          "d4de983b-6711-4e40-a3f7-66c35697474b",
+          "d98c82ac-9ced-4a3b-a669-bdff6827862d"
+        ],
+        "stored_business_date": "2026-02-08",
+        "subtotal": 38.97,
+        "subtotal_matches": true,
+        "total": 42.09
+      },
+      {
+        "ambiguous_reasons": [],
+        "closed_at": "2026-02-08T16:19:36.046+00:00",
+        "corrected_business_date": "2026-02-08",
+        "created_at": "2026-02-08T16:19:36.283747+00:00",
+        "delta_days": 0,
+        "eligible_for_repair": false,
+        "opened_at": "2026-02-08T16:19:36.046+00:00",
+        "order_id": "KIOSK-1770567576045",
+        "reconstructed_items": [
+          {
+            "inventory_txn_ids": [
+              "0618b225-8efd-4607-8d5e-1e08568b4737",
+              "87fee483-9305-4708-b921-2cd959d6a22f",
+              "8cbe79de-dbe1-4766-a4ca-a1a8a5579c0e",
+              "b97ef01a-ee80-4c44-8ce6-dd2976236967",
+              "c799d2bc-476b-44e4-8802-e79655af48b2",
+              "d619476c-dc14-4e9f-a609-73df6ac19f19",
+              "fb9e650e-b201-4b78-92b5-42e91dba983c"
+            ],
+            "line_sales": 25.98,
+            "menu_item_id": "8adeb634-8873-4cc5-a7b0-a52313bc6a48",
+            "menu_item_name": "The Napolitana Pizza (L)",
+            "qty": 2,
+            "unit_price": 12.99
+          }
+        ],
+        "reconstructed_subtotal": 25.98,
+        "related_inventory_txn_count": 7,
+        "related_inventory_txn_ids": [
+          "0618b225-8efd-4607-8d5e-1e08568b4737",
+          "87fee483-9305-4708-b921-2cd959d6a22f",
+          "8cbe79de-dbe1-4766-a4ca-a1a8a5579c0e",
+          "b97ef01a-ee80-4c44-8ce6-dd2976236967",
+          "c799d2bc-476b-44e4-8802-e79655af48b2",
+          "d619476c-dc14-4e9f-a609-73df6ac19f19",
+          "fb9e650e-b201-4b78-92b5-42e91dba983c"
+        ],
+        "stored_business_date": "2026-02-08",
+        "subtotal": 25.98,
+        "subtotal_matches": true,
+        "total": 28.06
+      },
+      {
+        "ambiguous_reasons": [],
+        "closed_at": "2026-02-08T15:38:57.831+00:00",
+        "corrected_business_date": "2026-02-08",
+        "created_at": "2026-02-08T15:38:58.091898+00:00",
+        "delta_days": 0,
+        "eligible_for_repair": false,
+        "opened_at": "2026-02-08T15:38:57.831+00:00",
+        "order_id": "KIOSK-1770565137831",
+        "reconstructed_items": [
+          {
+            "inventory_txn_ids": [
+              "13015714-7f6d-4b32-a32f-2f5ab46c3124",
+              "1e04b559-cd24-4216-b044-05fd2d01e1a4",
+              "5f4eceaf-12e7-453e-9ca6-02ffb24ed687",
+              "71ae1ba6-ea0d-424b-acb5-58ca5e204889",
+              "a2e98028-4882-439d-b730-753858f55766",
+              "cb87f000-2d65-45a3-8d4a-6a7352d1a60e",
+              "dd58da48-29dc-46c2-865d-48534040f406"
+            ],
+            "line_sales": 38.97,
+            "menu_item_id": "1585b988-fd76-47bd-aefe-35c1ad0a0768",
+            "menu_item_name": "The Calabrese Pizza (L)",
+            "qty": 3,
+            "unit_price": 12.99
+          }
+        ],
+        "reconstructed_subtotal": 38.97,
+        "related_inventory_txn_count": 7,
+        "related_inventory_txn_ids": [
+          "13015714-7f6d-4b32-a32f-2f5ab46c3124",
+          "1e04b559-cd24-4216-b044-05fd2d01e1a4",
+          "5f4eceaf-12e7-453e-9ca6-02ffb24ed687",
+          "71ae1ba6-ea0d-424b-acb5-58ca5e204889",
+          "a2e98028-4882-439d-b730-753858f55766",
+          "cb87f000-2d65-45a3-8d4a-6a7352d1a60e",
+          "dd58da48-29dc-46c2-865d-48534040f406"
+        ],
+        "stored_business_date": "2026-02-08",
+        "subtotal": 38.97,
+        "subtotal_matches": true,
+        "total": 42.09
+      },
+      {
+        "ambiguous_reasons": [],
+        "closed_at": "2026-02-08T13:43:13.483+00:00",
+        "corrected_business_date": "2026-02-08",
+        "created_at": "2026-02-08T13:43:14.001951+00:00",
+        "delta_days": 0,
+        "eligible_for_repair": false,
+        "opened_at": "2026-02-08T13:43:13.483+00:00",
+        "order_id": "KIOSK-1770558193482",
+        "reconstructed_items": [
+          {
+            "inventory_txn_ids": [
+              "05c2f5ea-4033-47b9-aafe-91cfcb1790cd",
+              "5d91cdfa-2d8c-4070-815f-f69b0f5c25a7",
+              "88c0b91c-0742-43af-a0bb-c3cfdc48ac54",
+              "e48d37d4-dee9-4d04-ac28-f410a2a2eff0",
+              "f152d4ff-a186-4592-8b6f-fd2cf42cf547",
+              "f1844b94-3110-4952-bb66-2368c36956d8"
+            ],
+            "line_sales": 12.99,
+            "menu_item_id": "a7523a38-4fbd-4a74-b690-2195e7f0f1ba",
+            "menu_item_name": "The Barbecue Chicken Pizza (S)",
+            "qty": 1,
+            "unit_price": 12.99
+          }
+        ],
+        "reconstructed_subtotal": 12.99,
+        "related_inventory_txn_count": 6,
+        "related_inventory_txn_ids": [
+          "05c2f5ea-4033-47b9-aafe-91cfcb1790cd",
+          "5d91cdfa-2d8c-4070-815f-f69b0f5c25a7",
+          "88c0b91c-0742-43af-a0bb-c3cfdc48ac54",
+          "e48d37d4-dee9-4d04-ac28-f410a2a2eff0",
+          "f152d4ff-a186-4592-8b6f-fd2cf42cf547",
+          "f1844b94-3110-4952-bb66-2368c36956d8"
+        ],
+        "stored_business_date": "2026-02-08",
+        "subtotal": 12.99,
+        "subtotal_matches": true,
+        "total": 14.03
+      },
+      {
+        "ambiguous_reasons": [],
+        "closed_at": "2026-02-08T15:59:12.64+00:00",
+        "corrected_business_date": "2026-02-08",
+        "created_at": "2026-02-08T15:59:12.816967+00:00",
+        "delta_days": 0,
+        "eligible_for_repair": false,
+        "opened_at": "2026-02-08T15:59:12.64+00:00",
+        "order_id": "KIOSK-1770566352639",
+        "reconstructed_items": [
+          {
+            "inventory_txn_ids": [
+              "249f73b7-ea27-48bc-b6cc-8ee0761ffec7",
+              "307d522d-3f97-4d2d-afcf-b08b5aa8c61f",
+              "3fe7326a-09d5-4c25-8b0d-432d13fd2cd5",
+              "5939892f-eeb1-44e1-9bce-086ffe6e3e1d",
+              "7c1bf9c8-e397-4494-8bf2-94fcdd8ec370",
+              "b5ab47be-5f5e-4795-ac86-0a0a54983808",
+              "cd8ec6f9-5bdc-4ceb-b360-917e2fb4dbf7",
+              "d279ee56-d10a-4d3e-875a-a34e8a76b756",
+              "ec3955bf-2bc8-4d50-b573-1dc4572cf011"
+            ],
+            "line_sales": 38.97,
+            "menu_item_id": "c546f439-b62e-465c-9da3-c2791423a7be",
+            "menu_item_name": "The Italian Supreme Pizza (L)",
+            "qty": 3,
+            "unit_price": 12.99
+          }
+        ],
+        "reconstructed_subtotal": 38.97,
+        "related_inventory_txn_count": 9,
+        "related_inventory_txn_ids": [
+          "249f73b7-ea27-48bc-b6cc-8ee0761ffec7",
+          "307d522d-3f97-4d2d-afcf-b08b5aa8c61f",
+          "3fe7326a-09d5-4c25-8b0d-432d13fd2cd5",
+          "5939892f-eeb1-44e1-9bce-086ffe6e3e1d",
+          "7c1bf9c8-e397-4494-8bf2-94fcdd8ec370",
+          "b5ab47be-5f5e-4795-ac86-0a0a54983808",
+          "cd8ec6f9-5bdc-4ceb-b360-917e2fb4dbf7",
+          "d279ee56-d10a-4d3e-875a-a34e8a76b756",
+          "ec3955bf-2bc8-4d50-b573-1dc4572cf011"
+        ],
+        "stored_business_date": "2026-02-08",
+        "subtotal": 38.97,
+        "subtotal_matches": true,
+        "total": 42.09
+      },
+      {
+        "ambiguous_reasons": [],
+        "closed_at": "2026-02-08T17:04:29.068+00:00",
+        "corrected_business_date": "2026-02-08",
+        "created_at": "2026-02-08T17:04:29.982371+00:00",
+        "delta_days": 0,
+        "eligible_for_repair": false,
+        "opened_at": "2026-02-08T17:04:29.068+00:00",
+        "order_id": "KIOSK-1770570269068",
+        "reconstructed_items": [
+          {
+            "inventory_txn_ids": [
+              "63712254-e5b8-404e-bc44-e9004bba5253",
+              "7dd27f7c-8967-4810-b1c4-5df0a7f6408d",
+              "82555019-46d2-46af-b55e-c31aa27a87bd",
+              "8d1e335e-8a79-4b35-96d0-57485a166f61",
+              "8d7aac2a-90e8-495f-9b0b-d1802a5402a0",
+              "a372e7c0-a88f-4e7a-af75-e15850006269",
+              "e42aae6e-5932-4735-ac37-00ddb4c9a4f4"
+            ],
+            "line_sales": 25.98,
+            "menu_item_id": "790df46e-42cf-4853-b04c-0e248181ee10",
+            "menu_item_name": "The Thai Chicken Pizza (L)",
+            "qty": 2,
+            "unit_price": 12.99
+          }
+        ],
+        "reconstructed_subtotal": 25.98,
+        "related_inventory_txn_count": 7,
+        "related_inventory_txn_ids": [
+          "63712254-e5b8-404e-bc44-e9004bba5253",
+          "7dd27f7c-8967-4810-b1c4-5df0a7f6408d",
+          "82555019-46d2-46af-b55e-c31aa27a87bd",
+          "8d1e335e-8a79-4b35-96d0-57485a166f61",
+          "8d7aac2a-90e8-495f-9b0b-d1802a5402a0",
+          "a372e7c0-a88f-4e7a-af75-e15850006269",
+          "e42aae6e-5932-4735-ac37-00ddb4c9a4f4"
+        ],
+        "stored_business_date": "2026-02-08",
+        "subtotal": 25.98,
+        "subtotal_matches": true,
+        "total": 28.06
+      },
+      {
+        "ambiguous_reasons": [],
+        "closed_at": "2026-02-08T14:37:32.128+00:00",
+        "corrected_business_date": "2026-02-08",
+        "created_at": "2026-02-08T14:37:32.430697+00:00",
+        "delta_days": 0,
+        "eligible_for_repair": false,
+        "opened_at": "2026-02-08T14:37:32.128+00:00",
+        "order_id": "KIOSK-1770561452128",
+        "reconstructed_items": [
+          {
+            "inventory_txn_ids": [
+              "1a4dced2-ed46-42f9-92b4-6c6c0345c3a2",
+              "2c402fe1-0e35-406e-ac2e-a34fc5be17c6",
+              "9f5d4503-dee6-46d7-adc4-e509102acb81",
+              "b1e949c0-b202-4202-98b6-98eb2fdaf9b3",
+              "e33684eb-b60f-4c99-8412-c48534073dae",
+              "e7d7afea-062d-4589-81b1-41760e7a45f7",
+              "f8c7fe9b-01ec-4070-b1f3-c9d28a704bad"
+            ],
+            "line_sales": 12.99,
+            "menu_item_id": "2fee9dd0-1706-4a4e-8b07-7f52f0e05049",
+            "menu_item_name": "The Thai Chicken Pizza (M)",
+            "qty": 1,
+            "unit_price": 12.99
+          }
+        ],
+        "reconstructed_subtotal": 12.99,
+        "related_inventory_txn_count": 7,
+        "related_inventory_txn_ids": [
+          "1a4dced2-ed46-42f9-92b4-6c6c0345c3a2",
+          "2c402fe1-0e35-406e-ac2e-a34fc5be17c6",
+          "9f5d4503-dee6-46d7-adc4-e509102acb81",
+          "b1e949c0-b202-4202-98b6-98eb2fdaf9b3",
+          "e33684eb-b60f-4c99-8412-c48534073dae",
+          "e7d7afea-062d-4589-81b1-41760e7a45f7",
+          "f8c7fe9b-01ec-4070-b1f3-c9d28a704bad"
+        ],
+        "stored_business_date": "2026-02-08",
+        "subtotal": 12.99,
+        "subtotal_matches": true,
+        "total": 14.03
+      },
+      {
+        "ambiguous_reasons": [],
+        "closed_at": "2026-02-08T17:04:45.366+00:00",
+        "corrected_business_date": "2026-02-08",
+        "created_at": "2026-02-08T17:04:45.52442+00:00",
+        "delta_days": 0,
+        "eligible_for_repair": false,
+        "opened_at": "2026-02-08T17:04:45.366+00:00",
+        "order_id": "KIOSK-1770570285366",
+        "reconstructed_items": [
+          {
+            "inventory_txn_ids": [
+              "1660a1e7-d39c-4130-ac61-5a12cca5a605",
+              "7b546cf4-4501-4d84-b186-ba2e7c718782",
+              "81fb4706-8650-41fb-baa0-00c07fd00455",
+              "886a72a8-22e7-4203-a7d5-b4ef86fb6e70",
+              "8d1a361d-c676-434e-89ea-7dc7c6d4e30f",
+              "9e780a82-de03-4bb8-8199-496aa25c7af2",
+              "bf38156b-6802-44bb-b08a-5d115fe0c7b0"
+            ],
+            "line_sales": 25.98,
+            "menu_item_id": "399143ec-66d0-47e1-9442-5f56f2162e59",
+            "menu_item_name": "The California Chicken Pizza (S)",
+            "qty": 2,
+            "unit_price": 12.99
+          }
+        ],
+        "reconstructed_subtotal": 25.98,
+        "related_inventory_txn_count": 7,
+        "related_inventory_txn_ids": [
+          "1660a1e7-d39c-4130-ac61-5a12cca5a605",
+          "7b546cf4-4501-4d84-b186-ba2e7c718782",
+          "81fb4706-8650-41fb-baa0-00c07fd00455",
+          "886a72a8-22e7-4203-a7d5-b4ef86fb6e70",
+          "8d1a361d-c676-434e-89ea-7dc7c6d4e30f",
+          "9e780a82-de03-4bb8-8199-496aa25c7af2",
+          "bf38156b-6802-44bb-b08a-5d115fe0c7b0"
+        ],
+        "stored_business_date": "2026-02-08",
+        "subtotal": 25.98,
+        "subtotal_matches": true,
+        "total": 28.06
+      },
+      {
+        "ambiguous_reasons": [],
+        "closed_at": "2026-02-09T15:27:48.94+00:00",
+        "corrected_business_date": "2026-02-09",
+        "created_at": "2026-02-09T15:27:48.96898+00:00",
+        "delta_days": 0,
+        "eligible_for_repair": false,
+        "opened_at": "2026-02-09T15:27:48.94+00:00",
+        "order_id": "KIOSK-1770737268940",
+        "reconstructed_items": [
+          {
+            "inventory_txn_ids": [
+              "092c951e-aac0-4ef8-bbe3-920631139fbe",
+              "1130711a-fa57-482c-a6cf-f713a5020d4c",
+              "3fdf6a9b-7328-465d-b8a8-1a8986a19c1c",
+              "90dfdb9c-7daa-4d97-9c21-c0611068289f",
+              "addbb7a6-5828-4784-988e-e8381d34f72c",
+              "b72d3c83-99de-45d3-9177-2973fc356f37",
+              "c4e1b98c-4082-4b1a-affd-c3dd0e0df293",
+              "dbd1b83b-b1d7-4a5a-98c3-a50d95c6535c"
+            ],
+            "line_sales": 207.84,
+            "menu_item_id": "3fae3a95-2bde-4a93-98f4-5f318d954c74",
+            "menu_item_name": "The Southwest Chicken Pizza (M)",
+            "qty": 16,
+            "unit_price": 12.99
+          },
+          {
+            "inventory_txn_ids": [
+              "125ee48e-a552-4bf8-a313-8773b83a0a5d",
+              "3021bf5b-5ff8-4f4b-9cbd-c4528ab03e8a",
+              "3ae5e3bc-d749-4fa0-9a0d-0ff728d90a16",
+              "7c558a73-93dc-4994-8c47-2770f3b3663c",
+              "d394735a-2993-490b-bd0b-750bdf5aec81",
+              "ed20bf7b-a940-45d5-8c02-c012543c3d9a"
+            ],
+            "line_sales": 181.86,
+            "menu_item_id": "0b928caa-befd-47ae-9a7b-209616dcb8b9",
+            "menu_item_name": "The Chicken Pesto Pizza (L)",
+            "qty": 14,
+            "unit_price": 12.99
+          },
+          {
+            "inventory_txn_ids": [
+              "3d34927c-f77a-45c4-a271-e2ec27d65357",
+              "58365dad-5008-43b0-bcc9-3bf726a5efb1",
+              "5d894af2-29cd-4d27-9489-9cd354df8137",
+              "7b42a794-da85-4b7d-bb19-2c7668b17ff6",
+              "8c9b94c6-0925-48b4-8f06-386599f1ae3f",
+              "acba48b8-8ccd-44fb-bb47-b583c7615a2b",
+              "b2afb8b6-f256-4da3-bc5d-52ddaa71ad7f"
+            ],
+            "line_sales": 155.88,
+            "menu_item_id": "790df46e-42cf-4853-b04c-0e248181ee10",
+            "menu_item_name": "The Thai Chicken Pizza (L)",
+            "qty": 12,
+            "unit_price": 12.99
+          }
+        ],
+        "reconstructed_subtotal": 545.58,
+        "related_inventory_txn_count": 21,
+        "related_inventory_txn_ids": [
+          "092c951e-aac0-4ef8-bbe3-920631139fbe",
+          "1130711a-fa57-482c-a6cf-f713a5020d4c",
+          "3fdf6a9b-7328-465d-b8a8-1a8986a19c1c",
+          "90dfdb9c-7daa-4d97-9c21-c0611068289f",
+          "addbb7a6-5828-4784-988e-e8381d34f72c",
+          "b72d3c83-99de-45d3-9177-2973fc356f37",
+          "c4e1b98c-4082-4b1a-affd-c3dd0e0df293",
+          "dbd1b83b-b1d7-4a5a-98c3-a50d95c6535c",
+          "125ee48e-a552-4bf8-a313-8773b83a0a5d",
+          "3021bf5b-5ff8-4f4b-9cbd-c4528ab03e8a",
+          "3ae5e3bc-d749-4fa0-9a0d-0ff728d90a16",
+          "7c558a73-93dc-4994-8c47-2770f3b3663c",
+          "d394735a-2993-490b-bd0b-750bdf5aec81",
+          "ed20bf7b-a940-45d5-8c02-c012543c3d9a",
+          "3d34927c-f77a-45c4-a271-e2ec27d65357",
+          "58365dad-5008-43b0-bcc9-3bf726a5efb1",
+          "5d894af2-29cd-4d27-9489-9cd354df8137",
+          "7b42a794-da85-4b7d-bb19-2c7668b17ff6",
+          "8c9b94c6-0925-48b4-8f06-386599f1ae3f",
+          "acba48b8-8ccd-44fb-bb47-b583c7615a2b",
+          "b2afb8b6-f256-4da3-bc5d-52ddaa71ad7f"
+        ],
+        "stored_business_date": "2026-02-09",
+        "subtotal": 545.58,
+        "subtotal_matches": true,
+        "total": 589.23
+      },
+      {
+        "ambiguous_reasons": [],
+        "closed_at": "2026-02-10T09:20:51.475+00:00",
+        "corrected_business_date": "2026-02-10",
+        "created_at": "2026-02-10T09:20:50.49046+00:00",
+        "delta_days": 0,
+        "eligible_for_repair": false,
+        "opened_at": "2026-02-10T09:20:51.475+00:00",
+        "order_id": "KIOSK-1770715251475",
+        "reconstructed_items": [
+          {
+            "inventory_txn_ids": [
+              "2a2b81ee-80b7-4572-b453-9a6e9d3c34d9",
+              "52359cf8-b1bd-4233-93cb-a71bc715a44e",
+              "984bdceb-4820-45fe-87ff-9a309021fe8f",
+              "9beebd53-90aa-4ea9-9e50-b501e56564ce",
+              "b4071f66-40b2-4934-b5ef-9d1aa136ea78",
+              "b72fa077-2a93-4808-ab92-015b3ee2e6ed",
+              "ca6bda7d-01b4-430e-9c38-69c683008f19"
+            ],
+            "line_sales": 38.97,
+            "menu_item_id": "41aceb20-96d1-4a4d-b3c1-645b77c46a06",
+            "menu_item_name": "The Five Cheese Pizza (L)",
+            "qty": 3,
+            "unit_price": 12.99
+          }
+        ],
+        "reconstructed_subtotal": 38.97,
+        "related_inventory_txn_count": 7,
+        "related_inventory_txn_ids": [
+          "2a2b81ee-80b7-4572-b453-9a6e9d3c34d9",
+          "52359cf8-b1bd-4233-93cb-a71bc715a44e",
+          "984bdceb-4820-45fe-87ff-9a309021fe8f",
+          "9beebd53-90aa-4ea9-9e50-b501e56564ce",
+          "b4071f66-40b2-4934-b5ef-9d1aa136ea78",
+          "b72fa077-2a93-4808-ab92-015b3ee2e6ed",
+          "ca6bda7d-01b4-430e-9c38-69c683008f19"
+        ],
+        "stored_business_date": "2026-02-10",
+        "subtotal": 38.97,
+        "subtotal_matches": true,
+        "total": 42.09
+      },
+      {
+        "ambiguous_reasons": [],
+        "closed_at": "2026-02-10T17:46:36.584+00:00",
+        "corrected_business_date": "2026-02-10",
+        "created_at": "2026-02-10T17:46:37.973914+00:00",
+        "delta_days": 0,
+        "eligible_for_repair": false,
+        "opened_at": "2026-02-10T17:46:36.584+00:00",
+        "order_id": "KIOSK-1770745596584",
+        "reconstructed_items": [
+          {
+            "inventory_txn_ids": [
+              "097900db-75fd-4652-9176-e70851586495",
+              "30c04ce4-4ce3-4ac8-9068-a63f7ca5f6c1",
+              "5208fce9-f4f1-45f3-9044-12bab3123e70",
+              "a86c97b4-8c9d-4818-b8a4-90d15e9e4bc6",
+              "aad7e5af-9e51-4525-9cd9-cdc451da7ab3",
+              "bece203c-bf23-44fe-9c3a-01bb97744f20",
+              "d556d78a-0c41-4a5c-ad63-fc7f9c9e93dc",
+              "e149a8a9-5764-47d1-8aab-87d09a89dcc5"
+            ],
+            "line_sales": 77.94,
+            "menu_item_id": "2dc0c36b-9845-4e54-8db0-df83b9e098ce",
+            "menu_item_name": "The Sicilian Pizza (L)",
+            "qty": 6,
+            "unit_price": 12.99
+          }
+        ],
+        "reconstructed_subtotal": 77.94,
+        "related_inventory_txn_count": 8,
+        "related_inventory_txn_ids": [
+          "097900db-75fd-4652-9176-e70851586495",
+          "30c04ce4-4ce3-4ac8-9068-a63f7ca5f6c1",
+          "5208fce9-f4f1-45f3-9044-12bab3123e70",
+          "a86c97b4-8c9d-4818-b8a4-90d15e9e4bc6",
+          "aad7e5af-9e51-4525-9cd9-cdc451da7ab3",
+          "bece203c-bf23-44fe-9c3a-01bb97744f20",
+          "d556d78a-0c41-4a5c-ad63-fc7f9c9e93dc",
+          "e149a8a9-5764-47d1-8aab-87d09a89dcc5"
+        ],
+        "stored_business_date": "2026-02-10",
+        "subtotal": 77.94,
+        "subtotal_matches": true,
+        "total": 84.18
+      },
+      {
+        "ambiguous_reasons": [],
+        "closed_at": "2026-02-10T15:15:58.203+00:00",
+        "corrected_business_date": "2026-02-10",
+        "created_at": "2026-02-10T15:15:58.113525+00:00",
+        "delta_days": 0,
+        "eligible_for_repair": false,
+        "opened_at": "2026-02-10T15:15:58.203+00:00",
+        "order_id": "KIOSK-1770736558202",
+        "reconstructed_items": [
+          {
+            "inventory_txn_ids": [
+              "16f0d3b8-21f0-4fb9-8529-e196f0234cc0",
+              "57e366c5-3af2-4fbd-abf3-db4917ff57dc",
+              "5a1b5071-c1b6-460e-9e13-271a6ffa2573",
+              "5b0b1809-d5de-4f66-9e8b-edfb18da5b41",
+              "6ca81de2-37bc-41c3-b610-f8fd1d3161c6",
+              "c7caac12-bce3-4112-9fd2-7170143bee55",
+              "d0118467-1fa1-4d5f-b196-4a1491097f9b"
+            ],
+            "line_sales": 415.68,
+            "menu_item_id": "564978bc-f1a1-45d6-9113-07ae1e22fb9a",
+            "menu_item_name": "The California Chicken Pizza (L)",
+            "qty": 32,
+            "unit_price": 12.99
+          },
+          {
+            "inventory_txn_ids": [
+              "638eb4d0-3dc2-461c-8560-86b0bfa72dfc",
+              "85f7c99f-3aa4-4e3c-895f-49e9f91f97af",
+              "9204f595-9c7e-406c-a4d3-23437371c9ed",
+              "9eebb2f9-2844-4fa5-bb15-6274445daf0b",
+              "ab0ade4f-d4f8-4a5d-a8d1-950525dc08f8",
+              "c62adbb3-4690-426e-a517-243ade5e3a18",
+              "e4f2ba33-575f-4f1b-8c39-fe91557f8593"
+            ],
+            "line_sales": 129.9,
+            "menu_item_id": "b47370b9-b9b1-426b-a3cf-e549c5299a51",
+            "menu_item_name": "The Chicken Alfredo Pizza (L)",
+            "qty": 10,
+            "unit_price": 12.99
+          }
+        ],
+        "reconstructed_subtotal": 545.58,
+        "related_inventory_txn_count": 14,
+        "related_inventory_txn_ids": [
+          "16f0d3b8-21f0-4fb9-8529-e196f0234cc0",
+          "57e366c5-3af2-4fbd-abf3-db4917ff57dc",
+          "5a1b5071-c1b6-460e-9e13-271a6ffa2573",
+          "5b0b1809-d5de-4f66-9e8b-edfb18da5b41",
+          "6ca81de2-37bc-41c3-b610-f8fd1d3161c6",
+          "c7caac12-bce3-4112-9fd2-7170143bee55",
+          "d0118467-1fa1-4d5f-b196-4a1491097f9b",
+          "638eb4d0-3dc2-461c-8560-86b0bfa72dfc",
+          "85f7c99f-3aa4-4e3c-895f-49e9f91f97af",
+          "9204f595-9c7e-406c-a4d3-23437371c9ed",
+          "9eebb2f9-2844-4fa5-bb15-6274445daf0b",
+          "ab0ade4f-d4f8-4a5d-a8d1-950525dc08f8",
+          "c62adbb3-4690-426e-a517-243ade5e3a18",
+          "e4f2ba33-575f-4f1b-8c39-fe91557f8593"
+        ],
+        "stored_business_date": "2026-02-10",
+        "subtotal": 545.58,
+        "subtotal_matches": true,
+        "total": 589.23
+      },
+      {
+        "ambiguous_reasons": [],
+        "closed_at": "2026-02-10T17:31:01.173+00:00",
+        "corrected_business_date": "2026-02-10",
+        "created_at": "2026-02-10T17:31:01.654963+00:00",
+        "delta_days": 0,
+        "eligible_for_repair": false,
+        "opened_at": "2026-02-10T17:31:01.173+00:00",
+        "order_id": "KIOSK-1770744661173",
+        "reconstructed_items": [
+          {
+            "inventory_txn_ids": [
+              "0c6d0d25-acc2-47a9-9dfb-1bd6ca894791",
+              "1bfac534-4d09-4840-a1f4-a156148c9469",
+              "6579fda3-c030-4d81-a473-e09e603c1a6b",
+              "68b61722-0201-47c7-a544-649b720f2c9e",
+              "7dbe28c9-0e58-4767-8750-e55a695cd649",
+              "950c3591-c509-48f2-bdc2-5446a1aef5bb",
+              "b5c2ee21-bd07-4d72-81e3-bd418a01e71f",
+              "c4ae4dc7-55c0-4f15-9076-feb28dc1abdc",
+              "d5a09d3b-8254-4b4a-8b7e-de8e45ce1a5d",
+              "fcb5835b-d3fa-4ee6-b38e-1d400a944f94"
+            ],
+            "line_sales": 129.9,
+            "menu_item_id": "7b2d14ce-d406-4d3e-949b-6b65755a5336",
+            "menu_item_name": "The Vegetables + Vegetables Pizza (L)",
+            "qty": 10,
+            "unit_price": 12.99
+          }
+        ],
+        "reconstructed_subtotal": 129.9,
+        "related_inventory_txn_count": 10,
+        "related_inventory_txn_ids": [
+          "0c6d0d25-acc2-47a9-9dfb-1bd6ca894791",
+          "1bfac534-4d09-4840-a1f4-a156148c9469",
+          "6579fda3-c030-4d81-a473-e09e603c1a6b",
+          "68b61722-0201-47c7-a544-649b720f2c9e",
+          "7dbe28c9-0e58-4767-8750-e55a695cd649",
+          "950c3591-c509-48f2-bdc2-5446a1aef5bb",
+          "b5c2ee21-bd07-4d72-81e3-bd418a01e71f",
+          "c4ae4dc7-55c0-4f15-9076-feb28dc1abdc",
+          "d5a09d3b-8254-4b4a-8b7e-de8e45ce1a5d",
+          "fcb5835b-d3fa-4ee6-b38e-1d400a944f94"
+        ],
+        "stored_business_date": "2026-02-10",
+        "subtotal": 129.9,
+        "subtotal_matches": true,
+        "total": 140.29
+      },
+      {
+        "ambiguous_reasons": [],
+        "closed_at": "2026-02-11T13:06:11.977+00:00",
+        "corrected_business_date": "2026-02-11",
+        "created_at": "2026-02-11T13:06:10.092748+00:00",
+        "delta_days": 0,
+        "eligible_for_repair": false,
+        "opened_at": "2026-02-11T13:06:11.977+00:00",
+        "order_id": "KIOSK-1770815171977",
+        "reconstructed_items": [
+          {
+            "inventory_txn_ids": [
+              "0221b427-449f-40dd-9c43-208365b00786",
+              "245f8986-7707-4a3b-ae3d-3fe34064f2e3",
+              "8b95ec97-0ffb-4cfc-bcac-5dff03769519",
+              "9234aa9d-27f6-40fb-bd35-1ca5ce7a99c8",
+              "923f7d1e-ef80-4526-a74b-032ca57c8f5c",
+              "b4ed0e0e-dee9-40c3-94f9-1f9522406499",
+              "d7b5fa5a-88d2-4168-abf3-be156ed7ac8e",
+              "def9a054-793c-4833-9004-c09fc8b46801"
+            ],
+            "line_sales": 181.86,
+            "menu_item_id": "75c18cb3-de82-4c08-8be4-370fd940d00c",
+            "menu_item_name": "The Southwest Chicken Pizza (S)",
+            "qty": 14,
+            "unit_price": 12.99
+          },
+          {
+            "inventory_txn_ids": [
+              "1543c588-4288-423a-93c9-9d9845bac781",
+              "38b59533-9b37-4d23-8b72-423411293cfe",
+              "699d6449-5288-4ab4-b112-ca6d38c4502e",
+              "7ac1811d-43b5-4f8d-adba-6d32f5d9872b",
+              "a72361ae-8d8d-4dc1-ae0d-0c7b7c07c269",
+              "e841c4e0-d084-4d01-8903-5013a9fa3f35"
+            ],
+            "line_sales": 103.92,
+            "menu_item_id": "2410195a-26ab-4436-ab1c-645717380696",
+            "menu_item_name": "The Pepper Salami Pizza (S)",
+            "qty": 8,
+            "unit_price": 12.99
+          },
+          {
+            "inventory_txn_ids": [
+              "1a730e34-fb6a-44c2-bf8d-ac427438f809",
+              "45da2c39-5362-4a94-851e-b88e7f073c41",
+              "6d977980-567d-470f-9fe4-cd209490501b",
+              "8537f31a-bab0-4b33-a129-58e3c294c5bd",
+              "9faaaa0e-19e6-45dd-98c9-ceb5f2bc7ad2",
+              "a441ae94-e134-4941-9109-2c207b70cb83",
+              "b4e96972-007d-4bf4-b5ec-f99b7c88ed6d"
+            ],
+            "line_sales": 233.82,
+            "menu_item_id": "dc75f04d-a918-4a2d-b5d9-5ce5db422713",
+            "menu_item_name": "The Spinach Pesto Pizza (L)",
+            "qty": 18,
+            "unit_price": 12.99
+          },
+          {
+            "inventory_txn_ids": [
+              "3365a3fd-6a81-4374-b834-f2d4c9bcc92b",
+              "4e4d77bf-92a5-490f-adeb-436414bd98cd",
+              "56c19b8a-21b7-452d-abe2-6e2d6531b53a",
+              "788f0c83-d95d-4c47-becc-a8f055bfc6cb",
+              "a9d74dda-0c63-42c8-bf4f-dd46709a717c",
+              "b0acf441-84c4-44bd-a668-76cdb03945b0",
+              "c588cda6-937e-44c4-9a4c-12c5bd660e01",
+              "db660008-4951-48f9-8573-ad7873b14500"
+            ],
+            "line_sales": 207.84,
+            "menu_item_id": "8021da94-43d1-475a-aedd-32c62a442dd7",
+            "menu_item_name": "The Sicilian Pizza (M)",
+            "qty": 16,
+            "unit_price": 12.99
+          }
+        ],
+        "reconstructed_subtotal": 727.44,
+        "related_inventory_txn_count": 29,
+        "related_inventory_txn_ids": [
+          "0221b427-449f-40dd-9c43-208365b00786",
+          "245f8986-7707-4a3b-ae3d-3fe34064f2e3",
+          "8b95ec97-0ffb-4cfc-bcac-5dff03769519",
+          "9234aa9d-27f6-40fb-bd35-1ca5ce7a99c8",
+          "923f7d1e-ef80-4526-a74b-032ca57c8f5c",
+          "b4ed0e0e-dee9-40c3-94f9-1f9522406499",
+          "d7b5fa5a-88d2-4168-abf3-be156ed7ac8e",
+          "def9a054-793c-4833-9004-c09fc8b46801",
+          "1543c588-4288-423a-93c9-9d9845bac781",
+          "38b59533-9b37-4d23-8b72-423411293cfe",
+          "699d6449-5288-4ab4-b112-ca6d38c4502e",
+          "7ac1811d-43b5-4f8d-adba-6d32f5d9872b",
+          "a72361ae-8d8d-4dc1-ae0d-0c7b7c07c269",
+          "e841c4e0-d084-4d01-8903-5013a9fa3f35",
+          "1a730e34-fb6a-44c2-bf8d-ac427438f809",
+          "45da2c39-5362-4a94-851e-b88e7f073c41",
+          "6d977980-567d-470f-9fe4-cd209490501b",
+          "8537f31a-bab0-4b33-a129-58e3c294c5bd",
+          "9faaaa0e-19e6-45dd-98c9-ceb5f2bc7ad2",
+          "a441ae94-e134-4941-9109-2c207b70cb83",
+          "b4e96972-007d-4bf4-b5ec-f99b7c88ed6d",
+          "3365a3fd-6a81-4374-b834-f2d4c9bcc92b",
+          "4e4d77bf-92a5-490f-adeb-436414bd98cd",
+          "56c19b8a-21b7-452d-abe2-6e2d6531b53a",
+          "788f0c83-d95d-4c47-becc-a8f055bfc6cb",
+          "a9d74dda-0c63-42c8-bf4f-dd46709a717c",
+          "b0acf441-84c4-44bd-a668-76cdb03945b0",
+          "c588cda6-937e-44c4-9a4c-12c5bd660e01",
+          "db660008-4951-48f9-8573-ad7873b14500"
+        ],
+        "stored_business_date": "2026-02-11",
+        "subtotal": 727.44,
+        "subtotal_matches": true,
+        "total": 785.64
+      },
+      {
+        "ambiguous_reasons": [],
+        "closed_at": "2026-02-12T22:50:53.764+00:00",
+        "corrected_business_date": "2026-02-12",
+        "created_at": "2026-02-12T22:50:54.504933+00:00",
+        "delta_days": 0,
+        "eligible_for_repair": false,
+        "opened_at": "2026-02-12T22:50:53.764+00:00",
+        "order_id": "KIOSK-1770936653763",
+        "reconstructed_items": [
+          {
+            "inventory_txn_ids": [
+              "19f032d6-ab38-4b11-96de-14bb5dc74183",
+              "2ac5072c-b8ca-4f3b-a3ce-c1fec74903db",
+              "4b30faed-6759-46fe-9deb-b65da85a6128",
+              "6ce174a8-7c8b-42cd-beb8-7269e4b36087",
+              "83c9908a-ad0b-4239-a9e9-1e9c7f7b9b6e",
+              "bfd4cb43-5740-4b2a-942c-3e82522dccb9",
+              "c861aa3e-aca5-4d8b-9c83-2b8517fa6b16"
+            ],
+            "line_sales": 25.98,
+            "menu_item_id": "564978bc-f1a1-45d6-9113-07ae1e22fb9a",
+            "menu_item_name": "The California Chicken Pizza (L)",
+            "qty": 2,
+            "unit_price": 12.99
+          }
+        ],
+        "reconstructed_subtotal": 25.98,
+        "related_inventory_txn_count": 7,
+        "related_inventory_txn_ids": [
+          "19f032d6-ab38-4b11-96de-14bb5dc74183",
+          "2ac5072c-b8ca-4f3b-a3ce-c1fec74903db",
+          "4b30faed-6759-46fe-9deb-b65da85a6128",
+          "6ce174a8-7c8b-42cd-beb8-7269e4b36087",
+          "83c9908a-ad0b-4239-a9e9-1e9c7f7b9b6e",
+          "bfd4cb43-5740-4b2a-942c-3e82522dccb9",
+          "c861aa3e-aca5-4d8b-9c83-2b8517fa6b16"
+        ],
+        "stored_business_date": "2026-02-12",
+        "subtotal": 25.98,
+        "subtotal_matches": true,
+        "total": 28.06
+      },
+      {
+        "ambiguous_reasons": [],
+        "closed_at": "2026-02-12T15:04:05.833+00:00",
+        "corrected_business_date": "2026-02-12",
+        "created_at": "2026-02-12T15:04:05.704607+00:00",
+        "delta_days": 0,
+        "eligible_for_repair": false,
+        "opened_at": "2026-02-12T15:04:05.833+00:00",
+        "order_id": "KIOSK-1770995045833",
+        "reconstructed_items": [
+          {
+            "inventory_txn_ids": [
+              "30a84422-7047-4a43-9a9d-879e7d2c9087",
+              "3485467b-92a9-4abd-89d2-5364f757d4fa",
+              "72e9e998-7719-4902-9f9f-3f6cb49dbe07",
+              "93480892-061b-455e-b28f-94350cf19905",
+              "948610b1-59f5-400e-9ada-18b399f55eb9",
+              "c6de4161-6369-44ed-bace-17a760be8c5e"
+            ],
+            "line_sales": 1324.98,
+            "menu_item_id": "0762f858-b598-46cd-9dee-6fd1da4ac4b1",
+            "menu_item_name": "The Barbecue Chicken Pizza (L)",
+            "qty": 102,
+            "unit_price": 12.99
+          }
+        ],
+        "reconstructed_subtotal": 1324.98,
+        "related_inventory_txn_count": 6,
+        "related_inventory_txn_ids": [
+          "30a84422-7047-4a43-9a9d-879e7d2c9087",
+          "3485467b-92a9-4abd-89d2-5364f757d4fa",
+          "72e9e998-7719-4902-9f9f-3f6cb49dbe07",
+          "93480892-061b-455e-b28f-94350cf19905",
+          "948610b1-59f5-400e-9ada-18b399f55eb9",
+          "c6de4161-6369-44ed-bace-17a760be8c5e"
+        ],
+        "stored_business_date": "2026-02-12",
+        "subtotal": 1324.98,
+        "subtotal_matches": true,
+        "total": 1430.98
+      },
+      {
+        "ambiguous_reasons": [],
+        "closed_at": "2026-02-13T03:44:43.994+00:00",
+        "corrected_business_date": "2026-02-12",
+        "created_at": "2026-02-13T03:44:44.130609+00:00",
+        "delta_days": 0,
+        "eligible_for_repair": false,
+        "opened_at": "2026-02-13T03:44:43.994+00:00",
+        "order_id": "KIOSK-1770954283994",
+        "reconstructed_items": [
+          {
+            "inventory_txn_ids": [
+              "03175205-4a47-4467-bb70-8f6badf962f5",
+              "193542c7-44de-4abd-b8c3-7d8a27967871",
+              "8b021fad-32eb-44ae-ac82-f323b4b60cb8",
+              "8cdbcfb7-7f04-4644-8d4a-12e585817f6d",
+              "b80360d4-e84f-4db0-9577-b5afb4e1dd92",
+              "b93d5a79-5053-4583-9022-ccaa81a4a38a",
+              "c1acd710-543f-4303-8d7f-86a2f93640c0",
+              "ef5b3b38-2ffc-4e78-88bb-5c97f8d9c34f"
+            ],
+            "line_sales": 532.59,
+            "menu_item_id": "bc79d0f9-37a7-4926-8ae5-eb3e72565c25",
+            "menu_item_name": "The Greek Pizza (L)",
+            "qty": 41,
+            "unit_price": 12.99
+          },
+          {
+            "inventory_txn_ids": [
+              "33d24d5a-d415-46b9-b212-2bfa6129d935",
+              "3d020abb-2d17-40e4-b39b-db0c88010eca",
+              "7ca181e3-9876-47a8-9367-46dcff9cdcca",
+              "995b9609-a694-4279-b71c-97b3b3dce5cb",
+              "f58d8196-3d45-4e37-9205-86c4dbb56139",
+              "f5a0972e-ad00-4289-8829-018148abd9da"
+            ],
+            "line_sales": 350.73,
+            "menu_item_id": "515251c1-3c40-4679-a482-f8ce71cce169",
+            "menu_item_name": "The Hawaiian Pizza (L)",
+            "qty": 27,
+            "unit_price": 12.99
+          }
+        ],
+        "reconstructed_subtotal": 883.32,
+        "related_inventory_txn_count": 14,
+        "related_inventory_txn_ids": [
+          "03175205-4a47-4467-bb70-8f6badf962f5",
+          "193542c7-44de-4abd-b8c3-7d8a27967871",
+          "8b021fad-32eb-44ae-ac82-f323b4b60cb8",
+          "8cdbcfb7-7f04-4644-8d4a-12e585817f6d",
+          "b80360d4-e84f-4db0-9577-b5afb4e1dd92",
+          "b93d5a79-5053-4583-9022-ccaa81a4a38a",
+          "c1acd710-543f-4303-8d7f-86a2f93640c0",
+          "ef5b3b38-2ffc-4e78-88bb-5c97f8d9c34f",
+          "33d24d5a-d415-46b9-b212-2bfa6129d935",
+          "3d020abb-2d17-40e4-b39b-db0c88010eca",
+          "7ca181e3-9876-47a8-9367-46dcff9cdcca",
+          "995b9609-a694-4279-b71c-97b3b3dce5cb",
+          "f58d8196-3d45-4e37-9205-86c4dbb56139",
+          "f5a0972e-ad00-4289-8829-018148abd9da"
+        ],
+        "stored_business_date": "2026-02-12",
+        "subtotal": 883.32,
+        "subtotal_matches": true,
+        "total": 953.99
+      },
+      {
+        "ambiguous_reasons": [],
+        "closed_at": "2026-02-15T04:33:56.164+00:00",
+        "corrected_business_date": "2026-02-14",
+        "created_at": "2026-02-15T04:33:58.11159+00:00",
+        "delta_days": 0,
+        "eligible_for_repair": false,
+        "opened_at": "2026-02-15T04:33:56.164+00:00",
+        "order_id": "KIOSK-1771130036163",
+        "reconstructed_items": [
+          {
+            "inventory_txn_ids": [
+              "217e4a0a-3510-46c9-9824-2c5026623c44",
+              "29ed329c-2524-49fc-ad4b-88969a9433e7",
+              "79a14a8c-4437-49f5-9a63-060026c5c5b8",
+              "7cc0dbfc-4f56-4afe-b7b4-aeb5a9163b5f",
+              "bb954aa1-a2e0-449f-b284-72e9bcaad09b",
+              "c31f5d7d-34dc-477e-813f-da153c63a52a",
+              "dd86b8c8-17a7-4347-bc86-2285bbcfb352"
+            ],
+            "line_sales": 64.95,
+            "menu_item_id": "f4ae4982-aa77-429d-acc3-8dbf136f91cb",
+            "menu_item_name": "The Chicken Alfredo Pizza (M)",
+            "qty": 5,
+            "unit_price": 12.99
+          }
+        ],
+        "reconstructed_subtotal": 64.95,
+        "related_inventory_txn_count": 7,
+        "related_inventory_txn_ids": [
+          "217e4a0a-3510-46c9-9824-2c5026623c44",
+          "29ed329c-2524-49fc-ad4b-88969a9433e7",
+          "79a14a8c-4437-49f5-9a63-060026c5c5b8",
+          "7cc0dbfc-4f56-4afe-b7b4-aeb5a9163b5f",
+          "bb954aa1-a2e0-449f-b284-72e9bcaad09b",
+          "c31f5d7d-34dc-477e-813f-da153c63a52a",
+          "dd86b8c8-17a7-4347-bc86-2285bbcfb352"
+        ],
+        "stored_business_date": "2026-02-14",
+        "subtotal": 64.95,
+        "subtotal_matches": true,
+        "total": 70.15
+      },
+      {
+        "ambiguous_reasons": [],
+        "closed_at": "2026-02-15T04:33:22.789+00:00",
+        "corrected_business_date": "2026-02-14",
+        "created_at": "2026-02-15T04:33:24.547014+00:00",
+        "delta_days": 0,
+        "eligible_for_repair": false,
+        "opened_at": "2026-02-15T04:33:22.789+00:00",
+        "order_id": "KIOSK-1771130002788",
+        "reconstructed_items": [
+          {
+            "inventory_txn_ids": [
+              "3178cca3-3084-4e9d-8058-6249b5c6e5d0",
+              "61bb5799-a13c-43fe-89c7-315a46a59ed3",
+              "747494d0-e3f5-4ce1-a47c-8cdf10b961a2",
+              "bd179ed9-4fd6-40d3-b512-b9ac9ab250e5",
+              "bd92b06f-cea0-42e3-b1be-ce7b72a0a13b",
+              "d32d14b5-af14-40df-918d-763f694b25da",
+              "fe28bb50-3376-4cb5-83d8-0edcb9886502"
+            ],
+            "line_sales": 12.99,
+            "menu_item_id": "564978bc-f1a1-45d6-9113-07ae1e22fb9a",
+            "menu_item_name": "The California Chicken Pizza (L)",
+            "qty": 1,
+            "unit_price": 12.99
+          }
+        ],
+        "reconstructed_subtotal": 12.99,
+        "related_inventory_txn_count": 7,
+        "related_inventory_txn_ids": [
+          "3178cca3-3084-4e9d-8058-6249b5c6e5d0",
+          "61bb5799-a13c-43fe-89c7-315a46a59ed3",
+          "747494d0-e3f5-4ce1-a47c-8cdf10b961a2",
+          "bd179ed9-4fd6-40d3-b512-b9ac9ab250e5",
+          "bd92b06f-cea0-42e3-b1be-ce7b72a0a13b",
+          "d32d14b5-af14-40df-918d-763f694b25da",
+          "fe28bb50-3376-4cb5-83d8-0edcb9886502"
+        ],
+        "stored_business_date": "2026-02-14",
+        "subtotal": 12.99,
+        "subtotal_matches": true,
+        "total": 14.03
+      },
+      {
+        "ambiguous_reasons": [],
+        "closed_at": "2026-02-14T19:37:48.281+00:00",
+        "corrected_business_date": "2026-02-14",
+        "created_at": "2026-02-14T19:37:48.388084+00:00",
+        "delta_days": 0,
+        "eligible_for_repair": false,
+        "opened_at": "2026-02-14T19:37:48.281+00:00",
+        "order_id": "KIOSK-1771097868281",
+        "reconstructed_items": [
+          {
+            "inventory_txn_ids": [
+              "1830df97-c55a-4b91-a185-bfbf9393ec6c",
+              "356fa19d-aed0-4a65-b904-19778558b02f",
+              "51f20180-9b72-4a3c-83a9-19b314bd4fe7",
+              "659933a4-0fa0-42e3-96d0-c8b10114cd11",
+              "9da11ab6-6e57-4b35-9f84-811e8d24713e",
+              "b3fa9a16-569d-4226-9273-7e4e2d49e817",
+              "fdfc168d-0b3f-487b-927a-9e1c4242673a"
+            ],
+            "line_sales": 38.97,
+            "menu_item_id": "564978bc-f1a1-45d6-9113-07ae1e22fb9a",
+            "menu_item_name": "The California Chicken Pizza (L)",
+            "qty": 3,
+            "unit_price": 12.99
+          }
+        ],
+        "reconstructed_subtotal": 38.97,
+        "related_inventory_txn_count": 7,
+        "related_inventory_txn_ids": [
+          "1830df97-c55a-4b91-a185-bfbf9393ec6c",
+          "356fa19d-aed0-4a65-b904-19778558b02f",
+          "51f20180-9b72-4a3c-83a9-19b314bd4fe7",
+          "659933a4-0fa0-42e3-96d0-c8b10114cd11",
+          "9da11ab6-6e57-4b35-9f84-811e8d24713e",
+          "b3fa9a16-569d-4226-9273-7e4e2d49e817",
+          "fdfc168d-0b3f-487b-927a-9e1c4242673a"
+        ],
+        "stored_business_date": "2026-02-14",
+        "subtotal": 38.97,
+        "subtotal_matches": true,
+        "total": 42.09
+      },
+      {
+        "ambiguous_reasons": [],
+        "closed_at": "2026-02-15T19:14:13.27+00:00",
+        "corrected_business_date": "2026-02-15",
+        "created_at": "2026-02-15T19:14:13.572075+00:00",
+        "delta_days": 0,
+        "eligible_for_repair": false,
+        "opened_at": "2026-02-15T19:14:13.27+00:00",
+        "order_id": "KIOSK-1771182853269",
+        "reconstructed_items": [
+          {
+            "inventory_txn_ids": [
+              "414ab9cc-6767-4a3c-9168-3d7451e76c59",
+              "44838c49-9c86-4e13-a78d-b1335ee64355",
+              "82a7b0e0-425b-4fcc-8309-c19c39fc9ba9",
+              "838b92c5-dca6-4e0c-bb50-b9c4a0d7cba4",
+              "d9ee1011-538d-4169-b5d6-ff51f2ebdf02",
+              "edae5f26-3a9e-4458-a3ea-6e5e4eba92da",
+              "f204af89-3c85-494c-ab8d-41a43c475de6",
+              "f63b900d-61d3-4e80-9597-fee8f5a22f16"
+            ],
+            "line_sales": 324.75,
+            "menu_item_id": "51cd32b9-65e1-4b3f-bc26-c80b3bb221f8",
+            "menu_item_name": "The Greek Pizza (S)",
+            "qty": 25,
+            "unit_price": 12.99
+          }
+        ],
+        "reconstructed_subtotal": 324.75,
+        "related_inventory_txn_count": 8,
+        "related_inventory_txn_ids": [
+          "414ab9cc-6767-4a3c-9168-3d7451e76c59",
+          "44838c49-9c86-4e13-a78d-b1335ee64355",
+          "82a7b0e0-425b-4fcc-8309-c19c39fc9ba9",
+          "838b92c5-dca6-4e0c-bb50-b9c4a0d7cba4",
+          "d9ee1011-538d-4169-b5d6-ff51f2ebdf02",
+          "edae5f26-3a9e-4458-a3ea-6e5e4eba92da",
+          "f204af89-3c85-494c-ab8d-41a43c475de6",
+          "f63b900d-61d3-4e80-9597-fee8f5a22f16"
+        ],
+        "stored_business_date": "2026-02-15",
+        "subtotal": 324.75,
+        "subtotal_matches": true,
+        "total": 350.73
+      },
+      {
+        "ambiguous_reasons": [],
+        "closed_at": "2026-02-16T18:11:21.438+00:00",
+        "corrected_business_date": "2026-02-16",
+        "created_at": "2026-02-16T18:11:20.336454+00:00",
+        "delta_days": 0,
+        "eligible_for_repair": false,
+        "opened_at": "2026-02-16T18:11:21.438+00:00",
+        "order_id": "KIOSK-1771265481437",
+        "reconstructed_items": [
+          {
+            "inventory_txn_ids": [
+              "0ebd32b6-e12d-4ddf-8c07-6744f1b6337e",
+              "554dacbb-d692-4ac6-9b27-862b021f2f2b",
+              "6f9fca31-b5bd-4aa2-be4b-d53623299756",
+              "8f181523-c984-489c-b35b-d457c83f9ad8",
+              "c6d9387c-8c00-458b-93b2-69f047673b96",
+              "e14312e4-efeb-4fd2-b3b5-a476f197614c"
+            ],
+            "line_sales": 77.94,
+            "menu_item_id": "0b928caa-befd-47ae-9a7b-209616dcb8b9",
+            "menu_item_name": "The Chicken Pesto Pizza (L)",
+            "qty": 6,
+            "unit_price": 12.99
+          }
+        ],
+        "reconstructed_subtotal": 77.94,
+        "related_inventory_txn_count": 6,
+        "related_inventory_txn_ids": [
+          "0ebd32b6-e12d-4ddf-8c07-6744f1b6337e",
+          "554dacbb-d692-4ac6-9b27-862b021f2f2b",
+          "6f9fca31-b5bd-4aa2-be4b-d53623299756",
+          "8f181523-c984-489c-b35b-d457c83f9ad8",
+          "c6d9387c-8c00-458b-93b2-69f047673b96",
+          "e14312e4-efeb-4fd2-b3b5-a476f197614c"
+        ],
+        "stored_business_date": "2026-02-16",
+        "subtotal": 77.94,
+        "subtotal_matches": true,
+        "total": 84.18
+      },
+      {
+        "ambiguous_reasons": [],
+        "closed_at": "2026-02-16T19:24:58.402+00:00",
+        "corrected_business_date": "2026-02-16",
+        "created_at": "2026-02-16T19:24:56.926845+00:00",
+        "delta_days": 0,
+        "eligible_for_repair": false,
+        "opened_at": "2026-02-16T19:24:58.402+00:00",
+        "order_id": "KIOSK-1771269898402",
+        "reconstructed_items": [
+          {
+            "inventory_txn_ids": [
+              "26947905-3853-4beb-8301-9f2a1809660f",
+              "2c275cc9-b25b-4554-8557-279597b20d5c",
+              "483ff7a2-bddf-4535-94f0-b6b2554e8b2c",
+              "9dd664eb-6e6d-4863-b809-541a493e9bfa",
+              "cf7a0b29-3e37-4e8b-a610-fb0fe831088b",
+              "d6bfaadc-6d7f-418e-9e88-38a72f9bac31",
+              "d6d1437e-aa4a-4908-852c-70e1a65f48fa"
+            ],
+            "line_sales": 51.96,
+            "menu_item_id": "7e322d99-db51-4e2d-9284-d532bb656060",
+            "menu_item_name": "The Italian Capocollo Pizza (M)",
+            "qty": 4,
+            "unit_price": 12.99
+          }
+        ],
+        "reconstructed_subtotal": 51.96,
+        "related_inventory_txn_count": 7,
+        "related_inventory_txn_ids": [
+          "26947905-3853-4beb-8301-9f2a1809660f",
+          "2c275cc9-b25b-4554-8557-279597b20d5c",
+          "483ff7a2-bddf-4535-94f0-b6b2554e8b2c",
+          "9dd664eb-6e6d-4863-b809-541a493e9bfa",
+          "cf7a0b29-3e37-4e8b-a610-fb0fe831088b",
+          "d6bfaadc-6d7f-418e-9e88-38a72f9bac31",
+          "d6d1437e-aa4a-4908-852c-70e1a65f48fa"
+        ],
+        "stored_business_date": "2026-02-16",
+        "subtotal": 51.96,
+        "subtotal_matches": true,
+        "total": 56.12
+      },
+      {
+        "ambiguous_reasons": [],
+        "closed_at": "2026-02-17T23:41:31.897+00:00",
+        "corrected_business_date": "2026-02-17",
+        "created_at": "2026-02-17T23:41:31.415299+00:00",
+        "delta_days": 0,
+        "eligible_for_repair": false,
+        "opened_at": "2026-02-17T23:41:31.897+00:00",
+        "order_id": "KIOSK-1771371691896",
+        "reconstructed_items": [
+          {
+            "inventory_txn_ids": [
+              "0d197e7c-d113-41d3-9838-9c6184cfa91c",
+              "530b9cfb-3442-4d7b-a938-3c6ac4d98eb5",
+              "720eba84-bda0-4c6c-8487-9514bef8de29",
+              "b9b294f8-100e-4676-aaf8-a74714e08a79",
+              "c50a6380-05f4-4b2d-9fcc-47ac82d4ce17",
+              "d6fa2928-5856-4f75-8a4f-097fd34cb7d6",
+              "dd743f8b-4a7c-4e6b-b0ba-4110594ed077",
+              "dfe4de03-5e76-4c5e-97f1-97afcc1998aa",
+              "ff5fce5c-d4a7-40c0-85da-438bb2bbd1b9"
+            ],
+            "line_sales": 831.36,
+            "menu_item_id": "c546f439-b62e-465c-9da3-c2791423a7be",
+            "menu_item_name": "The Italian Supreme Pizza (L)",
+            "qty": 64,
+            "unit_price": 12.99
+          }
+        ],
+        "reconstructed_subtotal": 831.36,
+        "related_inventory_txn_count": 9,
+        "related_inventory_txn_ids": [
+          "0d197e7c-d113-41d3-9838-9c6184cfa91c",
+          "530b9cfb-3442-4d7b-a938-3c6ac4d98eb5",
+          "720eba84-bda0-4c6c-8487-9514bef8de29",
+          "b9b294f8-100e-4676-aaf8-a74714e08a79",
+          "c50a6380-05f4-4b2d-9fcc-47ac82d4ce17",
+          "d6fa2928-5856-4f75-8a4f-097fd34cb7d6",
+          "dd743f8b-4a7c-4e6b-b0ba-4110594ed077",
+          "dfe4de03-5e76-4c5e-97f1-97afcc1998aa",
+          "ff5fce5c-d4a7-40c0-85da-438bb2bbd1b9"
+        ],
+        "stored_business_date": "2026-02-17",
+        "subtotal": 831.36,
+        "subtotal_matches": true,
+        "total": 897.87
+      },
+      {
+        "ambiguous_reasons": [],
+        "closed_at": "2026-02-18T08:51:32.616+00:00",
+        "corrected_business_date": "2026-02-18",
+        "created_at": "2026-02-18T08:51:32.774734+00:00",
+        "delta_days": 0,
+        "eligible_for_repair": false,
+        "opened_at": "2026-02-18T08:51:32.616+00:00",
+        "order_id": "KIOSK-1771404692616",
+        "reconstructed_items": [
+          {
+            "inventory_txn_ids": [
+              "0a2a0567-bdfa-4136-8609-1aea823a08c7",
+              "43c6d59e-a737-46d8-9f9a-957c11854181",
+              "59ad12de-ab02-4816-ad03-e21f975f1a79",
+              "c5e50e8e-cc67-415f-b1a0-7f1f8141381f",
+              "d6ef173d-5657-4942-b667-1b4d12293e3a",
+              "f750e963-6092-4e32-b95f-54893f101fce"
+            ],
+            "line_sales": 12.99,
+            "menu_item_id": "0762f858-b598-46cd-9dee-6fd1da4ac4b1",
+            "menu_item_name": "The Barbecue Chicken Pizza (L)",
+            "qty": 1,
+            "unit_price": 12.99
+          }
+        ],
+        "reconstructed_subtotal": 12.99,
+        "related_inventory_txn_count": 6,
+        "related_inventory_txn_ids": [
+          "0a2a0567-bdfa-4136-8609-1aea823a08c7",
+          "43c6d59e-a737-46d8-9f9a-957c11854181",
+          "59ad12de-ab02-4816-ad03-e21f975f1a79",
+          "c5e50e8e-cc67-415f-b1a0-7f1f8141381f",
+          "d6ef173d-5657-4942-b667-1b4d12293e3a",
+          "f750e963-6092-4e32-b95f-54893f101fce"
+        ],
+        "stored_business_date": "2026-02-18",
+        "subtotal": 12.99,
+        "subtotal_matches": true,
+        "total": 14.03
+      },
+      {
+        "ambiguous_reasons": [],
+        "closed_at": "2026-02-21T01:34:50.154+00:00",
+        "corrected_business_date": "2026-02-20",
+        "created_at": "2026-02-21T01:34:50.698945+00:00",
+        "delta_days": 0,
+        "eligible_for_repair": false,
+        "opened_at": "2026-02-21T01:34:50.154+00:00",
+        "order_id": "KIOSK-1771637690150",
+        "reconstructed_items": [
+          {
+            "inventory_txn_ids": [
+              "028f4ed7-fd8b-46eb-a15c-e32ffc6b9057",
+              "1057ac95-3681-4678-88a8-a1c29d4694e0",
+              "14a6fee4-a404-44d6-8164-f9deb84eeb53",
+              "2900cc20-0c7c-4c69-b396-5140f47ab79f",
+              "44734563-9505-47c0-a5d6-3c953cc3946a",
+              "737f8ed1-6c2b-45c3-bb60-bb506c78cf91",
+              "80a86140-0c20-4dbf-8683-6c939bf403b2",
+              "953d3737-3629-4f6d-81e7-002ef02ba122",
+              "b816f22e-84d8-4dab-b99a-60481553c812"
+            ],
+            "line_sales": 168.87,
+            "menu_item_id": "8005eada-c29b-41ea-aabc-4051ebc9607f",
+            "menu_item_name": "The Italian Vegetables Pizza (M)",
+            "qty": 13,
+            "unit_price": 12.99
+          }
+        ],
+        "reconstructed_subtotal": 168.87,
+        "related_inventory_txn_count": 9,
+        "related_inventory_txn_ids": [
+          "028f4ed7-fd8b-46eb-a15c-e32ffc6b9057",
+          "1057ac95-3681-4678-88a8-a1c29d4694e0",
+          "14a6fee4-a404-44d6-8164-f9deb84eeb53",
+          "2900cc20-0c7c-4c69-b396-5140f47ab79f",
+          "44734563-9505-47c0-a5d6-3c953cc3946a",
+          "737f8ed1-6c2b-45c3-bb60-bb506c78cf91",
+          "80a86140-0c20-4dbf-8683-6c939bf403b2",
+          "953d3737-3629-4f6d-81e7-002ef02ba122",
+          "b816f22e-84d8-4dab-b99a-60481553c812"
+        ],
+        "stored_business_date": "2026-02-20",
+        "subtotal": 168.87,
+        "subtotal_matches": true,
+        "total": 182.38
+      },
+      {
+        "ambiguous_reasons": [],
+        "closed_at": "2026-02-21T01:30:44.207+00:00",
+        "corrected_business_date": "2026-02-20",
+        "created_at": "2026-02-21T01:30:46.606571+00:00",
+        "delta_days": 0,
+        "eligible_for_repair": false,
+        "opened_at": "2026-02-21T01:30:44.207+00:00",
+        "order_id": "KIOSK-1771637444207",
+        "reconstructed_items": [
+          {
+            "inventory_txn_ids": [
+              "0c39ea7d-6df4-44e8-b7c1-ae1c053172ca",
+              "139acca7-eb76-4826-9c63-5fd02beafa58",
+              "15570de2-6b5b-4cd2-9aab-5e17134a5354",
+              "2117d9f8-5c61-4214-a794-7cbc790ca10b",
+              "7fc14243-0487-4de2-bf6e-8affc77e539d",
+              "9ade20e5-5213-477a-90df-566e85fcc25e"
+            ],
+            "line_sales": 64.95,
+            "menu_item_id": "515251c1-3c40-4679-a482-f8ce71cce169",
+            "menu_item_name": "The Hawaiian Pizza (L)",
+            "qty": 5,
+            "unit_price": 12.99
+          }
+        ],
+        "reconstructed_subtotal": 64.95,
+        "related_inventory_txn_count": 6,
+        "related_inventory_txn_ids": [
+          "0c39ea7d-6df4-44e8-b7c1-ae1c053172ca",
+          "139acca7-eb76-4826-9c63-5fd02beafa58",
+          "15570de2-6b5b-4cd2-9aab-5e17134a5354",
+          "2117d9f8-5c61-4214-a794-7cbc790ca10b",
+          "7fc14243-0487-4de2-bf6e-8affc77e539d",
+          "9ade20e5-5213-477a-90df-566e85fcc25e"
+        ],
+        "stored_business_date": "2026-02-20",
+        "subtotal": 64.95,
+        "subtotal_matches": true,
+        "total": 70.15
+      },
+      {
+        "ambiguous_reasons": [],
+        "closed_at": "2026-02-21T01:38:10.78+00:00",
+        "corrected_business_date": "2026-02-20",
+        "created_at": "2026-02-21T01:38:12.514264+00:00",
+        "delta_days": 0,
+        "eligible_for_repair": false,
+        "opened_at": "2026-02-21T01:38:10.78+00:00",
+        "order_id": "KIOSK-1771637890779",
+        "reconstructed_items": [
+          {
+            "inventory_txn_ids": [
+              "20718920-4118-4e1d-9e18-76282db96d8b",
+              "2dc43b9c-dfa1-4b29-9b1e-f4690128526d",
+              "328c7f18-c6a1-4991-aceb-cbde63d9663e",
+              "716c0f97-cf10-44a5-8389-8f1510bef881",
+              "88bc3723-8a02-4dbd-a804-49048cc0c310",
+              "aa90aa11-26ef-4794-9eae-f813f1bbae94",
+              "dc03d4f4-8a80-4804-8132-e8939b86233d",
+              "eaed5aad-f868-437f-8c02-33b9d8abba18"
+            ],
+            "line_sales": 64.95,
+            "menu_item_id": "341bdd76-7e05-43eb-a273-14947ab83dff",
+            "menu_item_name": "The Greek Pizza (XL)",
+            "qty": 5,
+            "unit_price": 12.99
+          }
+        ],
+        "reconstructed_subtotal": 64.95,
+        "related_inventory_txn_count": 8,
+        "related_inventory_txn_ids": [
+          "20718920-4118-4e1d-9e18-76282db96d8b",
+          "2dc43b9c-dfa1-4b29-9b1e-f4690128526d",
+          "328c7f18-c6a1-4991-aceb-cbde63d9663e",
+          "716c0f97-cf10-44a5-8389-8f1510bef881",
+          "88bc3723-8a02-4dbd-a804-49048cc0c310",
+          "aa90aa11-26ef-4794-9eae-f813f1bbae94",
+          "dc03d4f4-8a80-4804-8132-e8939b86233d",
+          "eaed5aad-f868-437f-8c02-33b9d8abba18"
+        ],
+        "stored_business_date": "2026-02-20",
+        "subtotal": 64.95,
+        "subtotal_matches": true,
+        "total": 70.15
+      },
+      {
+        "ambiguous_reasons": [],
+        "closed_at": "2026-03-19T00:28:19.847+00:00",
+        "corrected_business_date": "2026-03-18",
+        "created_at": "2026-03-19T00:28:19.934136+00:00",
+        "delta_days": 0,
+        "eligible_for_repair": false,
+        "opened_at": "2026-03-19T00:28:19.847+00:00",
+        "order_id": "KIOSK-1773880099847",
+        "reconstructed_items": [
+          {
+            "inventory_txn_ids": [
+              "01e98b94-0bea-41c7-aa37-5de713eeb03e",
+              "34fdb568-0741-4d78-9a7e-318c952ef4d3",
+              "712ea4fe-3ae4-426c-92b8-0586a47e6300",
+              "c0657063-809f-414c-8772-4a93e00e592e",
+              "d8f8e964-77b0-4bc5-a153-b986ce591665"
+            ],
+            "line_sales": 38.97,
+            "menu_item_id": "8e7440eb-0efb-4f22-881a-0a7a58b2a4ac",
+            "menu_item_name": "The Pepperoni Pizza (L)",
+            "qty": 3,
+            "unit_price": 12.99
+          }
+        ],
+        "reconstructed_subtotal": 38.97,
+        "related_inventory_txn_count": 5,
+        "related_inventory_txn_ids": [
+          "01e98b94-0bea-41c7-aa37-5de713eeb03e",
+          "34fdb568-0741-4d78-9a7e-318c952ef4d3",
+          "712ea4fe-3ae4-426c-92b8-0586a47e6300",
+          "c0657063-809f-414c-8772-4a93e00e592e",
+          "d8f8e964-77b0-4bc5-a153-b986ce591665"
+        ],
+        "stored_business_date": "2026-03-18",
+        "subtotal": 38.97,
+        "subtotal_matches": true,
+        "total": 42.09
+      },
+      {
+        "ambiguous_reasons": [],
+        "closed_at": "2026-03-19T00:28:43.582+00:00",
+        "corrected_business_date": "2026-03-18",
+        "created_at": "2026-03-19T00:28:43.630681+00:00",
+        "delta_days": 0,
+        "eligible_for_repair": false,
+        "opened_at": "2026-03-19T00:28:43.582+00:00",
+        "order_id": "KIOSK-1773880123582",
+        "reconstructed_items": [
+          {
+            "inventory_txn_ids": [
+              "6988788c-7d91-4d57-9667-d00cc1b0ae80",
+              "8892793d-e086-41b8-ab50-72f941ecbe54",
+              "c75c342c-d54a-442d-a249-cc8d2428413f",
+              "d9101e1d-04bf-4f29-b852-31fba44f6939",
+              "dd0c2d82-7956-4eb3-b184-679c47cbe82f",
+              "e0a78ad7-8878-4ae3-9517-c8af2a42c191"
+            ],
+            "line_sales": 51.96,
+            "menu_item_id": "0762f858-b598-46cd-9dee-6fd1da4ac4b1",
+            "menu_item_name": "The Barbecue Chicken Pizza (L)",
+            "qty": 4,
+            "unit_price": 12.99
+          }
+        ],
+        "reconstructed_subtotal": 51.96,
+        "related_inventory_txn_count": 6,
+        "related_inventory_txn_ids": [
+          "6988788c-7d91-4d57-9667-d00cc1b0ae80",
+          "8892793d-e086-41b8-ab50-72f941ecbe54",
+          "c75c342c-d54a-442d-a249-cc8d2428413f",
+          "d9101e1d-04bf-4f29-b852-31fba44f6939",
+          "dd0c2d82-7956-4eb3-b184-679c47cbe82f",
+          "e0a78ad7-8878-4ae3-9517-c8af2a42c191"
+        ],
+        "stored_business_date": "2026-03-18",
+        "subtotal": 51.96,
+        "subtotal_matches": true,
+        "total": 56.12
+      },
+      {
+        "ambiguous_reasons": [],
+        "closed_at": "2026-03-18T23:51:20.699+00:00",
+        "corrected_business_date": "2026-03-18",
+        "created_at": "2026-03-18T23:51:18.169288+00:00",
+        "delta_days": 0,
+        "eligible_for_repair": false,
+        "opened_at": "2026-03-18T23:51:20.699+00:00",
+        "order_id": "KIOSK-1773877880698",
+        "reconstructed_items": [
+          {
+            "inventory_txn_ids": [
+              "156bf323-fc24-46e7-ba9c-09ff0351593d",
+              "56ea6042-ef6f-45bd-a0ae-e591aa4a3d9c",
+              "81d052eb-2c56-40ae-a398-8ef24c85c080",
+              "a46b81e1-c9ec-4450-aed8-10e502e8d7cc",
+              "b7ceaf45-56bc-4625-9591-0541684e8f0a",
+              "e1a4905c-a6aa-492a-820a-9f4b531c088d",
+              "e5fd0214-6259-46ee-89ef-35b5da34259b"
+            ],
+            "line_sales": 12.99,
+            "menu_item_id": "b1622889-55fd-4229-ba00-f0e6ce895c07",
+            "menu_item_name": "The Italian Capocollo Pizza (L)",
+            "qty": 1,
+            "unit_price": 12.99
+          }
+        ],
+        "reconstructed_subtotal": 12.99,
+        "related_inventory_txn_count": 7,
+        "related_inventory_txn_ids": [
+          "156bf323-fc24-46e7-ba9c-09ff0351593d",
+          "56ea6042-ef6f-45bd-a0ae-e591aa4a3d9c",
+          "81d052eb-2c56-40ae-a398-8ef24c85c080",
+          "a46b81e1-c9ec-4450-aed8-10e502e8d7cc",
+          "b7ceaf45-56bc-4625-9591-0541684e8f0a",
+          "e1a4905c-a6aa-492a-820a-9f4b531c088d",
+          "e5fd0214-6259-46ee-89ef-35b5da34259b"
+        ],
+        "stored_business_date": "2026-03-18",
+        "subtotal": 12.99,
+        "subtotal_matches": true,
+        "total": 14.03
+      },
+      {
+        "ambiguous_reasons": [],
+        "closed_at": "2026-03-19T00:34:56.2+00:00",
+        "corrected_business_date": "2026-03-18",
+        "created_at": "2026-03-19T00:34:53.548678+00:00",
+        "delta_days": 0,
+        "eligible_for_repair": false,
+        "opened_at": "2026-03-19T00:34:56.2+00:00",
+        "order_id": "KIOSK-1773880496200",
+        "reconstructed_items": [
+          {
+            "inventory_txn_ids": [
+              "0b4e7a6f-91e1-47f8-86d1-982242fc96eb",
+              "457caaa0-d2a3-467b-bbee-67e591b686ae",
+              "4f14859b-d6f2-4e57-91d0-6ee02b63e130",
+              "4f437342-0db9-4b18-9c72-d652fdfd5e9b",
+              "54043970-ac15-4338-959e-850251b6a3b0",
+              "685404d9-bb07-49e2-96be-f8e923f6e82c",
+              "90fff50e-f11e-4093-b374-6315b8b5ff75",
+              "f2e94bfa-3b72-41d1-82c7-7818121eef1b"
+            ],
+            "line_sales": 12.99,
+            "menu_item_id": "2f5d581f-b8dd-4d30-9312-b1352f0010c2",
+            "menu_item_name": "The Mexicana Pizza (M)",
+            "qty": 1,
+            "unit_price": 12.99
+          }
+        ],
+        "reconstructed_subtotal": 12.99,
+        "related_inventory_txn_count": 8,
+        "related_inventory_txn_ids": [
+          "0b4e7a6f-91e1-47f8-86d1-982242fc96eb",
+          "457caaa0-d2a3-467b-bbee-67e591b686ae",
+          "4f14859b-d6f2-4e57-91d0-6ee02b63e130",
+          "4f437342-0db9-4b18-9c72-d652fdfd5e9b",
+          "54043970-ac15-4338-959e-850251b6a3b0",
+          "685404d9-bb07-49e2-96be-f8e923f6e82c",
+          "90fff50e-f11e-4093-b374-6315b8b5ff75",
+          "f2e94bfa-3b72-41d1-82c7-7818121eef1b"
+        ],
+        "stored_business_date": "2026-03-18",
+        "subtotal": 12.99,
+        "subtotal_matches": true,
+        "total": 14.03
+      },
+      {
+        "ambiguous_reasons": [],
+        "closed_at": "2026-03-19T00:31:45.723+00:00",
+        "corrected_business_date": "2026-03-18",
+        "created_at": "2026-03-19T00:31:45.870725+00:00",
+        "delta_days": 0,
+        "eligible_for_repair": false,
+        "opened_at": "2026-03-19T00:31:45.723+00:00",
+        "order_id": "KIOSK-1773880305722",
+        "reconstructed_items": [
+          {
+            "inventory_txn_ids": [
+              "5e1ff369-546c-4d31-868c-4303da8a03b5",
+              "69938122-dbcf-46ab-ada8-95b216368f72",
+              "70c3ef8d-c44a-4788-a221-d3119727fedb",
+              "8caa6535-054c-4897-885a-30b10ed813f2",
+              "9e9a5d2c-c1d8-4301-a6d1-4205072a699b",
+              "d1e4bf85-503a-4831-9381-36d652fd642e"
+            ],
+            "line_sales": 142.89,
+            "menu_item_id": "0762f858-b598-46cd-9dee-6fd1da4ac4b1",
+            "menu_item_name": "The Barbecue Chicken Pizza (L)",
+            "qty": 11,
+            "unit_price": 12.99
+          }
+        ],
+        "reconstructed_subtotal": 142.89,
+        "related_inventory_txn_count": 6,
+        "related_inventory_txn_ids": [
+          "5e1ff369-546c-4d31-868c-4303da8a03b5",
+          "69938122-dbcf-46ab-ada8-95b216368f72",
+          "70c3ef8d-c44a-4788-a221-d3119727fedb",
+          "8caa6535-054c-4897-885a-30b10ed813f2",
+          "9e9a5d2c-c1d8-4301-a6d1-4205072a699b",
+          "d1e4bf85-503a-4831-9381-36d652fd642e"
+        ],
+        "stored_business_date": "2026-03-18",
+        "subtotal": 142.89,
+        "subtotal_matches": true,
+        "total": 154.32
+      },
+      {
+        "ambiguous_reasons": [],
+        "closed_at": "2026-03-19T00:28:12.036+00:00",
+        "corrected_business_date": "2026-03-18",
+        "created_at": "2026-03-19T00:28:12.144033+00:00",
+        "delta_days": 0,
+        "eligible_for_repair": false,
+        "opened_at": "2026-03-19T00:28:12.036+00:00",
+        "order_id": "KIOSK-1773880092036",
+        "reconstructed_items": [
+          {
+            "inventory_txn_ids": [
+              "406a9930-4b3a-4299-8bd4-e3ef7cd87d90",
+              "417057c2-4675-400d-abcc-160479673eaf",
+              "49b54904-2358-42e1-857c-e9f6584eea07",
+              "8c0e8fe8-0945-4ed0-9c5c-9749ab79840b",
+              "b0a40a44-930f-489f-bff5-2ed6fee46e96",
+              "bc34f821-ed87-4b51-8d2c-24f570d89e20",
+              "f99dcf86-0747-4a3b-85d8-5b6be6c001cc"
+            ],
+            "line_sales": 12.99,
+            "menu_item_id": "399143ec-66d0-47e1-9442-5f56f2162e59",
+            "menu_item_name": "The California Chicken Pizza (S)",
+            "qty": 1,
+            "unit_price": 12.99
+          }
+        ],
+        "reconstructed_subtotal": 12.99,
+        "related_inventory_txn_count": 7,
+        "related_inventory_txn_ids": [
+          "406a9930-4b3a-4299-8bd4-e3ef7cd87d90",
+          "417057c2-4675-400d-abcc-160479673eaf",
+          "49b54904-2358-42e1-857c-e9f6584eea07",
+          "8c0e8fe8-0945-4ed0-9c5c-9749ab79840b",
+          "b0a40a44-930f-489f-bff5-2ed6fee46e96",
+          "bc34f821-ed87-4b51-8d2c-24f570d89e20",
+          "f99dcf86-0747-4a3b-85d8-5b6be6c001cc"
+        ],
+        "stored_business_date": "2026-03-18",
+        "subtotal": 12.99,
+        "subtotal_matches": true,
+        "total": 14.03
+      },
+      {
+        "ambiguous_reasons": [],
+        "closed_at": "2026-03-19T00:28:19.803+00:00",
+        "corrected_business_date": "2026-03-18",
+        "created_at": "2026-03-19T00:28:19.968275+00:00",
+        "delta_days": 0,
+        "eligible_for_repair": false,
+        "opened_at": "2026-03-19T00:28:19.803+00:00",
+        "order_id": "KIOSK-1773880099803",
+        "reconstructed_items": [
+          {
+            "inventory_txn_ids": [
+              "2b04b622-f2da-4a95-b249-dcbbfc574fdb",
+              "67749ad3-dbe7-466b-8ca3-3959b3f49e81",
+              "73aa705d-0652-441e-a82f-dc23d2584e09",
+              "7c5817bc-6bf4-4eff-ba3f-65bb93bcfe3a",
+              "a3bd0648-0732-4dfd-84d8-f959b4ae2500",
+              "c1cfae62-bb77-4cd8-9671-db3c7f1695f9",
+              "d43246dc-33b3-41da-96be-e2be5b8cbbaf",
+              "fa5c0bcd-82c6-46c8-bf6b-70bc37205d4e"
+            ],
+            "line_sales": 103.92,
+            "menu_item_id": "1ffa8c93-a29a-4fe5-baa3-6c68ae61808f",
+            "menu_item_name": "The Green Garden Pizza (M)",
+            "qty": 8,
+            "unit_price": 12.99
+          }
+        ],
+        "reconstructed_subtotal": 103.92,
+        "related_inventory_txn_count": 8,
+        "related_inventory_txn_ids": [
+          "2b04b622-f2da-4a95-b249-dcbbfc574fdb",
+          "67749ad3-dbe7-466b-8ca3-3959b3f49e81",
+          "73aa705d-0652-441e-a82f-dc23d2584e09",
+          "7c5817bc-6bf4-4eff-ba3f-65bb93bcfe3a",
+          "a3bd0648-0732-4dfd-84d8-f959b4ae2500",
+          "c1cfae62-bb77-4cd8-9671-db3c7f1695f9",
+          "d43246dc-33b3-41da-96be-e2be5b8cbbaf",
+          "fa5c0bcd-82c6-46c8-bf6b-70bc37205d4e"
+        ],
+        "stored_business_date": "2026-03-18",
+        "subtotal": 103.92,
+        "subtotal_matches": true,
+        "total": 112.23
+      },
+      {
+        "ambiguous_reasons": [],
+        "closed_at": "2026-03-19T00:28:30.286+00:00",
+        "corrected_business_date": "2026-03-18",
+        "created_at": "2026-03-19T00:28:30.420983+00:00",
+        "delta_days": 0,
+        "eligible_for_repair": false,
+        "opened_at": "2026-03-19T00:28:30.286+00:00",
+        "order_id": "KIOSK-1773880110286",
+        "reconstructed_items": [
+          {
+            "inventory_txn_ids": [
+              "0b2e75ff-681e-4e04-8fa4-391662616126",
+              "13676fe0-b930-448e-8363-c8dcd7d6d6ac",
+              "19a36ba8-a2d9-4b22-9052-2de774eedab1",
+              "a9071610-ffdf-435c-9f2e-650c35fa0f39",
+              "d46ba9b1-014e-479f-bae9-8fec9b415a4d",
+              "dac6d603-c4f9-4253-9820-a1f76fe8d7a1"
+            ],
+            "line_sales": 64.95,
+            "menu_item_id": "5dc1c59f-5424-48ef-b84b-84b0849f5e24",
+            "menu_item_name": "The Barbecue Chicken Pizza (M)",
+            "qty": 5,
+            "unit_price": 12.99
+          }
+        ],
+        "reconstructed_subtotal": 64.95,
+        "related_inventory_txn_count": 6,
+        "related_inventory_txn_ids": [
+          "0b2e75ff-681e-4e04-8fa4-391662616126",
+          "13676fe0-b930-448e-8363-c8dcd7d6d6ac",
+          "19a36ba8-a2d9-4b22-9052-2de774eedab1",
+          "a9071610-ffdf-435c-9f2e-650c35fa0f39",
+          "d46ba9b1-014e-479f-bae9-8fec9b415a4d",
+          "dac6d603-c4f9-4253-9820-a1f76fe8d7a1"
+        ],
+        "stored_business_date": "2026-03-18",
+        "subtotal": 64.95,
+        "subtotal_matches": true,
+        "total": 70.15
+      }
+    ],
+    "ambiguous_rows": [],
+    "delta_buckets": {
+      "0": 36
+    },
+    "eligible_anomalies": [],
+    "total_orders": 36
+  },
+  "notes": [
+    "sales_line_items.source = 'api' is mixed kiosk plus demo-backfill data, so all historical repair work stays per-order.",
+    "RECEIVE and COUNT inventory transactions are excluded from the forward shift because they do not carry business_date and are unrelated to order-day continuity."
+  ],
+  "project_ref": "ifycpxtpyysuthnknptl",
+  "proposed_repair": {
+    "corrected_max_order_date": "2026-03-18",
+    "impacted_rows": {
+      "full_forward_shift": {
+        "app_config": 1,
+        "daily_orders": 21920,
+        "inventory_txns_consume": 24370,
+        "sales_line_items": 25420
+      },
+      "kiosk_correction": {
+        "app_config": 0,
+        "daily_orders": 0,
+        "inventory_txns_consume": 0,
+        "sales_line_items": 0
+      },
+      "sales_line_items_detail": {
+        "aggregate_rows_touched": 0,
+        "existing_rows_touched": 0,
+        "rows_that_may_delete": 0,
+        "rows_to_insert": 0,
+        "touched_keys": []
+      }
+    },
+    "shift_delta_days": 35,
+    "shift_target_date": "2026-04-22"
+  },
+  "sales_adjustments": [],
+  "target_date": null,
+  "target_mode": "latest-complete-day",
+  "time_zone": "America/New_York"
+}

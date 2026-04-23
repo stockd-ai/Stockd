@@ -1,0 +1,17 @@
+{
+  "current_kiosk_max_business_date": "2026-03-18",
+  "current_max_business_date": "2026-03-18",
+  "expected_kiosk_max_business_date": "2026-03-18",
+  "expected_max_business_date": "2026-03-18",
+  "generated_at": "2026-04-22T09:28:20.908Z",
+  "mismatches": [],
+  "mode": "post",
+  "ok": true,
+  "stage": "kiosk-only",
+  "totals": {
+    "daily_orders_subtotal": 974842.61,
+    "inventory_txns_consume_qty_delta": -3283597.5,
+    "sales_line_items_net_sales": 899428.83,
+    "sales_line_items_qty": 55607
+  }
+}

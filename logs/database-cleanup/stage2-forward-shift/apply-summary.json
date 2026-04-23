@@ -1,0 +1,58 @@
+{
+  "analysis_file": "/Users/admin/Documents/GitHub/Stockd/logs/database-cleanup/stage2-forward-shift/analysis.json",
+  "applied": true,
+  "backups": [
+    {
+      "name": "affected-kiosk-daily-orders",
+      "path": "/Users/admin/Documents/GitHub/Stockd/logs/database-cleanup/stage2-forward-shift/backup/affected-kiosk-daily-orders.json",
+      "rows": 0
+    },
+    {
+      "name": "affected-kiosk-consume-transactions",
+      "path": "/Users/admin/Documents/GitHub/Stockd/logs/database-cleanup/stage2-forward-shift/backup/affected-kiosk-consume-transactions.json",
+      "rows": 0
+    },
+    {
+      "name": "affected-sales-line-items",
+      "path": "/Users/admin/Documents/GitHub/Stockd/logs/database-cleanup/stage2-forward-shift/backup/affected-sales-line-items.json",
+      "rows": 0
+    },
+    {
+      "name": "full-shift-daily-orders",
+      "path": "/Users/admin/Documents/GitHub/Stockd/logs/database-cleanup/stage2-forward-shift/backup/full-shift-daily-orders.json",
+      "rows": 21920
+    },
+    {
+      "name": "full-shift-sales-line-items",
+      "path": "/Users/admin/Documents/GitHub/Stockd/logs/database-cleanup/stage2-forward-shift/backup/full-shift-sales-line-items.json",
+      "rows": 25420
+    },
+    {
+      "name": "full-shift-consume-transactions",
+      "path": "/Users/admin/Documents/GitHub/Stockd/logs/database-cleanup/stage2-forward-shift/backup/full-shift-consume-transactions.json",
+      "rows": 24370
+    },
+    {
+      "name": "app-config-onboarding",
+      "path": "/Users/admin/Documents/GitHub/Stockd/logs/database-cleanup/stage2-forward-shift/backup/app-config-onboarding.json",
+      "rows": 1
+    }
+  ],
+  "changes": {
+    "app_config_updated": true,
+    "kiosk_daily_orders_updated": 0,
+    "kiosk_inventory_txns_updated": 0,
+    "sales_line_items_deleted": 0,
+    "sales_line_items_fallback_rows_used": 0,
+    "sales_line_items_inserted": 0,
+    "sales_line_items_updated": 0,
+    "shift_daily_orders_updated": 21920,
+    "shift_inventory_txns_updated": 21249,
+    "shift_sales_line_items_updated": 25420
+  },
+  "fallback_resolutions": [],
+  "finished_at": "2026-04-23T04:14:45.416Z",
+  "skipped": [],
+  "stage": "shift-only",
+  "started_at": "2026-04-23T04-13-06-341Z"
+}

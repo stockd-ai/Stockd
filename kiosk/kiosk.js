@@ -383,6 +383,7 @@ async function placeOrder() {
   const total = subtotal + tax;
 
   const orderId = 'KIOSK-' + Date.now();
+  const placedAt = new Date().toISOString();
   const diningOption = safeEnum(document.getElementById('dining-opt').value, ALLOWED_DINING_OPTIONS, 'Dine In');
   const numGuests = parseFiniteNumber(document.getElementById('guests').value, {
     integer: true,
@@ -393,9 +394,8 @@ async function placeOrder() {
 
   const order = {
     order_id:       orderId,
-    business_date:  new Date().toISOString().slice(0, 10),
-    opened_at:      new Date().toISOString(),
-    closed_at:      new Date().toISOString(),
+    opened_at:      placedAt,
+    closed_at:      placedAt,
     num_guests:     numGuests,
     dining_option:  diningOption,
     order_source:   'kiosk',

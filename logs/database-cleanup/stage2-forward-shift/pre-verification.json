@@ -1,0 +1,179 @@
+{
+  "current": {
+    "current_state": {
+      "app_config": {
+        "history_end_date": "2026-03-18",
+        "history_start_date": "2025-01-26",
+        "onboarding_present": true
+      },
+      "daily_orders": {
+        "count": 21920,
+        "distinct_dates": 372,
+        "largest_interior_gap": {
+          "diff_days": 10,
+          "from": "2026-03-05",
+          "missing_days": 9,
+          "to": "2026-03-15"
+        },
+        "max_date": "2026-03-18",
+        "min_date": "2025-03-02",
+        "non_voided_subtotal_total": 974842.61
+      },
+      "inventory_txns_consume": {
+        "count": 24370,
+        "distinct_dates": 401,
+        "largest_interior_gap": {
+          "diff_days": 10,
+          "from": "2026-03-05",
+          "missing_days": 9,
+          "to": "2026-03-15"
+        },
+        "max_date": "2026-03-18",
+        "min_date": "2025-01-26",
+        "total_qty_delta": -3283597.5
+      },
+      "sales_line_items": {
+        "count": 25420,
+        "distinct_dates": 401,
+        "largest_interior_gap": {
+          "diff_days": 10,
+          "from": "2026-03-05",
+          "missing_days": 9,
+          "to": "2026-03-15"
+        },
+        "max_date": "2026-03-18",
+        "min_date": "2025-01-26",
+        "total_net_sales": 899428.83,
+        "total_qty": 55607
+      }
+    },
+    "kiosk_orders": {
+      "ambiguous_rows": [],
+      "delta_buckets": {
+        "0": 36
+      },
+      "eligible_anomalies": [],
+      "total_orders": 36
+    },
+    "proposed_repair": {
+      "corrected_max_order_date": "2026-03-18",
+      "impacted_rows": {
+        "full_forward_shift": {
+          "app_config": 1,
+          "daily_orders": 21920,
+          "inventory_txns_consume": 24370,
+          "sales_line_items": 25420
+        },
+        "kiosk_correction": {
+          "app_config": 0,
+          "daily_orders": 0,
+          "inventory_txns_consume": 0,
+          "sales_line_items": 0
+        },
+        "sales_line_items_detail": {
+          "aggregate_rows_touched": 0,
+          "existing_rows_touched": 0,
+          "rows_that_may_delete": 0,
+          "rows_to_insert": 0,
+          "touched_keys": []
+        }
+      },
+      "shift_delta_days": 35,
+      "shift_target_date": "2026-04-22"
+    },
+    "target_date": null,
+    "target_mode": "latest-complete-day",
+    "time_zone": "America/New_York"
+  },
+  "expected": {
+    "current_state": {
+      "app_config": {
+        "history_end_date": "2026-03-18",
+        "history_start_date": "2025-01-26",
+        "onboarding_present": true
+      },
+      "daily_orders": {
+        "count": 21920,
+        "distinct_dates": 372,
+        "largest_interior_gap": {
+          "diff_days": 10,
+          "from": "2026-03-05",
+          "missing_days": 9,
+          "to": "2026-03-15"
+        },
+        "max_date": "2026-03-18",
+        "min_date": "2025-03-02",
+        "non_voided_subtotal_total": 974842.61
+      },
+      "inventory_txns_consume": {
+        "count": 24370,
+        "distinct_dates": 401,
+        "largest_interior_gap": {
+          "diff_days": 10,
+          "from": "2026-03-05",
+          "missing_days": 9,
+          "to": "2026-03-15"
+        },
+        "max_date": "2026-03-18",
+        "min_date": "2025-01-26",
+        "total_qty_delta": -3283597.5
+      },
+      "sales_line_items": {
+        "count": 25420,
+        "distinct_dates": 401,
+        "largest_interior_gap": {
+          "diff_days": 10,
+          "from": "2026-03-05",
+          "missing_days": 9,
+          "to": "2026-03-15"
+        },
+        "max_date": "2026-03-18",
+        "min_date": "2025-01-26",
+        "total_net_sales": 899428.83,
+        "total_qty": 55607
+      }
+    },
+    "kiosk_orders": {
+      "ambiguous_rows": [],
+      "delta_buckets": {
+        "0": 36
+      },
+      "eligible_anomalies": [],
+      "total_orders": 36
+    },
+    "proposed_repair": {
+      "corrected_max_order_date": "2026-03-18",
+      "impacted_rows": {
+        "full_forward_shift": {
+          "app_config": 1,
+          "daily_orders": 21920,
+          "inventory_txns_consume": 24370,
+          "sales_line_items": 25420
+        },
+        "kiosk_correction": {
+          "app_config": 0,
+          "daily_orders": 0,
+          "inventory_txns_consume": 0,
+          "sales_line_items": 0
+        },
+        "sales_line_items_detail": {
+          "aggregate_rows_touched": 0,
+          "existing_rows_touched": 0,
+          "rows_that_may_delete": 0,
+          "rows_to_insert": 0,
+          "touched_keys": []
+        }
+      },
+      "shift_delta_days": 35,
+      "shift_target_date": "2026-04-22"
+    },
+    "target_date": null,
+    "target_mode": "latest-complete-day",
+    "time_zone": "America/New_York"
+  },
+  "generated_at": "2026-04-23T04:13:00.479Z",
+  "mismatches": [],
+  "mode": "pre",
+  "ok": true,
+  "stage": "full"
+}

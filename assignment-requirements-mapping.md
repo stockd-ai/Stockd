@@ -1,6 +1,6 @@
 # Assignment Requirements Mapping
 
-Last updated: April 22, 2026
+Last updated: April 23, 2026
 
 This file maps the **real Stockd implementation** to the course rubric and reflects the current rollout state.
 
@@ -13,14 +13,14 @@ Repository link:
 | Rubric item | Stockd implementation | Status |
 | --- | --- | --- |
 | Mandatory Security 1: HTTPS | Existing Stockd hosting uses Vercel HTTPS by default. | `live-deployed` |
-| Mandatory Security 2: SQL injection / XSS protection | Supabase/RPC access avoids raw SQL concatenation; frontend now includes shared sanitization and hardened rendering paths. | `repo-complete, frontend deploy pending` |
-| Mandatory Security 3: brute-force login protection | `auth-login` Edge Function + `auth_login_guards` table + lockout messaging. | `backend-live, frontend deploy pending` |
-| Mandatory Security 4: secure sessions / auth handling | Supabase Auth manages sessions over HTTPS; the guarded login endpoint is now deployed. | `backend-live, frontend deploy pending` |
-| Additional Enhancement 1: database integration | Existing Supabase/PostgreSQL backend with migrations, RPCs, analytics, and real app data. | `live-deployed` |
+| Mandatory Security 2: SQL injection / XSS protection | Supabase/RPC access avoids raw SQL concatenation; frontend now includes shared sanitization and hardened rendering paths. | `live-deployed` |
+| Mandatory Security 3: brute-force login protection | `auth-login` Edge Function + `auth_login_guards` table + lockout messaging. | `live-deployed` |
+| Mandatory Security 4: secure sessions / auth handling | Supabase Auth manages sessions over HTTPS; the guarded login endpoint is now deployed. | `live-deployed` |
+| Additional Enhancement 1: database integration | Existing Supabase/PostgreSQL backend with migrations, RPCs, analytics, real app data, a live `business_date` normalization fix, and a completed Stage 1 historical kiosk correction. | `live-deployed` |
 | Additional Enhancement 2: performance optimization | Static frontend, lightweight client architecture, and CDN-backed hosting model. | `live-deployed` |
-| Additional Enhancement 3: scalability / deployment | Real Vercel deployment model plus GitHub Actions CI/deploy workflows in repo. | `repo-complete, secrets pending` |
-| Additional Enhancement 4: traffic monitoring & security analysis | `security_events` table, event-ingest function, analysis function, monitoring page, and generated artifacts. | `backend-live, frontend page deploy pending` |
-| Challenge item: GitHub Actions automation | `.github/workflows/ci.yml` and `.github/workflows/deploy.yml` added to the real repo. | `repo-complete, secrets pending` |
+| Additional Enhancement 3: scalability / deployment | Real Vercel deployment model plus GitHub Actions CI/deploy workflows in repo. | `live-deployed, deploy secrets optional` |
+| Additional Enhancement 4: traffic monitoring & security analysis | `security_events` table, event-ingest function, analysis function, internal/report monitoring page, and generated artifacts. | `backend-live, report-ready` |
+| Challenge item: GitHub Actions automation | `.github/workflows/ci.yml` and `.github/workflows/deploy.yml` added to the real repo. | `ci-live, deploy secrets optional` |
 | Challenge item: AI-inspired log monitoring | Deterministic anomaly detection plus an AI-style summary grounded in actual event evidence. | `backend-live` |
 
 ## Report-Ready Wording
@@ -57,7 +57,16 @@ Evidence:
 
 ### Additional Enhancement 1: Database Integration
 
-> Stockd already used a real Supabase/PostgreSQL backend with migrations, RPC functions, and production-style data flows for onboarding, inventory, forecasting, and analytics. This makes database integration one of the strongest rubric categories in the project.
+> Stockd already used a real Supabase/PostgreSQL backend with migrations, RPC functions, and production-style data flows for onboarding, inventory, forecasting, and analytics. During the assignment work, we also fixed a real date-handling bug in the kiosk order flow by moving `business_date` resolution to the server in `America/New_York`, safely corrected the already affected historical kiosk data in the live database, and then intentionally shifted the broader order-history timeline forward as a controlled data-curation step after verification. That makes database integration one of the strongest rubric categories in the project because it includes both normal application persistence and a real production-style data repair.
+
+Evidence:
+
+- `supabase/migrations/20260422000300_business_date_normalization.sql`
+- `kiosk/kiosk.js`
+- `logs/database-cleanup/stage1-kiosk-repair/apply-summary.json`
+- `logs/database-cleanup/stage1-kiosk-repair/post-verification-stage1-kiosk.json`
+- `logs/database-cleanup/stage2-forward-shift/analysis.json`
+- `logs/database-cleanup/stage2-forward-shift/post-verification-stage2-shift.json`
 
 ### Additional Enhancement 2: Performance Optimization
 
@@ -94,4 +103,4 @@ Evidence:
 
 Use this wording if you want the report to reflect the exact rollout state:
 
-> We used the real Stockd application as the networking course project and extended it instead of building a separate demo. By April 22, 2026, the backend rollout was complete in the real Supabase project: the new guard and monitoring migrations were applied, the login protection and monitoring Edge Functions were deployed, live security-analysis artifacts were regenerated, and the GitHub CI workflow was passing on the real repository. The remaining step was to publish the updated frontend through the actual Stockd Vercel project so the public site exposed the new login flow and monitoring page.
+> We used the real Stockd application as the networking course project and extended it instead of building a separate demo. By April 23, 2026, the backend rollout was complete in the real Supabase project: the security and monitoring migrations were applied, the login protection and monitoring Edge Functions were deployed, the kiosk `business_date` bug was fixed server-side in `America/New_York`, 35 historical kiosk orders and 300 related consume transactions were corrected with post-verification passing, the broader order-history timeline was intentionally shifted forward by 35 days after fresh analysis and post-verification, live security-analysis artifacts were regenerated, and the public frontend was deployed on the real Stockd Vercel site.

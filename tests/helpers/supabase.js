@@ -24,6 +24,11 @@ const TEST_DATE_RANGE_END = '9999-12-31';
  * Uses the __test__ prefix and 9999-* dates as markers.
  */
 async function cleanTestData() {
+  await supabase
+    .from('daily_orders')
+    .delete()
+    .or(`order_id.like.${TEST_PREFIX}%,business_date.gte.${TEST_DATE_RANGE_START}`);
+
   // Delete txns for test ingredients (by joining on name prefix)
   const { data: testIngs } = await supabase
     .from('ingredients')

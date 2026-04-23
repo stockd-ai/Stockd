@@ -1,0 +1,981 @@
+{
+  "current": {
+    "current_state": {
+      "app_config": {
+        "history_end_date": "2026-03-18",
+        "history_start_date": "2025-01-26",
+        "onboarding_present": true
+      },
+      "daily_orders": {
+        "count": 21920,
+        "distinct_dates": 411,
+        "largest_interior_gap": {
+          "diff_days": 3,
+          "from": "2025-10-18",
+          "missing_days": 2,
+          "to": "2025-10-21"
+        },
+        "max_date": "2026-03-19",
+        "min_date": "2025-01-26",
+        "non_voided_subtotal_total": 974842.61
+      },
+      "inventory_txns_consume": {
+        "count": 24370,
+        "distinct_dates": 410,
+        "largest_interior_gap": {
+          "diff_days": 3,
+          "from": "2025-10-18",
+          "missing_days": 2,
+          "to": "2025-10-21"
+        },
+        "max_date": "2026-03-19",
+        "min_date": "2025-01-26",
+        "total_qty_delta": -3306091.25
+      },
+      "sales_line_items": {
+        "count": 25447,
+        "distinct_dates": 410,
+        "largest_interior_gap": {
+          "diff_days": 3,
+          "from": "2025-10-18",
+          "missing_days": 2,
+          "to": "2025-10-21"
+        },
+        "max_date": "2026-03-19",
+        "min_date": "2025-01-26",
+        "total_net_sales": 899428.83,
+        "total_qty": 55607
+      }
+    },
+    "kiosk_orders": {
+      "ambiguous_rows": [],
+      "delta_buckets": {
+        "0": 1,
+        "1": 7,
+        "25": 22,
+        "26": 6
+      },
+      "eligible_anomalies": [
+        {
+          "corrected_business_date": "2026-02-08",
+          "delta_days": 25,
+          "order_id": "KIOSK-1770558193482",
+          "reconstructed_subtotal": 12.99,
+          "related_inventory_txn_count": 6,
+          "stored_business_date": "2026-03-05",
+          "subtotal": 12.99
+        },
+        {
+          "corrected_business_date": "2026-02-08",
+          "delta_days": 25,
+          "order_id": "KIOSK-1770561452128",
+          "reconstructed_subtotal": 12.99,
+          "related_inventory_txn_count": 7,
+          "stored_business_date": "2026-03-05",
+          "subtotal": 12.99
+        },
+        {
+          "corrected_business_date": "2026-02-08",
+          "delta_days": 25,
+          "order_id": "KIOSK-1770565137831",
+          "reconstructed_subtotal": 38.97,
+          "related_inventory_txn_count": 7,
+          "stored_business_date": "2026-03-05",
+          "subtotal": 38.97
+        },
+        {
+          "corrected_business_date": "2026-02-08",
+          "delta_days": 25,
+          "order_id": "KIOSK-1770566352639",
+          "reconstructed_subtotal": 38.97,
+          "related_inventory_txn_count": 9,
+          "stored_business_date": "2026-03-05",
+          "subtotal": 38.97
+        },
+        {
+          "corrected_business_date": "2026-02-08",
+          "delta_days": 25,
+          "order_id": "KIOSK-1770567576045",
+          "reconstructed_subtotal": 25.98,
+          "related_inventory_txn_count": 7,
+          "stored_business_date": "2026-03-05",
+          "subtotal": 25.98
+        },
+        {
+          "corrected_business_date": "2026-02-08",
+          "delta_days": 25,
+          "order_id": "KIOSK-1770570269068",
+          "reconstructed_subtotal": 25.98,
+          "related_inventory_txn_count": 7,
+          "stored_business_date": "2026-03-05",
+          "subtotal": 25.98
+        },
+        {
+          "corrected_business_date": "2026-02-08",
+          "delta_days": 25,
+          "order_id": "KIOSK-1770570285366",
+          "reconstructed_subtotal": 25.98,
+          "related_inventory_txn_count": 7,
+          "stored_business_date": "2026-03-05",
+          "subtotal": 25.98
+        },
+        {
+          "corrected_business_date": "2026-02-08",
+          "delta_days": 25,
+          "order_id": "KIOSK-1770571154093",
+          "reconstructed_subtotal": 38.97,
+          "related_inventory_txn_count": 8,
+          "stored_business_date": "2026-03-05",
+          "subtotal": 38.97
+        },
+        {
+          "corrected_business_date": "2026-02-10",
+          "delta_days": 25,
+          "order_id": "KIOSK-1770715251475",
+          "reconstructed_subtotal": 38.97,
+          "related_inventory_txn_count": 7,
+          "stored_business_date": "2026-03-07",
+          "subtotal": 38.97
+        },
+        {
+          "corrected_business_date": "2026-02-10",
+          "delta_days": 25,
+          "order_id": "KIOSK-1770736558202",
+          "reconstructed_subtotal": 545.58,
+          "related_inventory_txn_count": 14,
+          "stored_business_date": "2026-03-07",
+          "subtotal": 545.58
+        },
+        {
+          "corrected_business_date": "2026-02-09",
+          "delta_days": 25,
+          "order_id": "KIOSK-1770737268940",
+          "reconstructed_subtotal": 545.58,
+          "related_inventory_txn_count": 21,
+          "stored_business_date": "2026-03-06",
+          "subtotal": 545.58
+        },
+        {
+          "corrected_business_date": "2026-02-10",
+          "delta_days": 25,
+          "order_id": "KIOSK-1770744661173",
+          "reconstructed_subtotal": 129.9,
+          "related_inventory_txn_count": 10,
+          "stored_business_date": "2026-03-07",
+          "subtotal": 129.9
+        },
+        {
+          "corrected_business_date": "2026-02-10",
+          "delta_days": 25,
+          "order_id": "KIOSK-1770745596584",
+          "reconstructed_subtotal": 77.94,
+          "related_inventory_txn_count": 8,
+          "stored_business_date": "2026-03-07",
+          "subtotal": 77.94
+        },
+        {
+          "corrected_business_date": "2026-02-11",
+          "delta_days": 25,
+          "order_id": "KIOSK-1770815171977",
+          "reconstructed_subtotal": 727.44,
+          "related_inventory_txn_count": 29,
+          "stored_business_date": "2026-03-08",
+          "subtotal": 727.44
+        },
+        {
+          "corrected_business_date": "2026-02-12",
+          "delta_days": 25,
+          "order_id": "KIOSK-1770936653763",
+          "reconstructed_subtotal": 25.98,
+          "related_inventory_txn_count": 7,
+          "stored_business_date": "2026-03-09",
+          "subtotal": 25.98
+        },
+        {
+          "corrected_business_date": "2026-02-12",
+          "delta_days": 26,
+          "order_id": "KIOSK-1770954283994",
+          "reconstructed_subtotal": 883.32,
+          "related_inventory_txn_count": 14,
+          "stored_business_date": "2026-03-10",
+          "subtotal": 883.32
+        },
+        {
+          "corrected_business_date": "2026-02-12",
+          "delta_days": 25,
+          "order_id": "KIOSK-1770995045833",
+          "reconstructed_subtotal": 1324.98,
+          "related_inventory_txn_count": 6,
+          "stored_business_date": "2026-03-09",
+          "subtotal": 1324.98
+        },
+        {
+          "corrected_business_date": "2026-02-14",
+          "delta_days": 25,
+          "order_id": "KIOSK-1771097868281",
+          "reconstructed_subtotal": 38.97,
+          "related_inventory_txn_count": 7,
+          "stored_business_date": "2026-03-11",
+          "subtotal": 38.97
+        },
+        {
+          "corrected_business_date": "2026-02-14",
+          "delta_days": 26,
+          "order_id": "KIOSK-1771130002788",
+          "reconstructed_subtotal": 12.99,
+          "related_inventory_txn_count": 7,
+          "stored_business_date": "2026-03-12",
+          "subtotal": 12.99
+        },
+        {
+          "corrected_business_date": "2026-02-14",
+          "delta_days": 26,
+          "order_id": "KIOSK-1771130036163",
+          "reconstructed_subtotal": 64.95,
+          "related_inventory_txn_count": 7,
+          "stored_business_date": "2026-03-12",
+          "subtotal": 64.95
+        },
+        {
+          "corrected_business_date": "2026-02-15",
+          "delta_days": 25,
+          "order_id": "KIOSK-1771182853269",
+          "reconstructed_subtotal": 324.75,
+          "related_inventory_txn_count": 8,
+          "stored_business_date": "2026-03-12",
+          "subtotal": 324.75
+        },
+        {
+          "corrected_business_date": "2026-02-16",
+          "delta_days": 25,
+          "order_id": "KIOSK-1771265481437",
+          "reconstructed_subtotal": 77.94,
+          "related_inventory_txn_count": 6,
+          "stored_business_date": "2026-03-13",
+          "subtotal": 77.94
+        },
+        {
+          "corrected_business_date": "2026-02-16",
+          "delta_days": 25,
+          "order_id": "KIOSK-1771269898402",
+          "reconstructed_subtotal": 51.96,
+          "related_inventory_txn_count": 7,
+          "stored_business_date": "2026-03-13",
+          "subtotal": 51.96
+        },
+        {
+          "corrected_business_date": "2026-02-17",
+          "delta_days": 25,
+          "order_id": "KIOSK-1771371691896",
+          "reconstructed_subtotal": 831.36,
+          "related_inventory_txn_count": 9,
+          "stored_business_date": "2026-03-14",
+          "subtotal": 831.36
+        },
+        {
+          "corrected_business_date": "2026-02-18",
+          "delta_days": 25,
+          "order_id": "KIOSK-1771404692616",
+          "reconstructed_subtotal": 12.99,
+          "related_inventory_txn_count": 6,
+          "stored_business_date": "2026-03-15",
+          "subtotal": 12.99
+        },
+        {
+          "corrected_business_date": "2026-02-20",
+          "delta_days": 26,
+          "order_id": "KIOSK-1771637444207",
+          "reconstructed_subtotal": 64.95,
+          "related_inventory_txn_count": 6,
+          "stored_business_date": "2026-03-18",
+          "subtotal": 64.95
+        },
+        {
+          "corrected_business_date": "2026-02-20",
+          "delta_days": 26,
+          "order_id": "KIOSK-1771637690150",
+          "reconstructed_subtotal": 168.87,
+          "related_inventory_txn_count": 9,
+          "stored_business_date": "2026-03-18",
+          "subtotal": 168.87
+        },
+        {
+          "corrected_business_date": "2026-02-20",
+          "delta_days": 26,
+          "order_id": "KIOSK-1771637890779",
+          "reconstructed_subtotal": 64.95,
+          "related_inventory_txn_count": 8,
+          "stored_business_date": "2026-03-18",
+          "subtotal": 64.95
+        },
+        {
+          "corrected_business_date": "2026-03-18",
+          "delta_days": 1,
+          "order_id": "KIOSK-1773880092036",
+          "reconstructed_subtotal": 12.99,
+          "related_inventory_txn_count": 7,
+          "stored_business_date": "2026-03-19",
+          "subtotal": 12.99
+        },
+        {
+          "corrected_business_date": "2026-03-18",
+          "delta_days": 1,
+          "order_id": "KIOSK-1773880099803",
+          "reconstructed_subtotal": 103.92,
+          "related_inventory_txn_count": 8,
+          "stored_business_date": "2026-03-19",
+          "subtotal": 103.92
+        },
+        {
+          "corrected_business_date": "2026-03-18",
+          "delta_days": 1,
+          "order_id": "KIOSK-1773880099847",
+          "reconstructed_subtotal": 38.97,
+          "related_inventory_txn_count": 5,
+          "stored_business_date": "2026-03-19",
+          "subtotal": 38.97
+        },
+        {
+          "corrected_business_date": "2026-03-18",
+          "delta_days": 1,
+          "order_id": "KIOSK-1773880110286",
+          "reconstructed_subtotal": 64.95,
+          "related_inventory_txn_count": 6,
+          "stored_business_date": "2026-03-19",
+          "subtotal": 64.95
+        },
+        {
+          "corrected_business_date": "2026-03-18",
+          "delta_days": 1,
+          "order_id": "KIOSK-1773880123582",
+          "reconstructed_subtotal": 51.96,
+          "related_inventory_txn_count": 6,
+          "stored_business_date": "2026-03-19",
+          "subtotal": 51.96
+        },
+        {
+          "corrected_business_date": "2026-03-18",
+          "delta_days": 1,
+          "order_id": "KIOSK-1773880305722",
+          "reconstructed_subtotal": 142.89,
+          "related_inventory_txn_count": 6,
+          "stored_business_date": "2026-03-19",
+          "subtotal": 142.89
+        },
+        {
+          "corrected_business_date": "2026-03-18",
+          "delta_days": 1,
+          "order_id": "KIOSK-1773880496200",
+          "reconstructed_subtotal": 12.99,
+          "related_inventory_txn_count": 8,
+          "stored_business_date": "2026-03-19",
+          "subtotal": 12.99
+        }
+      ],
+      "total_orders": 36
+    },
+    "proposed_repair": {
+      "corrected_max_order_date": "2026-03-18",
+      "impacted_rows": {
+        "full_forward_shift": {
+          "app_config": 1,
+          "daily_orders": 21920,
+          "inventory_txns_consume": 24370,
+          "sales_line_items": 25447
+        },
+        "kiosk_correction": {
+          "app_config": 0,
+          "daily_orders": 35,
+          "inventory_txns_consume": 300,
+          "sales_line_items": 81
+        },
+        "sales_line_items_detail": {
+          "aggregate_rows_touched": 81,
+          "existing_rows_touched": 64,
+          "rows_that_may_delete": 38,
+          "rows_to_insert": 14,
+          "touched_keys": [
+            "2026-02-08|||1585b988-fd76-47bd-aefe-35c1ad0a0768",
+            "2026-02-08|||2fee9dd0-1706-4a4e-8b07-7f52f0e05049",
+            "2026-02-08|||399143ec-66d0-47e1-9442-5f56f2162e59",
+            "2026-02-08|||790df46e-42cf-4853-b04c-0e248181ee10",
+            "2026-02-08|||8adeb634-8873-4cc5-a7b0-a52313bc6a48",
+            "2026-02-08|||a22bcd57-81c7-44ae-b3b2-8289c92235d5",
+            "2026-02-08|||a7523a38-4fbd-4a74-b690-2195e7f0f1ba",
+            "2026-02-08|||c546f439-b62e-465c-9da3-c2791423a7be",
+            "2026-02-09|||0b928caa-befd-47ae-9a7b-209616dcb8b9",
+            "2026-02-09|||3fae3a95-2bde-4a93-98f4-5f318d954c74",
+            "2026-02-09|||790df46e-42cf-4853-b04c-0e248181ee10",
+            "2026-02-10|||2dc0c36b-9845-4e54-8db0-df83b9e098ce",
+            "2026-02-10|||41aceb20-96d1-4a4d-b3c1-645b77c46a06",
+            "2026-02-10|||564978bc-f1a1-45d6-9113-07ae1e22fb9a",
+            "2026-02-10|||7b2d14ce-d406-4d3e-949b-6b65755a5336",
+            "2026-02-10|||b47370b9-b9b1-426b-a3cf-e549c5299a51",
+            "2026-02-11|||2410195a-26ab-4436-ab1c-645717380696",
+            "2026-02-11|||75c18cb3-de82-4c08-8be4-370fd940d00c",
+            "2026-02-11|||8021da94-43d1-475a-aedd-32c62a442dd7",
+            "2026-02-11|||dc75f04d-a918-4a2d-b5d9-5ce5db422713",
+            "2026-02-12|||0762f858-b598-46cd-9dee-6fd1da4ac4b1",
+            "2026-02-12|||515251c1-3c40-4679-a482-f8ce71cce169",
+            "2026-02-12|||564978bc-f1a1-45d6-9113-07ae1e22fb9a",
+            "2026-02-12|||bc79d0f9-37a7-4926-8ae5-eb3e72565c25",
+            "2026-02-14|||564978bc-f1a1-45d6-9113-07ae1e22fb9a",
+            "2026-02-14|||f4ae4982-aa77-429d-acc3-8dbf136f91cb",
+            "2026-02-15|||51cd32b9-65e1-4b3f-bc26-c80b3bb221f8",
+            "2026-02-16|||0b928caa-befd-47ae-9a7b-209616dcb8b9",
+            "2026-02-16|||7e322d99-db51-4e2d-9284-d532bb656060",
+            "2026-02-17|||c546f439-b62e-465c-9da3-c2791423a7be",
+            "2026-02-18|||0762f858-b598-46cd-9dee-6fd1da4ac4b1",
+            "2026-02-20|||341bdd76-7e05-43eb-a273-14947ab83dff",
+            "2026-02-20|||515251c1-3c40-4679-a482-f8ce71cce169",
+            "2026-02-20|||8005eada-c29b-41ea-aabc-4051ebc9607f",
+            "2026-03-05|||1585b988-fd76-47bd-aefe-35c1ad0a0768",
+            "2026-03-05|||2fee9dd0-1706-4a4e-8b07-7f52f0e05049",
+            "2026-03-05|||399143ec-66d0-47e1-9442-5f56f2162e59",
+            "2026-03-05|||790df46e-42cf-4853-b04c-0e248181ee10",
+            "2026-03-05|||8adeb634-8873-4cc5-a7b0-a52313bc6a48",
+            "2026-03-05|||a22bcd57-81c7-44ae-b3b2-8289c92235d5",
+            "2026-03-05|||a7523a38-4fbd-4a74-b690-2195e7f0f1ba",
+            "2026-03-05|||c546f439-b62e-465c-9da3-c2791423a7be",
+            "2026-03-06|||0b928caa-befd-47ae-9a7b-209616dcb8b9",
+            "2026-03-06|||3fae3a95-2bde-4a93-98f4-5f318d954c74",
+            "2026-03-06|||790df46e-42cf-4853-b04c-0e248181ee10",
+            "2026-03-07|||2dc0c36b-9845-4e54-8db0-df83b9e098ce",
+            "2026-03-07|||41aceb20-96d1-4a4d-b3c1-645b77c46a06",
+            "2026-03-07|||564978bc-f1a1-45d6-9113-07ae1e22fb9a",
+            "2026-03-07|||7b2d14ce-d406-4d3e-949b-6b65755a5336",
+            "2026-03-07|||b47370b9-b9b1-426b-a3cf-e549c5299a51",
+            "2026-03-08|||2410195a-26ab-4436-ab1c-645717380696",
+            "2026-03-08|||75c18cb3-de82-4c08-8be4-370fd940d00c",
+            "2026-03-08|||8021da94-43d1-475a-aedd-32c62a442dd7",
+            "2026-03-08|||dc75f04d-a918-4a2d-b5d9-5ce5db422713",
+            "2026-03-09|||0762f858-b598-46cd-9dee-6fd1da4ac4b1",
+            "2026-03-09|||564978bc-f1a1-45d6-9113-07ae1e22fb9a",
+            "2026-03-10|||515251c1-3c40-4679-a482-f8ce71cce169",
+            "2026-03-10|||bc79d0f9-37a7-4926-8ae5-eb3e72565c25",
+            "2026-03-11|||564978bc-f1a1-45d6-9113-07ae1e22fb9a",
+            "2026-03-12|||51cd32b9-65e1-4b3f-bc26-c80b3bb221f8",
+            "2026-03-12|||564978bc-f1a1-45d6-9113-07ae1e22fb9a",
+            "2026-03-12|||f4ae4982-aa77-429d-acc3-8dbf136f91cb",
+            "2026-03-13|||0b928caa-befd-47ae-9a7b-209616dcb8b9",
+            "2026-03-13|||7e322d99-db51-4e2d-9284-d532bb656060",
+            "2026-03-14|||c546f439-b62e-465c-9da3-c2791423a7be",
+            "2026-03-15|||0762f858-b598-46cd-9dee-6fd1da4ac4b1",
+            "2026-03-18|||0762f858-b598-46cd-9dee-6fd1da4ac4b1",
+            "2026-03-18|||1ffa8c93-a29a-4fe5-baa3-6c68ae61808f",
+            "2026-03-18|||2f5d581f-b8dd-4d30-9312-b1352f0010c2",
+            "2026-03-18|||341bdd76-7e05-43eb-a273-14947ab83dff",
+            "2026-03-18|||399143ec-66d0-47e1-9442-5f56f2162e59",
+            "2026-03-18|||515251c1-3c40-4679-a482-f8ce71cce169",
+            "2026-03-18|||5dc1c59f-5424-48ef-b84b-84b0849f5e24",
+            "2026-03-18|||8005eada-c29b-41ea-aabc-4051ebc9607f",
+            "2026-03-18|||8e7440eb-0efb-4f22-881a-0a7a58b2a4ac",
+            "2026-03-19|||0762f858-b598-46cd-9dee-6fd1da4ac4b1",
+            "2026-03-19|||1ffa8c93-a29a-4fe5-baa3-6c68ae61808f",
+            "2026-03-19|||2f5d581f-b8dd-4d30-9312-b1352f0010c2",
+            "2026-03-19|||399143ec-66d0-47e1-9442-5f56f2162e59",
+            "2026-03-19|||5dc1c59f-5424-48ef-b84b-84b0849f5e24",
+            "2026-03-19|||8e7440eb-0efb-4f22-881a-0a7a58b2a4ac"
+          ]
+        }
+      },
+      "shift_delta_days": 34,
+      "shift_target_date": "2026-04-21"
+    },
+    "target_date": null,
+    "target_mode": "latest-complete-day",
+    "time_zone": "America/New_York"
+  },
+  "expected": {
+    "current_state": {
+      "app_config": {
+        "history_end_date": "2026-03-18",
+        "history_start_date": "2025-01-26",
+        "onboarding_present": true
+      },
+      "daily_orders": {
+        "count": 21920,
+        "distinct_dates": 411,
+        "largest_interior_gap": {
+          "diff_days": 3,
+          "from": "2025-10-18",
+          "missing_days": 2,
+          "to": "2025-10-21"
+        },
+        "max_date": "2026-03-19",
+        "min_date": "2025-01-26",
+        "non_voided_subtotal_total": 974842.61
+      },
+      "inventory_txns_consume": {
+        "count": 24370,
+        "distinct_dates": 410,
+        "largest_interior_gap": {
+          "diff_days": 3,
+          "from": "2025-10-18",
+          "missing_days": 2,
+          "to": "2025-10-21"
+        },
+        "max_date": "2026-03-19",
+        "min_date": "2025-01-26",
+        "total_qty_delta": -3306091.25
+      },
+      "sales_line_items": {
+        "count": 25447,
+        "distinct_dates": 410,
+        "largest_interior_gap": {
+          "diff_days": 3,
+          "from": "2025-10-18",
+          "missing_days": 2,
+          "to": "2025-10-21"
+        },
+        "max_date": "2026-03-19",
+        "min_date": "2025-01-26",
+        "total_net_sales": 899428.83,
+        "total_qty": 55607
+      }
+    },
+    "kiosk_orders": {
+      "ambiguous_rows": [],
+      "delta_buckets": {
+        "0": 1,
+        "1": 7,
+        "25": 22,
+        "26": 6
+      },
+      "eligible_anomalies": [
+        {
+          "corrected_business_date": "2026-02-08",
+          "delta_days": 25,
+          "order_id": "KIOSK-1770558193482",
+          "reconstructed_subtotal": 12.99,
+          "related_inventory_txn_count": 6,
+          "stored_business_date": "2026-03-05",
+          "subtotal": 12.99
+        },
+        {
+          "corrected_business_date": "2026-02-08",
+          "delta_days": 25,
+          "order_id": "KIOSK-1770561452128",
+          "reconstructed_subtotal": 12.99,
+          "related_inventory_txn_count": 7,
+          "stored_business_date": "2026-03-05",
+          "subtotal": 12.99
+        },
+        {
+          "corrected_business_date": "2026-02-08",
+          "delta_days": 25,
+          "order_id": "KIOSK-1770565137831",
+          "reconstructed_subtotal": 38.97,
+          "related_inventory_txn_count": 7,
+          "stored_business_date": "2026-03-05",
+          "subtotal": 38.97
+        },
+        {
+          "corrected_business_date": "2026-02-08",
+          "delta_days": 25,
+          "order_id": "KIOSK-1770566352639",
+          "reconstructed_subtotal": 38.97,
+          "related_inventory_txn_count": 9,
+          "stored_business_date": "2026-03-05",
+          "subtotal": 38.97
+        },
+        {
+          "corrected_business_date": "2026-02-08",
+          "delta_days": 25,
+          "order_id": "KIOSK-1770567576045",
+          "reconstructed_subtotal": 25.98,
+          "related_inventory_txn_count": 7,
+          "stored_business_date": "2026-03-05",
+          "subtotal": 25.98
+        },
+        {
+          "corrected_business_date": "2026-02-08",
+          "delta_days": 25,
+          "order_id": "KIOSK-1770570269068",
+          "reconstructed_subtotal": 25.98,
+          "related_inventory_txn_count": 7,
+          "stored_business_date": "2026-03-05",
+          "subtotal": 25.98
+        },
+        {
+          "corrected_business_date": "2026-02-08",
+          "delta_days": 25,
+          "order_id": "KIOSK-1770570285366",
+          "reconstructed_subtotal": 25.98,
+          "related_inventory_txn_count": 7,
+          "stored_business_date": "2026-03-05",
+          "subtotal": 25.98
+        },
+        {
+          "corrected_business_date": "2026-02-08",
+          "delta_days": 25,
+          "order_id": "KIOSK-1770571154093",
+          "reconstructed_subtotal": 38.97,
+          "related_inventory_txn_count": 8,
+          "stored_business_date": "2026-03-05",
+          "subtotal": 38.97
+        },
+        {
+          "corrected_business_date": "2026-02-10",
+          "delta_days": 25,
+          "order_id": "KIOSK-1770715251475",
+          "reconstructed_subtotal": 38.97,
+          "related_inventory_txn_count": 7,
+          "stored_business_date": "2026-03-07",
+          "subtotal": 38.97
+        },
+        {
+          "corrected_business_date": "2026-02-10",
+          "delta_days": 25,
+          "order_id": "KIOSK-1770736558202",
+          "reconstructed_subtotal": 545.58,
+          "related_inventory_txn_count": 14,
+          "stored_business_date": "2026-03-07",
+          "subtotal": 545.58
+        },
+        {
+          "corrected_business_date": "2026-02-09",
+          "delta_days": 25,
+          "order_id": "KIOSK-1770737268940",
+          "reconstructed_subtotal": 545.58,
+          "related_inventory_txn_count": 21,
+          "stored_business_date": "2026-03-06",
+          "subtotal": 545.58
+        },
+        {
+          "corrected_business_date": "2026-02-10",
+          "delta_days": 25,
+          "order_id": "KIOSK-1770744661173",
+          "reconstructed_subtotal": 129.9,
+          "related_inventory_txn_count": 10,
+          "stored_business_date": "2026-03-07",
+          "subtotal": 129.9
+        },
+        {
+          "corrected_business_date": "2026-02-10",
+          "delta_days": 25,
+          "order_id": "KIOSK-1770745596584",
+          "reconstructed_subtotal": 77.94,
+          "related_inventory_txn_count": 8,
+          "stored_business_date": "2026-03-07",
+          "subtotal": 77.94
+        },
+        {
+          "corrected_business_date": "2026-02-11",
+          "delta_days": 25,
+          "order_id": "KIOSK-1770815171977",
+          "reconstructed_subtotal": 727.44,
+          "related_inventory_txn_count": 29,
+          "stored_business_date": "2026-03-08",
+          "subtotal": 727.44
+        },
+        {
+          "corrected_business_date": "2026-02-12",
+          "delta_days": 25,
+          "order_id": "KIOSK-1770936653763",
+          "reconstructed_subtotal": 25.98,
+          "related_inventory_txn_count": 7,
+          "stored_business_date": "2026-03-09",
+          "subtotal": 25.98
+        },
+        {
+          "corrected_business_date": "2026-02-12",
+          "delta_days": 26,
+          "order_id": "KIOSK-1770954283994",
+          "reconstructed_subtotal": 883.32,
+          "related_inventory_txn_count": 14,
+          "stored_business_date": "2026-03-10",
+          "subtotal": 883.32
+        },
+        {
+          "corrected_business_date": "2026-02-12",
+          "delta_days": 25,
+          "order_id": "KIOSK-1770995045833",
+          "reconstructed_subtotal": 1324.98,
+          "related_inventory_txn_count": 6,
+          "stored_business_date": "2026-03-09",
+          "subtotal": 1324.98
+        },
+        {
+          "corrected_business_date": "2026-02-14",
+          "delta_days": 25,
+          "order_id": "KIOSK-1771097868281",
+          "reconstructed_subtotal": 38.97,
+          "related_inventory_txn_count": 7,
+          "stored_business_date": "2026-03-11",
+          "subtotal": 38.97
+        },
+        {
+          "corrected_business_date": "2026-02-14",
+          "delta_days": 26,
+          "order_id": "KIOSK-1771130002788",
+          "reconstructed_subtotal": 12.99,
+          "related_inventory_txn_count": 7,
+          "stored_business_date": "2026-03-12",
+          "subtotal": 12.99
+        },
+        {
+          "corrected_business_date": "2026-02-14",
+          "delta_days": 26,
+          "order_id": "KIOSK-1771130036163",
+          "reconstructed_subtotal": 64.95,
+          "related_inventory_txn_count": 7,
+          "stored_business_date": "2026-03-12",
+          "subtotal": 64.95
+        },
+        {
+          "corrected_business_date": "2026-02-15",
+          "delta_days": 25,
+          "order_id": "KIOSK-1771182853269",
+          "reconstructed_subtotal": 324.75,
+          "related_inventory_txn_count": 8,
+          "stored_business_date": "2026-03-12",
+          "subtotal": 324.75
+        },
+        {
+          "corrected_business_date": "2026-02-16",
+          "delta_days": 25,
+          "order_id": "KIOSK-1771265481437",
+          "reconstructed_subtotal": 77.94,
+          "related_inventory_txn_count": 6,
+          "stored_business_date": "2026-03-13",
+          "subtotal": 77.94
+        },
+        {
+          "corrected_business_date": "2026-02-16",
+          "delta_days": 25,
+          "order_id": "KIOSK-1771269898402",
+          "reconstructed_subtotal": 51.96,
+          "related_inventory_txn_count": 7,
+          "stored_business_date": "2026-03-13",
+          "subtotal": 51.96
+        },
+        {
+          "corrected_business_date": "2026-02-17",
+          "delta_days": 25,
+          "order_id": "KIOSK-1771371691896",
+          "reconstructed_subtotal": 831.36,
+          "related_inventory_txn_count": 9,
+          "stored_business_date": "2026-03-14",
+          "subtotal": 831.36
+        },
+        {
+          "corrected_business_date": "2026-02-18",
+          "delta_days": 25,
+          "order_id": "KIOSK-1771404692616",
+          "reconstructed_subtotal": 12.99,
+          "related_inventory_txn_count": 6,
+          "stored_business_date": "2026-03-15",
+          "subtotal": 12.99
+        },
+        {
+          "corrected_business_date": "2026-02-20",
+          "delta_days": 26,
+          "order_id": "KIOSK-1771637444207",
+          "reconstructed_subtotal": 64.95,
+          "related_inventory_txn_count": 6,
+          "stored_business_date": "2026-03-18",
+          "subtotal": 64.95
+        },
+        {
+          "corrected_business_date": "2026-02-20",
+          "delta_days": 26,
+          "order_id": "KIOSK-1771637690150",
+          "reconstructed_subtotal": 168.87,
+          "related_inventory_txn_count": 9,
+          "stored_business_date": "2026-03-18",
+          "subtotal": 168.87
+        },
+        {
+          "corrected_business_date": "2026-02-20",
+          "delta_days": 26,
+          "order_id": "KIOSK-1771637890779",
+          "reconstructed_subtotal": 64.95,
+          "related_inventory_txn_count": 8,
+          "stored_business_date": "2026-03-18",
+          "subtotal": 64.95
+        },
+        {
+          "corrected_business_date": "2026-03-18",
+          "delta_days": 1,
+          "order_id": "KIOSK-1773880092036",
+          "reconstructed_subtotal": 12.99,
+          "related_inventory_txn_count": 7,
+          "stored_business_date": "2026-03-19",
+          "subtotal": 12.99
+        },
+        {
+          "corrected_business_date": "2026-03-18",
+          "delta_days": 1,
+          "order_id": "KIOSK-1773880099803",
+          "reconstructed_subtotal": 103.92,
+          "related_inventory_txn_count": 8,
+          "stored_business_date": "2026-03-19",
+          "subtotal": 103.92
+        },
+        {
+          "corrected_business_date": "2026-03-18",
+          "delta_days": 1,
+          "order_id": "KIOSK-1773880099847",
+          "reconstructed_subtotal": 38.97,
+          "related_inventory_txn_count": 5,
+          "stored_business_date": "2026-03-19",
+          "subtotal": 38.97
+        },
+        {
+          "corrected_business_date": "2026-03-18",
+          "delta_days": 1,
+          "order_id": "KIOSK-1773880110286",
+          "reconstructed_subtotal": 64.95,
+          "related_inventory_txn_count": 6,
+          "stored_business_date": "2026-03-19",
+          "subtotal": 64.95
+        },
+        {
+          "corrected_business_date": "2026-03-18",
+          "delta_days": 1,
+          "order_id": "KIOSK-1773880123582",
+          "reconstructed_subtotal": 51.96,
+          "related_inventory_txn_count": 6,
+          "stored_business_date": "2026-03-19",
+          "subtotal": 51.96
+        },
+        {
+          "corrected_business_date": "2026-03-18",
+          "delta_days": 1,
+          "order_id": "KIOSK-1773880305722",
+          "reconstructed_subtotal": 142.89,
+          "related_inventory_txn_count": 6,
+          "stored_business_date": "2026-03-19",
+          "subtotal": 142.89
+        },
+        {
+          "corrected_business_date": "2026-03-18",
+          "delta_days": 1,
+          "order_id": "KIOSK-1773880496200",
+          "reconstructed_subtotal": 12.99,
+          "related_inventory_txn_count": 8,
+          "stored_business_date": "2026-03-19",
+          "subtotal": 12.99
+        }
+      ],
+      "total_orders": 36
+    },
+    "proposed_repair": {
+      "corrected_max_order_date": "2026-03-18",
+      "impacted_rows": {
+        "full_forward_shift": {
+          "app_config": 1,
+          "daily_orders": 21920,
+          "inventory_txns_consume": 24370,
+          "sales_line_items": 25447
+        },
+        "kiosk_correction": {
+          "app_config": 0,
+          "daily_orders": 35,
+          "inventory_txns_consume": 300,
+          "sales_line_items": 81
+        },
+        "sales_line_items_detail": {
+          "aggregate_rows_touched": 81,
+          "existing_rows_touched": 64,
+          "rows_that_may_delete": 38,
+          "rows_to_insert": 14,
+          "touched_keys": [
+            "2026-02-08|||1585b988-fd76-47bd-aefe-35c1ad0a0768",
+            "2026-02-08|||2fee9dd0-1706-4a4e-8b07-7f52f0e05049",
+            "2026-02-08|||399143ec-66d0-47e1-9442-5f56f2162e59",
+            "2026-02-08|||790df46e-42cf-4853-b04c-0e248181ee10",
+            "2026-02-08|||8adeb634-8873-4cc5-a7b0-a52313bc6a48",
+            "2026-02-08|||a22bcd57-81c7-44ae-b3b2-8289c92235d5",
+            "2026-02-08|||a7523a38-4fbd-4a74-b690-2195e7f0f1ba",
+            "2026-02-08|||c546f439-b62e-465c-9da3-c2791423a7be",
+            "2026-02-09|||0b928caa-befd-47ae-9a7b-209616dcb8b9",
+            "2026-02-09|||3fae3a95-2bde-4a93-98f4-5f318d954c74",
+            "2026-02-09|||790df46e-42cf-4853-b04c-0e248181ee10",
+            "2026-02-10|||2dc0c36b-9845-4e54-8db0-df83b9e098ce",
+            "2026-02-10|||41aceb20-96d1-4a4d-b3c1-645b77c46a06",
+            "2026-02-10|||564978bc-f1a1-45d6-9113-07ae1e22fb9a",
+            "2026-02-10|||7b2d14ce-d406-4d3e-949b-6b65755a5336",
+            "2026-02-10|||b47370b9-b9b1-426b-a3cf-e549c5299a51",
+            "2026-02-11|||2410195a-26ab-4436-ab1c-645717380696",
+            "2026-02-11|||75c18cb3-de82-4c08-8be4-370fd940d00c",
+            "2026-02-11|||8021da94-43d1-475a-aedd-32c62a442dd7",
+            "2026-02-11|||dc75f04d-a918-4a2d-b5d9-5ce5db422713",
+            "2026-02-12|||0762f858-b598-46cd-9dee-6fd1da4ac4b1",
+            "2026-02-12|||515251c1-3c40-4679-a482-f8ce71cce169",
+            "2026-02-12|||564978bc-f1a1-45d6-9113-07ae1e22fb9a",
+            "2026-02-12|||bc79d0f9-37a7-4926-8ae5-eb3e72565c25",
+            "2026-02-14|||564978bc-f1a1-45d6-9113-07ae1e22fb9a",
+            "2026-02-14|||f4ae4982-aa77-429d-acc3-8dbf136f91cb",
+            "2026-02-15|||51cd32b9-65e1-4b3f-bc26-c80b3bb221f8",
+            "2026-02-16|||0b928caa-befd-47ae-9a7b-209616dcb8b9",
+            "2026-02-16|||7e322d99-db51-4e2d-9284-d532bb656060",
+            "2026-02-17|||c546f439-b62e-465c-9da3-c2791423a7be",
+            "2026-02-18|||0762f858-b598-46cd-9dee-6fd1da4ac4b1",
+            "2026-02-20|||341bdd76-7e05-43eb-a273-14947ab83dff",
+            "2026-02-20|||515251c1-3c40-4679-a482-f8ce71cce169",
+            "2026-02-20|||8005eada-c29b-41ea-aabc-4051ebc9607f",
+            "2026-03-05|||1585b988-fd76-47bd-aefe-35c1ad0a0768",
+            "2026-03-05|||2fee9dd0-1706-4a4e-8b07-7f52f0e05049",
+            "2026-03-05|||399143ec-66d0-47e1-9442-5f56f2162e59",
+            "2026-03-05|||790df46e-42cf-4853-b04c-0e248181ee10",
+            "2026-03-05|||8adeb634-8873-4cc5-a7b0-a52313bc6a48",
+            "2026-03-05|||a22bcd57-81c7-44ae-b3b2-8289c92235d5",
+            "2026-03-05|||a7523a38-4fbd-4a74-b690-2195e7f0f1ba",
+            "2026-03-05|||c546f439-b62e-465c-9da3-c2791423a7be",
+            "2026-03-06|||0b928caa-befd-47ae-9a7b-209616dcb8b9",
+            "2026-03-06|||3fae3a95-2bde-4a93-98f4-5f318d954c74",
+            "2026-03-06|||790df46e-42cf-4853-b04c-0e248181ee10",
+            "2026-03-07|||2dc0c36b-9845-4e54-8db0-df83b9e098ce",
+            "2026-03-07|||41aceb20-96d1-4a4d-b3c1-645b77c46a06",
+            "2026-03-07|||564978bc-f1a1-45d6-9113-07ae1e22fb9a",
+            "2026-03-07|||7b2d14ce-d406-4d3e-949b-6b65755a5336",
+            "2026-03-07|||b47370b9-b9b1-426b-a3cf-e549c5299a51",
+            "2026-03-08|||2410195a-26ab-4436-ab1c-645717380696",
+            "2026-03-08|||75c18cb3-de82-4c08-8be4-370fd940d00c",
+            "2026-03-08|||8021da94-43d1-475a-aedd-32c62a442dd7",
+            "2026-03-08|||dc75f04d-a918-4a2d-b5d9-5ce5db422713",
+            "2026-03-09|||0762f858-b598-46cd-9dee-6fd1da4ac4b1",
+            "2026-03-09|||564978bc-f1a1-45d6-9113-07ae1e22fb9a",
+            "2026-03-10|||515251c1-3c40-4679-a482-f8ce71cce169",
+            "2026-03-10|||bc79d0f9-37a7-4926-8ae5-eb3e72565c25",
+            "2026-03-11|||564978bc-f1a1-45d6-9113-07ae1e22fb9a",
+            "2026-03-12|||51cd32b9-65e1-4b3f-bc26-c80b3bb221f8",
+            "2026-03-12|||564978bc-f1a1-45d6-9113-07ae1e22fb9a",
+            "2026-03-12|||f4ae4982-aa77-429d-acc3-8dbf136f91cb",
+            "2026-03-13|||0b928caa-befd-47ae-9a7b-209616dcb8b9",
+            "2026-03-13|||7e322d99-db51-4e2d-9284-d532bb656060",
+            "2026-03-14|||c546f439-b62e-465c-9da3-c2791423a7be",
+            "2026-03-15|||0762f858-b598-46cd-9dee-6fd1da4ac4b1",
+            "2026-03-18|||0762f858-b598-46cd-9dee-6fd1da4ac4b1",
+            "2026-03-18|||1ffa8c93-a29a-4fe5-baa3-6c68ae61808f",
+            "2026-03-18|||2f5d581f-b8dd-4d30-9312-b1352f0010c2",
+            "2026-03-18|||341bdd76-7e05-43eb-a273-14947ab83dff",
+            "2026-03-18|||399143ec-66d0-47e1-9442-5f56f2162e59",
+            "2026-03-18|||515251c1-3c40-4679-a482-f8ce71cce169",
+            "2026-03-18|||5dc1c59f-5424-48ef-b84b-84b0849f5e24",
+            "2026-03-18|||8005eada-c29b-41ea-aabc-4051ebc9607f",
+            "2026-03-18|||8e7440eb-0efb-4f22-881a-0a7a58b2a4ac",
+            "2026-03-19|||0762f858-b598-46cd-9dee-6fd1da4ac4b1",
+            "2026-03-19|||1ffa8c93-a29a-4fe5-baa3-6c68ae61808f",
+            "2026-03-19|||2f5d581f-b8dd-4d30-9312-b1352f0010c2",
+            "2026-03-19|||399143ec-66d0-47e1-9442-5f56f2162e59",
+            "2026-03-19|||5dc1c59f-5424-48ef-b84b-84b0849f5e24",
+            "2026-03-19|||8e7440eb-0efb-4f22-881a-0a7a58b2a4ac"
+          ]
+        }
+      },
+      "shift_delta_days": 34,
+      "shift_target_date": "2026-04-21"
+    },
+    "target_date": null,
+    "target_mode": "latest-complete-day",
+    "time_zone": "America/New_York"
+  },
+  "generated_at": "2026-04-22T09:25:34.559Z",
+  "mismatches": [],
+  "mode": "pre",
+  "ok": true,
+  "stage": "full"
+}
