@@ -1,0 +1,18 @@
+{
+  "exported_at": "2026-04-23T04:13:08.836Z",
+  "rows": [
+    {
+      "key": "onboarding",
+      "updated_at": "2026-04-22T08:35:31.313789+00:00",
+      "value": {
+        "bulk_close_complete": true,
+        "completed_at": "2026-04-22T08:35:31.313789+00:00",
+        "history_end_date": "2026-03-18",
+        "history_rows_ingested": 22964,
+        "history_start_date": "2025-01-26",
+        "history_uploaded": true,
+        "setup_complete": true
+      }
+    }
+  ]
+}

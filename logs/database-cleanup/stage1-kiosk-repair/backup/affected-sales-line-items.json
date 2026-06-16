@@ -1,0 +1,675 @@
+{
+  "exported_at": "2026-04-22T09:25:42.970Z",
+  "rows": [
+    {
+      "business_date": "2026-02-08",
+      "created_at": "2026-02-08T08:39:04.452847+00:00",
+      "id": "67cdcb9a-1b4c-44e1-a895-685ed4000ac8",
+      "menu_item_id": "a22bcd57-81c7-44ae-b3b2-8289c92235d5",
+      "net_sales": 161.85,
+      "org_id": null,
+      "qty": 8,
+      "source": "toast"
+    },
+    {
+      "business_date": "2026-02-08",
+      "created_at": "2026-02-08T08:39:04.452847+00:00",
+      "id": "9aed3fe1-09de-4a6d-90b7-ab2da60d9cc8",
+      "menu_item_id": "2fee9dd0-1706-4a4e-8b07-7f52f0e05049",
+      "net_sales": 29.32,
+      "org_id": null,
+      "qty": 2,
+      "source": "toast"
+    },
+    {
+      "business_date": "2026-02-08",
+      "created_at": "2026-02-08T08:39:04.452847+00:00",
+      "id": "95e9b849-2bb6-4b40-9669-fcfd20f46be3",
+      "menu_item_id": "1585b988-fd76-47bd-aefe-35c1ad0a0768",
+      "net_sales": 58.72,
+      "org_id": null,
+      "qty": 3,
+      "source": "toast"
+    },
+    {
+      "business_date": "2026-02-08",
+      "created_at": "2026-02-08T08:39:04.452847+00:00",
+      "id": "432a9687-171c-4045-a675-5f46a263981a",
+      "menu_item_id": "8adeb634-8873-4cc5-a7b0-a52313bc6a48",
+      "net_sales": 57.4,
+      "org_id": null,
+      "qty": 3,
+      "source": "toast"
+    },
+    {
+      "business_date": "2026-02-08",
+      "created_at": "2026-02-08T08:39:04.452847+00:00",
+      "id": "5060feb6-4c62-4a1b-9091-51573b5d6b51",
+      "menu_item_id": "790df46e-42cf-4853-b04c-0e248181ee10",
+      "net_sales": 39.42,
+      "org_id": null,
+      "qty": 2,
+      "source": "toast"
+    },
+    {
+      "business_date": "2026-02-08",
+      "created_at": "2026-02-08T08:39:04.452847+00:00",
+      "id": "abb58f5a-0c69-4827-a39a-14cff5787a09",
+      "menu_item_id": "399143ec-66d0-47e1-9442-5f56f2162e59",
+      "net_sales": 12.75,
+      "org_id": null,
+      "qty": 1,
+      "source": "toast"
+    },
+    {
+      "business_date": "2026-02-08",
+      "created_at": "2026-02-08T08:39:04.452847+00:00",
+      "id": "50519211-6ee9-4539-b9b9-967f531338a5",
+      "menu_item_id": "c546f439-b62e-465c-9da3-c2791423a7be",
+      "net_sales": 41.5,
+      "org_id": null,
+      "qty": 2,
+      "source": "toast"
+    },
+    {
+      "business_date": "2026-02-08",
+      "created_at": "2026-02-08T08:39:04.452847+00:00",
+      "id": "cf03a4ff-963e-4437-b435-786a9d9f745a",
+      "menu_item_id": "a7523a38-4fbd-4a74-b690-2195e7f0f1ba",
+      "net_sales": 12.75,
+      "org_id": null,
+      "qty": 1,
+      "source": "toast"
+    },
+    {
+      "business_date": "2026-02-09",
+      "created_at": "2026-02-08T08:39:04.452847+00:00",
+      "id": "75a734dd-af1f-4763-81f6-fed12d1061ac",
+      "menu_item_id": "790df46e-42cf-4853-b04c-0e248181ee10",
+      "net_sales": 83,
+      "org_id": null,
+      "qty": 4,
+      "source": "toast"
+    },
+    {
+      "business_date": "2026-02-09",
+      "created_at": "2026-02-08T08:39:04.452847+00:00",
+      "id": "afab30ee-fe6c-4d5c-96e9-c98690683b1a",
+      "menu_item_id": "3fae3a95-2bde-4a93-98f4-5f318d954c74",
+      "net_sales": 16.75,
+      "org_id": null,
+      "qty": 1,
+      "source": "toast"
+    },
+    {
+      "business_date": "2026-02-10",
+      "created_at": "2026-02-08T08:39:04.452847+00:00",
+      "id": "da548f8a-97d6-4794-be6c-5271ebd17de7",
+      "menu_item_id": "564978bc-f1a1-45d6-9113-07ae1e22fb9a",
+      "net_sales": 20.75,
+      "org_id": null,
+      "qty": 1,
+      "source": "toast"
+    },
+    {
+      "business_date": "2026-02-10",
+      "created_at": "2026-02-08T08:39:04.452847+00:00",
+      "id": "6202eeb6-7eff-4185-a042-ecc8a655e0f3",
+      "menu_item_id": "7b2d14ce-d406-4d3e-949b-6b65755a5336",
+      "net_sales": 60.75,
+      "org_id": null,
+      "qty": 3,
+      "source": "toast"
+    },
+    {
+      "business_date": "2026-02-10",
+      "created_at": "2026-02-08T08:39:04.452847+00:00",
+      "id": "bc5f84f0-de42-4643-8103-3994f2f37a53",
+      "menu_item_id": "41aceb20-96d1-4a4d-b3c1-645b77c46a06",
+      "net_sales": 111,
+      "org_id": null,
+      "qty": 6,
+      "source": "toast"
+    },
+    {
+      "business_date": "2026-02-10",
+      "created_at": "2026-02-08T08:39:04.548332+00:00",
+      "id": "de792322-c60e-4507-978d-b8ee1c5d6fb2",
+      "menu_item_id": "2dc0c36b-9845-4e54-8db0-df83b9e098ce",
+      "net_sales": 20.25,
+      "org_id": null,
+      "qty": 1,
+      "source": "toast"
+    },
+    {
+      "business_date": "2026-02-11",
+      "created_at": "2026-02-08T08:39:04.548332+00:00",
+      "id": "51a9e37a-2e8d-446f-9d76-3224b182dc75",
+      "menu_item_id": "8021da94-43d1-475a-aedd-32c62a442dd7",
+      "net_sales": 16.25,
+      "org_id": null,
+      "qty": 1,
+      "source": "toast"
+    },
+    {
+      "business_date": "2026-02-12",
+      "created_at": "2026-02-08T08:39:04.548332+00:00",
+      "id": "18fcde35-fcca-4e65-8036-27f354f1827a",
+      "menu_item_id": "515251c1-3c40-4679-a482-f8ce71cce169",
+      "net_sales": 49.5,
+      "org_id": null,
+      "qty": 3,
+      "source": "toast"
+    },
+    {
+      "business_date": "2026-02-12",
+      "created_at": "2026-02-08T08:39:04.548332+00:00",
+      "id": "8284a9d1-f6ec-4e45-9472-e56f37d164d9",
+      "menu_item_id": "564978bc-f1a1-45d6-9113-07ae1e22fb9a",
+      "net_sales": 59.14,
+      "org_id": null,
+      "qty": 3,
+      "source": "toast"
+    },
+    {
+      "business_date": "2026-02-12",
+      "created_at": "2026-02-08T08:39:04.548332+00:00",
+      "id": "6cd6cada-932e-4f93-a422-dc57887ec5e1",
+      "menu_item_id": "0762f858-b598-46cd-9dee-6fd1da4ac4b1",
+      "net_sales": 39.42,
+      "org_id": null,
+      "qty": 2,
+      "source": "toast"
+    },
+    {
+      "business_date": "2026-02-14",
+      "created_at": "2026-02-08T08:39:04.548332+00:00",
+      "id": "d874a7f9-3532-4f2d-ab11-2549b8c7f831",
+      "menu_item_id": "f4ae4982-aa77-429d-acc3-8dbf136f91cb",
+      "net_sales": 50.25,
+      "org_id": null,
+      "qty": 3,
+      "source": "toast"
+    },
+    {
+      "business_date": "2026-02-14",
+      "created_at": "2026-02-08T08:39:04.548332+00:00",
+      "id": "7c77d5ee-d2fd-438e-9b36-23f8ba3c8d89",
+      "menu_item_id": "564978bc-f1a1-45d6-9113-07ae1e22fb9a",
+      "net_sales": 101.67,
+      "org_id": null,
+      "qty": 5,
+      "source": "toast"
+    },
+    {
+      "business_date": "2026-02-16",
+      "created_at": "2026-02-08T08:39:04.548332+00:00",
+      "id": "51b279b7-f5ab-4f53-89f3-91b2ea73834a",
+      "menu_item_id": "0b928caa-befd-47ae-9a7b-209616dcb8b9",
+      "net_sales": 17.64,
+      "org_id": null,
+      "qty": 1,
+      "source": "toast"
+    },
+    {
+      "business_date": "2026-02-17",
+      "created_at": "2026-02-08T08:39:04.548332+00:00",
+      "id": "47d0ff4e-65af-4544-9e62-e7b7fd17361f",
+      "menu_item_id": "c546f439-b62e-465c-9da3-c2791423a7be",
+      "net_sales": 20.75,
+      "org_id": null,
+      "qty": 1,
+      "source": "toast"
+    },
+    {
+      "business_date": "2026-02-18",
+      "created_at": "2026-02-08T08:39:04.627334+00:00",
+      "id": "1b7cb846-81ce-416d-8558-4213dd54c840",
+      "menu_item_id": "0762f858-b598-46cd-9dee-6fd1da4ac4b1",
+      "net_sales": 20.75,
+      "org_id": null,
+      "qty": 1,
+      "source": "toast"
+    },
+    {
+      "business_date": "2026-02-20",
+      "created_at": "2026-02-08T08:39:04.627334+00:00",
+      "id": "d9bade80-81bb-4e71-870f-d9bf3ac84a95",
+      "menu_item_id": "341bdd76-7e05-43eb-a273-14947ab83dff",
+      "net_sales": 25.5,
+      "org_id": null,
+      "qty": 1,
+      "source": "toast"
+    },
+    {
+      "business_date": "2026-02-20",
+      "created_at": "2026-02-08T08:39:04.627334+00:00",
+      "id": "19beef71-3c8c-4191-b154-8661ab596c90",
+      "menu_item_id": "515251c1-3c40-4679-a482-f8ce71cce169",
+      "net_sales": 49.5,
+      "org_id": null,
+      "qty": 3,
+      "source": "toast"
+    },
+    {
+      "business_date": "2026-02-20",
+      "created_at": "2026-02-08T08:39:04.627334+00:00",
+      "id": "42623e74-f550-4b1d-af3f-de0f022e52e0",
+      "menu_item_id": "8005eada-c29b-41ea-aabc-4051ebc9607f",
+      "net_sales": 15.07,
+      "org_id": null,
+      "qty": 1,
+      "source": "toast"
+    },
+    {
+      "business_date": "2026-03-05",
+      "created_at": "2026-02-08T13:43:14.001951+00:00",
+      "id": "c6f64e5c-82e7-4fcc-9076-c8032cfe0554",
+      "menu_item_id": "a7523a38-4fbd-4a74-b690-2195e7f0f1ba",
+      "net_sales": 12.99,
+      "org_id": null,
+      "qty": 1,
+      "source": "api"
+    },
+    {
+      "business_date": "2026-03-05",
+      "created_at": "2026-02-08T14:37:32.430697+00:00",
+      "id": "c9147f8c-80fd-495c-8061-ab6fbff44c72",
+      "menu_item_id": "2fee9dd0-1706-4a4e-8b07-7f52f0e05049",
+      "net_sales": 12.99,
+      "org_id": null,
+      "qty": 1,
+      "source": "api"
+    },
+    {
+      "business_date": "2026-03-05",
+      "created_at": "2026-02-08T15:38:58.091898+00:00",
+      "id": "88e04ab2-a923-4bf5-b5e2-eefdf73f5b08",
+      "menu_item_id": "1585b988-fd76-47bd-aefe-35c1ad0a0768",
+      "net_sales": 38.97,
+      "org_id": null,
+      "qty": 3,
+      "source": "api"
+    },
+    {
+      "business_date": "2026-03-05",
+      "created_at": "2026-02-08T15:59:12.816967+00:00",
+      "id": "6ee26b19-4b0f-4a44-89f0-8ae0f2090836",
+      "menu_item_id": "c546f439-b62e-465c-9da3-c2791423a7be",
+      "net_sales": 38.97,
+      "org_id": null,
+      "qty": 3,
+      "source": "api"
+    },
+    {
+      "business_date": "2026-03-05",
+      "created_at": "2026-02-08T16:19:36.283747+00:00",
+      "id": "bae704f9-08ea-42eb-8c6d-82655d8175b0",
+      "menu_item_id": "8adeb634-8873-4cc5-a7b0-a52313bc6a48",
+      "net_sales": 25.98,
+      "org_id": null,
+      "qty": 2,
+      "source": "api"
+    },
+    {
+      "business_date": "2026-03-05",
+      "created_at": "2026-02-08T17:04:29.982371+00:00",
+      "id": "ed550933-48b8-4f4c-b9bc-cec28adeafc2",
+      "menu_item_id": "790df46e-42cf-4853-b04c-0e248181ee10",
+      "net_sales": 25.98,
+      "org_id": null,
+      "qty": 2,
+      "source": "api"
+    },
+    {
+      "business_date": "2026-03-05",
+      "created_at": "2026-02-08T17:04:45.52442+00:00",
+      "id": "bdc4184b-b09b-46fd-b8f2-f0fc9dec2892",
+      "menu_item_id": "399143ec-66d0-47e1-9442-5f56f2162e59",
+      "net_sales": 25.98,
+      "org_id": null,
+      "qty": 2,
+      "source": "api"
+    },
+    {
+      "business_date": "2026-03-05",
+      "created_at": "2026-02-08T17:19:14.317017+00:00",
+      "id": "60b4a033-0834-48f3-907d-d94134901850",
+      "menu_item_id": "a22bcd57-81c7-44ae-b3b2-8289c92235d5",
+      "net_sales": 38.97,
+      "org_id": null,
+      "qty": 3,
+      "source": "api"
+    },
+    {
+      "business_date": "2026-03-07",
+      "created_at": "2026-02-10T15:27:48.96898+00:00",
+      "id": "17dbb04e-259f-4cfe-b004-3d436a3fef53",
+      "menu_item_id": "0b928caa-befd-47ae-9a7b-209616dcb8b9",
+      "net_sales": 181.86,
+      "org_id": null,
+      "qty": 14,
+      "source": "api"
+    },
+    {
+      "business_date": "2026-03-07",
+      "created_at": "2026-02-10T15:27:48.96898+00:00",
+      "id": "155cd2fa-fdf4-4220-82ea-01645b4f1058",
+      "menu_item_id": "790df46e-42cf-4853-b04c-0e248181ee10",
+      "net_sales": 155.88,
+      "org_id": null,
+      "qty": 12,
+      "source": "api"
+    },
+    {
+      "business_date": "2026-03-07",
+      "created_at": "2026-02-10T15:27:48.96898+00:00",
+      "id": "6a2118ae-5f8a-4823-9694-0175080f9c98",
+      "menu_item_id": "3fae3a95-2bde-4a93-98f4-5f318d954c74",
+      "net_sales": 207.84,
+      "org_id": null,
+      "qty": 16,
+      "source": "api"
+    },
+    {
+      "business_date": "2026-03-07",
+      "created_at": "2026-02-10T09:20:50.49046+00:00",
+      "id": "b890a4bd-f21a-4864-aae9-ede61d4744ac",
+      "menu_item_id": "41aceb20-96d1-4a4d-b3c1-645b77c46a06",
+      "net_sales": 38.97,
+      "org_id": null,
+      "qty": 3,
+      "source": "api"
+    },
+    {
+      "business_date": "2026-03-07",
+      "created_at": "2026-02-10T15:15:58.113525+00:00",
+      "id": "516b39e5-c638-44fd-ad1c-c5f50da34fe8",
+      "menu_item_id": "b47370b9-b9b1-426b-a3cf-e549c5299a51",
+      "net_sales": 129.9,
+      "org_id": null,
+      "qty": 10,
+      "source": "api"
+    },
+    {
+      "business_date": "2026-03-07",
+      "created_at": "2026-02-10T15:15:58.113525+00:00",
+      "id": "ac96c912-10fd-41ad-94ec-7d2dfacce1ca",
+      "menu_item_id": "564978bc-f1a1-45d6-9113-07ae1e22fb9a",
+      "net_sales": 415.68,
+      "org_id": null,
+      "qty": 32,
+      "source": "api"
+    },
+    {
+      "business_date": "2026-03-07",
+      "created_at": "2026-02-10T17:31:01.654963+00:00",
+      "id": "55a902df-357f-42a3-a569-aca74cb0b7a2",
+      "menu_item_id": "7b2d14ce-d406-4d3e-949b-6b65755a5336",
+      "net_sales": 129.9,
+      "org_id": null,
+      "qty": 10,
+      "source": "api"
+    },
+    {
+      "business_date": "2026-03-07",
+      "created_at": "2026-02-10T17:46:37.973914+00:00",
+      "id": "ee08c81b-d79f-4c60-a90c-b29b99460aaa",
+      "menu_item_id": "2dc0c36b-9845-4e54-8db0-df83b9e098ce",
+      "net_sales": 77.94,
+      "org_id": null,
+      "qty": 6,
+      "source": "api"
+    },
+    {
+      "business_date": "2026-03-08",
+      "created_at": "2026-02-11T13:06:10.092748+00:00",
+      "id": "025605dc-49e9-404d-b806-b74aefe6ccf9",
+      "menu_item_id": "75c18cb3-de82-4c08-8be4-370fd940d00c",
+      "net_sales": 181.86,
+      "org_id": null,
+      "qty": 14,
+      "source": "api"
+    },
+    {
+      "business_date": "2026-03-08",
+      "created_at": "2026-02-11T13:06:10.092748+00:00",
+      "id": "7bf3e178-3c28-4883-b4c9-e27c013564a1",
+      "menu_item_id": "2410195a-26ab-4436-ab1c-645717380696",
+      "net_sales": 103.92,
+      "org_id": null,
+      "qty": 8,
+      "source": "api"
+    },
+    {
+      "business_date": "2026-03-08",
+      "created_at": "2026-02-11T13:06:10.092748+00:00",
+      "id": "157090a4-4184-44d0-a7e8-36eef2a9a088",
+      "menu_item_id": "dc75f04d-a918-4a2d-b5d9-5ce5db422713",
+      "net_sales": 233.82,
+      "org_id": null,
+      "qty": 18,
+      "source": "api"
+    },
+    {
+      "business_date": "2026-03-08",
+      "created_at": "2026-02-11T13:06:10.092748+00:00",
+      "id": "bde961e9-2ba2-47b6-baaa-e02e68c651aa",
+      "menu_item_id": "8021da94-43d1-475a-aedd-32c62a442dd7",
+      "net_sales": 207.84,
+      "org_id": null,
+      "qty": 16,
+      "source": "api"
+    },
+    {
+      "business_date": "2026-03-09",
+      "created_at": "2026-02-12T22:50:54.504933+00:00",
+      "id": "5a72b146-7d07-47fb-a795-749a065c3b03",
+      "menu_item_id": "564978bc-f1a1-45d6-9113-07ae1e22fb9a",
+      "net_sales": 25.98,
+      "org_id": null,
+      "qty": 2,
+      "source": "api"
+    },
+    {
+      "business_date": "2026-03-09",
+      "created_at": "2026-02-12T15:04:05.704607+00:00",
+      "id": "8c89dde0-7d5f-4285-8174-98189e9ab182",
+      "menu_item_id": "0762f858-b598-46cd-9dee-6fd1da4ac4b1",
+      "net_sales": 1324.98,
+      "org_id": null,
+      "qty": 102,
+      "source": "api"
+    },
+    {
+      "business_date": "2026-03-10",
+      "created_at": "2026-02-13T03:44:44.130609+00:00",
+      "id": "8300c9c7-a99e-48ed-afc7-4d3b117ba770",
+      "menu_item_id": "bc79d0f9-37a7-4926-8ae5-eb3e72565c25",
+      "net_sales": 532.59,
+      "org_id": null,
+      "qty": 41,
+      "source": "api"
+    },
+    {
+      "business_date": "2026-03-10",
+      "created_at": "2026-02-13T03:44:44.130609+00:00",
+      "id": "88cbabe5-2077-49d9-a5b9-e19396c64e7d",
+      "menu_item_id": "515251c1-3c40-4679-a482-f8ce71cce169",
+      "net_sales": 350.73,
+      "org_id": null,
+      "qty": 27,
+      "source": "api"
+    },
+    {
+      "business_date": "2026-03-11",
+      "created_at": "2026-02-14T19:37:48.388084+00:00",
+      "id": "0a85a8ef-cd58-4f4f-8eb3-d482bed17e46",
+      "menu_item_id": "564978bc-f1a1-45d6-9113-07ae1e22fb9a",
+      "net_sales": 38.97,
+      "org_id": null,
+      "qty": 3,
+      "source": "api"
+    },
+    {
+      "business_date": "2026-03-12",
+      "created_at": "2026-02-15T04:33:24.547014+00:00",
+      "id": "bf8694d9-b0d0-4861-9d75-11418b76f8f9",
+      "menu_item_id": "564978bc-f1a1-45d6-9113-07ae1e22fb9a",
+      "net_sales": 12.99,
+      "org_id": null,
+      "qty": 1,
+      "source": "api"
+    },
+    {
+      "business_date": "2026-03-12",
+      "created_at": "2026-02-15T04:33:58.11159+00:00",
+      "id": "eafc0a33-a701-48c3-819c-9e70ccfa90ae",
+      "menu_item_id": "f4ae4982-aa77-429d-acc3-8dbf136f91cb",
+      "net_sales": 64.95,
+      "org_id": null,
+      "qty": 5,
+      "source": "api"
+    },
+    {
+      "business_date": "2026-03-12",
+      "created_at": "2026-02-15T19:14:13.572075+00:00",
+      "id": "60cd5dce-2166-4233-b3c5-1e9422bc1259",
+      "menu_item_id": "51cd32b9-65e1-4b3f-bc26-c80b3bb221f8",
+      "net_sales": 324.75,
+      "org_id": null,
+      "qty": 25,
+      "source": "api"
+    },
+    {
+      "business_date": "2026-03-13",
+      "created_at": "2026-02-16T18:11:20.336454+00:00",
+      "id": "6f0ce3e3-b795-491e-a2e0-7a118cbda1a8",
+      "menu_item_id": "0b928caa-befd-47ae-9a7b-209616dcb8b9",
+      "net_sales": 77.94,
+      "org_id": null,
+      "qty": 6,
+      "source": "api"
+    },
+    {
+      "business_date": "2026-03-13",
+      "created_at": "2026-02-16T19:24:56.926845+00:00",
+      "id": "5d081c5e-5f75-4a49-9553-fcb9a00c47d8",
+      "menu_item_id": "7e322d99-db51-4e2d-9284-d532bb656060",
+      "net_sales": 51.96,
+      "org_id": null,
+      "qty": 4,
+      "source": "api"
+    },
+    {
+      "business_date": "2026-03-14",
+      "created_at": "2026-02-17T23:41:31.415299+00:00",
+      "id": "d462f821-3d3c-4656-b86c-3598993c8184",
+      "menu_item_id": "c546f439-b62e-465c-9da3-c2791423a7be",
+      "net_sales": 831.36,
+      "org_id": null,
+      "qty": 64,
+      "source": "api"
+    },
+    {
+      "business_date": "2026-03-15",
+      "created_at": "2026-02-18T08:51:32.774734+00:00",
+      "id": "f348c3e2-b81c-4ee4-ab42-3c5849112822",
+      "menu_item_id": "0762f858-b598-46cd-9dee-6fd1da4ac4b1",
+      "net_sales": 12.99,
+      "org_id": null,
+      "qty": 1,
+      "source": "api"
+    },
+    {
+      "business_date": "2026-03-18",
+      "created_at": "2026-02-21T01:30:46.606571+00:00",
+      "id": "de412f2f-6afe-4f80-b649-dc4b3d4c6068",
+      "menu_item_id": "515251c1-3c40-4679-a482-f8ce71cce169",
+      "net_sales": 64.95,
+      "org_id": null,
+      "qty": 5,
+      "source": "api"
+    },
+    {
+      "business_date": "2026-03-18",
+      "created_at": "2026-02-21T01:34:50.698945+00:00",
+      "id": "9863ca25-dff6-420c-b696-60b5047247d0",
+      "menu_item_id": "8005eada-c29b-41ea-aabc-4051ebc9607f",
+      "net_sales": 168.87,
+      "org_id": null,
+      "qty": 13,
+      "source": "api"
+    },
+    {
+      "business_date": "2026-03-18",
+      "created_at": "2026-02-21T01:38:12.514264+00:00",
+      "id": "761690e8-11a8-4136-9c28-50180e1d330d",
+      "menu_item_id": "341bdd76-7e05-43eb-a273-14947ab83dff",
+      "net_sales": 64.95,
+      "org_id": null,
+      "qty": 5,
+      "source": "api"
+    },
+    {
+      "business_date": "2026-03-19",
+      "created_at": "2026-03-19T00:28:12.144033+00:00",
+      "id": "6a1cc620-40e2-43d3-bbb1-bd5b883e1cfb",
+      "menu_item_id": "399143ec-66d0-47e1-9442-5f56f2162e59",
+      "net_sales": 12.99,
+      "org_id": null,
+      "qty": 1,
+      "source": "api"
+    },
+    {
+      "business_date": "2026-03-19",
+      "created_at": "2026-03-19T00:28:19.968275+00:00",
+      "id": "9033cd51-195f-47ee-b5be-d5c72f0058f4",
+      "menu_item_id": "1ffa8c93-a29a-4fe5-baa3-6c68ae61808f",
+      "net_sales": 103.92,
+      "org_id": null,
+      "qty": 8,
+      "source": "api"
+    },
+    {
+      "business_date": "2026-03-19",
+      "created_at": "2026-03-19T00:28:19.934136+00:00",
+      "id": "efcce0fa-a7e7-4cce-b1ea-04a4cc08660f",
+      "menu_item_id": "8e7440eb-0efb-4f22-881a-0a7a58b2a4ac",
+      "net_sales": 38.97,
+      "org_id": null,
+      "qty": 3,
+      "source": "api"
+    },
+    {
+      "business_date": "2026-03-19",
+      "created_at": "2026-03-19T00:28:30.420983+00:00",
+      "id": "2171862c-5eb1-4c61-8e85-92abbc871fab",
+      "menu_item_id": "5dc1c59f-5424-48ef-b84b-84b0849f5e24",
+      "net_sales": 64.95,
+      "org_id": null,
+      "qty": 5,
+      "source": "api"
+    },
+    {
+      "business_date": "2026-03-19",
+      "created_at": "2026-03-19T00:28:43.630681+00:00",
+      "id": "f238f538-1fb5-4459-8dd4-b47bc67602af",
+      "menu_item_id": "0762f858-b598-46cd-9dee-6fd1da4ac4b1",
+      "net_sales": 194.85,
+      "org_id": null,
+      "qty": 15,
+      "source": "api"
+    },
+    {
+      "business_date": "2026-03-19",
+      "created_at": "2026-03-19T00:34:53.548678+00:00",
+      "id": "e43679b8-a782-4e6b-877e-00308a0eef76",
+      "menu_item_id": "2f5d581f-b8dd-4d30-9312-b1352f0010c2",
+      "net_sales": 12.99,
+      "org_id": null,
+      "qty": 1,
+      "source": "api"
+    }
+  ]
+}

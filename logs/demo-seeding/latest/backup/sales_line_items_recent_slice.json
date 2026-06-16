@@ -1,0 +1,86 @@
+[
+  {
+    "id": "58b7c990-bed3-4ad4-9f18-31a9a6a40a67",
+    "org_id": null,
+    "business_date": "2026-04-20",
+    "menu_item_id": "0762f858-b598-46cd-9dee-6fd1da4ac4b1",
+    "qty": 102,
+    "net_sales": 1324.98,
+    "source": "api",
+    "created_at": "2026-03-18T23:45:04.662874+00:00",
+    "menu_items": {
+      "name": "The Barbecue Chicken Pizza (L)",
+      "category": "Chicken"
+    }
+  },
+  {
+    "id": "df81e850-efee-4efe-be70-ea2568faa647",
+    "org_id": null,
+    "business_date": "2026-04-20",
+    "menu_item_id": "564978bc-f1a1-45d6-9113-07ae1e22fb9a",
+    "qty": 2,
+    "net_sales": 25.98,
+    "source": "api",
+    "created_at": "2026-03-18T23:45:04.662874+00:00",
+    "menu_items": {
+      "name": "The California Chicken Pizza (L)",
+      "category": "Chicken"
+    }
+  },
+  {
+    "id": "5f7e849f-8522-4663-a43b-556279166513",
+    "org_id": null,
+    "business_date": "2026-04-21",
+    "menu_item_id": "bc79d0f9-37a7-4926-8ae5-eb3e72565c25",
+    "qty": 41,
+    "net_sales": 532.59,
+    "source": "api",
+    "created_at": "2026-03-18T23:45:05.594948+00:00",
+    "menu_items": {
+      "name": "The Greek Pizza (L)",
+      "category": "Classic"
+    }
+  },
+  {
+    "id": "fac313de-a764-45d6-a407-f9d8e08e507a",
+    "org_id": null,
+    "business_date": "2026-04-22",
+    "menu_item_id": "0762f858-b598-46cd-9dee-6fd1da4ac4b1",
+    "qty": 15,
+    "net_sales": 194.85,
+    "source": "api",
+    "created_at": "2026-04-22T09:25:47.86542+00:00",
+    "menu_items": {
+      "name": "The Barbecue Chicken Pizza (L)",
+      "category": "Chicken"
+    }
+  },
+  {
+    "id": "b0b61d6a-663d-47eb-b231-6c095dc5366e",
+    "org_id": null,
+    "business_date": "2026-04-22",
+    "menu_item_id": "1ffa8c93-a29a-4fe5-baa3-6c68ae61808f",
+    "qty": 8,
+    "net_sales": 103.92,
+    "source": "api",
+    "created_at": "2026-04-22T09:25:47.682978+00:00",
+    "menu_items": {
+      "name": "The Green Garden Pizza (M)",
+      "category": "Veggie"
+    }
+  },
+  {
+    "id": "30eda7c4-cb66-4c0c-b303-d439d2e49af6",
+    "org_id": null,
+    "business_date": "2026-04-22",
+    "menu_item_id": "8e7440eb-0efb-4f22-881a-0a7a58b2a4ac",
+    "qty": 3,
+    "net_sales": 38.97,
+    "source": "api",
+    "created_at": "2026-04-22T09:25:47.743307+00:00",
+    "menu_items": {
+      "name": "The Pepperoni Pizza (L)",
+      "category": "Classic"
+    }
+  }
+]

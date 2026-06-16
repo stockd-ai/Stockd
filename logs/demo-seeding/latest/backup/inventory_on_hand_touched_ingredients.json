@@ -1,0 +1,110 @@
+[
+  {
+    "ingredient_id": "b56a2ee4-ae4f-4adf-b739-f5050dbe7200",
+    "org_id": null,
+    "qty_on_hand": 5325,
+    "updated_at": "2026-04-05T00:28:41.16937+00:00"
+  },
+  {
+    "ingredient_id": "dd5527fd-62fc-4c86-81cb-95ec24c832ae",
+    "org_id": null,
+    "qty_on_hand": 151.5,
+    "updated_at": "2026-04-05T00:28:51.124475+00:00"
+  },
+  {
+    "ingredient_id": "54991a9d-849a-484a-95f5-f1c41f9d2701",
+    "org_id": null,
+    "qty_on_hand": 54.5,
+    "updated_at": "2026-04-05T00:29:15.139757+00:00"
+  },
+  {
+    "ingredient_id": "13ff5b4b-6765-4ca6-8b75-4455bec52d7f",
+    "org_id": null,
+    "qty_on_hand": 691,
+    "updated_at": "2026-03-19T00:28:12.144033+00:00"
+  },
+  {
+    "ingredient_id": "7767e4e6-7b4f-4ef0-b5bd-b1a305a8ec43",
+    "org_id": null,
+    "qty_on_hand": 104.5,
+    "updated_at": "2026-03-19T00:28:12.144033+00:00"
+  },
+  {
+    "ingredient_id": "cb69071c-76d5-4979-a7ab-ae63a38a3dda",
+    "org_id": null,
+    "qty_on_hand": 559,
+    "updated_at": "2026-03-19T00:28:19.934136+00:00"
+  },
+  {
+    "ingredient_id": "edf4ac54-e9ab-4f31-a6ea-6da7ae33d18c",
+    "org_id": null,
+    "qty_on_hand": 230,
+    "updated_at": "2026-03-19T00:28:19.968275+00:00"
+  },
+  {
+    "ingredient_id": "30177fad-5223-4dd0-af1b-7f9c8e5ad4ec",
+    "org_id": null,
+    "qty_on_hand": 329,
+    "updated_at": "2026-03-19T00:28:19.968275+00:00"
+  },
+  {
+    "ingredient_id": "f9fab3fa-89f7-49c6-bc12-bc9939b5dbcd",
+    "org_id": null,
+    "qty_on_hand": 522.5,
+    "updated_at": "2026-02-10T15:27:48.96898+00:00"
+  },
+  {
+    "ingredient_id": "58cd927b-ec4e-429b-9548-af9f05926b16",
+    "org_id": null,
+    "qty_on_hand": 196,
+    "updated_at": "2026-03-19T00:30:38.761112+00:00"
+  },
+  {
+    "ingredient_id": "d6e7c237-00de-45a9-baf6-79950c4f0253",
+    "org_id": null,
+    "qty_on_hand": 5606,
+    "updated_at": "2026-03-19T00:34:53.548678+00:00"
+  },
+  {
+    "ingredient_id": "d4e95924-56db-4483-ba7f-a7393531c5c2",
+    "org_id": null,
+    "qty_on_hand": 503,
+    "updated_at": "2026-03-19T00:34:53.548678+00:00"
+  },
+  {
+    "ingredient_id": "89e9b8b1-dd83-4794-b2d7-160be5453b57",
+    "org_id": null,
+    "qty_on_hand": 2907.5,
+    "updated_at": "2026-03-19T00:34:53.548678+00:00"
+  },
+  {
+    "ingredient_id": "432c222b-ece8-44b7-9d3b-0178234e96a9",
+    "org_id": null,
+    "qty_on_hand": 77.5,
+    "updated_at": "2026-03-19T00:34:53.548678+00:00"
+  },
+  {
+    "ingredient_id": "3afb0652-fb0d-4dde-a9d3-efc90bc215d2",
+    "org_id": null,
+    "qty_on_hand": 228.25,
+    "updated_at": "2026-03-19T00:34:53.548678+00:00"
+  },
+  {
+    "ingredient_id": "2612c2d9-18a0-4aee-8191-e9e0f9cbca69",
+    "org_id": null,
+    "qty_on_hand": 21.75,
+    "updated_at": "2026-03-19T00:34:53.548678+00:00"
+  },
+  {
+    "ingredient_id": "2fc5b6e8-b790-4e5d-8f6e-da92faf1c531",
+    "org_id": null,
+    "qty_on_hand": 121,
+    "updated_at": "2026-03-19T00:34:53.548678+00:00"
+  },
+  {
+    "ingredient_id": "3904cd16-a7ea-4985-b3eb-5677d1022f49",
+    "org_id": null,
+    "qty_on_hand": 178,
+    "updated_at": "2026-03-18T23:45:06.063063+00:00"
+  }
+]

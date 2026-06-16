@@ -1,0 +1,1902 @@
+[
+  {
+    "id": "81b7be3f-236a-4fb4-a933-f13f970cc352",
+    "org_id": null,
+    "ingredient_id": "f55ceb2f-6b45-40aa-99bb-39cd2552c920",
+    "txn_type": "CONSUME",
+    "qty_delta": -20,
+    "created_at": "2026-03-18T23:45:03.825966+00:00",
+    "note": "Order DEMO-20260315-A: The Pepper Salami Pizza (S)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "168946f7-10c5-45cd-b1f1-87f079e32c8d",
+    "org_id": null,
+    "ingredient_id": "432c222b-ece8-44b7-9d3b-0178234e96a9",
+    "txn_type": "CONSUME",
+    "qty_delta": -10,
+    "created_at": "2026-03-18T23:45:03.825966+00:00",
+    "note": "Order DEMO-20260315-A: The Southwest Chicken Pizza (S)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "e385eed7-e298-42f6-82a8-39ea13dfe27a",
+    "org_id": null,
+    "ingredient_id": "13ff5b4b-6765-4ca6-8b75-4455bec52d7f",
+    "txn_type": "CONSUME",
+    "qty_delta": -30,
+    "created_at": "2026-03-18T23:45:03.825966+00:00",
+    "note": "Order DEMO-20260315-A: The Southwest Chicken Pizza (S)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "c7ef31f9-f3e3-40bc-8f6c-99ae370c7f9b",
+    "org_id": null,
+    "ingredient_id": "2612c2d9-18a0-4aee-8191-e9e0f9cbca69",
+    "txn_type": "CONSUME",
+    "qty_delta": -10,
+    "created_at": "2026-03-18T23:45:03.825966+00:00",
+    "note": "Order DEMO-20260315-A: The Southwest Chicken Pizza (S)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "ea59d5c5-6c30-4118-aa48-23d82cd65dea",
+    "org_id": null,
+    "ingredient_id": "3afb0652-fb0d-4dde-a9d3-efc90bc215d2",
+    "txn_type": "CONSUME",
+    "qty_delta": -10,
+    "created_at": "2026-03-18T23:45:03.825966+00:00",
+    "note": "Order DEMO-20260315-A: The Southwest Chicken Pizza (S)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "b6b187ef-df28-4f7b-a3d8-7cf55128ca85",
+    "org_id": null,
+    "ingredient_id": "d6e7c237-00de-45a9-baf6-79950c4f0253",
+    "txn_type": "CONSUME",
+    "qty_delta": -64,
+    "created_at": "2026-03-18T23:45:03.825966+00:00",
+    "note": "Order DEMO-20260315-A: The Pepper Salami Pizza (S)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "1d103a05-7d51-431d-a9f9-3740e54e2aaa",
+    "org_id": null,
+    "ingredient_id": "d4e95924-56db-4483-ba7f-a7393531c5c2",
+    "txn_type": "CONSUME",
+    "qty_delta": -4,
+    "created_at": "2026-03-18T23:45:03.825966+00:00",
+    "note": "Order DEMO-20260315-A: The Pepper Salami Pizza (S)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "fcefded9-e226-4796-8e2a-9854e0591327",
+    "org_id": null,
+    "ingredient_id": "89e9b8b1-dd83-4794-b2d7-160be5453b57",
+    "txn_type": "CONSUME",
+    "qty_delta": -24,
+    "created_at": "2026-03-18T23:45:03.825966+00:00",
+    "note": "Order DEMO-20260315-A: The Pepper Salami Pizza (S)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "f75b9b8e-7c29-4378-9215-48ce9a168eed",
+    "org_id": null,
+    "ingredient_id": "b56a2ee4-ae4f-4adf-b739-f5050dbe7200",
+    "txn_type": "CONSUME",
+    "qty_delta": -32,
+    "created_at": "2026-03-18T23:45:03.825966+00:00",
+    "note": "Order DEMO-20260315-A: The Pepper Salami Pizza (S)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "085b552f-d269-4d35-b5f4-6bacec1cf713",
+    "org_id": null,
+    "ingredient_id": "b56a2ee4-ae4f-4adf-b739-f5050dbe7200",
+    "txn_type": "CONSUME",
+    "qty_delta": -40,
+    "created_at": "2026-03-18T23:45:03.825966+00:00",
+    "note": "Order DEMO-20260315-A: The Southwest Chicken Pizza (S)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "1846d2de-64a7-42e0-8fc0-68c9664e4799",
+    "org_id": null,
+    "ingredient_id": "89e9b8b1-dd83-4794-b2d7-160be5453b57",
+    "txn_type": "CONSUME",
+    "qty_delta": -30,
+    "created_at": "2026-03-18T23:45:03.825966+00:00",
+    "note": "Order DEMO-20260315-A: The Southwest Chicken Pizza (S)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "765240b7-5849-439b-95b8-73e60a6913cc",
+    "org_id": null,
+    "ingredient_id": "d4e95924-56db-4483-ba7f-a7393531c5c2",
+    "txn_type": "CONSUME",
+    "qty_delta": -5,
+    "created_at": "2026-03-18T23:45:03.825966+00:00",
+    "note": "Order DEMO-20260315-A: The Southwest Chicken Pizza (S)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "c6e8089f-bb34-47f7-9548-8bd895decd01",
+    "org_id": null,
+    "ingredient_id": "d6e7c237-00de-45a9-baf6-79950c4f0253",
+    "txn_type": "CONSUME",
+    "qty_delta": -80,
+    "created_at": "2026-03-18T23:45:03.825966+00:00",
+    "note": "Order DEMO-20260315-A: The Southwest Chicken Pizza (S)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "b262a62d-0ae1-4e05-8687-5b73ebdd5343",
+    "org_id": null,
+    "ingredient_id": "6fd49b0c-26a7-447d-9f82-3f9df591ba56",
+    "txn_type": "CONSUME",
+    "qty_delta": -12,
+    "created_at": "2026-03-18T23:45:03.825966+00:00",
+    "note": "Order DEMO-20260315-A: The Pepper Salami Pizza (S)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "2939a64f-4fc3-42b5-8794-573a8d7d8990",
+    "org_id": null,
+    "ingredient_id": "d6e7c237-00de-45a9-baf6-79950c4f0253",
+    "txn_type": "CONSUME",
+    "qty_delta": -96,
+    "created_at": "2026-03-18T23:45:04.23019+00:00",
+    "note": "Order DEMO-20260315-B: The Sicilian Pizza (M)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "9d505553-16eb-42fb-a579-d0c90dcc10c3",
+    "org_id": null,
+    "ingredient_id": "d4e95924-56db-4483-ba7f-a7393531c5c2",
+    "txn_type": "CONSUME",
+    "qty_delta": -12,
+    "created_at": "2026-03-18T23:45:04.23019+00:00",
+    "note": "Order DEMO-20260315-B: The Spinach Pesto Pizza (L)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "b9bdf292-b231-441a-93bf-040ecfe6287b",
+    "org_id": null,
+    "ingredient_id": "bd551072-e0ad-48f2-ae52-a81a18a11d6a",
+    "txn_type": "CONSUME",
+    "qty_delta": -72,
+    "created_at": "2026-03-18T23:45:04.23019+00:00",
+    "note": "Order DEMO-20260315-B: The Spinach Pesto Pizza (L)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "46f1b1ce-c3cd-4fd4-8a27-fc778ad27e87",
+    "org_id": null,
+    "ingredient_id": "b56a2ee4-ae4f-4adf-b739-f5050dbe7200",
+    "txn_type": "CONSUME",
+    "qty_delta": -96,
+    "created_at": "2026-03-18T23:45:04.23019+00:00",
+    "note": "Order DEMO-20260315-B: The Spinach Pesto Pizza (L)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "fc2c5377-e992-4828-bb41-a89702093e78",
+    "org_id": null,
+    "ingredient_id": "edf4ac54-e9ab-4f31-a6ea-6da7ae33d18c",
+    "txn_type": "CONSUME",
+    "qty_delta": -48,
+    "created_at": "2026-03-18T23:45:04.23019+00:00",
+    "note": "Order DEMO-20260315-B: The Spinach Pesto Pizza (L)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "a6f2fb11-b033-4956-ac18-62d0717823ad",
+    "org_id": null,
+    "ingredient_id": "d6e7c237-00de-45a9-baf6-79950c4f0253",
+    "txn_type": "CONSUME",
+    "qty_delta": -192,
+    "created_at": "2026-03-18T23:45:04.23019+00:00",
+    "note": "Order DEMO-20260315-B: The Spinach Pesto Pizza (L)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "9e5d477c-e441-418e-ae5f-f29d79208470",
+    "org_id": null,
+    "ingredient_id": "2fc5b6e8-b790-4e5d-8f6e-da92faf1c531",
+    "txn_type": "CONSUME",
+    "qty_delta": -24,
+    "created_at": "2026-03-18T23:45:04.23019+00:00",
+    "note": "Order DEMO-20260315-B: The Spinach Pesto Pizza (L)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "cd40eb0c-ac83-4156-8588-5b30e0b65583",
+    "org_id": null,
+    "ingredient_id": "96eefe07-87e4-4981-b702-f34b8b36e681",
+    "txn_type": "CONSUME",
+    "qty_delta": -12,
+    "created_at": "2026-03-18T23:45:04.23019+00:00",
+    "note": "Order DEMO-20260315-B: The Spinach Pesto Pizza (L)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "fe993617-0c8f-4a6d-8caa-6becd05ae45c",
+    "org_id": null,
+    "ingredient_id": "3afb0652-fb0d-4dde-a9d3-efc90bc215d2",
+    "txn_type": "CONSUME",
+    "qty_delta": -12,
+    "created_at": "2026-03-18T23:45:04.23019+00:00",
+    "note": "Order DEMO-20260315-B: The Sicilian Pizza (M)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "10e66c54-96d1-4ebb-b2b6-4fde8afecf1d",
+    "org_id": null,
+    "ingredient_id": "2612c2d9-18a0-4aee-8191-e9e0f9cbca69",
+    "txn_type": "CONSUME",
+    "qty_delta": -12,
+    "created_at": "2026-03-18T23:45:04.23019+00:00",
+    "note": "Order DEMO-20260315-B: The Sicilian Pizza (M)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "c4428267-5a67-4d7d-a34d-a88feac46c21",
+    "org_id": null,
+    "ingredient_id": "cb69071c-76d5-4979-a7ab-ae63a38a3dda",
+    "txn_type": "CONSUME",
+    "qty_delta": -12,
+    "created_at": "2026-03-18T23:45:04.23019+00:00",
+    "note": "Order DEMO-20260315-B: The Sicilian Pizza (M)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "f2524ed6-ad44-46fe-9733-9fe162ccda27",
+    "org_id": null,
+    "ingredient_id": "d978fd02-fd92-451f-b6a1-9531e8b7e78f",
+    "txn_type": "CONSUME",
+    "qty_delta": -24,
+    "created_at": "2026-03-18T23:45:04.23019+00:00",
+    "note": "Order DEMO-20260315-B: The Sicilian Pizza (M)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "4dd2a318-9924-41fa-ad8e-88ab6fcf4749",
+    "org_id": null,
+    "ingredient_id": "b56a2ee4-ae4f-4adf-b739-f5050dbe7200",
+    "txn_type": "CONSUME",
+    "qty_delta": -48,
+    "created_at": "2026-03-18T23:45:04.23019+00:00",
+    "note": "Order DEMO-20260315-B: The Sicilian Pizza (M)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "9fd7400e-15b7-43b7-a2e7-d0c3e423e515",
+    "org_id": null,
+    "ingredient_id": "89e9b8b1-dd83-4794-b2d7-160be5453b57",
+    "txn_type": "CONSUME",
+    "qty_delta": -36,
+    "created_at": "2026-03-18T23:45:04.23019+00:00",
+    "note": "Order DEMO-20260315-B: The Sicilian Pizza (M)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "77c802b3-da52-4368-a41e-3731623168a4",
+    "org_id": null,
+    "ingredient_id": "d4e95924-56db-4483-ba7f-a7393531c5c2",
+    "txn_type": "CONSUME",
+    "qty_delta": -6,
+    "created_at": "2026-03-18T23:45:04.23019+00:00",
+    "note": "Order DEMO-20260315-B: The Sicilian Pizza (M)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "94d753af-8ec7-4ce8-b422-94ba7d68ccb7",
+    "org_id": null,
+    "ingredient_id": "edf4ac54-e9ab-4f31-a6ea-6da7ae33d18c",
+    "txn_type": "CONSUME",
+    "qty_delta": -24,
+    "created_at": "2026-03-18T23:45:04.425907+00:00",
+    "note": "Order DEMO-20260315-C: The Spinach Pesto Pizza (L)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "63686ccf-8a3a-49b9-870d-b0172ddbf87b",
+    "org_id": null,
+    "ingredient_id": "b56a2ee4-ae4f-4adf-b739-f5050dbe7200",
+    "txn_type": "CONSUME",
+    "qty_delta": -48,
+    "created_at": "2026-03-18T23:45:04.425907+00:00",
+    "note": "Order DEMO-20260315-C: The Spinach Pesto Pizza (L)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "fd1a9ebd-f73e-44b1-9241-e18fa26d6505",
+    "org_id": null,
+    "ingredient_id": "bd551072-e0ad-48f2-ae52-a81a18a11d6a",
+    "txn_type": "CONSUME",
+    "qty_delta": -36,
+    "created_at": "2026-03-18T23:45:04.425907+00:00",
+    "note": "Order DEMO-20260315-C: The Spinach Pesto Pizza (L)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "59831dc6-8982-4e04-abce-ce77678a7ab8",
+    "org_id": null,
+    "ingredient_id": "d4e95924-56db-4483-ba7f-a7393531c5c2",
+    "txn_type": "CONSUME",
+    "qty_delta": -6,
+    "created_at": "2026-03-18T23:45:04.425907+00:00",
+    "note": "Order DEMO-20260315-C: The Spinach Pesto Pizza (L)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "83ef3fd5-021a-4ab6-a219-a5f23f5613fb",
+    "org_id": null,
+    "ingredient_id": "d6e7c237-00de-45a9-baf6-79950c4f0253",
+    "txn_type": "CONSUME",
+    "qty_delta": -96,
+    "created_at": "2026-03-18T23:45:04.425907+00:00",
+    "note": "Order DEMO-20260315-C: The Spinach Pesto Pizza (L)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "8808a70d-8602-4704-8ae1-81844fe913da",
+    "org_id": null,
+    "ingredient_id": "3afb0652-fb0d-4dde-a9d3-efc90bc215d2",
+    "txn_type": "CONSUME",
+    "qty_delta": -4,
+    "created_at": "2026-03-18T23:45:04.425907+00:00",
+    "note": "Order DEMO-20260315-C: The Southwest Chicken Pizza (S)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "0121970c-d530-4604-80ea-22fe3c08d38f",
+    "org_id": null,
+    "ingredient_id": "2612c2d9-18a0-4aee-8191-e9e0f9cbca69",
+    "txn_type": "CONSUME",
+    "qty_delta": -4,
+    "created_at": "2026-03-18T23:45:04.425907+00:00",
+    "note": "Order DEMO-20260315-C: The Southwest Chicken Pizza (S)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "76bde9b5-3dd4-4bb0-b2e1-725b651cade7",
+    "org_id": null,
+    "ingredient_id": "432c222b-ece8-44b7-9d3b-0178234e96a9",
+    "txn_type": "CONSUME",
+    "qty_delta": -4,
+    "created_at": "2026-03-18T23:45:04.425907+00:00",
+    "note": "Order DEMO-20260315-C: The Southwest Chicken Pizza (S)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "ea305b5c-2e05-4d7a-a6d4-8a3f646e6320",
+    "org_id": null,
+    "ingredient_id": "13ff5b4b-6765-4ca6-8b75-4455bec52d7f",
+    "txn_type": "CONSUME",
+    "qty_delta": -12,
+    "created_at": "2026-03-18T23:45:04.425907+00:00",
+    "note": "Order DEMO-20260315-C: The Southwest Chicken Pizza (S)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "0de8a498-90eb-452b-82dd-398c02f7ac3b",
+    "org_id": null,
+    "ingredient_id": "b56a2ee4-ae4f-4adf-b739-f5050dbe7200",
+    "txn_type": "CONSUME",
+    "qty_delta": -16,
+    "created_at": "2026-03-18T23:45:04.425907+00:00",
+    "note": "Order DEMO-20260315-C: The Southwest Chicken Pizza (S)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "1c7b0b2f-25c3-4ade-8108-765d56ac7fdc",
+    "org_id": null,
+    "ingredient_id": "89e9b8b1-dd83-4794-b2d7-160be5453b57",
+    "txn_type": "CONSUME",
+    "qty_delta": -12,
+    "created_at": "2026-03-18T23:45:04.425907+00:00",
+    "note": "Order DEMO-20260315-C: The Southwest Chicken Pizza (S)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "d1dd1133-1f52-4245-ae2d-9f6f0ebcc040",
+    "org_id": null,
+    "ingredient_id": "d4e95924-56db-4483-ba7f-a7393531c5c2",
+    "txn_type": "CONSUME",
+    "qty_delta": -2,
+    "created_at": "2026-03-18T23:45:04.425907+00:00",
+    "note": "Order DEMO-20260315-C: The Southwest Chicken Pizza (S)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "c14a939a-69ce-4ed9-b768-b72a116a8d0f",
+    "org_id": null,
+    "ingredient_id": "d6e7c237-00de-45a9-baf6-79950c4f0253",
+    "txn_type": "CONSUME",
+    "qty_delta": -32,
+    "created_at": "2026-03-18T23:45:04.425907+00:00",
+    "note": "Order DEMO-20260315-C: The Southwest Chicken Pizza (S)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "a6f03b32-0999-42d1-893b-c3ea6bf2d979",
+    "org_id": null,
+    "ingredient_id": "2fc5b6e8-b790-4e5d-8f6e-da92faf1c531",
+    "txn_type": "CONSUME",
+    "qty_delta": -12,
+    "created_at": "2026-03-18T23:45:04.425907+00:00",
+    "note": "Order DEMO-20260315-C: The Spinach Pesto Pizza (L)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "1c133d5a-32b5-4add-8e30-41dff76ac051",
+    "org_id": null,
+    "ingredient_id": "6fd49b0c-26a7-447d-9f82-3f9df591ba56",
+    "txn_type": "CONSUME",
+    "qty_delta": -4.5,
+    "created_at": "2026-03-18T23:45:04.425907+00:00",
+    "note": "Order DEMO-20260315-C: The Pepper Salami Pizza (S)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "e723340e-06df-43ae-9032-8486d5fac7a0",
+    "org_id": null,
+    "ingredient_id": "f55ceb2f-6b45-40aa-99bb-39cd2552c920",
+    "txn_type": "CONSUME",
+    "qty_delta": -7.5,
+    "created_at": "2026-03-18T23:45:04.425907+00:00",
+    "note": "Order DEMO-20260315-C: The Pepper Salami Pizza (S)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "0a58c6c5-037b-44a9-ac05-637162b3fa25",
+    "org_id": null,
+    "ingredient_id": "b56a2ee4-ae4f-4adf-b739-f5050dbe7200",
+    "txn_type": "CONSUME",
+    "qty_delta": -12,
+    "created_at": "2026-03-18T23:45:04.425907+00:00",
+    "note": "Order DEMO-20260315-C: The Pepper Salami Pizza (S)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "b8ab797e-ffd1-4586-991f-18e8148dc423",
+    "org_id": null,
+    "ingredient_id": "89e9b8b1-dd83-4794-b2d7-160be5453b57",
+    "txn_type": "CONSUME",
+    "qty_delta": -9,
+    "created_at": "2026-03-18T23:45:04.425907+00:00",
+    "note": "Order DEMO-20260315-C: The Pepper Salami Pizza (S)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "c1c07d9f-99a7-471f-9868-2d16b7b17710",
+    "org_id": null,
+    "ingredient_id": "d4e95924-56db-4483-ba7f-a7393531c5c2",
+    "txn_type": "CONSUME",
+    "qty_delta": -1.5,
+    "created_at": "2026-03-18T23:45:04.425907+00:00",
+    "note": "Order DEMO-20260315-C: The Pepper Salami Pizza (S)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "ffe1fbb9-c68f-4324-bde1-12c6e780468a",
+    "org_id": null,
+    "ingredient_id": "d6e7c237-00de-45a9-baf6-79950c4f0253",
+    "txn_type": "CONSUME",
+    "qty_delta": -24,
+    "created_at": "2026-03-18T23:45:04.425907+00:00",
+    "note": "Order DEMO-20260315-C: The Pepper Salami Pizza (S)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "b04464ce-0508-4725-a19b-620f3f3192a3",
+    "org_id": null,
+    "ingredient_id": "3afb0652-fb0d-4dde-a9d3-efc90bc215d2",
+    "txn_type": "CONSUME",
+    "qty_delta": -6,
+    "created_at": "2026-03-18T23:45:04.425907+00:00",
+    "note": "Order DEMO-20260315-C: The Sicilian Pizza (M)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "64826150-af80-4d1c-825c-9727cccd9a48",
+    "org_id": null,
+    "ingredient_id": "2612c2d9-18a0-4aee-8191-e9e0f9cbca69",
+    "txn_type": "CONSUME",
+    "qty_delta": -6,
+    "created_at": "2026-03-18T23:45:04.425907+00:00",
+    "note": "Order DEMO-20260315-C: The Sicilian Pizza (M)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "c82559c9-9743-48b3-9eab-a2670b1efb57",
+    "org_id": null,
+    "ingredient_id": "cb69071c-76d5-4979-a7ab-ae63a38a3dda",
+    "txn_type": "CONSUME",
+    "qty_delta": -6,
+    "created_at": "2026-03-18T23:45:04.425907+00:00",
+    "note": "Order DEMO-20260315-C: The Sicilian Pizza (M)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "6b5562fe-1a56-4751-9ec8-9f451713667e",
+    "org_id": null,
+    "ingredient_id": "d978fd02-fd92-451f-b6a1-9531e8b7e78f",
+    "txn_type": "CONSUME",
+    "qty_delta": -12,
+    "created_at": "2026-03-18T23:45:04.425907+00:00",
+    "note": "Order DEMO-20260315-C: The Sicilian Pizza (M)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "e623bf77-ba3c-4918-acaa-0835cc2b9ed7",
+    "org_id": null,
+    "ingredient_id": "b56a2ee4-ae4f-4adf-b739-f5050dbe7200",
+    "txn_type": "CONSUME",
+    "qty_delta": -24,
+    "created_at": "2026-03-18T23:45:04.425907+00:00",
+    "note": "Order DEMO-20260315-C: The Sicilian Pizza (M)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "bbccd7c0-eb81-440e-9902-1d49f3ae28ea",
+    "org_id": null,
+    "ingredient_id": "89e9b8b1-dd83-4794-b2d7-160be5453b57",
+    "txn_type": "CONSUME",
+    "qty_delta": -18,
+    "created_at": "2026-03-18T23:45:04.425907+00:00",
+    "note": "Order DEMO-20260315-C: The Sicilian Pizza (M)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "f229e117-24db-4ece-85e0-49508bc4305d",
+    "org_id": null,
+    "ingredient_id": "d4e95924-56db-4483-ba7f-a7393531c5c2",
+    "txn_type": "CONSUME",
+    "qty_delta": -3,
+    "created_at": "2026-03-18T23:45:04.425907+00:00",
+    "note": "Order DEMO-20260315-C: The Sicilian Pizza (M)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "6bab4593-69f0-4e70-8797-f9b130f98ec4",
+    "org_id": null,
+    "ingredient_id": "d6e7c237-00de-45a9-baf6-79950c4f0253",
+    "txn_type": "CONSUME",
+    "qty_delta": -48,
+    "created_at": "2026-03-18T23:45:04.425907+00:00",
+    "note": "Order DEMO-20260315-C: The Sicilian Pizza (M)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "11425308-4478-43d1-9a9a-3a685dbfe47d",
+    "org_id": null,
+    "ingredient_id": "96eefe07-87e4-4981-b702-f34b8b36e681",
+    "txn_type": "CONSUME",
+    "qty_delta": -6,
+    "created_at": "2026-03-18T23:45:04.425907+00:00",
+    "note": "Order DEMO-20260315-C: The Spinach Pesto Pizza (L)",
+    "business_date": "2026-04-19"
+  },
+  {
+    "id": "5c58457e-44b3-46ee-a4ce-cd9425d7e5dc",
+    "org_id": null,
+    "ingredient_id": "d6e7c237-00de-45a9-baf6-79950c4f0253",
+    "txn_type": "CONSUME",
+    "qty_delta": -512,
+    "created_at": "2026-03-18T23:45:05.071662+00:00",
+    "note": "Order DEMO-20260316-C: The Barbecue Chicken Pizza (L)",
+    "business_date": "2026-04-20"
+  },
+  {
+    "id": "6295a175-5747-449e-b27c-d54af8125ee1",
+    "org_id": null,
+    "ingredient_id": "d4e95924-56db-4483-ba7f-a7393531c5c2",
+    "txn_type": "CONSUME",
+    "qty_delta": -32,
+    "created_at": "2026-03-18T23:45:05.071662+00:00",
+    "note": "Order DEMO-20260316-C: The Barbecue Chicken Pizza (L)",
+    "business_date": "2026-04-20"
+  },
+  {
+    "id": "a5563fd2-6f3b-4d0f-98f3-c7844a6e109a",
+    "org_id": null,
+    "ingredient_id": "b56a2ee4-ae4f-4adf-b739-f5050dbe7200",
+    "txn_type": "CONSUME",
+    "qty_delta": -256,
+    "created_at": "2026-03-18T23:45:05.071662+00:00",
+    "note": "Order DEMO-20260316-C: The Barbecue Chicken Pizza (L)",
+    "business_date": "2026-04-20"
+  },
+  {
+    "id": "870b4bff-8951-432e-8ece-8597ed3aa1f0",
+    "org_id": null,
+    "ingredient_id": "54991a9d-849a-484a-95f5-f1c41f9d2701",
+    "txn_type": "CONSUME",
+    "qty_delta": -192,
+    "created_at": "2026-03-18T23:45:05.071662+00:00",
+    "note": "Order DEMO-20260316-C: The Barbecue Chicken Pizza (L)",
+    "business_date": "2026-04-20"
+  },
+  {
+    "id": "089441b3-dc95-4e7e-a4e4-2a8ec201b869",
+    "org_id": null,
+    "ingredient_id": "2612c2d9-18a0-4aee-8191-e9e0f9cbca69",
+    "txn_type": "CONSUME",
+    "qty_delta": -40,
+    "created_at": "2026-03-18T23:45:05.269711+00:00",
+    "note": "Order DEMO-20260316-D: The Barbecue Chicken Pizza (L)",
+    "business_date": "2026-04-20"
+  },
+  {
+    "id": "ce25484d-6a1f-4670-92ea-b72a4cd06f42",
+    "org_id": null,
+    "ingredient_id": "d6e7c237-00de-45a9-baf6-79950c4f0253",
+    "txn_type": "CONSUME",
+    "qty_delta": -320,
+    "created_at": "2026-03-18T23:45:05.269711+00:00",
+    "note": "Order DEMO-20260316-D: The Barbecue Chicken Pizza (L)",
+    "business_date": "2026-04-20"
+  },
+  {
+    "id": "78c218cb-1501-4f80-b54a-e5b7b5272a92",
+    "org_id": null,
+    "ingredient_id": "dd5527fd-62fc-4c86-81cb-95ec24c832ae",
+    "txn_type": "CONSUME",
+    "qty_delta": -120,
+    "created_at": "2026-03-18T23:45:05.269711+00:00",
+    "note": "Order DEMO-20260316-D: The Barbecue Chicken Pizza (L)",
+    "business_date": "2026-04-20"
+  },
+  {
+    "id": "80ae03a2-08f5-4b58-8fd7-d87eef6074bf",
+    "org_id": null,
+    "ingredient_id": "d4e95924-56db-4483-ba7f-a7393531c5c2",
+    "txn_type": "CONSUME",
+    "qty_delta": -20,
+    "created_at": "2026-03-18T23:45:05.269711+00:00",
+    "note": "Order DEMO-20260316-D: The Barbecue Chicken Pizza (L)",
+    "business_date": "2026-04-20"
+  },
+  {
+    "id": "4205ffa9-7ac4-466b-8708-42a976b5581e",
+    "org_id": null,
+    "ingredient_id": "54991a9d-849a-484a-95f5-f1c41f9d2701",
+    "txn_type": "CONSUME",
+    "qty_delta": -120,
+    "created_at": "2026-03-18T23:45:05.269711+00:00",
+    "note": "Order DEMO-20260316-D: The Barbecue Chicken Pizza (L)",
+    "business_date": "2026-04-20"
+  },
+  {
+    "id": "aa803785-2c19-4195-b604-d731b6b0e938",
+    "org_id": null,
+    "ingredient_id": "b56a2ee4-ae4f-4adf-b739-f5050dbe7200",
+    "txn_type": "CONSUME",
+    "qty_delta": -160,
+    "created_at": "2026-03-18T23:45:05.269711+00:00",
+    "note": "Order DEMO-20260316-D: The Barbecue Chicken Pizza (L)",
+    "business_date": "2026-04-20"
+  },
+  {
+    "id": "672ccefc-b14c-4ced-9dc8-5f9e23478a69",
+    "org_id": null,
+    "ingredient_id": "2612c2d9-18a0-4aee-8191-e9e0f9cbca69",
+    "txn_type": "CONSUME",
+    "qty_delta": -16,
+    "created_at": "2026-03-18T23:45:05.416999+00:00",
+    "note": "Order DEMO-20260316-E: The Barbecue Chicken Pizza (L)",
+    "business_date": "2026-04-20"
+  },
+  {
+    "id": "7a272239-5a91-475e-b0e4-b36e3c1eb4e5",
+    "org_id": null,
+    "ingredient_id": "dd5527fd-62fc-4c86-81cb-95ec24c832ae",
+    "txn_type": "CONSUME",
+    "qty_delta": -48,
+    "created_at": "2026-03-18T23:45:05.416999+00:00",
+    "note": "Order DEMO-20260316-E: The Barbecue Chicken Pizza (L)",
+    "business_date": "2026-04-20"
+  },
+  {
+    "id": "4c2da703-4d5d-42ae-8fd0-65e341eaccac",
+    "org_id": null,
+    "ingredient_id": "b56a2ee4-ae4f-4adf-b739-f5050dbe7200",
+    "txn_type": "CONSUME",
+    "qty_delta": -64,
+    "created_at": "2026-03-18T23:45:05.416999+00:00",
+    "note": "Order DEMO-20260316-E: The Barbecue Chicken Pizza (L)",
+    "business_date": "2026-04-20"
+  },
+  {
+    "id": "57a89f52-66d4-44c1-9dc9-570a3ac956ce",
+    "org_id": null,
+    "ingredient_id": "54991a9d-849a-484a-95f5-f1c41f9d2701",
+    "txn_type": "CONSUME",
+    "qty_delta": -48,
+    "created_at": "2026-03-18T23:45:05.416999+00:00",
+    "note": "Order DEMO-20260316-E: The Barbecue Chicken Pizza (L)",
+    "business_date": "2026-04-20"
+  },
+  {
+    "id": "8982ddb1-e32e-4545-aba1-e654199bea28",
+    "org_id": null,
+    "ingredient_id": "d4e95924-56db-4483-ba7f-a7393531c5c2",
+    "txn_type": "CONSUME",
+    "qty_delta": -8,
+    "created_at": "2026-03-18T23:45:05.416999+00:00",
+    "note": "Order DEMO-20260316-E: The Barbecue Chicken Pizza (L)",
+    "business_date": "2026-04-20"
+  },
+  {
+    "id": "e14e22ab-0594-4fc2-9c5e-629569e39688",
+    "org_id": null,
+    "ingredient_id": "d6e7c237-00de-45a9-baf6-79950c4f0253",
+    "txn_type": "CONSUME",
+    "qty_delta": -384,
+    "created_at": "2026-03-18T23:45:04.662874+00:00",
+    "note": "Order DEMO-20260316-A: The Barbecue Chicken Pizza (L)",
+    "business_date": "2026-04-20"
+  },
+  {
+    "id": "c59913d1-b4af-4778-b261-9ad8307b751a",
+    "org_id": null,
+    "ingredient_id": "89e9b8b1-dd83-4794-b2d7-160be5453b57",
+    "txn_type": "CONSUME",
+    "qty_delta": -12,
+    "created_at": "2026-03-18T23:45:04.662874+00:00",
+    "note": "Order DEMO-20260316-A: The California Chicken Pizza (L)",
+    "business_date": "2026-04-20"
+  },
+  {
+    "id": "5f42f770-8782-4059-b4b6-ca20e37c146d",
+    "org_id": null,
+    "ingredient_id": "d4e95924-56db-4483-ba7f-a7393531c5c2",
+    "txn_type": "CONSUME",
+    "qty_delta": -2,
+    "created_at": "2026-03-18T23:45:04.662874+00:00",
+    "note": "Order DEMO-20260316-A: The California Chicken Pizza (L)",
+    "business_date": "2026-04-20"
+  },
+  {
+    "id": "0ef1463c-dacd-48fc-a0e2-1973d6bd6a14",
+    "org_id": null,
+    "ingredient_id": "d6e7c237-00de-45a9-baf6-79950c4f0253",
+    "txn_type": "CONSUME",
+    "qty_delta": -32,
+    "created_at": "2026-03-18T23:45:04.662874+00:00",
+    "note": "Order DEMO-20260316-A: The California Chicken Pizza (L)",
+    "business_date": "2026-04-20"
+  },
+  {
+    "id": "252b18cd-c187-4d03-a21b-3541afdd3d67",
+    "org_id": null,
+    "ingredient_id": "2612c2d9-18a0-4aee-8191-e9e0f9cbca69",
+    "txn_type": "CONSUME",
+    "qty_delta": -48,
+    "created_at": "2026-03-18T23:45:04.662874+00:00",
+    "note": "Order DEMO-20260316-A: The Barbecue Chicken Pizza (L)",
+    "business_date": "2026-04-20"
+  },
+  {
+    "id": "6441d104-31d3-4ba8-b956-19c1177380cc",
+    "org_id": null,
+    "ingredient_id": "dd5527fd-62fc-4c86-81cb-95ec24c832ae",
+    "txn_type": "CONSUME",
+    "qty_delta": -144,
+    "created_at": "2026-03-18T23:45:04.662874+00:00",
+    "note": "Order DEMO-20260316-A: The Barbecue Chicken Pizza (L)",
+    "business_date": "2026-04-20"
+  },
+  {
+    "id": "4bd1dd0e-f335-4ebd-8325-9aec56da2f17",
+    "org_id": null,
+    "ingredient_id": "b56a2ee4-ae4f-4adf-b739-f5050dbe7200",
+    "txn_type": "CONSUME",
+    "qty_delta": -192,
+    "created_at": "2026-03-18T23:45:04.662874+00:00",
+    "note": "Order DEMO-20260316-A: The Barbecue Chicken Pizza (L)",
+    "business_date": "2026-04-20"
+  },
+  {
+    "id": "100b108a-2acb-4bc8-8d13-c228f6896862",
+    "org_id": null,
+    "ingredient_id": "54991a9d-849a-484a-95f5-f1c41f9d2701",
+    "txn_type": "CONSUME",
+    "qty_delta": -144,
+    "created_at": "2026-03-18T23:45:04.662874+00:00",
+    "note": "Order DEMO-20260316-A: The Barbecue Chicken Pizza (L)",
+    "business_date": "2026-04-20"
+  },
+  {
+    "id": "ec2d45d1-21e7-45fd-966a-687f38b78246",
+    "org_id": null,
+    "ingredient_id": "d4e95924-56db-4483-ba7f-a7393531c5c2",
+    "txn_type": "CONSUME",
+    "qty_delta": -24,
+    "created_at": "2026-03-18T23:45:04.662874+00:00",
+    "note": "Order DEMO-20260316-A: The Barbecue Chicken Pizza (L)",
+    "business_date": "2026-04-20"
+  },
+  {
+    "id": "5b26694e-58c7-4795-ba4c-d5edcd0ebeb5",
+    "org_id": null,
+    "ingredient_id": "7767e4e6-7b4f-4ef0-b5bd-b1a305a8ec43",
+    "txn_type": "CONSUME",
+    "qty_delta": -2,
+    "created_at": "2026-03-18T23:45:04.662874+00:00",
+    "note": "Order DEMO-20260316-A: The California Chicken Pizza (L)",
+    "business_date": "2026-04-20"
+  },
+  {
+    "id": "22df5cb7-02c5-4c2a-9b60-fff9e7ca46cb",
+    "org_id": null,
+    "ingredient_id": "2fc5b6e8-b790-4e5d-8f6e-da92faf1c531",
+    "txn_type": "CONSUME",
+    "qty_delta": -6,
+    "created_at": "2026-03-18T23:45:04.662874+00:00",
+    "note": "Order DEMO-20260316-A: The California Chicken Pizza (L)",
+    "business_date": "2026-04-20"
+  },
+  {
+    "id": "21823644-8e2c-4009-85fa-248e1811aaa0",
+    "org_id": null,
+    "ingredient_id": "13ff5b4b-6765-4ca6-8b75-4455bec52d7f",
+    "txn_type": "CONSUME",
+    "qty_delta": -12,
+    "created_at": "2026-03-18T23:45:04.662874+00:00",
+    "note": "Order DEMO-20260316-A: The California Chicken Pizza (L)",
+    "business_date": "2026-04-20"
+  },
+  {
+    "id": "5bfe9bd5-0b0b-4a5b-807c-839dd07f9d18",
+    "org_id": null,
+    "ingredient_id": "b56a2ee4-ae4f-4adf-b739-f5050dbe7200",
+    "txn_type": "CONSUME",
+    "qty_delta": -16,
+    "created_at": "2026-03-18T23:45:04.662874+00:00",
+    "note": "Order DEMO-20260316-A: The California Chicken Pizza (L)",
+    "business_date": "2026-04-20"
+  },
+  {
+    "id": "c7d4c15b-23f8-4cbf-985a-9008305443cc",
+    "org_id": null,
+    "ingredient_id": "d4e95924-56db-4483-ba7f-a7393531c5c2",
+    "txn_type": "CONSUME",
+    "qty_delta": -18,
+    "created_at": "2026-03-18T23:45:04.863606+00:00",
+    "note": "Order DEMO-20260316-B: The Barbecue Chicken Pizza (L)",
+    "business_date": "2026-04-20"
+  },
+  {
+    "id": "2574ce72-92e1-4df1-a3d4-702753d163f2",
+    "org_id": null,
+    "ingredient_id": "d6e7c237-00de-45a9-baf6-79950c4f0253",
+    "txn_type": "CONSUME",
+    "qty_delta": -288,
+    "created_at": "2026-03-18T23:45:04.863606+00:00",
+    "note": "Order DEMO-20260316-B: The Barbecue Chicken Pizza (L)",
+    "business_date": "2026-04-20"
+  },
+  {
+    "id": "33feab9b-ce6b-4e8c-bd22-f515abaabc13",
+    "org_id": null,
+    "ingredient_id": "2612c2d9-18a0-4aee-8191-e9e0f9cbca69",
+    "txn_type": "CONSUME",
+    "qty_delta": -36,
+    "created_at": "2026-03-18T23:45:04.863606+00:00",
+    "note": "Order DEMO-20260316-B: The Barbecue Chicken Pizza (L)",
+    "business_date": "2026-04-20"
+  },
+  {
+    "id": "a613e8f3-06db-4176-bfc3-a80244c569df",
+    "org_id": null,
+    "ingredient_id": "dd5527fd-62fc-4c86-81cb-95ec24c832ae",
+    "txn_type": "CONSUME",
+    "qty_delta": -108,
+    "created_at": "2026-03-18T23:45:04.863606+00:00",
+    "note": "Order DEMO-20260316-B: The Barbecue Chicken Pizza (L)",
+    "business_date": "2026-04-20"
+  },
+  {
+    "id": "e257a800-ad04-487c-8bb4-36cac45999c1",
+    "org_id": null,
+    "ingredient_id": "b56a2ee4-ae4f-4adf-b739-f5050dbe7200",
+    "txn_type": "CONSUME",
+    "qty_delta": -144,
+    "created_at": "2026-03-18T23:45:04.863606+00:00",
+    "note": "Order DEMO-20260316-B: The Barbecue Chicken Pizza (L)",
+    "business_date": "2026-04-20"
+  },
+  {
+    "id": "9d1bf57e-a296-4bdd-9409-9aa81ca24632",
+    "org_id": null,
+    "ingredient_id": "54991a9d-849a-484a-95f5-f1c41f9d2701",
+    "txn_type": "CONSUME",
+    "qty_delta": -108,
+    "created_at": "2026-03-18T23:45:04.863606+00:00",
+    "note": "Order DEMO-20260316-B: The Barbecue Chicken Pizza (L)",
+    "business_date": "2026-04-20"
+  },
+  {
+    "id": "904092ab-e026-4317-8458-b94521e02794",
+    "org_id": null,
+    "ingredient_id": "dd5527fd-62fc-4c86-81cb-95ec24c832ae",
+    "txn_type": "CONSUME",
+    "qty_delta": -192,
+    "created_at": "2026-03-18T23:45:05.071662+00:00",
+    "note": "Order DEMO-20260316-C: The Barbecue Chicken Pizza (L)",
+    "business_date": "2026-04-20"
+  },
+  {
+    "id": "f21e37b7-41e3-4028-bd99-72fc818599fa",
+    "org_id": null,
+    "ingredient_id": "2612c2d9-18a0-4aee-8191-e9e0f9cbca69",
+    "txn_type": "CONSUME",
+    "qty_delta": -64,
+    "created_at": "2026-03-18T23:45:05.071662+00:00",
+    "note": "Order DEMO-20260316-C: The Barbecue Chicken Pizza (L)",
+    "business_date": "2026-04-20"
+  },
+  {
+    "id": "6219840e-ed16-4c4c-8d63-e5a2420e78bc",
+    "org_id": null,
+    "ingredient_id": "d6e7c237-00de-45a9-baf6-79950c4f0253",
+    "txn_type": "CONSUME",
+    "qty_delta": -128,
+    "created_at": "2026-03-18T23:45:05.416999+00:00",
+    "note": "Order DEMO-20260316-E: The Barbecue Chicken Pizza (L)",
+    "business_date": "2026-04-20"
+  },
+  {
+    "id": "c1e50a34-3233-4709-871b-f3e59724633c",
+    "org_id": null,
+    "ingredient_id": "3904cd16-a7ea-4985-b3eb-5677d1022f49",
+    "txn_type": "CONSUME",
+    "qty_delta": -72,
+    "created_at": "2026-03-18T23:45:05.594948+00:00",
+    "note": "Order DEMO-20260317-A: The Greek Pizza (L)",
+    "business_date": "2026-04-21"
+  },
+  {
+    "id": "1ce4e368-ac02-4978-83ce-d720b66ca7cf",
+    "org_id": null,
+    "ingredient_id": "d4e95924-56db-4483-ba7f-a7393531c5c2",
+    "txn_type": "CONSUME",
+    "qty_delta": -12,
+    "created_at": "2026-03-18T23:45:05.594948+00:00",
+    "note": "Order DEMO-20260317-A: The Hawaiian Pizza (L)",
+    "business_date": "2026-04-21"
+  },
+  {
+    "id": "6483b7e2-1e4b-4882-9c83-d66693c08577",
+    "org_id": null,
+    "ingredient_id": "d6e7c237-00de-45a9-baf6-79950c4f0253",
+    "txn_type": "CONSUME",
+    "qty_delta": -192,
+    "created_at": "2026-03-18T23:45:05.594948+00:00",
+    "note": "Order DEMO-20260317-A: The Hawaiian Pizza (L)",
+    "business_date": "2026-04-21"
+  },
+  {
+    "id": "9d9e38a1-c4b4-420a-a97c-65bafa4fa104",
+    "org_id": null,
+    "ingredient_id": "2fc5b6e8-b790-4e5d-8f6e-da92faf1c531",
+    "txn_type": "CONSUME",
+    "qty_delta": -36,
+    "created_at": "2026-03-18T23:45:05.594948+00:00",
+    "note": "Order DEMO-20260317-A: The Greek Pizza (L)",
+    "business_date": "2026-04-21"
+  },
+  {
+    "id": "a80bc624-4fda-4706-8c95-bda2225b0701",
+    "org_id": null,
+    "ingredient_id": "2612c2d9-18a0-4aee-8191-e9e0f9cbca69",
+    "txn_type": "CONSUME",
+    "qty_delta": -36,
+    "created_at": "2026-03-18T23:45:05.594948+00:00",
+    "note": "Order DEMO-20260317-A: The Greek Pizza (L)",
+    "business_date": "2026-04-21"
+  },
+  {
+    "id": "80aa8505-c187-4393-bc65-a5118769b41c",
+    "org_id": null,
+    "ingredient_id": "58cd927b-ec4e-429b-9548-af9f05926b16",
+    "txn_type": "CONSUME",
+    "qty_delta": -36,
+    "created_at": "2026-03-18T23:45:05.594948+00:00",
+    "note": "Order DEMO-20260317-A: The Greek Pizza (L)",
+    "business_date": "2026-04-21"
+  },
+  {
+    "id": "dbf56efc-c93d-4d5d-88ac-ef2c23fc493e",
+    "org_id": null,
+    "ingredient_id": "b56a2ee4-ae4f-4adf-b739-f5050dbe7200",
+    "txn_type": "CONSUME",
+    "qty_delta": -144,
+    "created_at": "2026-03-18T23:45:05.594948+00:00",
+    "note": "Order DEMO-20260317-A: The Greek Pizza (L)",
+    "business_date": "2026-04-21"
+  },
+  {
+    "id": "4583cf22-f4fa-4b19-8553-d501b0c86a4c",
+    "org_id": null,
+    "ingredient_id": "89e9b8b1-dd83-4794-b2d7-160be5453b57",
+    "txn_type": "CONSUME",
+    "qty_delta": -108,
+    "created_at": "2026-03-18T23:45:05.594948+00:00",
+    "note": "Order DEMO-20260317-A: The Greek Pizza (L)",
+    "business_date": "2026-04-21"
+  },
+  {
+    "id": "bee9b510-5dc0-453d-b1bf-4886bb103285",
+    "org_id": null,
+    "ingredient_id": "d4e95924-56db-4483-ba7f-a7393531c5c2",
+    "txn_type": "CONSUME",
+    "qty_delta": -18,
+    "created_at": "2026-03-18T23:45:05.594948+00:00",
+    "note": "Order DEMO-20260317-A: The Greek Pizza (L)",
+    "business_date": "2026-04-21"
+  },
+  {
+    "id": "c5879727-c146-405b-a38e-6d76dbb39b18",
+    "org_id": null,
+    "ingredient_id": "d6e7c237-00de-45a9-baf6-79950c4f0253",
+    "txn_type": "CONSUME",
+    "qty_delta": -288,
+    "created_at": "2026-03-18T23:45:05.594948+00:00",
+    "note": "Order DEMO-20260317-A: The Greek Pizza (L)",
+    "business_date": "2026-04-21"
+  },
+  {
+    "id": "51c5eb76-cb1b-4e7f-8c6c-77d5bc965937",
+    "org_id": null,
+    "ingredient_id": "b56a2ee4-ae4f-4adf-b739-f5050dbe7200",
+    "txn_type": "CONSUME",
+    "qty_delta": -96,
+    "created_at": "2026-03-18T23:45:05.825282+00:00",
+    "note": "Order DEMO-20260317-B: The Greek Pizza (L)",
+    "business_date": "2026-04-21"
+  },
+  {
+    "id": "99c79b40-ac1a-4b45-a7de-0c8fec7c0122",
+    "org_id": null,
+    "ingredient_id": "d6e7c237-00de-45a9-baf6-79950c4f0253",
+    "txn_type": "CONSUME",
+    "qty_delta": -192,
+    "created_at": "2026-03-18T23:45:05.825282+00:00",
+    "note": "Order DEMO-20260317-B: The Greek Pizza (L)",
+    "business_date": "2026-04-21"
+  },
+  {
+    "id": "164cefd9-aeeb-46b2-9788-2f4332b039fc",
+    "org_id": null,
+    "ingredient_id": "89e9b8b1-dd83-4794-b2d7-160be5453b57",
+    "txn_type": "CONSUME",
+    "qty_delta": -72,
+    "created_at": "2026-03-18T23:45:05.825282+00:00",
+    "note": "Order DEMO-20260317-B: The Greek Pizza (L)",
+    "business_date": "2026-04-21"
+  },
+  {
+    "id": "7109348e-dedb-4240-a688-c1208fe21dc9",
+    "org_id": null,
+    "ingredient_id": "d4e95924-56db-4483-ba7f-a7393531c5c2",
+    "txn_type": "CONSUME",
+    "qty_delta": -12,
+    "created_at": "2026-03-18T23:45:05.825282+00:00",
+    "note": "Order DEMO-20260317-B: The Greek Pizza (L)",
+    "business_date": "2026-04-21"
+  },
+  {
+    "id": "a9b88b71-56d1-4b86-b83b-83c61b9098c0",
+    "org_id": null,
+    "ingredient_id": "3904cd16-a7ea-4985-b3eb-5677d1022f49",
+    "txn_type": "CONSUME",
+    "qty_delta": -48,
+    "created_at": "2026-03-18T23:45:05.825282+00:00",
+    "note": "Order DEMO-20260317-B: The Greek Pizza (L)",
+    "business_date": "2026-04-21"
+  },
+  {
+    "id": "fb41b2d9-7178-47e1-a94a-0473d30bfc34",
+    "org_id": null,
+    "ingredient_id": "2fc5b6e8-b790-4e5d-8f6e-da92faf1c531",
+    "txn_type": "CONSUME",
+    "qty_delta": -22,
+    "created_at": "2026-03-18T23:45:06.063063+00:00",
+    "note": "Order DEMO-20260317-C: The Greek Pizza (L)",
+    "business_date": "2026-04-21"
+  },
+  {
+    "id": "9143ce20-5cc0-44f3-b3e5-aab561aab09a",
+    "org_id": null,
+    "ingredient_id": "d4e95924-56db-4483-ba7f-a7393531c5c2",
+    "txn_type": "CONSUME",
+    "qty_delta": -7,
+    "created_at": "2026-03-18T23:45:06.063063+00:00",
+    "note": "Order DEMO-20260317-C: The Hawaiian Pizza (L)",
+    "business_date": "2026-04-21"
+  },
+  {
+    "id": "bd3de879-f817-4ffc-8545-8d8d418b8fee",
+    "org_id": null,
+    "ingredient_id": "89e9b8b1-dd83-4794-b2d7-160be5453b57",
+    "txn_type": "CONSUME",
+    "qty_delta": -42,
+    "created_at": "2026-03-18T23:45:06.063063+00:00",
+    "note": "Order DEMO-20260317-C: The Hawaiian Pizza (L)",
+    "business_date": "2026-04-21"
+  },
+  {
+    "id": "d679f1b5-30a4-482f-85bb-996749918b6b",
+    "org_id": null,
+    "ingredient_id": "b56a2ee4-ae4f-4adf-b739-f5050dbe7200",
+    "txn_type": "CONSUME",
+    "qty_delta": -56,
+    "created_at": "2026-03-18T23:45:06.063063+00:00",
+    "note": "Order DEMO-20260317-C: The Hawaiian Pizza (L)",
+    "business_date": "2026-04-21"
+  },
+  {
+    "id": "05466a78-3724-47f0-b5e3-b29927414452",
+    "org_id": null,
+    "ingredient_id": "b8f31db9-f0b3-472a-b784-0e37fac96226",
+    "txn_type": "CONSUME",
+    "qty_delta": -35,
+    "created_at": "2026-03-18T23:45:06.063063+00:00",
+    "note": "Order DEMO-20260317-C: The Hawaiian Pizza (L)",
+    "business_date": "2026-04-21"
+  },
+  {
+    "id": "d3086b53-3225-442e-8365-66ef8bf537f1",
+    "org_id": null,
+    "ingredient_id": "47ba895a-8c9e-4d7c-a9bb-2d4fe59ca924",
+    "txn_type": "CONSUME",
+    "qty_delta": -28,
+    "created_at": "2026-03-18T23:45:06.063063+00:00",
+    "note": "Order DEMO-20260317-C: The Hawaiian Pizza (L)",
+    "business_date": "2026-04-21"
+  },
+  {
+    "id": "3240cefc-1d38-4695-a886-ab5a922b590c",
+    "org_id": null,
+    "ingredient_id": "3904cd16-a7ea-4985-b3eb-5677d1022f49",
+    "txn_type": "CONSUME",
+    "qty_delta": -44,
+    "created_at": "2026-03-18T23:45:06.063063+00:00",
+    "note": "Order DEMO-20260317-C: The Greek Pizza (L)",
+    "business_date": "2026-04-21"
+  },
+  {
+    "id": "4c22f0e9-8641-47bf-be75-f54397cfeec8",
+    "org_id": null,
+    "ingredient_id": "47ba895a-8c9e-4d7c-a9bb-2d4fe59ca924",
+    "txn_type": "CONSUME",
+    "qty_delta": -48,
+    "created_at": "2026-03-18T23:45:05.594948+00:00",
+    "note": "Order DEMO-20260317-A: The Hawaiian Pizza (L)",
+    "business_date": "2026-04-21"
+  },
+  {
+    "id": "a7dfd7f8-7b0f-4646-af25-99086358c236",
+    "org_id": null,
+    "ingredient_id": "89e9b8b1-dd83-4794-b2d7-160be5453b57",
+    "txn_type": "CONSUME",
+    "qty_delta": -72,
+    "created_at": "2026-03-18T23:45:05.594948+00:00",
+    "note": "Order DEMO-20260317-A: The Hawaiian Pizza (L)",
+    "business_date": "2026-04-21"
+  },
+  {
+    "id": "e0eae31f-1eaa-4832-a8cf-40ae8cc14979",
+    "org_id": null,
+    "ingredient_id": "b56a2ee4-ae4f-4adf-b739-f5050dbe7200",
+    "txn_type": "CONSUME",
+    "qty_delta": -96,
+    "created_at": "2026-03-18T23:45:05.594948+00:00",
+    "note": "Order DEMO-20260317-A: The Hawaiian Pizza (L)",
+    "business_date": "2026-04-21"
+  },
+  {
+    "id": "452ff5d5-b223-4bb0-9f41-d70447bbaf72",
+    "org_id": null,
+    "ingredient_id": "b8f31db9-f0b3-472a-b784-0e37fac96226",
+    "txn_type": "CONSUME",
+    "qty_delta": -60,
+    "created_at": "2026-03-18T23:45:05.594948+00:00",
+    "note": "Order DEMO-20260317-A: The Hawaiian Pizza (L)",
+    "business_date": "2026-04-21"
+  },
+  {
+    "id": "bd745d64-33f4-4387-87fd-d05ab000b1c7",
+    "org_id": null,
+    "ingredient_id": "58cd927b-ec4e-429b-9548-af9f05926b16",
+    "txn_type": "CONSUME",
+    "qty_delta": -24,
+    "created_at": "2026-03-18T23:45:05.825282+00:00",
+    "note": "Order DEMO-20260317-B: The Greek Pizza (L)",
+    "business_date": "2026-04-21"
+  },
+  {
+    "id": "5318c5e6-2da4-4279-a777-804a6a7421b2",
+    "org_id": null,
+    "ingredient_id": "2612c2d9-18a0-4aee-8191-e9e0f9cbca69",
+    "txn_type": "CONSUME",
+    "qty_delta": -24,
+    "created_at": "2026-03-18T23:45:05.825282+00:00",
+    "note": "Order DEMO-20260317-B: The Greek Pizza (L)",
+    "business_date": "2026-04-21"
+  },
+  {
+    "id": "a1f9f615-6c2e-456c-b690-0b669fa1e1c6",
+    "org_id": null,
+    "ingredient_id": "2fc5b6e8-b790-4e5d-8f6e-da92faf1c531",
+    "txn_type": "CONSUME",
+    "qty_delta": -24,
+    "created_at": "2026-03-18T23:45:05.825282+00:00",
+    "note": "Order DEMO-20260317-B: The Greek Pizza (L)",
+    "business_date": "2026-04-21"
+  },
+  {
+    "id": "c82e0cd8-8811-4fab-a0bc-709e33cef6c3",
+    "org_id": null,
+    "ingredient_id": "d6e7c237-00de-45a9-baf6-79950c4f0253",
+    "txn_type": "CONSUME",
+    "qty_delta": -128,
+    "created_at": "2026-03-18T23:45:05.825282+00:00",
+    "note": "Order DEMO-20260317-B: The Hawaiian Pizza (L)",
+    "business_date": "2026-04-21"
+  },
+  {
+    "id": "f677c817-9813-4176-9f63-48a222eaa963",
+    "org_id": null,
+    "ingredient_id": "d4e95924-56db-4483-ba7f-a7393531c5c2",
+    "txn_type": "CONSUME",
+    "qty_delta": -8,
+    "created_at": "2026-03-18T23:45:05.825282+00:00",
+    "note": "Order DEMO-20260317-B: The Hawaiian Pizza (L)",
+    "business_date": "2026-04-21"
+  },
+  {
+    "id": "2fdb40ab-8285-4d96-a662-3fcf863ab7e6",
+    "org_id": null,
+    "ingredient_id": "89e9b8b1-dd83-4794-b2d7-160be5453b57",
+    "txn_type": "CONSUME",
+    "qty_delta": -48,
+    "created_at": "2026-03-18T23:45:05.825282+00:00",
+    "note": "Order DEMO-20260317-B: The Hawaiian Pizza (L)",
+    "business_date": "2026-04-21"
+  },
+  {
+    "id": "867e3f5d-3ef9-4b64-8760-1915b75a7ac8",
+    "org_id": null,
+    "ingredient_id": "b56a2ee4-ae4f-4adf-b739-f5050dbe7200",
+    "txn_type": "CONSUME",
+    "qty_delta": -64,
+    "created_at": "2026-03-18T23:45:05.825282+00:00",
+    "note": "Order DEMO-20260317-B: The Hawaiian Pizza (L)",
+    "business_date": "2026-04-21"
+  },
+  {
+    "id": "5a061f41-2385-47c4-b172-82afaead4d31",
+    "org_id": null,
+    "ingredient_id": "b8f31db9-f0b3-472a-b784-0e37fac96226",
+    "txn_type": "CONSUME",
+    "qty_delta": -40,
+    "created_at": "2026-03-18T23:45:05.825282+00:00",
+    "note": "Order DEMO-20260317-B: The Hawaiian Pizza (L)",
+    "business_date": "2026-04-21"
+  },
+  {
+    "id": "50fc029e-27be-4283-a85a-3236ffbcdd3d",
+    "org_id": null,
+    "ingredient_id": "47ba895a-8c9e-4d7c-a9bb-2d4fe59ca924",
+    "txn_type": "CONSUME",
+    "qty_delta": -32,
+    "created_at": "2026-03-18T23:45:05.825282+00:00",
+    "note": "Order DEMO-20260317-B: The Hawaiian Pizza (L)",
+    "business_date": "2026-04-21"
+  },
+  {
+    "id": "c02fa566-21d2-40d1-a8c3-fcde6d977f54",
+    "org_id": null,
+    "ingredient_id": "d6e7c237-00de-45a9-baf6-79950c4f0253",
+    "txn_type": "CONSUME",
+    "qty_delta": -176,
+    "created_at": "2026-03-18T23:45:06.063063+00:00",
+    "note": "Order DEMO-20260317-C: The Greek Pizza (L)",
+    "business_date": "2026-04-21"
+  },
+  {
+    "id": "2e0b43cf-4067-4e6c-96af-34cdf3a1240f",
+    "org_id": null,
+    "ingredient_id": "b56a2ee4-ae4f-4adf-b739-f5050dbe7200",
+    "txn_type": "CONSUME",
+    "qty_delta": -88,
+    "created_at": "2026-03-18T23:45:06.063063+00:00",
+    "note": "Order DEMO-20260317-C: The Greek Pizza (L)",
+    "business_date": "2026-04-21"
+  },
+  {
+    "id": "d40834c6-831e-4ebc-a77d-b17e2235e089",
+    "org_id": null,
+    "ingredient_id": "89e9b8b1-dd83-4794-b2d7-160be5453b57",
+    "txn_type": "CONSUME",
+    "qty_delta": -66,
+    "created_at": "2026-03-18T23:45:06.063063+00:00",
+    "note": "Order DEMO-20260317-C: The Greek Pizza (L)",
+    "business_date": "2026-04-21"
+  },
+  {
+    "id": "308fe647-7191-4f72-84fd-bcc1331a5dc9",
+    "org_id": null,
+    "ingredient_id": "d4e95924-56db-4483-ba7f-a7393531c5c2",
+    "txn_type": "CONSUME",
+    "qty_delta": -11,
+    "created_at": "2026-03-18T23:45:06.063063+00:00",
+    "note": "Order DEMO-20260317-C: The Greek Pizza (L)",
+    "business_date": "2026-04-21"
+  },
+  {
+    "id": "bd6bcdaa-b26f-48f7-8d2e-cb9cec5a78e0",
+    "org_id": null,
+    "ingredient_id": "58cd927b-ec4e-429b-9548-af9f05926b16",
+    "txn_type": "CONSUME",
+    "qty_delta": -22,
+    "created_at": "2026-03-18T23:45:06.063063+00:00",
+    "note": "Order DEMO-20260317-C: The Greek Pizza (L)",
+    "business_date": "2026-04-21"
+  },
+  {
+    "id": "038eb038-7770-412f-9e24-600d6a80f232",
+    "org_id": null,
+    "ingredient_id": "2612c2d9-18a0-4aee-8191-e9e0f9cbca69",
+    "txn_type": "CONSUME",
+    "qty_delta": -22,
+    "created_at": "2026-03-18T23:45:06.063063+00:00",
+    "note": "Order DEMO-20260317-C: The Greek Pizza (L)",
+    "business_date": "2026-04-21"
+  },
+  {
+    "id": "dd389726-20cc-44e1-bacc-c49a1edb98ba",
+    "org_id": null,
+    "ingredient_id": "d6e7c237-00de-45a9-baf6-79950c4f0253",
+    "txn_type": "CONSUME",
+    "qty_delta": -112,
+    "created_at": "2026-03-18T23:45:06.063063+00:00",
+    "note": "Order DEMO-20260317-C: The Hawaiian Pizza (L)",
+    "business_date": "2026-04-21"
+  },
+  {
+    "id": "56ea6042-ef6f-45bd-a0ae-e591aa4a3d9c",
+    "org_id": null,
+    "ingredient_id": "89e9b8b1-dd83-4794-b2d7-160be5453b57",
+    "txn_type": "CONSUME",
+    "qty_delta": -6,
+    "created_at": "2026-03-18T23:51:18.169288+00:00",
+    "note": "Order KIOSK-1773877880698: The Italian Capocollo Pizza (L)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "e1a4905c-a6aa-492a-820a-9f4b531c088d",
+    "org_id": null,
+    "ingredient_id": "96eefe07-87e4-4981-b702-f34b8b36e681",
+    "txn_type": "CONSUME",
+    "qty_delta": -1,
+    "created_at": "2026-03-18T23:51:18.169288+00:00",
+    "note": "Order KIOSK-1773877880698: The Italian Capocollo Pizza (L)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "156bf323-fc24-46e7-ba9c-09ff0351593d",
+    "org_id": null,
+    "ingredient_id": "d6e7c237-00de-45a9-baf6-79950c4f0253",
+    "txn_type": "CONSUME",
+    "qty_delta": -16,
+    "created_at": "2026-03-18T23:51:18.169288+00:00",
+    "note": "Order KIOSK-1773877880698: The Italian Capocollo Pizza (L)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "e5fd0214-6259-46ee-89ef-35b5da34259b",
+    "org_id": null,
+    "ingredient_id": "d4e95924-56db-4483-ba7f-a7393531c5c2",
+    "txn_type": "CONSUME",
+    "qty_delta": -1,
+    "created_at": "2026-03-18T23:51:18.169288+00:00",
+    "note": "Order KIOSK-1773877880698: The Italian Capocollo Pizza (L)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "81d052eb-2c56-40ae-a398-8ef24c85c080",
+    "org_id": null,
+    "ingredient_id": "2612c2d9-18a0-4aee-8191-e9e0f9cbca69",
+    "txn_type": "CONSUME",
+    "qty_delta": -1,
+    "created_at": "2026-03-18T23:51:18.169288+00:00",
+    "note": "Order KIOSK-1773877880698: The Italian Capocollo Pizza (L)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "a46b81e1-c9ec-4450-aed8-10e502e8d7cc",
+    "org_id": null,
+    "ingredient_id": "41355155-7f11-4906-88d4-45f3d3e44b9a",
+    "txn_type": "CONSUME",
+    "qty_delta": -5,
+    "created_at": "2026-03-18T23:51:18.169288+00:00",
+    "note": "Order KIOSK-1773877880698: The Italian Capocollo Pizza (L)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "b7ceaf45-56bc-4625-9591-0541684e8f0a",
+    "org_id": null,
+    "ingredient_id": "b56a2ee4-ae4f-4adf-b739-f5050dbe7200",
+    "txn_type": "CONSUME",
+    "qty_delta": -8,
+    "created_at": "2026-03-18T23:51:18.169288+00:00",
+    "note": "Order KIOSK-1773877880698: The Italian Capocollo Pizza (L)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "01e98b94-0bea-41c7-aa37-5de713eeb03e",
+    "org_id": null,
+    "ingredient_id": "d4e95924-56db-4483-ba7f-a7393531c5c2",
+    "txn_type": "CONSUME",
+    "qty_delta": -3,
+    "created_at": "2026-03-19T00:28:19.934136+00:00",
+    "note": "Order KIOSK-1773880099847: The Pepperoni Pizza (L)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "c0657063-809f-414c-8772-4a93e00e592e",
+    "org_id": null,
+    "ingredient_id": "89e9b8b1-dd83-4794-b2d7-160be5453b57",
+    "txn_type": "CONSUME",
+    "qty_delta": -18,
+    "created_at": "2026-03-19T00:28:19.934136+00:00",
+    "note": "Order KIOSK-1773880099847: The Pepperoni Pizza (L)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "712ea4fe-3ae4-426c-92b8-0586a47e6300",
+    "org_id": null,
+    "ingredient_id": "cb69071c-76d5-4979-a7ab-ae63a38a3dda",
+    "txn_type": "CONSUME",
+    "qty_delta": -18,
+    "created_at": "2026-03-19T00:28:19.934136+00:00",
+    "note": "Order KIOSK-1773880099847: The Pepperoni Pizza (L)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "34fdb568-0741-4d78-9a7e-318c952ef4d3",
+    "org_id": null,
+    "ingredient_id": "b56a2ee4-ae4f-4adf-b739-f5050dbe7200",
+    "txn_type": "CONSUME",
+    "qty_delta": -24,
+    "created_at": "2026-03-19T00:28:19.934136+00:00",
+    "note": "Order KIOSK-1773880099847: The Pepperoni Pizza (L)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "d8f8e964-77b0-4bc5-a153-b986ce591665",
+    "org_id": null,
+    "ingredient_id": "d6e7c237-00de-45a9-baf6-79950c4f0253",
+    "txn_type": "CONSUME",
+    "qty_delta": -48,
+    "created_at": "2026-03-19T00:28:19.934136+00:00",
+    "note": "Order KIOSK-1773880099847: The Pepperoni Pizza (L)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "d43246dc-33b3-41da-96be-e2be5b8cbbaf",
+    "org_id": null,
+    "ingredient_id": "2fc5b6e8-b790-4e5d-8f6e-da92faf1c531",
+    "txn_type": "CONSUME",
+    "qty_delta": -12,
+    "created_at": "2026-03-19T00:28:19.968275+00:00",
+    "note": "Order KIOSK-1773880099803: The Green Garden Pizza (M)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "c1cfae62-bb77-4cd8-9671-db3c7f1695f9",
+    "org_id": null,
+    "ingredient_id": "30177fad-5223-4dd0-af1b-7f9c8e5ad4ec",
+    "txn_type": "CONSUME",
+    "qty_delta": -12,
+    "created_at": "2026-03-19T00:28:19.968275+00:00",
+    "note": "Order KIOSK-1773880099803: The Green Garden Pizza (M)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "7c5817bc-6bf4-4eff-ba3f-65bb93bcfe3a",
+    "org_id": null,
+    "ingredient_id": "3afb0652-fb0d-4dde-a9d3-efc90bc215d2",
+    "txn_type": "CONSUME",
+    "qty_delta": -12,
+    "created_at": "2026-03-19T00:28:19.968275+00:00",
+    "note": "Order KIOSK-1773880099803: The Green Garden Pizza (M)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "0b2e75ff-681e-4e04-8fa4-391662616126",
+    "org_id": null,
+    "ingredient_id": "d6e7c237-00de-45a9-baf6-79950c4f0253",
+    "txn_type": "CONSUME",
+    "qty_delta": -60,
+    "created_at": "2026-03-19T00:28:30.420983+00:00",
+    "note": "Order KIOSK-1773880110286: The Barbecue Chicken Pizza (M)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "19a36ba8-a2d9-4b22-9052-2de774eedab1",
+    "org_id": null,
+    "ingredient_id": "2612c2d9-18a0-4aee-8191-e9e0f9cbca69",
+    "txn_type": "CONSUME",
+    "qty_delta": -7.5,
+    "created_at": "2026-03-19T00:28:30.420983+00:00",
+    "note": "Order KIOSK-1773880110286: The Barbecue Chicken Pizza (M)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "d46ba9b1-014e-479f-bae9-8fec9b415a4d",
+    "org_id": null,
+    "ingredient_id": "dd5527fd-62fc-4c86-81cb-95ec24c832ae",
+    "txn_type": "CONSUME",
+    "qty_delta": -22.5,
+    "created_at": "2026-03-19T00:28:30.420983+00:00",
+    "note": "Order KIOSK-1773880110286: The Barbecue Chicken Pizza (M)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "13676fe0-b930-448e-8363-c8dcd7d6d6ac",
+    "org_id": null,
+    "ingredient_id": "d4e95924-56db-4483-ba7f-a7393531c5c2",
+    "txn_type": "CONSUME",
+    "qty_delta": -3.75,
+    "created_at": "2026-03-19T00:28:30.420983+00:00",
+    "note": "Order KIOSK-1773880110286: The Barbecue Chicken Pizza (M)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "a9071610-ffdf-435c-9f2e-650c35fa0f39",
+    "org_id": null,
+    "ingredient_id": "54991a9d-849a-484a-95f5-f1c41f9d2701",
+    "txn_type": "CONSUME",
+    "qty_delta": -22.5,
+    "created_at": "2026-03-19T00:28:30.420983+00:00",
+    "note": "Order KIOSK-1773880110286: The Barbecue Chicken Pizza (M)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "dac6d603-c4f9-4253-9820-a1f76fe8d7a1",
+    "org_id": null,
+    "ingredient_id": "b56a2ee4-ae4f-4adf-b739-f5050dbe7200",
+    "txn_type": "CONSUME",
+    "qty_delta": -30,
+    "created_at": "2026-03-19T00:28:30.420983+00:00",
+    "note": "Order KIOSK-1773880110286: The Barbecue Chicken Pizza (M)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "6988788c-7d91-4d57-9667-d00cc1b0ae80",
+    "org_id": null,
+    "ingredient_id": "2612c2d9-18a0-4aee-8191-e9e0f9cbca69",
+    "txn_type": "CONSUME",
+    "qty_delta": -8,
+    "created_at": "2026-03-19T00:28:43.630681+00:00",
+    "note": "Order KIOSK-1773880123582: The Barbecue Chicken Pizza (L)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "dd0c2d82-7956-4eb3-b184-679c47cbe82f",
+    "org_id": null,
+    "ingredient_id": "d6e7c237-00de-45a9-baf6-79950c4f0253",
+    "txn_type": "CONSUME",
+    "qty_delta": -64,
+    "created_at": "2026-03-19T00:28:43.630681+00:00",
+    "note": "Order KIOSK-1773880123582: The Barbecue Chicken Pizza (L)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "69938122-dbcf-46ab-ada8-95b216368f72",
+    "org_id": null,
+    "ingredient_id": "d6e7c237-00de-45a9-baf6-79950c4f0253",
+    "txn_type": "CONSUME",
+    "qty_delta": -176,
+    "created_at": "2026-03-19T00:31:45.870725+00:00",
+    "note": "Order KIOSK-1773880305722: The Barbecue Chicken Pizza (L)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "70c3ef8d-c44a-4788-a221-d3119727fedb",
+    "org_id": null,
+    "ingredient_id": "54991a9d-849a-484a-95f5-f1c41f9d2701",
+    "txn_type": "CONSUME",
+    "qty_delta": -66,
+    "created_at": "2026-03-19T00:31:45.870725+00:00",
+    "note": "Order KIOSK-1773880305722: The Barbecue Chicken Pizza (L)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "d1e4bf85-503a-4831-9381-36d652fd642e",
+    "org_id": null,
+    "ingredient_id": "2612c2d9-18a0-4aee-8191-e9e0f9cbca69",
+    "txn_type": "CONSUME",
+    "qty_delta": -22,
+    "created_at": "2026-03-19T00:31:45.870725+00:00",
+    "note": "Order KIOSK-1773880305722: The Barbecue Chicken Pizza (L)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "9e9a5d2c-c1d8-4301-a6d1-4205072a699b",
+    "org_id": null,
+    "ingredient_id": "dd5527fd-62fc-4c86-81cb-95ec24c832ae",
+    "txn_type": "CONSUME",
+    "qty_delta": -66,
+    "created_at": "2026-03-19T00:31:45.870725+00:00",
+    "note": "Order KIOSK-1773880305722: The Barbecue Chicken Pizza (L)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "8caa6535-054c-4897-885a-30b10ed813f2",
+    "org_id": null,
+    "ingredient_id": "b56a2ee4-ae4f-4adf-b739-f5050dbe7200",
+    "txn_type": "CONSUME",
+    "qty_delta": -88,
+    "created_at": "2026-03-19T00:31:45.870725+00:00",
+    "note": "Order KIOSK-1773880305722: The Barbecue Chicken Pizza (L)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "54043970-ac15-4338-959e-850251b6a3b0",
+    "org_id": null,
+    "ingredient_id": "d6e7c237-00de-45a9-baf6-79950c4f0253",
+    "txn_type": "CONSUME",
+    "qty_delta": -12,
+    "created_at": "2026-03-19T00:34:53.548678+00:00",
+    "note": "Order KIOSK-1773880496200: The Mexicana Pizza (M)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "0b4e7a6f-91e1-47f8-86d1-982242fc96eb",
+    "org_id": null,
+    "ingredient_id": "3afb0652-fb0d-4dde-a9d3-efc90bc215d2",
+    "txn_type": "CONSUME",
+    "qty_delta": -1.5,
+    "created_at": "2026-03-19T00:34:53.548678+00:00",
+    "note": "Order KIOSK-1773880496200: The Mexicana Pizza (M)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "457caaa0-d2a3-467b-bbee-67e591b686ae",
+    "org_id": null,
+    "ingredient_id": "2612c2d9-18a0-4aee-8191-e9e0f9cbca69",
+    "txn_type": "CONSUME",
+    "qty_delta": -1.5,
+    "created_at": "2026-03-19T00:34:53.548678+00:00",
+    "note": "Order KIOSK-1773880496200: The Mexicana Pizza (M)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "4f437342-0db9-4b18-9c72-d652fdfd5e9b",
+    "org_id": null,
+    "ingredient_id": "d4e95924-56db-4483-ba7f-a7393531c5c2",
+    "txn_type": "CONSUME",
+    "qty_delta": -0.75,
+    "created_at": "2026-03-19T00:34:53.548678+00:00",
+    "note": "Order KIOSK-1773880496200: The Mexicana Pizza (M)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "685404d9-bb07-49e2-96be-f8e923f6e82c",
+    "org_id": null,
+    "ingredient_id": "432c222b-ece8-44b7-9d3b-0178234e96a9",
+    "txn_type": "CONSUME",
+    "qty_delta": -1.5,
+    "created_at": "2026-03-19T00:34:53.548678+00:00",
+    "note": "Order KIOSK-1773880496200: The Mexicana Pizza (M)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "bc34f821-ed87-4b51-8d2c-24f570d89e20",
+    "org_id": null,
+    "ingredient_id": "d6e7c237-00de-45a9-baf6-79950c4f0253",
+    "txn_type": "CONSUME",
+    "qty_delta": -8,
+    "created_at": "2026-03-19T00:28:12.144033+00:00",
+    "note": "Order KIOSK-1773880092036: The California Chicken Pizza (S)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "417057c2-4675-400d-abcc-160479673eaf",
+    "org_id": null,
+    "ingredient_id": "2fc5b6e8-b790-4e5d-8f6e-da92faf1c531",
+    "txn_type": "CONSUME",
+    "qty_delta": -1.5,
+    "created_at": "2026-03-19T00:28:12.144033+00:00",
+    "note": "Order KIOSK-1773880092036: The California Chicken Pizza (S)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "49b54904-2358-42e1-857c-e9f6584eea07",
+    "org_id": null,
+    "ingredient_id": "13ff5b4b-6765-4ca6-8b75-4455bec52d7f",
+    "txn_type": "CONSUME",
+    "qty_delta": -3,
+    "created_at": "2026-03-19T00:28:12.144033+00:00",
+    "note": "Order KIOSK-1773880092036: The California Chicken Pizza (S)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "b0a40a44-930f-489f-bff5-2ed6fee46e96",
+    "org_id": null,
+    "ingredient_id": "b56a2ee4-ae4f-4adf-b739-f5050dbe7200",
+    "txn_type": "CONSUME",
+    "qty_delta": -4,
+    "created_at": "2026-03-19T00:28:12.144033+00:00",
+    "note": "Order KIOSK-1773880092036: The California Chicken Pizza (S)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "f99dcf86-0747-4a3b-85d8-5b6be6c001cc",
+    "org_id": null,
+    "ingredient_id": "89e9b8b1-dd83-4794-b2d7-160be5453b57",
+    "txn_type": "CONSUME",
+    "qty_delta": -3,
+    "created_at": "2026-03-19T00:28:12.144033+00:00",
+    "note": "Order KIOSK-1773880092036: The California Chicken Pizza (S)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "8c0e8fe8-0945-4ed0-9c5c-9749ab79840b",
+    "org_id": null,
+    "ingredient_id": "d4e95924-56db-4483-ba7f-a7393531c5c2",
+    "txn_type": "CONSUME",
+    "qty_delta": -0.5,
+    "created_at": "2026-03-19T00:28:12.144033+00:00",
+    "note": "Order KIOSK-1773880092036: The California Chicken Pizza (S)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "406a9930-4b3a-4299-8bd4-e3ef7cd87d90",
+    "org_id": null,
+    "ingredient_id": "7767e4e6-7b4f-4ef0-b5bd-b1a305a8ec43",
+    "txn_type": "CONSUME",
+    "qty_delta": -0.5,
+    "created_at": "2026-03-19T00:28:12.144033+00:00",
+    "note": "Order KIOSK-1773880092036: The California Chicken Pizza (S)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "fa5c0bcd-82c6-46c8-bf6b-70bc37205d4e",
+    "org_id": null,
+    "ingredient_id": "d4e95924-56db-4483-ba7f-a7393531c5c2",
+    "txn_type": "CONSUME",
+    "qty_delta": -6,
+    "created_at": "2026-03-19T00:28:19.968275+00:00",
+    "note": "Order KIOSK-1773880099803: The Green Garden Pizza (M)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "73aa705d-0652-441e-a82f-dc23d2584e09",
+    "org_id": null,
+    "ingredient_id": "89e9b8b1-dd83-4794-b2d7-160be5453b57",
+    "txn_type": "CONSUME",
+    "qty_delta": -36,
+    "created_at": "2026-03-19T00:28:19.968275+00:00",
+    "note": "Order KIOSK-1773880099803: The Green Garden Pizza (M)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "a3bd0648-0732-4dfd-84d8-f959b4ae2500",
+    "org_id": null,
+    "ingredient_id": "b56a2ee4-ae4f-4adf-b739-f5050dbe7200",
+    "txn_type": "CONSUME",
+    "qty_delta": -48,
+    "created_at": "2026-03-19T00:28:19.968275+00:00",
+    "note": "Order KIOSK-1773880099803: The Green Garden Pizza (M)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "67749ad3-dbe7-466b-8ca3-3959b3f49e81",
+    "org_id": null,
+    "ingredient_id": "d6e7c237-00de-45a9-baf6-79950c4f0253",
+    "txn_type": "CONSUME",
+    "qty_delta": -96,
+    "created_at": "2026-03-19T00:28:19.968275+00:00",
+    "note": "Order KIOSK-1773880099803: The Green Garden Pizza (M)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "2b04b622-f2da-4a95-b249-dcbbfc574fdb",
+    "org_id": null,
+    "ingredient_id": "edf4ac54-e9ab-4f31-a6ea-6da7ae33d18c",
+    "txn_type": "CONSUME",
+    "qty_delta": -18,
+    "created_at": "2026-03-19T00:28:19.968275+00:00",
+    "note": "Order KIOSK-1773880099803: The Green Garden Pizza (M)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "d9101e1d-04bf-4f29-b852-31fba44f6939",
+    "org_id": null,
+    "ingredient_id": "dd5527fd-62fc-4c86-81cb-95ec24c832ae",
+    "txn_type": "CONSUME",
+    "qty_delta": -24,
+    "created_at": "2026-03-19T00:28:43.630681+00:00",
+    "note": "Order KIOSK-1773880123582: The Barbecue Chicken Pizza (L)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "8892793d-e086-41b8-ab50-72f941ecbe54",
+    "org_id": null,
+    "ingredient_id": "b56a2ee4-ae4f-4adf-b739-f5050dbe7200",
+    "txn_type": "CONSUME",
+    "qty_delta": -32,
+    "created_at": "2026-03-19T00:28:43.630681+00:00",
+    "note": "Order KIOSK-1773880123582: The Barbecue Chicken Pizza (L)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "e0a78ad7-8878-4ae3-9517-c8af2a42c191",
+    "org_id": null,
+    "ingredient_id": "54991a9d-849a-484a-95f5-f1c41f9d2701",
+    "txn_type": "CONSUME",
+    "qty_delta": -24,
+    "created_at": "2026-03-19T00:28:43.630681+00:00",
+    "note": "Order KIOSK-1773880123582: The Barbecue Chicken Pizza (L)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "c75c342c-d54a-442d-a249-cc8d2428413f",
+    "org_id": null,
+    "ingredient_id": "d4e95924-56db-4483-ba7f-a7393531c5c2",
+    "txn_type": "CONSUME",
+    "qty_delta": -4,
+    "created_at": "2026-03-19T00:28:43.630681+00:00",
+    "note": "Order KIOSK-1773880123582: The Barbecue Chicken Pizza (L)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "5e1ff369-546c-4d31-868c-4303da8a03b5",
+    "org_id": null,
+    "ingredient_id": "d4e95924-56db-4483-ba7f-a7393531c5c2",
+    "txn_type": "CONSUME",
+    "qty_delta": -11,
+    "created_at": "2026-03-19T00:31:45.870725+00:00",
+    "note": "Order KIOSK-1773880305722: The Barbecue Chicken Pizza (L)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "90fff50e-f11e-4093-b374-6315b8b5ff75",
+    "org_id": null,
+    "ingredient_id": "89e9b8b1-dd83-4794-b2d7-160be5453b57",
+    "txn_type": "CONSUME",
+    "qty_delta": -4.5,
+    "created_at": "2026-03-19T00:34:53.548678+00:00",
+    "note": "Order KIOSK-1773880496200: The Mexicana Pizza (M)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "f2e94bfa-3b72-41d1-82c7-7818121eef1b",
+    "org_id": null,
+    "ingredient_id": "2fc5b6e8-b790-4e5d-8f6e-da92faf1c531",
+    "txn_type": "CONSUME",
+    "qty_delta": -1.5,
+    "created_at": "2026-03-19T00:34:53.548678+00:00",
+    "note": "Order KIOSK-1773880496200: The Mexicana Pizza (M)",
+    "business_date": "2026-04-22"
+  },
+  {
+    "id": "4f14859b-d6f2-4e57-91d0-6ee02b63e130",
+    "org_id": null,
+    "ingredient_id": "b56a2ee4-ae4f-4adf-b739-f5050dbe7200",
+    "txn_type": "CONSUME",
+    "qty_delta": -6,
+    "created_at": "2026-03-19T00:34:53.548678+00:00",
+    "note": "Order KIOSK-1773880496200: The Mexicana Pizza (M)",
+    "business_date": "2026-04-22"
+  }
+]

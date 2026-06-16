@@ -1,0 +1,1794 @@
+[
+  {
+    "id": "a4cbfb5f-9519-40f4-93da-e4ff77bdf891",
+    "forecast_date": "2026-04-23",
+    "ingredient_id": "67ac1a22-828b-4d0c-9e6b-a88bbf3f14ea",
+    "qty": 17.5,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "a9437a63-93ea-4f6a-9e32-ceb18c7e1fdc",
+    "forecast_date": "2026-04-23",
+    "ingredient_id": "6d9d3818-a766-4aaf-941d-fadf8cd8de26",
+    "qty": 15.125,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "0dc9ef6a-4d75-42cf-9365-d59f70510d44",
+    "forecast_date": "2026-04-23",
+    "ingredient_id": "58cd927b-ec4e-429b-9548-af9f05926b16",
+    "qty": 83.665,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "6eb76d0e-12c2-416e-9c5a-c74357f6d95d",
+    "forecast_date": "2026-04-23",
+    "ingredient_id": "d6e7c237-00de-45a9-baf6-79950c4f0253",
+    "qty": 2932.972,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "0dc69d29-a8fa-49a5-81af-f3fb3854f45f",
+    "forecast_date": "2026-04-23",
+    "ingredient_id": "432c222b-ece8-44b7-9d3b-0178234e96a9",
+    "qty": 27.917,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "4b242804-48ca-44f8-9821-4d371106e9f7",
+    "forecast_date": "2026-04-23",
+    "ingredient_id": "96eefe07-87e4-4981-b702-f34b8b36e681",
+    "qty": 44.354,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "a26c864e-d8f5-4fe6-a87b-4e7028f8cba5",
+    "forecast_date": "2026-04-23",
+    "ingredient_id": "cb69071c-76d5-4979-a7ab-ae63a38a3dda",
+    "qty": 140.768,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "03e5b58c-cfe9-45b6-8b50-eda993a57f17",
+    "forecast_date": "2026-04-23",
+    "ingredient_id": "d4e95924-56db-4483-ba7f-a7393531c5c2",
+    "qty": 183.311,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "e0ab1f10-411f-4ead-8f92-6b8d96c71c08",
+    "forecast_date": "2026-04-23",
+    "ingredient_id": "13ff5b4b-6765-4ca6-8b75-4455bec52d7f",
+    "qty": 137.501,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "7e2af7e2-ab64-4e17-b9d1-55acaf105f78",
+    "forecast_date": "2026-04-23",
+    "ingredient_id": "41355155-7f11-4906-88d4-45f3d3e44b9a",
+    "qty": 14.79,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "30303b51-26f8-45b9-bd64-0e4f20299fd7",
+    "forecast_date": "2026-04-23",
+    "ingredient_id": "d978fd02-fd92-451f-b6a1-9531e8b7e78f",
+    "qty": 99.31,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "10585216-bfb9-4537-802a-6d5837a4128f",
+    "forecast_date": "2026-04-23",
+    "ingredient_id": "2612c2d9-18a0-4aee-8191-e9e0f9cbca69",
+    "qty": 181.603,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "00dc383f-55f0-453a-8f3f-530fbfd94dc8",
+    "forecast_date": "2026-04-23",
+    "ingredient_id": "dd5527fd-62fc-4c86-81cb-95ec24c832ae",
+    "qty": 195,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "4a483feb-e950-442b-b3be-ef9b8c4443bf",
+    "forecast_date": "2026-04-23",
+    "ingredient_id": "89e9b8b1-dd83-4794-b2d7-160be5453b57",
+    "qty": 820.614,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "aaaa857b-e09f-4dea-9c2a-8aeb7fdef4da",
+    "forecast_date": "2026-04-23",
+    "ingredient_id": "6fd49b0c-26a7-447d-9f82-3f9df591ba56",
+    "qty": 43.457,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "5a0f6836-e045-414e-a0eb-b502cd5ce317",
+    "forecast_date": "2026-04-23",
+    "ingredient_id": "595a42d2-0945-4b47-b0b8-3c31a9cc25e1",
+    "qty": 20.999,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "f5463992-bcdc-4282-bc4f-666e39b6197f",
+    "forecast_date": "2026-04-23",
+    "ingredient_id": "f9fab3fa-89f7-49c6-bc12-bc9939b5dbcd",
+    "qty": 26.25,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "353475b9-a725-4f32-a916-2d957ee76326",
+    "forecast_date": "2026-04-23",
+    "ingredient_id": "bd551072-e0ad-48f2-ae52-a81a18a11d6a",
+    "qty": 44.501,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "c04ec48b-24da-4ef3-a09c-26f972b076d1",
+    "forecast_date": "2026-04-23",
+    "ingredient_id": "54991a9d-849a-484a-95f5-f1c41f9d2701",
+    "qty": 195,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "0a5ff238-88da-4ce0-bbe5-0d280a14ed9d",
+    "forecast_date": "2026-04-23",
+    "ingredient_id": "2fc5b6e8-b790-4e5d-8f6e-da92faf1c531",
+    "qty": 122.999,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "63016f75-2b73-485c-877e-a6102861dbb0",
+    "forecast_date": "2026-04-23",
+    "ingredient_id": "28bedec8-567a-4a3d-b5d0-7c937b68811c",
+    "qty": 12,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "2b23034d-c52b-472e-b021-689fb9b098e8",
+    "forecast_date": "2026-04-23",
+    "ingredient_id": "b1e3bc98-fea9-41f6-89cb-2e1b09f7bd72",
+    "qty": 13.5,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "5b42956e-4214-44db-bf3a-4209364e09d1",
+    "forecast_date": "2026-04-23",
+    "ingredient_id": "30177fad-5223-4dd0-af1b-7f9c8e5ad4ec",
+    "qty": 44.625,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "c522b681-cd9f-40f3-9078-d72c2f4543bf",
+    "forecast_date": "2026-04-23",
+    "ingredient_id": "b8f31db9-f0b3-472a-b784-0e37fac96226",
+    "qty": 61.375,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "513d599e-2f9d-421b-b207-afcd9154232d",
+    "forecast_date": "2026-04-23",
+    "ingredient_id": "f55ceb2f-6b45-40aa-99bb-39cd2552c920",
+    "qty": 32.626,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "c897d43c-c69b-4118-a2fd-f851da4ece05",
+    "forecast_date": "2026-04-23",
+    "ingredient_id": "6c66d4af-b6fb-421c-a06a-f66f2516893c",
+    "qty": 4.666,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "4cde5835-561e-45b5-94c4-6cabf1806265",
+    "forecast_date": "2026-04-23",
+    "ingredient_id": "7767e4e6-7b4f-4ef0-b5bd-b1a305a8ec43",
+    "qty": 19.083,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "527e7bd4-b1ae-4f36-b715-0fefe93aa6c3",
+    "forecast_date": "2026-04-23",
+    "ingredient_id": "47ba895a-8c9e-4d7c-a9bb-2d4fe59ca924",
+    "qty": 42.5,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "e928ddc5-ae8d-441e-a065-7fd467e449a8",
+    "forecast_date": "2026-04-23",
+    "ingredient_id": "3afb0652-fb0d-4dde-a9d3-efc90bc215d2",
+    "qty": 85.375,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "ea1eb239-f733-4c76-8539-cb888ff166a9",
+    "forecast_date": "2026-04-23",
+    "ingredient_id": "3904cd16-a7ea-4985-b3eb-5677d1022f49",
+    "qty": 107.582,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "c4c53bb6-669e-424a-a517-d82fe7aa415f",
+    "forecast_date": "2026-04-23",
+    "ingredient_id": "edf4ac54-e9ab-4f31-a6ea-6da7ae33d18c",
+    "qty": 58.667,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "dfff1b2d-773a-41ef-8b88-c59ce51db95f",
+    "forecast_date": "2026-04-23",
+    "ingredient_id": "b56a2ee4-ae4f-4adf-b739-f5050dbe7200",
+    "qty": 1466.486,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "4bb50fbc-4953-4cd4-a125-a76aba3a87c5",
+    "forecast_date": "2026-04-24",
+    "ingredient_id": "67ac1a22-828b-4d0c-9e6b-a88bbf3f14ea",
+    "qty": 14.585,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "bb94a2d5-5968-46c4-84bb-460ded797a3b",
+    "forecast_date": "2026-04-24",
+    "ingredient_id": "6d9d3818-a766-4aaf-941d-fadf8cd8de26",
+    "qty": 15,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "bdd9d301-cb37-4c2b-8bb3-4d2b8af54bc0",
+    "forecast_date": "2026-04-24",
+    "ingredient_id": "58cd927b-ec4e-429b-9548-af9f05926b16",
+    "qty": 61.919,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "c95a39d3-e08d-4323-a818-f17ec5e6ff94",
+    "forecast_date": "2026-04-24",
+    "ingredient_id": "d6e7c237-00de-45a9-baf6-79950c4f0253",
+    "qty": 2126.028,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "a849dfa0-5a58-4c6d-8790-a9270f8acfb1",
+    "forecast_date": "2026-04-24",
+    "ingredient_id": "432c222b-ece8-44b7-9d3b-0178234e96a9",
+    "qty": 24.501,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "fd8c348f-0e1b-4a4c-ac84-c4b90c19c324",
+    "forecast_date": "2026-04-24",
+    "ingredient_id": "96eefe07-87e4-4981-b702-f34b8b36e681",
+    "qty": 45.083,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "7a659ee9-5caa-494f-926b-ad3488c9c769",
+    "forecast_date": "2026-04-24",
+    "ingredient_id": "cb69071c-76d5-4979-a7ab-ae63a38a3dda",
+    "qty": 108.564,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "dc417744-0db5-4b8d-ba08-8d377fec2599",
+    "forecast_date": "2026-04-24",
+    "ingredient_id": "d4e95924-56db-4483-ba7f-a7393531c5c2",
+    "qty": 132.877,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "f311e6f0-85ea-4650-98bd-fe08b9295958",
+    "forecast_date": "2026-04-24",
+    "ingredient_id": "13ff5b4b-6765-4ca6-8b75-4455bec52d7f",
+    "qty": 139.502,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "81f28912-cb21-46ee-ab4c-81256664e7d0",
+    "forecast_date": "2026-04-24",
+    "ingredient_id": "41355155-7f11-4906-88d4-45f3d3e44b9a",
+    "qty": 19.583,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "65636bd7-d0b2-40fe-b5df-a930cd5e946a",
+    "forecast_date": "2026-04-24",
+    "ingredient_id": "d978fd02-fd92-451f-b6a1-9531e8b7e78f",
+    "qty": 83.064,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "bb77ee70-1549-4231-b092-141a150016d0",
+    "forecast_date": "2026-04-24",
+    "ingredient_id": "2612c2d9-18a0-4aee-8191-e9e0f9cbca69",
+    "qty": 103.691,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "47c38a2c-1907-4938-a965-f829dfdf16b9",
+    "forecast_date": "2026-04-24",
+    "ingredient_id": "dd5527fd-62fc-4c86-81cb-95ec24c832ae",
+    "qty": 26.874,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "2cfacb46-58fb-4dd0-a721-b99500f4b108",
+    "forecast_date": "2026-04-24",
+    "ingredient_id": "89e9b8b1-dd83-4794-b2d7-160be5453b57",
+    "qty": 674.51,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "26f29f5d-fca2-4b70-a37a-952cb0b4e138",
+    "forecast_date": "2026-04-24",
+    "ingredient_id": "6fd49b0c-26a7-447d-9f82-3f9df591ba56",
+    "qty": 38.125,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "bcbeee7b-6e5b-4aee-9e08-c7a991269e35",
+    "forecast_date": "2026-04-24",
+    "ingredient_id": "595a42d2-0945-4b47-b0b8-3c31a9cc25e1",
+    "qty": 14.501,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "50593439-eec5-4389-9a01-475a555f0b0d",
+    "forecast_date": "2026-04-24",
+    "ingredient_id": "f9fab3fa-89f7-49c6-bc12-bc9939b5dbcd",
+    "qty": 38.376,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "2b787d6c-4938-4356-ad82-1b2d56749cae",
+    "forecast_date": "2026-04-24",
+    "ingredient_id": "bd551072-e0ad-48f2-ae52-a81a18a11d6a",
+    "qty": 36.501,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "14ded035-de75-4ea1-9812-f5e782a6ac3b",
+    "forecast_date": "2026-04-24",
+    "ingredient_id": "54991a9d-849a-484a-95f5-f1c41f9d2701",
+    "qty": 26.874,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "cf1773fb-5a17-4ad6-8af9-0f4d9e9a53ad",
+    "forecast_date": "2026-04-24",
+    "ingredient_id": "2fc5b6e8-b790-4e5d-8f6e-da92faf1c531",
+    "qty": 95.689,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "78f8903e-3f97-4228-8a0c-c09cccaaf94c",
+    "forecast_date": "2026-04-24",
+    "ingredient_id": "28bedec8-567a-4a3d-b5d0-7c937b68811c",
+    "qty": 16.209,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "a9687742-cdc7-4cfc-995f-07dfaa92341d",
+    "forecast_date": "2026-04-24",
+    "ingredient_id": "b1e3bc98-fea9-41f6-89cb-2e1b09f7bd72",
+    "qty": 21,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "5d224f9e-441d-4eaa-b843-45df97c53469",
+    "forecast_date": "2026-04-24",
+    "ingredient_id": "30177fad-5223-4dd0-af1b-7f9c8e5ad4ec",
+    "qty": 59.75,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "e673368d-ed54-4d8d-94c3-116ab79a4861",
+    "forecast_date": "2026-04-24",
+    "ingredient_id": "b8f31db9-f0b3-472a-b784-0e37fac96226",
+    "qty": 44.375,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "3b04851b-d48b-480f-b3aa-fe878ca16729",
+    "forecast_date": "2026-04-24",
+    "ingredient_id": "f55ceb2f-6b45-40aa-99bb-39cd2552c920",
+    "qty": 27.083,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "184d34d2-4bac-4de1-948f-6abc48438cf3",
+    "forecast_date": "2026-04-24",
+    "ingredient_id": "6c66d4af-b6fb-421c-a06a-f66f2516893c",
+    "qty": 2,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "4bcb39b8-bf69-4b11-b03a-1f6b67d3bde4",
+    "forecast_date": "2026-04-24",
+    "ingredient_id": "7767e4e6-7b4f-4ef0-b5bd-b1a305a8ec43",
+    "qty": 12.188,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "ded620f2-a2b1-42d9-96ed-1e84e9070b80",
+    "forecast_date": "2026-04-24",
+    "ingredient_id": "47ba895a-8c9e-4d7c-a9bb-2d4fe59ca924",
+    "qty": 28,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "f6fa1e96-cf0f-46d9-9915-90ea98d9b0cb",
+    "forecast_date": "2026-04-24",
+    "ingredient_id": "3afb0652-fb0d-4dde-a9d3-efc90bc215d2",
+    "qty": 92.356,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "093de736-7548-4c69-9e72-c3f24ea53329",
+    "forecast_date": "2026-04-24",
+    "ingredient_id": "3904cd16-a7ea-4985-b3eb-5677d1022f49",
+    "qty": 66.711,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "5d8ec013-4ca6-4e63-97dd-10a79ec102b6",
+    "forecast_date": "2026-04-24",
+    "ingredient_id": "edf4ac54-e9ab-4f31-a6ea-6da7ae33d18c",
+    "qty": 54.794,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "3e1a930f-a504-42cf-b53a-8d54a8e539eb",
+    "forecast_date": "2026-04-24",
+    "ingredient_id": "b56a2ee4-ae4f-4adf-b739-f5050dbe7200",
+    "qty": 1063.014,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "c9fd8fbc-0220-4720-9831-a4969b12f46f",
+    "forecast_date": "2026-04-25",
+    "ingredient_id": "67ac1a22-828b-4d0c-9e6b-a88bbf3f14ea",
+    "qty": 19.063,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "87e87fcb-743e-490c-9332-6a116d8c9028",
+    "forecast_date": "2026-04-25",
+    "ingredient_id": "6d9d3818-a766-4aaf-941d-fadf8cd8de26",
+    "qty": 22.5,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "c18603dc-f1af-473d-a037-bbcf68172198",
+    "forecast_date": "2026-04-25",
+    "ingredient_id": "58cd927b-ec4e-429b-9548-af9f05926b16",
+    "qty": 63.999,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "ec13f9f3-faa0-4e14-932d-6ab80de8f443",
+    "forecast_date": "2026-04-25",
+    "ingredient_id": "d6e7c237-00de-45a9-baf6-79950c4f0253",
+    "qty": 2361.34,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "7905cfde-a505-43c8-a85e-718ce9f52923",
+    "forecast_date": "2026-04-25",
+    "ingredient_id": "432c222b-ece8-44b7-9d3b-0178234e96a9",
+    "qty": 22.25,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "4cd53925-39aa-48a8-bbd4-d0b81381d5a9",
+    "forecast_date": "2026-04-25",
+    "ingredient_id": "96eefe07-87e4-4981-b702-f34b8b36e681",
+    "qty": 62.083,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "be662c9c-f029-428d-880b-203032a3c660",
+    "forecast_date": "2026-04-25",
+    "ingredient_id": "cb69071c-76d5-4979-a7ab-ae63a38a3dda",
+    "qty": 108.939,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "6478ff6e-f0e2-470b-9bf9-b30c496b022e",
+    "forecast_date": "2026-04-25",
+    "ingredient_id": "d4e95924-56db-4483-ba7f-a7393531c5c2",
+    "qty": 147.584,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "8fdb8933-1412-4f77-8c07-8d2d5933421f",
+    "forecast_date": "2026-04-25",
+    "ingredient_id": "13ff5b4b-6765-4ca6-8b75-4455bec52d7f",
+    "qty": 147.752,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "394b3355-6e10-4844-8821-442c0e862fd3",
+    "forecast_date": "2026-04-25",
+    "ingredient_id": "41355155-7f11-4906-88d4-45f3d3e44b9a",
+    "qty": 40.835,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "2416d5bd-2bb3-4325-bf9d-1d4e98367143",
+    "forecast_date": "2026-04-25",
+    "ingredient_id": "d978fd02-fd92-451f-b6a1-9531e8b7e78f",
+    "qty": 92.148,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "aff785ea-a7f6-4907-a6d8-eff427f02773",
+    "forecast_date": "2026-04-25",
+    "ingredient_id": "2612c2d9-18a0-4aee-8191-e9e0f9cbca69",
+    "qty": 115.209,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "e7ad0015-45a2-4154-acce-ebcaa411cce2",
+    "forecast_date": "2026-04-25",
+    "ingredient_id": "dd5527fd-62fc-4c86-81cb-95ec24c832ae",
+    "qty": 40.125,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "05e3b8d2-5f74-458b-a169-a4cf355faaa1",
+    "forecast_date": "2026-04-25",
+    "ingredient_id": "89e9b8b1-dd83-4794-b2d7-160be5453b57",
+    "qty": 755.877,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "26f8f168-9957-4f79-83f9-d5a95ef3404c",
+    "forecast_date": "2026-04-25",
+    "ingredient_id": "6fd49b0c-26a7-447d-9f82-3f9df591ba56",
+    "qty": 47.23,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "72b508df-8936-46bc-bcd2-1d2e97b7f9ac",
+    "forecast_date": "2026-04-25",
+    "ingredient_id": "595a42d2-0945-4b47-b0b8-3c31a9cc25e1",
+    "qty": 21.625,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "8e9aaef7-53e7-4660-81d7-7f22b48c0381",
+    "forecast_date": "2026-04-25",
+    "ingredient_id": "f9fab3fa-89f7-49c6-bc12-bc9939b5dbcd",
+    "qty": 31.502,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "15577aac-c30f-4ac4-a889-4dbff95c4ce9",
+    "forecast_date": "2026-04-25",
+    "ingredient_id": "bd551072-e0ad-48f2-ae52-a81a18a11d6a",
+    "qty": 33.999,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "ad352233-bbb6-4bee-a985-cebda4a28128",
+    "forecast_date": "2026-04-25",
+    "ingredient_id": "54991a9d-849a-484a-95f5-f1c41f9d2701",
+    "qty": 40.125,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "fd9aa6c2-d34d-4fbe-a62a-da0463f67cbc",
+    "forecast_date": "2026-04-25",
+    "ingredient_id": "2fc5b6e8-b790-4e5d-8f6e-da92faf1c531",
+    "qty": 93.77,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "a02985a5-7966-4095-b0f6-501cdae48ffd",
+    "forecast_date": "2026-04-25",
+    "ingredient_id": "28bedec8-567a-4a3d-b5d0-7c937b68811c",
+    "qty": 13,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "2c820944-78dc-4b7d-b452-b0fa0bd58b09",
+    "forecast_date": "2026-04-25",
+    "ingredient_id": "b1e3bc98-fea9-41f6-89cb-2e1b09f7bd72",
+    "qty": 24,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "70351786-6fc2-481e-88c8-d26985598981",
+    "forecast_date": "2026-04-25",
+    "ingredient_id": "30177fad-5223-4dd0-af1b-7f9c8e5ad4ec",
+    "qty": 61.375,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "9e3fd35b-448d-44b5-bf14-8145333e3828",
+    "forecast_date": "2026-04-25",
+    "ingredient_id": "b8f31db9-f0b3-472a-b784-0e37fac96226",
+    "qty": 36.75,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "eaea2b6e-22cf-4add-8c16-0a6c4e4ed1f0",
+    "forecast_date": "2026-04-25",
+    "ingredient_id": "f55ceb2f-6b45-40aa-99bb-39cd2552c920",
+    "qty": 29.563,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "4074a358-f4e3-4ebd-b91e-672cdefe7925",
+    "forecast_date": "2026-04-25",
+    "ingredient_id": "6c66d4af-b6fb-421c-a06a-f66f2516893c",
+    "qty": 3.5,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "ba593b27-906b-49f1-b40f-ad17d9efb167",
+    "forecast_date": "2026-04-25",
+    "ingredient_id": "7767e4e6-7b4f-4ef0-b5bd-b1a305a8ec43",
+    "qty": 17.105,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "a05da39f-5b56-4f49-ba2e-d175324873de",
+    "forecast_date": "2026-04-25",
+    "ingredient_id": "47ba895a-8c9e-4d7c-a9bb-2d4fe59ca924",
+    "qty": 24,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "3e0ab3c0-2609-436a-9810-dbfe08ab4be8",
+    "forecast_date": "2026-04-25",
+    "ingredient_id": "3afb0652-fb0d-4dde-a9d3-efc90bc215d2",
+    "qty": 84.917,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "8bbfb23c-8ea7-4120-8c75-53543df51e33",
+    "forecast_date": "2026-04-25",
+    "ingredient_id": "3904cd16-a7ea-4985-b3eb-5677d1022f49",
+    "qty": 74.416,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "2c0f4a58-b746-4b58-8477-483c07b48084",
+    "forecast_date": "2026-04-25",
+    "ingredient_id": "edf4ac54-e9ab-4f31-a6ea-6da7ae33d18c",
+    "qty": 61.375,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "d9847e64-7f5c-456a-b0f0-3fdb9408de3a",
+    "forecast_date": "2026-04-25",
+    "ingredient_id": "b56a2ee4-ae4f-4adf-b739-f5050dbe7200",
+    "qty": 1180.67,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "fa5a3ec6-c220-4a06-9a8c-bab97078ee1f",
+    "forecast_date": "2026-04-26",
+    "ingredient_id": "67ac1a22-828b-4d0c-9e6b-a88bbf3f14ea",
+    "qty": 10.835,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "c0abb646-9d7c-4fc5-a5ff-a42917183a77",
+    "forecast_date": "2026-04-26",
+    "ingredient_id": "6d9d3818-a766-4aaf-941d-fadf8cd8de26",
+    "qty": 19.5,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "b3ab4ae9-4df3-4b86-be94-96cc2ed8786a",
+    "forecast_date": "2026-04-26",
+    "ingredient_id": "58cd927b-ec4e-429b-9548-af9f05926b16",
+    "qty": 70.833,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "964a5d27-6c15-4e95-a764-52c7964f76a9",
+    "forecast_date": "2026-04-26",
+    "ingredient_id": "d6e7c237-00de-45a9-baf6-79950c4f0253",
+    "qty": 2603.332,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "155cb4d3-df85-43f7-8c00-c8d388f364d8",
+    "forecast_date": "2026-04-26",
+    "ingredient_id": "432c222b-ece8-44b7-9d3b-0178234e96a9",
+    "qty": 31.042,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "d88ed643-2848-4ccc-83e2-adae7b3ea570",
+    "forecast_date": "2026-04-26",
+    "ingredient_id": "96eefe07-87e4-4981-b702-f34b8b36e681",
+    "qty": 58,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "b969919e-ee8a-4040-8cf8-48bd9aabecd3",
+    "forecast_date": "2026-04-26",
+    "ingredient_id": "cb69071c-76d5-4979-a7ab-ae63a38a3dda",
+    "qty": 129.561,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "775cb72f-cbca-4e19-b719-0193b4df7bb5",
+    "forecast_date": "2026-04-26",
+    "ingredient_id": "d4e95924-56db-4483-ba7f-a7393531c5c2",
+    "qty": 162.708,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "8b53603b-3a20-4fc6-9084-6aa10a77c58b",
+    "forecast_date": "2026-04-26",
+    "ingredient_id": "13ff5b4b-6765-4ca6-8b75-4455bec52d7f",
+    "qty": 157.128,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "e5fddfa9-bc81-4964-b75e-7af9d30c3684",
+    "forecast_date": "2026-04-26",
+    "ingredient_id": "41355155-7f11-4906-88d4-45f3d3e44b9a",
+    "qty": 20.001,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "92e51a4d-e790-4717-bfb4-18788ca11d08",
+    "forecast_date": "2026-04-26",
+    "ingredient_id": "d978fd02-fd92-451f-b6a1-9531e8b7e78f",
+    "qty": 119.645,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "23680b8f-a128-4f46-9ad7-2ddd19404e64",
+    "forecast_date": "2026-04-26",
+    "ingredient_id": "2612c2d9-18a0-4aee-8191-e9e0f9cbca69",
+    "qty": 135.48,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "51548f53-da16-40d3-9a93-605e320f1014",
+    "forecast_date": "2026-04-26",
+    "ingredient_id": "dd5527fd-62fc-4c86-81cb-95ec24c832ae",
+    "qty": 41.625,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "38f5f631-1d48-4fce-990a-be4e397f12ff",
+    "forecast_date": "2026-04-26",
+    "ingredient_id": "89e9b8b1-dd83-4794-b2d7-160be5453b57",
+    "qty": 788.375,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "2a99f6bb-123a-442b-b400-1407073552e2",
+    "forecast_date": "2026-04-26",
+    "ingredient_id": "6fd49b0c-26a7-447d-9f82-3f9df591ba56",
+    "qty": 59.249,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "84ea2d03-f874-4051-b6e2-9633467e0b51",
+    "forecast_date": "2026-04-26",
+    "ingredient_id": "595a42d2-0945-4b47-b0b8-3c31a9cc25e1",
+    "qty": 16,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "d0f3ad91-dcd4-4334-ac27-798080499348",
+    "forecast_date": "2026-04-26",
+    "ingredient_id": "f9fab3fa-89f7-49c6-bc12-bc9939b5dbcd",
+    "qty": 39,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "9642a211-5dda-4700-b827-148975157445",
+    "forecast_date": "2026-04-26",
+    "ingredient_id": "bd551072-e0ad-48f2-ae52-a81a18a11d6a",
+    "qty": 93,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "fc849d8d-df77-4857-900c-a1b3a8acec91",
+    "forecast_date": "2026-04-26",
+    "ingredient_id": "54991a9d-849a-484a-95f5-f1c41f9d2701",
+    "qty": 41.625,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "cdc7c0d4-960c-4b9a-8146-8e266a5a3316",
+    "forecast_date": "2026-04-26",
+    "ingredient_id": "2fc5b6e8-b790-4e5d-8f6e-da92faf1c531",
+    "qty": 110.604,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "771b63fc-9a49-4f41-a14c-771d7f2f9b1c",
+    "forecast_date": "2026-04-26",
+    "ingredient_id": "28bedec8-567a-4a3d-b5d0-7c937b68811c",
+    "qty": 12.5,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "9f0b70c1-8616-4193-81b2-b536fa9d391d",
+    "forecast_date": "2026-04-26",
+    "ingredient_id": "b1e3bc98-fea9-41f6-89cb-2e1b09f7bd72",
+    "qty": 14.25,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "1fcb3218-7d4f-4b65-bda6-3d750dec143b",
+    "forecast_date": "2026-04-26",
+    "ingredient_id": "30177fad-5223-4dd0-af1b-7f9c8e5ad4ec",
+    "qty": 64.542,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "172189d5-9731-44d6-ba5c-90098306118e",
+    "forecast_date": "2026-04-26",
+    "ingredient_id": "b8f31db9-f0b3-472a-b784-0e37fac96226",
+    "qty": 32.375,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "904c48d0-a1cf-4c31-b311-9f834d5a0267",
+    "forecast_date": "2026-04-26",
+    "ingredient_id": "f55ceb2f-6b45-40aa-99bb-39cd2552c920",
+    "qty": 42.165,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "7afc36b8-e2b0-473d-bb54-9c828e3948c5",
+    "forecast_date": "2026-04-26",
+    "ingredient_id": "6c66d4af-b6fb-421c-a06a-f66f2516893c",
+    "qty": 4,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "6e23244e-2dfb-4687-a56d-2d7f344fd3a9",
+    "forecast_date": "2026-04-26",
+    "ingredient_id": "7767e4e6-7b4f-4ef0-b5bd-b1a305a8ec43",
+    "qty": 12.521,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "13133533-b754-44e3-8be0-9f141e7b862b",
+    "forecast_date": "2026-04-26",
+    "ingredient_id": "47ba895a-8c9e-4d7c-a9bb-2d4fe59ca924",
+    "qty": 20.5,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "f9497ec0-cb2e-478d-89b9-751d19f3fe62",
+    "forecast_date": "2026-04-26",
+    "ingredient_id": "3afb0652-fb0d-4dde-a9d3-efc90bc215d2",
+    "qty": 109.001,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "e71db17a-c0a0-4855-b7af-72f04ff03ca6",
+    "forecast_date": "2026-04-26",
+    "ingredient_id": "3904cd16-a7ea-4985-b3eb-5677d1022f49",
+    "qty": 85.499,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "cc9df38c-3bef-4b4c-b45c-51495b3cf51c",
+    "forecast_date": "2026-04-26",
+    "ingredient_id": "edf4ac54-e9ab-4f31-a6ea-6da7ae33d18c",
+    "qty": 97.833,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "b1e22be2-62a5-480e-a9e3-fb6206a87cc4",
+    "forecast_date": "2026-04-26",
+    "ingredient_id": "b56a2ee4-ae4f-4adf-b739-f5050dbe7200",
+    "qty": 1301.666,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "18c4d1f7-6ed6-4700-baac-ab58fd9fff23",
+    "forecast_date": "2026-04-27",
+    "ingredient_id": "67ac1a22-828b-4d0c-9e6b-a88bbf3f14ea",
+    "qty": 14.165,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "ae8224ab-c153-4a02-ab0e-7d7fd5081b2b",
+    "forecast_date": "2026-04-27",
+    "ingredient_id": "6d9d3818-a766-4aaf-941d-fadf8cd8de26",
+    "qty": 17.875,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "0a5ff9a9-7b65-4396-80f8-5f2e3799b9f0",
+    "forecast_date": "2026-04-27",
+    "ingredient_id": "58cd927b-ec4e-429b-9548-af9f05926b16",
+    "qty": 59.667,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "fb9ea258-4ece-4b12-9ddc-350cf6f903e3",
+    "forecast_date": "2026-04-27",
+    "ingredient_id": "d6e7c237-00de-45a9-baf6-79950c4f0253",
+    "qty": 2650.988,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "8f66a251-881b-4bbb-a1b1-e1ed366e6436",
+    "forecast_date": "2026-04-27",
+    "ingredient_id": "432c222b-ece8-44b7-9d3b-0178234e96a9",
+    "qty": 29.416,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "5edb10ed-20a5-4a51-a790-78545dcc8fc9",
+    "forecast_date": "2026-04-27",
+    "ingredient_id": "96eefe07-87e4-4981-b702-f34b8b36e681",
+    "qty": 47.312,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "e3602bbe-a3de-4085-aff7-6e3981f34255",
+    "forecast_date": "2026-04-27",
+    "ingredient_id": "cb69071c-76d5-4979-a7ab-ae63a38a3dda",
+    "qty": 129.19,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "bda2bd93-3a15-4ad7-96f3-501fd8152ef1",
+    "forecast_date": "2026-04-27",
+    "ingredient_id": "d4e95924-56db-4483-ba7f-a7393531c5c2",
+    "qty": 165.687,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "e2654e6e-eecd-4be7-9ba0-691acf3af47f",
+    "forecast_date": "2026-04-27",
+    "ingredient_id": "13ff5b4b-6765-4ca6-8b75-4455bec52d7f",
+    "qty": 194.924,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "a7facb5f-6039-407e-9c76-eaed668c6b27",
+    "forecast_date": "2026-04-27",
+    "ingredient_id": "41355155-7f11-4906-88d4-45f3d3e44b9a",
+    "qty": 22.499,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "1a48e16b-a335-481f-88de-a5efb4eba5d1",
+    "forecast_date": "2026-04-27",
+    "ingredient_id": "d978fd02-fd92-451f-b6a1-9531e8b7e78f",
+    "qty": 87.939,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "b4a4f965-7d40-4817-998f-0b818c3ed955",
+    "forecast_date": "2026-04-27",
+    "ingredient_id": "2612c2d9-18a0-4aee-8191-e9e0f9cbca69",
+    "qty": 151.669,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "e4e215a6-f420-4ba0-8c71-9690cc883d9b",
+    "forecast_date": "2026-04-27",
+    "ingredient_id": "dd5527fd-62fc-4c86-81cb-95ec24c832ae",
+    "qty": 157.575,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "4406f8cf-b24f-4514-b098-f8b6be9d769d",
+    "forecast_date": "2026-04-27",
+    "ingredient_id": "89e9b8b1-dd83-4794-b2d7-160be5453b57",
+    "qty": 698.796,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "fa038526-681a-49b9-88fc-10bdc63b5776",
+    "forecast_date": "2026-04-27",
+    "ingredient_id": "6fd49b0c-26a7-447d-9f82-3f9df591ba56",
+    "qty": 34.875,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "22bccfdf-abd1-43d1-8a7c-c2015174797f",
+    "forecast_date": "2026-04-27",
+    "ingredient_id": "595a42d2-0945-4b47-b0b8-3c31a9cc25e1",
+    "qty": 16.334,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "4b32ee51-7b16-4018-964d-416d7d710a07",
+    "forecast_date": "2026-04-27",
+    "ingredient_id": "f9fab3fa-89f7-49c6-bc12-bc9939b5dbcd",
+    "qty": 53.25,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "0cba0d0a-1034-4581-abfb-856cfbdd51d7",
+    "forecast_date": "2026-04-27",
+    "ingredient_id": "bd551072-e0ad-48f2-ae52-a81a18a11d6a",
+    "qty": 69.501,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "6637333f-d503-42d4-ad17-93d20029ab3a",
+    "forecast_date": "2026-04-27",
+    "ingredient_id": "54991a9d-849a-484a-95f5-f1c41f9d2701",
+    "qty": 157.575,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "6bf43083-5f23-40fa-badd-659f4c0188ed",
+    "forecast_date": "2026-04-27",
+    "ingredient_id": "2fc5b6e8-b790-4e5d-8f6e-da92faf1c531",
+    "qty": 95.004,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "8613f6c2-26ad-4389-9c00-d0fd72edc90e",
+    "forecast_date": "2026-04-27",
+    "ingredient_id": "28bedec8-567a-4a3d-b5d0-7c937b68811c",
+    "qty": 16.084,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "c0c5b37e-6f55-4c66-bb68-2f7b2b849bd5",
+    "forecast_date": "2026-04-27",
+    "ingredient_id": "b1e3bc98-fea9-41f6-89cb-2e1b09f7bd72",
+    "qty": 14.999,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "5f1bd340-c3c1-4237-8ef3-2c27f8659db3",
+    "forecast_date": "2026-04-27",
+    "ingredient_id": "30177fad-5223-4dd0-af1b-7f9c8e5ad4ec",
+    "qty": 61.125,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "3655a20e-d7eb-4902-870f-42f251dc36f2",
+    "forecast_date": "2026-04-27",
+    "ingredient_id": "b8f31db9-f0b3-472a-b784-0e37fac96226",
+    "qty": 35.708,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "4e1af690-611e-48e7-8f5c-240d5df55438",
+    "forecast_date": "2026-04-27",
+    "ingredient_id": "f55ceb2f-6b45-40aa-99bb-39cd2552c920",
+    "qty": 22.583,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "7b8c5ef1-6c5b-46d6-a2f8-4f40f3463993",
+    "forecast_date": "2026-04-27",
+    "ingredient_id": "6c66d4af-b6fb-421c-a06a-f66f2516893c",
+    "qty": 4,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "0ec519ef-6ef5-4915-9b07-3a5e3bc2e639",
+    "forecast_date": "2026-04-27",
+    "ingredient_id": "7767e4e6-7b4f-4ef0-b5bd-b1a305a8ec43",
+    "qty": 12.53,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "c4f299df-df85-4af5-ad5c-aac8522278e4",
+    "forecast_date": "2026-04-27",
+    "ingredient_id": "47ba895a-8c9e-4d7c-a9bb-2d4fe59ca924",
+    "qty": 24.666,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "d2412dfd-7288-4627-94fb-0de0ecb6c9c5",
+    "forecast_date": "2026-04-27",
+    "ingredient_id": "3afb0652-fb0d-4dde-a9d3-efc90bc215d2",
+    "qty": 103.667,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "1bcc3c18-d52d-4665-a566-3cfd30ec7c77",
+    "forecast_date": "2026-04-27",
+    "ingredient_id": "3904cd16-a7ea-4985-b3eb-5677d1022f49",
+    "qty": 61.581,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "0ead63dc-0e8f-4b27-9ced-9f0cb5359ce8",
+    "forecast_date": "2026-04-27",
+    "ingredient_id": "edf4ac54-e9ab-4f31-a6ea-6da7ae33d18c",
+    "qty": 54.417,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "4de9fd75-330f-464a-9652-394e95815087",
+    "forecast_date": "2026-04-27",
+    "ingredient_id": "b56a2ee4-ae4f-4adf-b739-f5050dbe7200",
+    "qty": 1325.494,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "684cf7b6-0f43-44a6-9128-e74aa1153fff",
+    "forecast_date": "2026-04-28",
+    "ingredient_id": "67ac1a22-828b-4d0c-9e6b-a88bbf3f14ea",
+    "qty": 11.25,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "489a2aae-6049-4ede-9226-614729351f2d",
+    "forecast_date": "2026-04-28",
+    "ingredient_id": "6d9d3818-a766-4aaf-941d-fadf8cd8de26",
+    "qty": 24.5,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "57438d71-1de4-48bd-83f2-6ddd4f18adf6",
+    "forecast_date": "2026-04-28",
+    "ingredient_id": "58cd927b-ec4e-429b-9548-af9f05926b16",
+    "qty": 114.25,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "20c8db3f-40c4-4d62-812e-4689a72ba4de",
+    "forecast_date": "2026-04-28",
+    "ingredient_id": "d6e7c237-00de-45a9-baf6-79950c4f0253",
+    "qty": 3160.688,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "547d7503-a34d-442f-bcf9-60b3a42eee82",
+    "forecast_date": "2026-04-28",
+    "ingredient_id": "432c222b-ece8-44b7-9d3b-0178234e96a9",
+    "qty": 26.083,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "21b0b2c7-040b-4a14-945b-1b46ec4e48f8",
+    "forecast_date": "2026-04-28",
+    "ingredient_id": "96eefe07-87e4-4981-b702-f34b8b36e681",
+    "qty": 68.647,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "bd43a482-9eed-4fa2-87ba-285c317f8044",
+    "forecast_date": "2026-04-28",
+    "ingredient_id": "cb69071c-76d5-4979-a7ab-ae63a38a3dda",
+    "qty": 181.813,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "bbec8a68-96d3-4591-8789-e47904a26388",
+    "forecast_date": "2026-04-28",
+    "ingredient_id": "d4e95924-56db-4483-ba7f-a7393531c5c2",
+    "qty": 197.543,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "640f1ed5-a303-4c22-aa00-48cbdd0f8b82",
+    "forecast_date": "2026-04-28",
+    "ingredient_id": "13ff5b4b-6765-4ca6-8b75-4455bec52d7f",
+    "qty": 197.499,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "644f90f7-733e-4a19-a487-56d438a259ee",
+    "forecast_date": "2026-04-28",
+    "ingredient_id": "41355155-7f11-4906-88d4-45f3d3e44b9a",
+    "qty": 22.5,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "564d716b-dd4c-4d7b-9608-fc5ad9f3abf2",
+    "forecast_date": "2026-04-28",
+    "ingredient_id": "d978fd02-fd92-451f-b6a1-9531e8b7e78f",
+    "qty": 157.648,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "3f2ea055-d3b7-4548-aeb5-3911729ab43b",
+    "forecast_date": "2026-04-28",
+    "ingredient_id": "2612c2d9-18a0-4aee-8191-e9e0f9cbca69",
+    "qty": 155.417,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "8dec2cbf-32f3-4334-8215-855d0f4f2e69",
+    "forecast_date": "2026-04-28",
+    "ingredient_id": "dd5527fd-62fc-4c86-81cb-95ec24c832ae",
+    "qty": 45.126,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "589c688e-a908-485c-878e-0d581d9bb916",
+    "forecast_date": "2026-04-28",
+    "ingredient_id": "89e9b8b1-dd83-4794-b2d7-160be5453b57",
+    "qty": 1031.505,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "2ddcc371-3655-4437-ae9a-f96aee25ab72",
+    "forecast_date": "2026-04-28",
+    "ingredient_id": "6fd49b0c-26a7-447d-9f82-3f9df591ba56",
+    "qty": 50.919,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "05308f13-fce0-4f0a-b9af-ba00ab6f4172",
+    "forecast_date": "2026-04-28",
+    "ingredient_id": "595a42d2-0945-4b47-b0b8-3c31a9cc25e1",
+    "qty": 19.168,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "dab95b00-1bc8-485c-8010-967f92b564a7",
+    "forecast_date": "2026-04-28",
+    "ingredient_id": "f9fab3fa-89f7-49c6-bc12-bc9939b5dbcd",
+    "qty": 29.625,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "7f89714a-5347-4b29-af74-20942e3d213b",
+    "forecast_date": "2026-04-28",
+    "ingredient_id": "bd551072-e0ad-48f2-ae52-a81a18a11d6a",
+    "qty": 40.752,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "768562ac-dab5-4e9c-aae0-316ea675819b",
+    "forecast_date": "2026-04-28",
+    "ingredient_id": "54991a9d-849a-484a-95f5-f1c41f9d2701",
+    "qty": 45.126,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "46c1d888-bff2-454a-b9ac-9d05b90e3845",
+    "forecast_date": "2026-04-28",
+    "ingredient_id": "2fc5b6e8-b790-4e5d-8f6e-da92faf1c531",
+    "qty": 146.562,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "95ae1f8c-fec4-4a67-b385-5d4604ced76e",
+    "forecast_date": "2026-04-28",
+    "ingredient_id": "28bedec8-567a-4a3d-b5d0-7c937b68811c",
+    "qty": 13.125,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "96f97e9c-9c36-4743-834b-4d66fe671907",
+    "forecast_date": "2026-04-28",
+    "ingredient_id": "b1e3bc98-fea9-41f6-89cb-2e1b09f7bd72",
+    "qty": 38.25,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "afbc2a13-05b0-42c4-8646-7453dc7e5d3d",
+    "forecast_date": "2026-04-28",
+    "ingredient_id": "30177fad-5223-4dd0-af1b-7f9c8e5ad4ec",
+    "qty": 76.75,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "a2591f21-7848-4841-a9a8-9820c8c6b57d",
+    "forecast_date": "2026-04-28",
+    "ingredient_id": "b8f31db9-f0b3-472a-b784-0e37fac96226",
+    "qty": 77.211,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "3fa7bf4f-8e3e-4dc9-b8e7-ea54603ae520",
+    "forecast_date": "2026-04-28",
+    "ingredient_id": "f55ceb2f-6b45-40aa-99bb-39cd2552c920",
+    "qty": 32,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "27a9e553-edbe-4039-b860-094abba42df9",
+    "forecast_date": "2026-04-28",
+    "ingredient_id": "6c66d4af-b6fb-421c-a06a-f66f2516893c",
+    "qty": 3,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "16310184-751d-4d7f-9e4c-3fa21be038f1",
+    "forecast_date": "2026-04-28",
+    "ingredient_id": "7767e4e6-7b4f-4ef0-b5bd-b1a305a8ec43",
+    "qty": 23.438,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "15a2fe91-2b26-436a-896b-9beb0b22faee",
+    "forecast_date": "2026-04-28",
+    "ingredient_id": "47ba895a-8c9e-4d7c-a9bb-2d4fe59ca924",
+    "qty": 55.169,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "86b6394e-66b8-4b4e-818e-b0473da0dee0",
+    "forecast_date": "2026-04-28",
+    "ingredient_id": "3afb0652-fb0d-4dde-a9d3-efc90bc215d2",
+    "qty": 134.603,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "ad5a12a7-7b39-4a2f-937b-aa757e0f9dcf",
+    "forecast_date": "2026-04-28",
+    "ingredient_id": "3904cd16-a7ea-4985-b3eb-5677d1022f49",
+    "qty": 106.25,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "27b237fd-4752-457e-9c19-ae687f147f58",
+    "forecast_date": "2026-04-28",
+    "ingredient_id": "edf4ac54-e9ab-4f31-a6ea-6da7ae33d18c",
+    "qty": 71.293,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "e08eb92b-2c66-4d07-ba59-b4f621caca30",
+    "forecast_date": "2026-04-28",
+    "ingredient_id": "b56a2ee4-ae4f-4adf-b739-f5050dbe7200",
+    "qty": 1580.344,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "6a617c62-c231-4425-abf9-c07e3926009f",
+    "forecast_date": "2026-04-29",
+    "ingredient_id": "67ac1a22-828b-4d0c-9e6b-a88bbf3f14ea",
+    "qty": 10.313,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "5f2bda70-ce24-4009-b010-f8bc52ca6884",
+    "forecast_date": "2026-04-29",
+    "ingredient_id": "6d9d3818-a766-4aaf-941d-fadf8cd8de26",
+    "qty": 16.334,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "bdc112aa-aab6-450d-bfed-0c18e77cbaa8",
+    "forecast_date": "2026-04-29",
+    "ingredient_id": "58cd927b-ec4e-429b-9548-af9f05926b16",
+    "qty": 55.312,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "e8800af2-aad8-4108-a163-118029f575d4",
+    "forecast_date": "2026-04-29",
+    "ingredient_id": "d6e7c237-00de-45a9-baf6-79950c4f0253",
+    "qty": 2577.868,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "01cbb466-8e6f-4bb6-a0b4-fa6f1f8de681",
+    "forecast_date": "2026-04-29",
+    "ingredient_id": "432c222b-ece8-44b7-9d3b-0178234e96a9",
+    "qty": 27.517,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "41f99473-a68d-42c7-9c37-c3b6be0648b9",
+    "forecast_date": "2026-04-29",
+    "ingredient_id": "96eefe07-87e4-4981-b702-f34b8b36e681",
+    "qty": 64.743,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "6b6baaaa-27b0-4e7f-8c73-0d9154799477",
+    "forecast_date": "2026-04-29",
+    "ingredient_id": "cb69071c-76d5-4979-a7ab-ae63a38a3dda",
+    "qty": 117.312,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "7edc1010-ed8e-4f9d-892e-d54e87b26a18",
+    "forecast_date": "2026-04-29",
+    "ingredient_id": "d4e95924-56db-4483-ba7f-a7393531c5c2",
+    "qty": 161.117,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "b47101af-ed7f-45a0-80bd-d66636741451",
+    "forecast_date": "2026-04-29",
+    "ingredient_id": "13ff5b4b-6765-4ca6-8b75-4455bec52d7f",
+    "qty": 159.725,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "424f4d21-c6d8-4c31-9831-3b5d8b5b80c9",
+    "forecast_date": "2026-04-29",
+    "ingredient_id": "41355155-7f11-4906-88d4-45f3d3e44b9a",
+    "qty": 24.75,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "d9b4adf1-a0a6-405f-9b0f-978c12c51a2d",
+    "forecast_date": "2026-04-29",
+    "ingredient_id": "d978fd02-fd92-451f-b6a1-9531e8b7e78f",
+    "qty": 106.48,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "8d7e73b2-0a69-47f5-99d6-45addd60fd3a",
+    "forecast_date": "2026-04-29",
+    "ingredient_id": "2612c2d9-18a0-4aee-8191-e9e0f9cbca69",
+    "qty": 120.792,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "70534629-8fc9-4b43-982a-d8eeb5e52b6b",
+    "forecast_date": "2026-04-29",
+    "ingredient_id": "dd5527fd-62fc-4c86-81cb-95ec24c832ae",
+    "qty": 51.6,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "f1139747-a9cc-4b58-a9dd-b967ca68a5e0",
+    "forecast_date": "2026-04-29",
+    "ingredient_id": "89e9b8b1-dd83-4794-b2d7-160be5453b57",
+    "qty": 722.105,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "339e2e2a-2238-454e-a70b-4947ee9590d0",
+    "forecast_date": "2026-04-29",
+    "ingredient_id": "6fd49b0c-26a7-447d-9f82-3f9df591ba56",
+    "qty": 41.126,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "cc85684b-6b0d-487d-81dc-0da5bf77a95a",
+    "forecast_date": "2026-04-29",
+    "ingredient_id": "595a42d2-0945-4b47-b0b8-3c31a9cc25e1",
+    "qty": 22.501,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "10e5fd79-b918-4bc8-8e41-03f0a48aff11",
+    "forecast_date": "2026-04-29",
+    "ingredient_id": "f9fab3fa-89f7-49c6-bc12-bc9939b5dbcd",
+    "qty": 39.999,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "f36a010d-3af7-465e-b30f-80fc9f434fa5",
+    "forecast_date": "2026-04-29",
+    "ingredient_id": "bd551072-e0ad-48f2-ae52-a81a18a11d6a",
+    "qty": 136.499,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "6e5a7715-c36e-4457-9e9f-f13e5d035d15",
+    "forecast_date": "2026-04-29",
+    "ingredient_id": "54991a9d-849a-484a-95f5-f1c41f9d2701",
+    "qty": 51.6,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "bb9d210c-ec0b-40e3-93bd-50fa7b458b53",
+    "forecast_date": "2026-04-29",
+    "ingredient_id": "2fc5b6e8-b790-4e5d-8f6e-da92faf1c531",
+    "qty": 123.838,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "f569abb5-2905-46ff-8f73-b1808e6c7f83",
+    "forecast_date": "2026-04-29",
+    "ingredient_id": "28bedec8-567a-4a3d-b5d0-7c937b68811c",
+    "qty": 11.041,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "e635c2d1-473c-40f3-9d5d-2dd97da78d21",
+    "forecast_date": "2026-04-29",
+    "ingredient_id": "b1e3bc98-fea9-41f6-89cb-2e1b09f7bd72",
+    "qty": 16.499,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "3ae19ab9-78e6-4f8b-a5ef-ab60d56205bd",
+    "forecast_date": "2026-04-29",
+    "ingredient_id": "30177fad-5223-4dd0-af1b-7f9c8e5ad4ec",
+    "qty": 53.249,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "9ddad633-30c0-47ea-9bd0-dcc88bb7dbc2",
+    "forecast_date": "2026-04-29",
+    "ingredient_id": "b8f31db9-f0b3-472a-b784-0e37fac96226",
+    "qty": 34,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "231de5b9-6661-4521-aa79-9a904d547ae6",
+    "forecast_date": "2026-04-29",
+    "ingredient_id": "f55ceb2f-6b45-40aa-99bb-39cd2552c920",
+    "qty": 39.625,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "1e0da28e-9f6a-4450-ba53-4c0d46552acb",
+    "forecast_date": "2026-04-29",
+    "ingredient_id": "6c66d4af-b6fb-421c-a06a-f66f2516893c",
+    "qty": 4,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "df3c6709-5df5-4bf6-beb6-4e80a28450b6",
+    "forecast_date": "2026-04-29",
+    "ingredient_id": "7767e4e6-7b4f-4ef0-b5bd-b1a305a8ec43",
+    "qty": 18.205,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "50b8aec6-2982-4b58-b02b-67e3276108d0",
+    "forecast_date": "2026-04-29",
+    "ingredient_id": "47ba895a-8c9e-4d7c-a9bb-2d4fe59ca924",
+    "qty": 20,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "d6c97507-06f3-4da1-bbb5-98d60e3493b2",
+    "forecast_date": "2026-04-29",
+    "ingredient_id": "3afb0652-fb0d-4dde-a9d3-efc90bc215d2",
+    "qty": 101.808,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "980adfe6-2c51-4f1e-8dab-6dd25a670eb2",
+    "forecast_date": "2026-04-29",
+    "ingredient_id": "3904cd16-a7ea-4985-b3eb-5677d1022f49",
+    "qty": 59.499,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "8ca386de-6db9-4e5f-99dd-a16c651dfb81",
+    "forecast_date": "2026-04-29",
+    "ingredient_id": "edf4ac54-e9ab-4f31-a6ea-6da7ae33d18c",
+    "qty": 129.228,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "c0b4b45d-06e1-456c-b04b-d8fc664c8373",
+    "forecast_date": "2026-04-29",
+    "ingredient_id": "b56a2ee4-ae4f-4adf-b739-f5050dbe7200",
+    "qty": 1288.934,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "613c6467-1791-4008-9005-e9101600394b",
+    "forecast_date": "2026-04-30",
+    "ingredient_id": "67ac1a22-828b-4d0c-9e6b-a88bbf3f14ea",
+    "qty": 17.5,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "64d06847-ec5c-4d1b-b112-e118f38096a7",
+    "forecast_date": "2026-04-30",
+    "ingredient_id": "6d9d3818-a766-4aaf-941d-fadf8cd8de26",
+    "qty": 15.125,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "e0e8d7ad-aed7-4489-bf0a-69d8b37f631a",
+    "forecast_date": "2026-04-30",
+    "ingredient_id": "58cd927b-ec4e-429b-9548-af9f05926b16",
+    "qty": 83.665,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "d356ed33-1bf4-47cb-8d9d-5a8ed1863a5d",
+    "forecast_date": "2026-04-30",
+    "ingredient_id": "d6e7c237-00de-45a9-baf6-79950c4f0253",
+    "qty": 2932.972,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "51a1f38c-1f2f-4805-b5e1-9e71e5ba5f4d",
+    "forecast_date": "2026-04-30",
+    "ingredient_id": "432c222b-ece8-44b7-9d3b-0178234e96a9",
+    "qty": 27.917,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "e768c78b-535f-4a4b-8f44-c481a2830cfd",
+    "forecast_date": "2026-04-30",
+    "ingredient_id": "96eefe07-87e4-4981-b702-f34b8b36e681",
+    "qty": 44.354,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "01568eac-6867-4569-a8ce-1029a0dc0a1e",
+    "forecast_date": "2026-04-30",
+    "ingredient_id": "cb69071c-76d5-4979-a7ab-ae63a38a3dda",
+    "qty": 140.768,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "2ea96261-d546-4bf6-990a-e38f43502b3f",
+    "forecast_date": "2026-04-30",
+    "ingredient_id": "d4e95924-56db-4483-ba7f-a7393531c5c2",
+    "qty": 183.311,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "8c13f173-a10f-4ed2-a3e1-94929844eb08",
+    "forecast_date": "2026-04-30",
+    "ingredient_id": "13ff5b4b-6765-4ca6-8b75-4455bec52d7f",
+    "qty": 137.501,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "6686d1e8-dbeb-4f05-b7e2-fa14e279d6f1",
+    "forecast_date": "2026-04-30",
+    "ingredient_id": "41355155-7f11-4906-88d4-45f3d3e44b9a",
+    "qty": 14.79,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "cb5e8fe8-abb2-45f1-9526-26d9d11d3187",
+    "forecast_date": "2026-04-30",
+    "ingredient_id": "d978fd02-fd92-451f-b6a1-9531e8b7e78f",
+    "qty": 99.31,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "2db8819a-5b88-43b8-ae32-27db35c353b2",
+    "forecast_date": "2026-04-30",
+    "ingredient_id": "2612c2d9-18a0-4aee-8191-e9e0f9cbca69",
+    "qty": 181.603,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "d6f1115c-31b1-48be-a70c-fa0e8d6f863b",
+    "forecast_date": "2026-04-30",
+    "ingredient_id": "dd5527fd-62fc-4c86-81cb-95ec24c832ae",
+    "qty": 195,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "2370009d-0f18-44bb-95f2-b054ef9ebddb",
+    "forecast_date": "2026-04-30",
+    "ingredient_id": "89e9b8b1-dd83-4794-b2d7-160be5453b57",
+    "qty": 820.614,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "46f550b8-4488-451f-8f19-e862ccfef8a2",
+    "forecast_date": "2026-04-30",
+    "ingredient_id": "6fd49b0c-26a7-447d-9f82-3f9df591ba56",
+    "qty": 43.457,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "22e7c2dd-6b69-4c6c-96f2-aa28f5ca90fd",
+    "forecast_date": "2026-04-30",
+    "ingredient_id": "595a42d2-0945-4b47-b0b8-3c31a9cc25e1",
+    "qty": 20.999,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "45f0644d-a5fa-42e7-bd2c-06824e96a644",
+    "forecast_date": "2026-04-30",
+    "ingredient_id": "f9fab3fa-89f7-49c6-bc12-bc9939b5dbcd",
+    "qty": 26.25,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "56885dab-1dc0-479c-9922-bf4b7bfa5962",
+    "forecast_date": "2026-04-30",
+    "ingredient_id": "bd551072-e0ad-48f2-ae52-a81a18a11d6a",
+    "qty": 44.501,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "58c7183a-adb4-4428-a900-8a89d3d28de1",
+    "forecast_date": "2026-04-30",
+    "ingredient_id": "54991a9d-849a-484a-95f5-f1c41f9d2701",
+    "qty": 195,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "19fd60c5-3b88-4c69-a5cf-582b228c1b0b",
+    "forecast_date": "2026-04-30",
+    "ingredient_id": "2fc5b6e8-b790-4e5d-8f6e-da92faf1c531",
+    "qty": 122.999,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "1c1a5845-57c6-4035-b25e-292d3ce47712",
+    "forecast_date": "2026-04-30",
+    "ingredient_id": "28bedec8-567a-4a3d-b5d0-7c937b68811c",
+    "qty": 12,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "4c65db84-f4f9-4e31-a103-dce30494c9ae",
+    "forecast_date": "2026-04-30",
+    "ingredient_id": "b1e3bc98-fea9-41f6-89cb-2e1b09f7bd72",
+    "qty": 13.5,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "8dc7a6a4-5760-4ca3-9f93-14fb4b96299d",
+    "forecast_date": "2026-04-30",
+    "ingredient_id": "30177fad-5223-4dd0-af1b-7f9c8e5ad4ec",
+    "qty": 44.625,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "3f5e127c-97a6-43aa-9662-2e456715f47f",
+    "forecast_date": "2026-04-30",
+    "ingredient_id": "b8f31db9-f0b3-472a-b784-0e37fac96226",
+    "qty": 61.375,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "d357064c-c568-46b7-8932-bb8eea8bbba1",
+    "forecast_date": "2026-04-30",
+    "ingredient_id": "f55ceb2f-6b45-40aa-99bb-39cd2552c920",
+    "qty": 32.626,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "1bc8be9f-3a24-4c22-9cda-0eb386c04aa5",
+    "forecast_date": "2026-04-30",
+    "ingredient_id": "6c66d4af-b6fb-421c-a06a-f66f2516893c",
+    "qty": 4.666,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "ff05613e-fad5-4226-82b4-df53ddccfdd7",
+    "forecast_date": "2026-04-30",
+    "ingredient_id": "7767e4e6-7b4f-4ef0-b5bd-b1a305a8ec43",
+    "qty": 19.083,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "c3a7b4f7-996e-4aec-ad8e-261132bac483",
+    "forecast_date": "2026-04-30",
+    "ingredient_id": "47ba895a-8c9e-4d7c-a9bb-2d4fe59ca924",
+    "qty": 42.5,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "ab2d9aa7-7f07-48d3-868e-8f8c9c7a789e",
+    "forecast_date": "2026-04-30",
+    "ingredient_id": "3afb0652-fb0d-4dde-a9d3-efc90bc215d2",
+    "qty": 85.375,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "121a4266-d285-4c9f-80ef-6bd7df485380",
+    "forecast_date": "2026-04-30",
+    "ingredient_id": "3904cd16-a7ea-4985-b3eb-5677d1022f49",
+    "qty": 107.582,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "20b0578a-6860-4793-9f16-9d4bc5afcc4b",
+    "forecast_date": "2026-04-30",
+    "ingredient_id": "edf4ac54-e9ab-4f31-a6ea-6da7ae33d18c",
+    "qty": 58.667,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  },
+  {
+    "id": "49a961c1-460a-4395-876d-7f534f91d157",
+    "forecast_date": "2026-04-30",
+    "ingredient_id": "b56a2ee4-ae4f-4adf-b739-f5050dbe7200",
+    "qty": 1466.486,
+    "created_at": "2026-04-23T20:40:28.617561+00:00"
+  }
+]
