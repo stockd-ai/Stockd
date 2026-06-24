@@ -4,3 +4,14 @@ node_modules/
 Frontend/js/config.js
 Frontend/js/env.js
 .vercel
+logs/demo-gapfill/2026-06-24T02-33-33-939Z/backup/inventory_on_hand.json
+demo-gapfill-summary.md
+logs/demo-gapfill/2026-06-24T02-33-33-939Z/backup/daily_orders_gap.json
+logs/demo-gapfill/2026-06-24T02-33-33-939Z/backup/forecast_ingredients.json
+logs/demo-gapfill/2026-06-24T02-33-33-939Z/backup/forecast_items.json
+logs/demo-gapfill/2026-06-24T02-33-33-939Z/backup/sales_line_items_gap.json
+logs/demo-gapfill/2026-06-24T02-33-33-939Z/fill-summary.json
+logs/demo-gapfill/relevel-2026-06-24T02-34-28-300Z/inventory_on_hand_before.json
+scripts/fill-demo-gap.mjs
+scripts/relevel-inventory.mjs
+scripts/verify-demo-ready.mjs
